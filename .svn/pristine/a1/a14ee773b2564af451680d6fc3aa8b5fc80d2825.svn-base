@@ -1,0 +1,77 @@
+[Sheet000]
+ss1.EMP ID= 8
+ss1.EMP NAME= 8
+ss1.DEPT= 7
+ss1.PHONE_OFFICE= 5
+ss1.PHONE MOBILE= 0
+ss1.PHONE HOME= 0
+ss1.PASSWORD= 10
+ss1.e Mail= 0
+ss1.Description= 12
+ss1.Supervisor= 0
+ss1.INS DATE= 11
+ss1.INS TIME= 8
+ss1.INS EMP= 7
+[Msheet00]
+ss1.EMP ID= 8
+ss1.Program ID= 9
+ss1.Inquiry= 5
+ss1.Insert= 5
+ss1.Update= 5
+ss1.Delete= 5
+ss1.INS DATE= 10
+ss1.INS TIME= 10
+ss1.INS EMP= 11
+[HSheet00]
+ss1.CD= 7.25
+ss1.CD SHORT NAME= 18
+ss1.CD NAME= 18
+ss1.CD SHORT ENG= 18
+ss1.CD FULL ENG= 18
+ss1.APLY STD= 8
+ss1.INS DATE= 8
+ss1.INS TIME= 8
+ss1.INS EMP= 8
+[Refer000]
+ss1.CD MANA NO= 8
+ss1.CD MANA NAME= 8
+ss1.BIZ AREA= 8
+ss1.BIZ AREA NAME= 22
+ss1.CD LEN= 8
+ss1.CD DESC= 8
+ss1.INS DATE= 8
+ss1.INS TIME= 8
+ss1.INS EMP= 8
+[TabSheet]
+ss1.EMP ID= 8
+ss1.EMP NAME= 24
+ss1.DEPT= 8
+ss1.PHONE OFFICE= 14
+ss1.PHONE MOBILE= 14
+ss1.PHONE HOME= 14
+ss1.Password= 9
+ss1.e Mail= 8
+ss1.Description= 9
+ss1.Supervisor= 8
+ss1.INS DATE= 11
+ss1.INS TIME= 8
+ss1.INS EMP= 8
+ss2.EMP ID= 8
+ss2.Program ID= 8
+ss2.Inquiry= 8
+ss2.Insert= 8
+ss2.Update= 8
+ss2.Delete= 8
+ss2.INS DATE= 8
+ss2.INS TIME= 8
+ss2.INS EMP= 8
+[PopupShe]
+ss1.CD MANA NO= 8
+ss1.CD MANA NAME= 8
+ss1.BIZ AREA= 8
+ss1.BIZ AREA NAME= 30
+ss1.CD LEN= 8
+ss1.CD DESC= 8
+ss1.INS DATE= 8
+ss1.INS TIME= 8
+ss1.INS EMP= 8

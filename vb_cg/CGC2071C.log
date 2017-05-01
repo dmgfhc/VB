@@ -1,0 +1,12 @@
+行 110: 控件 ss1 的类 FPSpread.vaSpread 不是一个已加载的控件类。
+行 138: 控件 ULabel16 的类 InDate.ULabel 不是一个已加载的控件类。
+行 160: 控件 ULabel4 的类 InDate.ULabel 不是一个已加载的控件类。
+行 182: 控件 ULabel1 的类 InDate.ULabel 不是一个已加载的控件类。
+行 204: 控件 SDT_PROD_DATE_FROM 的类 InDate.UDate 不是一个已加载的控件类。
+行 225: 控件 SDT_PROD_DATE_TO 的类 InDate.UDate 不是一个已加载的控件类。
+行 246: 控件 ULabel27 的类 InDate.ULabel 不是一个已加载的控件类。
+行 268: 控件 SSFrame3 的类 Threed.SSFrame 不是一个已加载的控件类。
+行 278: 控件 opt_line1 的类 Threed.SSOption 不是一个已加载的控件类。
+行 302: 控件 opt_line2 的类 Threed.SSOption 不是一个已加载的控件类。
+行 325: 控件 ULabel9 的类 InDate.ULabel 不是一个已加载的控件类。
+行 348: 控件 SSP3 的类 Threed.SSPanel 不是一个已加载的控件类。

@@ -1,0 +1,45 @@
+[DataDicM]
+TOP=1560
+LEFT=5955
+HEIGHT=8190
+WIDTH=5565
+[DataDic]
+MssWhere.代码= 8
+MssWhere.代码简称= 15
+MssWhere.代码名称= 8
+MssWhere.代码英文简称= 8
+MssWhere.代码英文名称= 8
+MssResult.代码= 8
+MssResult.代码简称= 15
+MssResult.代码名称= 8
+MssResult.代码英文简称= 8
+MssResult.代码英文名称= 8
+AssWhere.适用项目= 8
+AssWhere.适用项目名称= 8
+AssResult.适用项目= 8
+AssResult.适用项目名称= 8
+SssWhere.钢种= 12
+SssWhere.目标说明= 10
+SssResult.钢种= 12
+SssResult.目标说明= 10
+CssWhere.客户代码= 8
+CssWhere.客户名称= 10
+CssWhere.客户英文名称= 8
+CssResult.客户代码= 8
+CssResult.客户名称= 10
+CssResult.客户英文名称= 8
+[DataDicA]
+TOP=1560
+LEFT=5955
+HEIGHT=8190
+WIDTH=5565
+[DataDicS]
+TOP=1560
+LEFT=5955
+HEIGHT=8190
+WIDTH=5565
+[DataDicC]
+TOP=1410
+LEFT=8010
+HEIGHT=8190
+WIDTH=5565

@@ -1,0 +1,745 @@
+VERSION 5.00
+Object = "{FDAC2480-F4ED-4632-AA78-DCA210A74E49}#6.0#0"; "SPR32X60.ocx"
+Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "indate.ocx"
+Begin VB.Form ACF1080C 
+   Caption         =   "炼钢班报_ACF1080C"
+   ClientHeight    =   5355
+   ClientLeft      =   60
+   ClientTop       =   345
+   ClientWidth     =   6795
+   LinkTopic       =   "Form1"
+   MDIChild        =   -1  'True
+   ScaleHeight     =   5355
+   ScaleWidth      =   6795
+   WindowState     =   2  'Maximized
+   Begin FPSpread.vaSpread ss1 
+      Height          =   7365
+      Left            =   45
+      TabIndex        =   0
+      Top             =   720
+      Width           =   15345
+      _Version        =   393216
+      _ExtentX        =   27067
+      _ExtentY        =   12991
+      _StockProps     =   64
+      AllowDragDrop   =   -1  'True
+      AllowMultiBlocks=   -1  'True
+      AllowUserFormulas=   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      MaxCols         =   16
+      MaxRows         =   10
+      Protect         =   0   'False
+      RetainSelBlock  =   0   'False
+      SpreadDesigner  =   "ACF1080C.frx":0000
+   End
+   Begin InDate.UDate dtp_date 
+      Height          =   315
+      Left            =   1605
+      TabIndex        =   1
+      Tag             =   "指示日期"
+      Top             =   120
+      Width           =   1455
+      _ExtentX        =   2566
+      _ExtentY        =   556
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "宋体"
+         Size            =   9.74
+         Charset         =   134
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483630
+      BackColor       =   16777215
+      MaxLength       =   10
+   End
+   Begin InDate.ULabel ULabel1 
+      Height          =   315
+      Left            =   75
+      Top             =   105
+      Width           =   1410
+      _ExtentX        =   2487
+      _ExtentY        =   556
+      Caption         =   "年 月 日"
+      Alignment       =   1
+      BackColor       =   14804173
+      BackgroundStyle =   1
+      ChiselText      =   2
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "宋体"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   16711680
+   End
+   Begin VB.Line Line1 
+      BorderColor     =   &H000000FF&
+      X1              =   45
+      X2              =   15240
+      Y1              =   555
+      Y2              =   555
+   End
+End
+Attribute VB_Name = "ACF1080C"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Explicit
+
+'-------------------------------------------------------------------------------
+'-- PROGRAM HEADER  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+'-------------------------------------------------------------------------------
+'-- System Name       DAILY SCHEDULE
+'-- Sub_System Name
+'-- Program Name
+'-- Program ID        AEA1100C
+'-- Document No       Q-00-0010(Specification)
+'-- Designer          Kim Sung Ho
+'-- Coder             Kim Sung Ho
+'-- Date              2003.6.20
+'-- Description
+'-------------------------------------------------------------------------------
+'-- UPDATE HISTORY  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+'-------------------------------------------------------------------------------
+'-- VER   DATE     EDITOR       DESCRIPTION
+'-------------------------------------------------------------------------------
+'-- DECLARATION     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+'-------------------------------------------------------------------------------
+
+Public FormType As String           'Form Type
+Public Toolbar_St As String         'Active Form ToolBar Setting
+Public sAuthority As String         'Active Form Authority Setting
+
+Dim pControl As New Collection      'Master Primary Key Collection
+Dim nControl As New Collection      'Master Necessary Collection
+Dim mControl As New Collection      'Master Maxlength check Collection
+Dim iControl As New Collection      'Master Insert Collection
+Dim rControl As New Collection      'Master Refer Collection
+Dim cControl As New Collection      'Master Copy Collection
+Dim aControl As New Collection      'Master -> Spread Collection
+Dim lControl As New Collection      'Master Lock Collection
+
+Dim pColumn1 As New Collection      'Spread Primary Key Collection
+Dim nColumn1 As New Collection      'Spread necessary Column Collection
+Dim mColumn1 As New Collection      'Spread Maxlength check Column Collection
+Dim iColumn1 As New Collection      'Spread Insert Column Collection
+Dim aColumn1 As New Collection      'Master -> Spread Column Collection
+Dim lColumn1 As New Collection      'Spread Lock Column Collection
+
+Dim Mc1 As New Collection           'Master Collection
+Dim Sc1 As New Collection           'Spread Collection
+Dim Proc_Sc As New Collection       'Spread Struc Collection
+
+Dim lBlkcol1 As Long                'To Excel Block Col1
+Dim lBlkcol2 As Long                'To Excel Block Col2
+Dim lBlkrow1 As Long                'To Excel Block Row1
+Dim lBlkrow2 As Long                'To Excel Block Row2
+
+Private Sub Form_Define()
+   
+    FormType = "Refer"
+
+    Call Gp_Ms_Collection(dtp_date, "p", " ", " ", " ", " ", " ", "l", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+    
+    'MASTER Collection
+    Mc1.Add Item:=pControl, Key:="pControl"
+    Mc1.Add Item:=nControl, Key:="nControl"
+    Mc1.Add Item:=mControl, Key:="mControl"
+    Mc1.Add Item:=iControl, Key:="iControl"
+    Mc1.Add Item:=rControl, Key:="rControl"
+    Mc1.Add Item:=cControl, Key:="cControl"
+    Mc1.Add Item:=aControl, Key:="aControl"
+    Mc1.Add Item:=lControl, Key:="lControl"
+  
+
+    'Spread_Collection
+    Sc1.Add Item:=ss1, Key:="Spread"
+  
+    Sc1.Add Item:="ACF1080C.P_REFER", Key:="P-R"
+   
+    Sc1.Add Item:=pColumn1, Key:="pColumn"
+ 
+
+    Proc_Sc.Add Item:=Sc1, Key:="Sc1"
+    
+    
+End Sub
+
+Private Sub Form_Activate()
+        
+    Call MDIMain.FormMenuSetting(Me, FormType, Toolbar_St, sAuthority)
+    
+    MDIMain.MenuTool.Buttons(7).Enabled = False    'Row Insert
+    MDIMain.MenuTool.Buttons(8).Enabled = False    'Row Delete
+    MDIMain.MenuTool.Buttons(11).Enabled = False   'Copy
+    MDIMain.MenuTool.Buttons(12).Enabled = False   'Paste
+
+End Sub
+
+Private Sub Form_KeyPress(KeyAscii As Integer)
+
+    If KeyAscii = KEY_RETURN Then
+        KeyAscii = 0
+        SendKeys "{TAB}"
+    End If
+
+End Sub
+
+Private Sub Form_Load()
+
+    Screen.MousePointer = vbHourglass
+    
+    sAuthority = Gf_Pgm_Authority(Me.Name)
+
+    Call Form_Define
+
+    Call MDIMain.FormMenuSetting(Me, FormType, "FS", sAuthority)
+    
+    
+    dtp_date.Text = DateAdd("d", -1, Date)
+   
+    
+    Call Gp_Ms_Cls(Mc1("rControl"))
+ 
+    Call Gp_Ms_NeceColor(Mc1("nControl"))
+    
+    Call Sp_Header_display(Proc_Sc("Sc1")("Spread"))
+    Call Sp_Setting(Proc_Sc("Sc1")("Spread"))
+ 
+    
+    Call Gp_Sp_ColGet(Proc_Sc("Sc1")("Spread"), "C-System.INI", Me.Name)
+  
+ 
+   
+    Screen.MousePointer = vbDefault
+    
+    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+   
+    
+End Sub
+
+Private Sub Form_QueryUnload(Cancel As Integer, UnloadMode As Integer)
+
+    Call Gp_Sp_ColSet(Proc_Sc("Sc1")("Spread"), "C-System.INI", Me.Name)
+    
+    Set pControl = Nothing
+    Set nControl = Nothing
+    Set iControl = Nothing
+    Set rControl = Nothing
+    Set cControl = Nothing
+    Set aControl = Nothing
+    Set lControl = Nothing
+    Set mControl = Nothing
+    
+    Set Mc1 = Nothing
+    Set Sc1 = Nothing
+    Set Proc_Sc = Nothing
+    
+    Call MDIMain.FormMenuSetting(Me, "Start", Toolbar_St, "")
+
+End Sub
+
+Public Sub Form_Cls()
+
+    ss1.ClearRange 1, 1, ss1.MaxCols, ss1.MaxRows, True
+    Call Gp_Sp_BlockColor(Proc_Sc("Sc1")("Spread"), 3, ss1.MaxCols, 1, ss1.MaxRows)
+    Call Gp_Ms_Cls(Mc1("rControl"))
+    Call MDIMain.FormMenuSetting(Me, FormType, "CLS", sAuthority)
+    
+    Call Gp_Ms_ControlLock(Mc1("lControl"), False)
+
+    
+End Sub
+
+Public Sub Form_Exc()
+    
+    Call Gp_Sp_Excel(Me, Proc_Sc("Sc1")("Spread"), lBlkcol1, lBlkcol2, lBlkrow1, lBlkrow2)
+  
+End Sub
+
+Public Sub Form_Ref()
+
+On Error GoTo Refer_Err
+
+    If Gf_Sp_ProceExist(Proc_Sc("Sc1").Item("Spread")) Then Exit Sub
+    
+    If Sp_Refer(M_CN1, Proc_Sc("Sc1"), Mc1, Mc1("nControl"), Mc1("mControl")) Then
+        Call MDIMain.FormMenuSetting(Me, FormType, "RE", sAuthority)
+        MDIMain.MenuTool.Buttons(7).Enabled = False    'Row Insert
+        MDIMain.MenuTool.Buttons(8).Enabled = False    'Row Delete
+        MDIMain.MenuTool.Buttons(11).Enabled = False   'Copy
+        MDIMain.MenuTool.Buttons(12).Enabled = False   'Paste
+    End If
+            
+    Exit Sub
+
+
+Refer_Err:
+
+End Sub
+
+Public Sub Spread_ColumnsSort()
+
+    Spread_ColSort.Show 1
+    
+End Sub
+
+
+'---------------------------------------------------------------------------------------
+'   1.ID           : Gf_Sp_Display
+'   2.Name         : Spread Row Display
+'   3.Input  Value : Conn Connection, sPname vaSpread, sQuery String, {lColumn Variant}, {MsgChk Boolean}
+'   4.Return Value : Boolean
+'   5.Writer       : Kim Sung Ho
+'   6.Create Date  : 2003. 05 .06
+'   7.Modify Date  :
+'   8.Comment      : Spread Row Display
+'---------------------------------------------------------------------------------------
+Public Function Sp_Display(Conn As ADODB.Connection, sPname As vaSpread, sQuery As String, _
+                              Optional lColumn As Variant = Nothing, Optional MsgChk As Boolean = True) As Boolean
+
+ 'On Error GoTo SpreadDisplay_Error
+
+    Dim iCount As Integer
+    Dim iRowCount As Long
+    Dim iColcount As Long
+    Dim AdoRs As ADODB.Recordset
+    Dim ArrayRecords As Variant
+
+    'Db Connection Check
+    If Conn Is Nothing Then
+        If GF_DbConnect = False Then Sp_Display = False: Exit Function
+    End If
+   
+ 
+    Set AdoRs = New ADODB.Recordset
+   ' Text1.Text = sQuery
+    With sPname
+
+        Sp_Display = True
+        
+        .ReDraw = False
+        '.MaxRows = 0: iCount = 0     不刷新 0列,0行
+        
+      '  .ClearRange 3, 1, .MaxCols, .MaxRows, True
+        
+         Screen.MousePointer = vbHourglass
+        
+        'Ado Execute
+        
+        AdoRs.Open sQuery, Conn, adOpenKeyset
+        
+        If AdoRs.BOF Or AdoRs.EOF Then
+        
+            If MsgChk Then Call Gp_MsgBoxDisplay("无相关记录", "I")
+                
+            Sp_Display = False
+            .ReDraw = True
+            AdoRs.Close
+            Set AdoRs = Nothing
+        
+            Screen.MousePointer = vbDefault
+            Exit Function
+        Else
+            
+        End If
+        
+        ArrayRecords = AdoRs.GetRows
+        
+        AdoRs.Close
+        Set AdoRs = Nothing
+
+       ' .MaxRows = UBound(ArrayRecords, 2) + 1
+         .MaxRows = 10
+    
+        For iRowCount = 0 To .MaxRows - 1
+        
+            .Row = iRowCount + 1     '数组为(0,0)时，显示在(1,2)上
+            
+            .Col = 0                 '在一个行下，每次都让列从1开始，因为界面上的列从2开始
+          
+            For iColcount = 0 To .MaxCols - 1 '(0,0)时,
+                
+                
+            
+                .Col = .Col + 1
+                
+                Select Case .CellType
+                
+                    Case SS_CELL_TYPE_CHECKBOX
+                        If VarType(ArrayRecords(iColcount, iRowCount)) <> vbNull Or _
+                           Trim(ArrayRecords(iColcount, iRowCount)) = "1" Then
+                            .Text = Trim(ArrayRecords(iColcount, iRowCount))
+                        End If
+                        
+                    Case SS_CELL_TYPE_COMBOBOX
+                        If VarType(ArrayRecords(iColcount, iRowCount)) = vbNull Or _
+                           Trim(ArrayRecords(iColcount, iRowCount)) = "" Then
+                            .Value = 0
+                        Else
+                            .Value = Trim(ArrayRecords(iColcount, iRowCount))
+                        End If
+                        
+                    Case SS_CELL_TYPE_DATE
+                        If VarType(ArrayRecords(iColcount, iRowCount)) = vbNull Then
+                            .Text = ""
+                        Else
+                            .Text = Mid(Trim(ArrayRecords(iColcount, iRowCount)), 1, 4) & "-" & _
+                                    Mid(Trim(ArrayRecords(iColcount, iRowCount)), 5, 2) & "-" & _
+                                    Mid(Trim(ArrayRecords(iColcount, iRowCount)), 7, 2)
+                        End If
+                        
+                    Case SS_CELL_TYPE_PIC, SS_CELL_TYPE_TIME
+                        If VarType(ArrayRecords(iColcount, iRowCount)) = vbNull Then
+                            .Value = ""
+                        Else
+                            .Value = Trim(ArrayRecords(iColcount, iRowCount))
+                        End If
+                        
+                    Case Else
+                        If VarType(ArrayRecords(iColcount, iRowCount)) = vbNull Then
+                            .Text = ""
+                        Else
+                            .Text = Trim(ArrayRecords(iColcount, iRowCount))
+                        End If
+                        
+                End Select
+                
+            Next iColcount
+            
+        Next iRowCount
+            
+        If Not lColumn Is Nothing Then
+
+            'lControl Lock
+            For iCount = 3 To lColumn.Count
+
+                .Protect = True
+                .Col = lColumn(iCount): .Col2 = lColumn(iCount)
+                .Row = 1:               .row2 = .MaxRows
+                .BlockMode = True: .Lock = True
+                .BlockMode = False
+
+            Next iCount
+
+        End If
+        
+        .ReDraw = True
+        Screen.MousePointer = vbDefault
+        
+    End With
+
+Exit Function
+
+SpreadDisplay_Error:
+    
+    Set AdoRs = Nothing
+    Sp_Display = False
+    Call Gp_MsgBoxDisplay("Gf_Sp_Display Error : " & sQuery)
+    Screen.MousePointer = vbDefault
+
+End Function
+'-----------------------------------------------------------------------------------------------
+'   1.ID           : Gf_Sp_Refer
+'   2.Name         : Spread Refer
+'   3.Input  Value : Conn Connection, Sc Collection, Mc Collection, {nCheckControl Collection},
+'                                        {mCheckControl Collection},{MsgChk Boolean}
+'   4.Return Value : Boolean
+'   5.Writer       : Kim Sung Ho
+'   6.Create Date  : 2003. 05 .06
+'   7.Modify Date  :
+'   8.Comment      : Spread Refer
+'-----------------------------------------------------------------------------------------------
+Public Function Sp_Refer(Conn As ADODB.Connection, Sc As Collection, Optional MC As Collection, _
+                            Optional nCheckControl As Collection, Optional mCheckControl As Collection, Optional MsgChk As Boolean = True) As Boolean
+On Error GoTo SpreadRef_Error
+
+    Dim sQuery As String
+    Dim sMsg As String
+
+'    If MsgChk Then
+'        If Gf_Sp_ProceExist(Sc.Item("Spread")) Then
+'            Gf_Sp_Refer = True
+'            Exit Function
+'        End If
+'    End If
+
+    If Not MC Is Nothing Then
+    
+        If Not nCheckControl Is Nothing Then
+            sMsg = Gf_Ms_NeceCheck(nCheckControl)
+            If sMsg <> "OK" Then
+                sMsg = sMsg + "必须输入"
+                Call Gp_MsgBoxDisplay(sMsg, "", "错误提示")
+                Sp_Refer = False
+                Exit Function
+            End If
+        End If
+        
+        If Not mCheckControl Is Nothing Then
+            sMsg = Gf_Ms_NeceCheck2(mCheckControl)
+            If sMsg <> "OK" Then
+                sMsg = sMsg + "长度不正确"
+                Call Gp_MsgBoxDisplay(sMsg, "", "错误提示")
+                Sp_Refer = False
+                Exit Function
+            End If
+        End If
+        
+    End If
+
+    Sc.Item("Spread").OperationMode = OperationModeNormal
+    
+    If Not MC Is Nothing Then
+        Sp_Refer = Sp_Display(Conn, Sc.Item("Spread"), Gf_Ms_MakeQuery(Sc.Item("P-R"), "R", MC("pControl")), _
+                                    Sc.Item("pColumn"), MsgChk)
+        If Sp_Refer Then
+           Call Gp_Ms_ControlLock(MC!lControl, True)
+           MDIMain.StatusBar1.Panels(1) = "提示信息：查询成功"
+        End If
+    Else
+        Sp_Refer = Sp_Display(Conn, Sc.Item("Spread"), Gf_Sp_MakeQuery(Sc.Item("Spread"), Sc.Item("P-R"), _
+                                    "R", Sc.Item("aColumn"), 1), Sc.Item("pColumn"), MsgChk)
+    End If
+    
+    If Sp_Refer Then
+       ' Sc.Item("Spread").OperationMode = OperationModeRow
+        MDIMain.StatusBar1.Panels(1) = "提示信息：查询成功"
+        'Sc!Spread.SetFocus
+    End If
+        
+    Exit Function
+    
+SpreadRef_Error:
+
+    Call Gp_MsgBoxDisplay("Gf_Sp_Refer Error : " & Error)
+    Sp_Refer = False
+
+End Function
+
+Public Sub Spread_Forzens_Setting()
+
+    Active_Spread.SetFocus
+    Me.ActiveControl.ColsFrozen = Me.ActiveControl.ActiveCol
+End Sub
+
+Public Sub Spread_Forzens_Cancel()
+
+    Active_Spread.SetFocus
+    Me.ActiveControl.ColsFrozen = 0
+    
+End Sub
+
+Public Sub Form_Exit()
+    Unload Me
+End Sub
+
+Private Sub ss1_BlockSelected(ByVal BlockCol As Long, ByVal BlockRow As Long, ByVal BlockCol2 As Long, ByVal BlockRow2 As Long)
+    
+   lBlkcol1 = BlockCol
+   lBlkcol2 = BlockCol2
+   lBlkrow1 = BlockRow
+   lBlkrow2 = BlockRow2
+End Sub
+
+Private Sub ss1_LostFocus()
+    
+   lBlkcol1 = 0
+   lBlkcol2 = 0
+   lBlkrow1 = 0
+   lBlkrow2 = 0
+
+
+End Sub
+Private Sub ss1_RightClick(ByVal ClickType As Integer, ByVal Col As Long, ByVal Row As Long, ByVal MouseX As Long, ByVal MouseY As Long)
+    
+    MDIMain.Mnu_Sorting.Enabled = False
+
+    If Row > 0 Then
+        Set Active_Spread = Me.ss1
+        PopupMenu MDIMain.PopUp_Spread
+    End If
+
+    MDIMain.Mnu_Sorting.Enabled = True
+    
+End Sub
+
+Public Sub Sp_Setting(ByVal sPname As Variant)
+
+Dim irow As Integer
+
+  With sPname
+'
+  .RowHeight(-1) = 19
+        
+        If .ColHeaderRows > 1 Then
+            .RowHeight(SpreadHeader + (.ColHeaderRows - 2)) = 13
+            .RowHeight(SpreadHeader + (.ColHeaderRows - 1)) = 13
+        Else
+            .RowHeight(0) = 24
+        End If
+       
+       
+       ' .RowHeadersShow = False
+        .BackColorStyle = BackColorStyleUnderGrid
+        
+        .GrayAreaBackColor = &HE0E0E0
+        .GridColor = &H808040
+        
+        .ShadowColor = &HE1E4CD
+        .ShadowDark = &H808040
+        .SelBackColor = &HCEECFF     ''&HE3F4FF      ''&HFFFF80     '&H808040
+     
+       
+        .OperationMode = OperationModeNormal
+        .RetainSelBlock = True
+        .UserResize = UserResizeColumns
+        
+        .ProcessTab = True
+        .ScrollBarExtMode = True
+        .ButtonDrawMode = 1
+        .TabStop = False
+        
+        .Col = 0: .Col2 = -1
+        .Row = 0: .row2 = -1
+        
+        
+        .BlockMode = True
+        .FontBold = False
+        .FontName = "SimSun"
+        .FontSize = 10
+        .BlockMode = False
+        
+        .Col = -1
+        .Row = 0
+        .FontBold = True
+'        .Col = -1
+'        .Row = 1
+'        .FontBold = True
+'
+'        '----------------第二列
+'        .Col = 2
+'        .Row = -1
+'        .CellType (SS_CELL_TYPE_NUMBER)
+'
+'        .TypeNumberLeadingZero = TypeLeadingZeroYes
+'        .CellType = CellTypeNumber
+'        .TypeNumberShowSep = True
+'        .TypeNumberDecPlaces (2)
+'        .TypeNumberMax = 999999.99
+'        .TypeNumberMin = 0#
+'        .TypeNumberSeparator = ","
+'
+'
+'        '-------------第一列
+'        .Col = 1
+'        .Row = -1
+'        .FontSize = 15
+
+
+     
+        
+    End With
+    
+End Sub
+
+Public Sub Sp_Header_display(sPname As Variant)
+
+ On Error GoTo SpreadDisplay_Error
+
+    Dim iCol As Integer
+    Dim iCnt As Integer
+    Dim iColCnt As Integer
+    Dim sQuery As String
+
+    
+    With sPname
+
+        .ReDraw = False
+       ' .MaxCols = 16
+         Screen.MousePointer = vbHourglass
+        
+        'Title Setting
+       
+'        .Col = 1
+'        .Row = 0
+         
+'        .Text = "班组\成分"
+'
+'        .Row = 1
+'        .Text = "班组\成分"
+'
+'
+'        .Row = 1
+'        .Text = "甲"
+'        .Row = 2
+'        .Text = "甲"
+'
+'        .Row = 3
+'        .Text = "乙"
+'        .Row = 4
+'        .Text = "乙"
+'        .Row = 5
+'        .Text = "丙"
+'        .Row = 6
+'        .Text = "丙"
+'        .Row = 7
+'        .Text = "总计"
+'        .Row = 8
+'        .Text = "总计"
+         .Row = 0
+         .Col = 0
+         .Text = "班组\项目"
+         
+'        .Text = "班组\成分"
+'
+'        .Row = 1
+'        .Text = "班组\成分"
+         
+'
+'        .BlockMode = True
+'        .Row = 0
+'        .Col = 1
+'        .Row2 = -1
+'        .Col2 = 1
+'        .RowMerge = MergeAlways
+'        .ColMerge = MergeAlways
+'        .TypeHAlign = TypeHAlignCenter
+'        .TypeVAlign = TypeVAlignCenter
+'        .FontSize = 13
+'        .FontSize = 13
+'        .BlockMode = False
+'
+''
+''        .ColsFrozen = 1
+         .ReDraw = True
+         .Refresh
+'
+        Screen.MousePointer = vbDefault
+        
+    End With
+    
+Exit Sub
+
+SpreadDisplay_Error:
+    
+ '   Set AdoRs = Nothing
+   ' ss1.ReDraw = True
+    Screen.MousePointer = vbDefault
+    
+End Sub
+

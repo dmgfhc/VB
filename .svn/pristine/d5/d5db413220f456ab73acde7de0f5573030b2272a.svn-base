@@ -1,0 +1,8 @@
+CONSTANT = 0, 0, 0, 0, C
+UserID_Del = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+ConfirmLogin = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+UserID_Add = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+SSocx = 0, 0, 0, 0, C
+GeneralCommon = 0, 0, 0, 0, C
+Login = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+Mainmenu = 50, 50, 930, 473, , 25, 25, 905, 448, C
