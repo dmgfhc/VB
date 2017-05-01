@@ -2,7 +2,7 @@ VERSION 5.00
 Object = "{A5CC20C4-B5F5-11CD-98EC-0020AF234C9D}#4.1#0"; "cstext32.ocx"
 Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.OCX"
 Object = "{8C3D4AA0-2599-11D2-BAF1-00104B9E0792}#3.0#0"; "sssplt30.ocx"
-Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "Indate.ocx"
+Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "indate.ocx"
 Object = "{065E6FD1-1BF9-11D2-BAE8-00104B9E0792}#3.0#0"; "ssa3d30.ocx"
 Object = "{FDAC2480-F4ED-4632-AA78-DCA210A74E49}#6.0#0"; "SPR32X60.ocx"
 Begin VB.Form CGC2000C 
@@ -13,8 +13,8 @@ Begin VB.Form CGC2000C
    ClientWidth     =   15075
    LinkTopic       =   "Form1"
    MDIChild        =   -1  'True
-   ScaleHeight     =   10950
-   ScaleWidth      =   20250
+   ScaleHeight     =   9240
+   ScaleWidth      =   15075
    WindowState     =   2  'Maximized
    Begin Threed.SSFrame SSFrame1 
       Height          =   525
@@ -140,7 +140,7 @@ Begin VB.Form CGC2000C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -162,7 +162,7 @@ Begin VB.Form CGC2000C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -184,7 +184,7 @@ Begin VB.Form CGC2000C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -206,7 +206,7 @@ Begin VB.Form CGC2000C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -452,7 +452,7 @@ Begin VB.Form CGC2000C
             Modified        =   0   'False
             HideSelection   =   -1  'True
             RawData         =   "0.00"
-            Text            =   ""
+            Text            =   " 0"
             StartText.x     =   3
             StartText.y     =   3
             FirstVisPos     =   0
@@ -506,7 +506,7 @@ Begin VB.Form CGC2000C
             Modified        =   0   'False
             HideSelection   =   -1  'True
             RawData         =   ""
-            Text            =   ""
+            Text            =   " 0"
             StartText.x     =   3
             StartText.y     =   3
             FirstVisPos     =   0
@@ -543,7 +543,7 @@ Begin VB.Form CGC2000C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -565,7 +565,7 @@ Begin VB.Form CGC2000C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -587,7 +587,7 @@ Begin VB.Form CGC2000C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -609,7 +609,7 @@ Begin VB.Form CGC2000C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -631,7 +631,7 @@ Begin VB.Form CGC2000C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -667,7 +667,7 @@ Begin VB.Form CGC2000C
             Modified        =   -1  'True
             HideSelection   =   -1  'True
             RawData         =   ""
-            Text            =   "____-__-__ __:__:__ "
+            Text            =   "____-__-__ __-__-__"
             StartText.x     =   3
             StartText.y     =   3
             FirstVisPos     =   0
@@ -713,7 +713,7 @@ Begin VB.Form CGC2000C
             Modified        =   -1  'True
             HideSelection   =   -1  'True
             RawData         =   ""
-            Text            =   "____-__-__ __:__:__"
+            Text            =   "____-__-__ __-__-__"
             StartText.x     =   3
             StartText.y     =   3
             FirstVisPos     =   0
@@ -761,7 +761,7 @@ Begin VB.Form CGC2000C
             Modified        =   0   'False
             HideSelection   =   -1  'True
             RawData         =   ""
-            Text            =   ""
+            Text            =   " 0"
             StartText.x     =   3
             StartText.y     =   3
             FirstVisPos     =   0
@@ -812,7 +812,7 @@ Begin VB.Form CGC2000C
             Modified        =   0   'False
             HideSelection   =   -1  'True
             RawData         =   ""
-            Text            =   ""
+            Text            =   " 0"
             StartText.x     =   3
             StartText.y     =   3
             FirstVisPos     =   0
@@ -851,7 +851,7 @@ Begin VB.Form CGC2000C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -873,7 +873,7 @@ Begin VB.Form CGC2000C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -895,7 +895,7 @@ Begin VB.Form CGC2000C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -917,7 +917,7 @@ Begin VB.Form CGC2000C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -978,7 +978,7 @@ Begin VB.Form CGC2000C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1015,7 +1015,7 @@ Begin VB.Form CGC2000C
             Modified        =   -1  'True
             HideSelection   =   -1  'True
             RawData         =   "0.00"
-            Text            =   ""
+            Text            =   " 0"
             StartText.x     =   3
             StartText.y     =   3
             FirstVisPos     =   0
@@ -1052,7 +1052,7 @@ Begin VB.Form CGC2000C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1089,7 +1089,7 @@ Begin VB.Form CGC2000C
             Modified        =   0   'False
             HideSelection   =   -1  'True
             RawData         =   "0.00"
-            Text            =   ""
+            Text            =   " 0"
             StartText.x     =   3
             StartText.y     =   3
             FirstVisPos     =   0
@@ -1214,7 +1214,7 @@ Begin VB.Form CGC2000C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1251,7 +1251,7 @@ Begin VB.Form CGC2000C
             Modified        =   0   'False
             HideSelection   =   -1  'True
             RawData         =   ""
-            Text            =   ""
+            Text            =   " 0"
             StartText.x     =   3
             StartText.y     =   3
             FirstVisPos     =   0
@@ -1305,7 +1305,7 @@ Begin VB.Form CGC2000C
             Modified        =   0   'False
             HideSelection   =   -1  'True
             RawData         =   ""
-            Text            =   ""
+            Text            =   " 0"
             StartText.x     =   3
             StartText.y     =   3
             FirstVisPos     =   0
@@ -1359,7 +1359,7 @@ Begin VB.Form CGC2000C
             Modified        =   0   'False
             HideSelection   =   -1  'True
             RawData         =   ""
-            Text            =   ""
+            Text            =   " 0"
             StartText.x     =   3
             StartText.y     =   3
             FirstVisPos     =   0
@@ -1413,7 +1413,7 @@ Begin VB.Form CGC2000C
             Modified        =   0   'False
             HideSelection   =   -1  'True
             RawData         =   ""
-            Text            =   ""
+            Text            =   " 0"
             StartText.x     =   3
             StartText.y     =   3
             FirstVisPos     =   0
@@ -1452,7 +1452,7 @@ Begin VB.Form CGC2000C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1474,7 +1474,7 @@ Begin VB.Form CGC2000C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1496,7 +1496,7 @@ Begin VB.Form CGC2000C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1518,7 +1518,7 @@ Begin VB.Form CGC2000C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1540,7 +1540,7 @@ Begin VB.Form CGC2000C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1587,7 +1587,7 @@ Begin VB.Form CGC2000C
             Modified        =   0   'False
             HideSelection   =   -1  'True
             RawData         =   ""
-            Text            =   ""
+            Text            =   " 0"
             StartText.x     =   3
             StartText.y     =   3
             FirstVisPos     =   0
@@ -1640,7 +1640,7 @@ Begin VB.Form CGC2000C
             Modified        =   0   'False
             HideSelection   =   -1  'True
             RawData         =   ""
-            Text            =   ""
+            Text            =   " 0"
             StartText.x     =   3
             StartText.y     =   3
             FirstVisPos     =   0
@@ -1693,7 +1693,7 @@ Begin VB.Form CGC2000C
             Modified        =   0   'False
             HideSelection   =   -1  'True
             RawData         =   ""
-            Text            =   ""
+            Text            =   " 0"
             StartText.x     =   3
             StartText.y     =   3
             FirstVisPos     =   0
@@ -1747,7 +1747,7 @@ Begin VB.Form CGC2000C
             Modified        =   0   'False
             HideSelection   =   -1  'True
             RawData         =   ""
-            Text            =   ""
+            Text            =   " 0"
             StartText.x     =   3
             StartText.y     =   3
             FirstVisPos     =   0
@@ -1786,7 +1786,7 @@ Begin VB.Form CGC2000C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1808,7 +1808,7 @@ Begin VB.Form CGC2000C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1830,7 +1830,7 @@ Begin VB.Form CGC2000C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1867,7 +1867,7 @@ Begin VB.Form CGC2000C
             Modified        =   0   'False
             HideSelection   =   -1  'True
             RawData         =   ""
-            Text            =   ""
+            Text            =   " 0"
             StartText.x     =   3
             StartText.y     =   3
             FirstVisPos     =   0
@@ -1906,7 +1906,7 @@ Begin VB.Form CGC2000C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1929,7 +1929,7 @@ Begin VB.Form CGC2000C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1988,7 +1988,7 @@ Begin VB.Form CGC2000C
          Modified        =   0   'False
          HideSelection   =   -1  'True
          RawData         =   ""
-         Text            =   ""
+         Text            =   " 0"
          StartText.x     =   3
          StartText.y     =   3
          FirstVisPos     =   0
@@ -2027,7 +2027,7 @@ Begin VB.Form CGC2000C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -2063,7 +2063,7 @@ Begin VB.Form CGC2000C
          Modified        =   0   'False
          HideSelection   =   -1  'True
          RawData         =   ""
-         Text            =   ""
+         Text            =   " 0"
          StartText.x     =   3
          StartText.y     =   3
          FirstVisPos     =   0
@@ -2116,7 +2116,7 @@ Begin VB.Form CGC2000C
          Modified        =   0   'False
          HideSelection   =   -1  'True
          RawData         =   ""
-         Text            =   ""
+         Text            =   " 0"
          StartText.x     =   3
          StartText.y     =   3
          FirstVisPos     =   0
@@ -2155,7 +2155,7 @@ Begin VB.Form CGC2000C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -2192,11 +2192,11 @@ Begin VB.Form CGC2000C
          TabCaption(1)   =   "粗轧制实绩"
          TabPicture(1)   =   "CGC2000C.frx":19DA
          Tab(1).ControlEnabled=   0   'False
-         Tab(1).Control(0)=   "ss3"
+         Tab(1).Control(0)=   "txt_RstToDate"
          Tab(1).Control(0).Enabled=   0   'False
          Tab(1).Control(1)=   "txt_RstFormDate"
          Tab(1).Control(1).Enabled=   0   'False
-         Tab(1).Control(2)=   "txt_RstToDate"
+         Tab(1).Control(2)=   "ss3"
          Tab(1).Control(2).Enabled=   0   'False
          Tab(1).ControlCount=   3
          Begin SSSplitter.SSSplitter SSSplitter1 
@@ -2531,7 +2531,7 @@ Begin VB.Form CGC2000C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -2553,7 +2553,7 @@ Begin VB.Form CGC2000C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -2575,7 +2575,7 @@ Begin VB.Form CGC2000C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -2612,7 +2612,7 @@ Begin VB.Form CGC2000C
          Modified        =   0   'False
          HideSelection   =   -1  'True
          RawData         =   ""
-         Text            =   ""
+         Text            =   " 0"
          StartText.x     =   3
          StartText.y     =   3
          FirstVisPos     =   0
@@ -2651,7 +2651,7 @@ Begin VB.Form CGC2000C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -2673,7 +2673,7 @@ Begin VB.Form CGC2000C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -2710,7 +2710,7 @@ Begin VB.Form CGC2000C
          Modified        =   0   'False
          HideSelection   =   -1  'True
          RawData         =   "0.00"
-         Text            =   ""
+         Text            =   " 0"
          StartText.x     =   3
          StartText.y     =   3
          FirstVisPos     =   0
@@ -2764,7 +2764,7 @@ Begin VB.Form CGC2000C
          Modified        =   0   'False
          HideSelection   =   -1  'True
          RawData         =   ""
-         Text            =   ""
+         Text            =   " 0"
          StartText.x     =   3
          StartText.y     =   3
          FirstVisPos     =   0
@@ -3180,7 +3180,7 @@ Begin VB.Form CGC2000C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.76
+         Size            =   9.75
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -3401,7 +3401,7 @@ Dim Mc4 As New Collection           'Master Collectionn
 
 Dim sc1 As New Collection           'Spread Collection
 Dim sc2 As New Collection           'Spread Collection
-Dim sc3 As New Collection           'Spread Collection
+Dim Sc3 As New Collection           'Spread Collection
 Dim sc4 As New Collection           'Spread Collection
 
 Dim Proc_Sc As New Collection       'Spread Struc Collection
@@ -3429,7 +3429,7 @@ Private Sub Form_Define()
             Call Gp_Ms_Collection(txt_SlabNo, "p", "n", " ", "i", "r", " ", "l", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
           Call Gp_Ms_Collection(txt_SlabSize, " ", " ", " ", " ", "r", " ", "l", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
        Call Gp_Ms_Collection(txt_RollingSize, " ", " ", " ", " ", "r", " ", "l", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
-            Call Gp_Ms_Collection(txt_stlgrd, " ", " ", " ", " ", "r", " ", " ", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
+            Call Gp_Ms_Collection(txt_Stlgrd, " ", " ", " ", " ", "r", " ", " ", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
           '2010.09.09 015725 加热轧/热处理交货状态显示
                Call Gp_Ms_Collection(txt_HTM, " ", " ", " ", " ", "r", " ", "l", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
               Call Gp_Ms_Collection(txt_CrCd, " ", " ", " ", " ", "r", " ", "l", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
@@ -3468,12 +3468,12 @@ Private Sub Form_Define()
          'Rolling result
      Call Gp_Ms_Collection(TXT_MILL_STA_TIME, " ", "n", " ", "i", "r", " ", " ", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
      Call Gp_Ms_Collection(TXT_MILL_END_TIME, " ", "n", " ", "i", "r", " ", " ", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
-               Call Gp_Ms_Collection(TXT_THK, " ", "n", " ", "i", "r", " ", " ", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
-               Call Gp_Ms_Collection(TXT_WID, " ", "n", " ", "i", "r", " ", " ", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
-               Call Gp_Ms_Collection(TXT_LEN, " ", "n", " ", "i", "r", " ", " ", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
+               Call Gp_Ms_Collection(txt_thk, " ", "n", " ", "i", "r", " ", " ", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
+               Call Gp_Ms_Collection(txt_wid, " ", "n", " ", "i", "r", " ", " ", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
+               Call Gp_Ms_Collection(txt_len, " ", "n", " ", "i", "r", " ", " ", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
           Call Gp_Ms_Collection(txt_LastTemp, " ", " ", " ", "i", "r", " ", " ", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
-             Call Gp_Ms_Collection(txt_Shift, " ", "n", " ", "i", "r", " ", " ", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
-             Call Gp_Ms_Collection(txt_Group, " ", "n", " ", "i", "r", " ", " ", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
+             Call Gp_Ms_Collection(TXT_SHIFT, " ", "n", " ", "i", "r", " ", " ", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
+             Call Gp_Ms_Collection(TXT_GROUP, " ", "n", " ", "i", "r", " ", " ", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
               Call Gp_Ms_Collection(TXT_EMP1, " ", "n", " ", "i", "r", " ", " ", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
               Call Gp_Ms_Collection(TXT_EMP2, " ", " ", " ", "i", "r", " ", " ", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
        Call Gp_Ms_Collection(txt_Roll_Stlgrd, " ", " ", " ", " ", "r", " ", " ", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
@@ -3549,7 +3549,7 @@ Private Sub Form_Define()
    Call Gp_Sp_Collection(ss2, 20, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
    Call Gp_Sp_Collection(ss2, 21, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
    Call Gp_Sp_Collection(ss2, 22, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-   Call Gp_Sp_Collection(ss2, 23, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2) '超交货期用红色显示 add by liqian 2012-06-11
+   Call Gp_Sp_Collection(ss2, 23, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2) '超交货期用红色显示 add by liqian 2012-06-12
    Call Gp_Sp_Collection(ss2, 24, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2) '超交货期用红色显示 add by liqian 2012-06-11
    Call Gp_Sp_Collection(ss2, 25, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2) '紧急订单绿色显示 add by liqian 2012-08-15
    Call Gp_Sp_Collection(ss2, 26, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
@@ -3604,16 +3604,16 @@ Private Sub Form_Define()
    Call Gp_Sp_Collection(ss3, 14, " ", " ", " ", " ", " ", "l", pColumn3, nColumn3, mColumn3, iColumn3, aColumn3, lColumn3)
    
    'Spread_Collection
-    sc3.Add Item:=ss3, Key:="Spread"
-    sc3.Add Item:="CGC2000C.P_REFER3", Key:="P-R"
-    sc3.Add Item:=pColumn3, Key:="pColumn"
-    sc3.Add Item:=nColumn3, Key:="nColumn"
-    sc3.Add Item:=aColumn3, Key:="aColumn"
-    sc3.Add Item:=mColumn3, Key:="mColumn"
-    sc3.Add Item:=iColumn3, Key:="iColumn"
-    sc3.Add Item:=lColumn3, Key:="lColumn"
-    sc3.Add Item:=1, Key:="First"
-    sc3.Add Item:=ss3.MaxCols, Key:="Last"
+    Sc3.Add Item:=ss3, Key:="Spread"
+    Sc3.Add Item:="CGC2000C.P_REFER3", Key:="P-R"
+    Sc3.Add Item:=pColumn3, Key:="pColumn"
+    Sc3.Add Item:=nColumn3, Key:="nColumn"
+    Sc3.Add Item:=aColumn3, Key:="aColumn"
+    Sc3.Add Item:=mColumn3, Key:="mColumn"
+    Sc3.Add Item:=iColumn3, Key:="iColumn"
+    Sc3.Add Item:=lColumn3, Key:="lColumn"
+    Sc3.Add Item:=1, Key:="First"
+    Sc3.Add Item:=ss3.MaxCols, Key:="Last"
     
     'Call Spread_Collection("Column_Num", "p(primary)", "n(Necessary)", "m(maxlength)", "i(insert)", "a(append_down), "l(lock)")
      Call Gp_Sp_Collection(ss4, 1, " ", " ", " ", " ", " ", "l", pColumn4, nColumn4, mColumn4, iColumn4, aColumn4, lColumn4)
@@ -3640,7 +3640,7 @@ Private Sub Form_Define()
             Call Gp_Ms_Collection(txt_SlabNo, "p", "n", " ", "i", "r", " ", "l", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
           Call Gp_Ms_Collection(txt_SlabSize, " ", " ", " ", " ", "r", " ", "l", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
        Call Gp_Ms_Collection(txt_RollingSize, " ", " ", " ", " ", "r", " ", "l", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
-            Call Gp_Ms_Collection(txt_stlgrd, " ", " ", " ", " ", "r", " ", "l", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
+            Call Gp_Ms_Collection(txt_Stlgrd, " ", " ", " ", " ", "r", " ", "l", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
                '2010.09.09 015725 加热轧/热处理交货状态显示
                Call Gp_Ms_Collection(txt_HTM, " ", " ", " ", " ", "r", " ", "l", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
               Call Gp_Ms_Collection(txt_CrCd, " ", " ", " ", " ", "r", " ", " ", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
@@ -3679,12 +3679,12 @@ Private Sub Form_Define()
          'Rolling result
      Call Gp_Ms_Collection(TXT_MILL_STA_TIME, " ", "n", " ", " ", "r", " ", " ", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
      Call Gp_Ms_Collection(TXT_MILL_END_TIME, " ", "n", " ", " ", "r", " ", " ", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
-               Call Gp_Ms_Collection(TXT_THK, " ", "n", " ", "i", "r", " ", " ", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
-               Call Gp_Ms_Collection(TXT_WID, " ", "n", " ", "i", "r", " ", " ", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
-               Call Gp_Ms_Collection(TXT_LEN, " ", "n", " ", "i", "r", " ", " ", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
+               Call Gp_Ms_Collection(txt_thk, " ", "n", " ", "i", "r", " ", " ", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
+               Call Gp_Ms_Collection(txt_wid, " ", "n", " ", "i", "r", " ", " ", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
+               Call Gp_Ms_Collection(txt_len, " ", "n", " ", "i", "r", " ", " ", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
           Call Gp_Ms_Collection(txt_LastTemp, " ", "n", " ", "i", "r", " ", " ", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
-             Call Gp_Ms_Collection(txt_Shift, " ", "n", " ", "i", "r", " ", " ", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
-             Call Gp_Ms_Collection(txt_Group, " ", "n", " ", "i", "r", " ", " ", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
+             Call Gp_Ms_Collection(TXT_SHIFT, " ", "n", " ", "i", "r", " ", " ", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
+             Call Gp_Ms_Collection(TXT_GROUP, " ", "n", " ", "i", "r", " ", " ", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
               Call Gp_Ms_Collection(TXT_EMP1, " ", "n", " ", "i", "r", " ", " ", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
               Call Gp_Ms_Collection(TXT_EMP2, " ", "n", " ", "i", "r", " ", " ", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
        Call Gp_Ms_Collection(txt_Roll_Stlgrd, " ", " ", " ", " ", "r", " ", "l", pControl4, nControl4, mControl4, iControl4, rControl4, aControl4, lControl4)
@@ -3881,7 +3881,7 @@ End If
     OutParam(2, 3) = adParamOutput
     OutParam(2, 4) = 10
     
-    sQuery = "{call CGC2010C.P_SCRAP('" & Trim(txt_SlabNo.Text) & "','" & txt_Shift & "','" & txt_Group & "','" & TXT_EMP1 & "','" & TXT_CB & "',?,?)}"
+    sQuery = "{call CGC2010C.P_SCRAP('" & Trim(txt_SlabNo.Text) & "','" & TXT_SHIFT & "','" & TXT_GROUP & "','" & TXT_EMP1 & "','" & TXT_CB & "',?,?)}"
     
     'Ado Setting
     M_CN1.CursorLocation = adUseServer
@@ -3952,24 +3952,24 @@ Private Sub Form_Load()
     
     Call Gp_Sp_Setting(sc1.Item("Spread"))
     Call Gp_Sp_Setting(sc2.Item("Spread"))
-    Call Gp_Sp_Setting(sc3.Item("Spread"))
+    Call Gp_Sp_Setting(Sc3.Item("Spread"))
     Call Gp_Sp_Setting(sc4.Item("Spread"))
     
     Call Gf_Sp_Cls(sc1)
     Call Gf_Sp_Cls(sc2)
-    Call Gf_Sp_Cls(sc3)
+    Call Gf_Sp_Cls(Sc3)
     Call Gf_Sp_Cls(sc4)
     
     Call Gp_Sp_ColGet(sc1.Item("Spread"), "CG-System.INI", Me.Name)
     Call Gp_Sp_ColGet(sc2.Item("Spread"), "CG-System.INI", Me.Name)
-    Call Gp_Sp_ColGet(sc3.Item("Spread"), "CG-System.INI", Me.Name)
+    Call Gp_Sp_ColGet(Sc3.Item("Spread"), "CG-System.INI", Me.Name)
     Call Gp_Sp_ColGet(sc4.Item("Spread"), "CG-System.INI", Me.Name)
 
-    Tab1.Tab = 0
+    tab1.Tab = 0
     Call Form_Ref
     
-    txt_Shift = Gf_ShiftSet3(M_CN1)
-    txt_Group = Gf_GroupSet(M_CN1, Trim(txt_Shift), Gf_DTSet(M_CN1, , "X"))
+    TXT_SHIFT = Gf_ShiftSet3(M_CN1)
+    TXT_GROUP = Gf_GroupSet(M_CN1, Trim(TXT_SHIFT), Gf_DTSet(M_CN1, , "X"))
     TXT_EMP1 = sUserID
     
     If Mid(sAuthority, 1, 3) = "111" Then
@@ -3991,7 +3991,7 @@ Private Sub Form_Unload(Cancel As Integer)
 
     Call Gp_Sp_ColSet(sc1.Item("Spread"), "CG-System.INI", Me.Name)
     Call Gp_Sp_ColSet(sc2.Item("Spread"), "CG-System.INI", Me.Name)
-    Call Gp_Sp_ColSet(sc3.Item("Spread"), "CG-System.INI", Me.Name)
+    Call Gp_Sp_ColSet(Sc3.Item("Spread"), "CG-System.INI", Me.Name)
     Call Gp_Sp_ColSet(sc4.Item("Spread"), "CG-System.INI", Me.Name)
 
     Set pControl1 = Nothing
@@ -4065,7 +4065,7 @@ Private Sub Form_Unload(Cancel As Integer)
     
     Set sc1 = Nothing
     Set sc2 = Nothing
-    Set sc3 = Nothing
+    Set Sc3 = Nothing
     Set sc4 = Nothing
     Set Proc_Sc = Nothing
     
@@ -4088,7 +4088,7 @@ Public Sub Form_Cls()
 
     Call Gf_Sp_Cls(sc1)
     Call Gf_Sp_Cls(sc2)
-    Call Gf_Sp_Cls(sc3)
+    Call Gf_Sp_Cls(Sc3)
     Call Gf_Sp_Cls(sc4)
 
 End Sub
@@ -4107,7 +4107,7 @@ Public Sub Form_Ref()
     
     sCurDate = Format(Now, "YYYYMM")
     
-    If Tab1.Tab = 0 Then
+    If tab1.Tab = 0 Then
     
         Call Gf_Sp_Refer(M_CN1, sc2, , , , False)
         Call Gf_Sp_Refer(M_CN1, sc4, , , , False)
@@ -4121,8 +4121,8 @@ Public Sub Form_Ref()
             If Gf_Ms_Refer(M_CN1, Mc1, , , False) And Gf_Sp_Refer(M_CN1, sc1, Mc2, Mc2("nControl"), Mc2("mControl"), False) Then
                         
                 TXT_MILL_STA_TIME.RawData = Gf_DTSet(M_CN1, , "X")
-                txt_Shift = Gf_ShiftSet3(M_CN1)
-                txt_Group = Gf_GroupSet(M_CN1, Trim(txt_Shift), Gf_DTSet(M_CN1, , "X"))
+                TXT_SHIFT = Gf_ShiftSet3(M_CN1)
+                TXT_GROUP = Gf_GroupSet(M_CN1, Trim(TXT_SHIFT), Gf_DTSet(M_CN1, , "X"))
                 TXT_EMP1 = sUserID
                 
             End If
@@ -4171,9 +4171,9 @@ Public Sub Form_Ref()
               Next iRow
         End With
         
-    ElseIf Tab1.Tab = 1 Then
+    ElseIf tab1.Tab = 1 Then
     
-        Call Gf_Sp_Refer(M_CN1, sc3, Mc3, Mc3("nControl"), Mc3("mControl"), False)
+        Call Gf_Sp_Refer(M_CN1, Sc3, Mc3, Mc3("nControl"), Mc3("mControl"), False)
         ss3.Col = 1
         ss3.ROW = 1
         If ss3.Text <> "" Then
@@ -4210,8 +4210,8 @@ Dim SMESG As String
     Call Gf_Ms_Process(M_CN1, Mc1, sAuthority)
     Call Form_Ref
     TXT_MILL_END_TIME = ""
-    txt_Shift = Gf_ShiftSet3(M_CN1)
-    txt_Group = Gf_GroupSet(M_CN1, Trim(txt_Shift), Gf_DTSet(M_CN1, , "X"))
+    TXT_SHIFT = Gf_ShiftSet3(M_CN1)
+    TXT_GROUP = Gf_GroupSet(M_CN1, Trim(TXT_SHIFT), Gf_DTSet(M_CN1, , "X"))
     TXT_EMP1 = sUserID
 '    Dim sMesg As String
 '    Dim Temp_no As String
@@ -4322,8 +4322,8 @@ Private Sub ss2_Click(ByVal Col As Long, ByVal ROW As Long)
         TXT_MILL_STA_TIME.RawData = Gf_DTSet(M_CN1, , "X")
         'TXT_MILL_END_TIME.RawData = Gf_DTSet(M_CN1, , "X")
         
-        txt_Shift = Gf_ShiftSet3(M_CN1)
-        txt_Group = Gf_GroupSet(M_CN1, Trim(txt_Shift), Gf_DTSet(M_CN1, , "X"))
+        TXT_SHIFT = Gf_ShiftSet3(M_CN1)
+        TXT_GROUP = Gf_GroupSet(M_CN1, Trim(TXT_SHIFT), Gf_DTSet(M_CN1, , "X"))
         TXT_EMP1 = sUserID
     
     End If
@@ -4342,8 +4342,8 @@ Private Sub ss2_DblClick(ByVal Col As Long, ByVal ROW As Long)
         TXT_MILL_STA_TIME.RawData = Gf_DTSet(M_CN1, , "X")
         'TXT_MILL_END_TIME.RawData = Gf_DTSet(M_CN1, , "X")
         
-        txt_Shift = Gf_ShiftSet3(M_CN1)
-        txt_Group = Gf_GroupSet(M_CN1, Trim(txt_Shift), Gf_DTSet(M_CN1, , "X"))
+        TXT_SHIFT = Gf_ShiftSet3(M_CN1)
+        TXT_GROUP = Gf_GroupSet(M_CN1, Trim(TXT_SHIFT), Gf_DTSet(M_CN1, , "X"))
         TXT_EMP1 = sUserID
     
     End If
@@ -4407,7 +4407,7 @@ Private Sub SSCommand1_Click()
 '         Exit Sub
 '    End If
     
-    sQuery = "{call CGC2010C.P_REJECT('" & Trim(txt_SlabNo.Text) & "'," & TXT_THK.RawData & "," & TXT_WID.RawData & "," & TXT_LEN.RawData & ",'" & txt_Shift & "','" & txt_Group & "','" & TXT_EMP1 & "','" & TXT_CB & "',?,?)}"
+    sQuery = "{call CGC2010C.P_REJECT('" & Trim(txt_SlabNo.Text) & "'," & txt_thk.RawData & "," & txt_wid.RawData & "," & txt_len.RawData & ",'" & TXT_SHIFT & "','" & TXT_GROUP & "','" & TXT_EMP1 & "','" & TXT_CB & "',?,?)}"
     
     'Ado Setting
     M_CN1.CursorLocation = adUseServer
@@ -4438,19 +4438,19 @@ Private Sub SSCommand1_Click()
 End Sub
 
 Private Sub tab1_Click(PreviousTab As Integer)
-    If Tab1.Tab = "1" Then
-        txt_Shift = Gf_ShiftSet3(M_CN1)
-        If txt_Shift = "1" Then
+    If tab1.Tab = "1" Then
+        TXT_SHIFT = Gf_ShiftSet3(M_CN1)
+        If TXT_SHIFT = "1" Then
             txt_RstFormDate.RawData = Mid(Gf_DTSet(M_CN1, , "X"), 1, 8) & "000001"
             txt_RstToDate.RawData = Mid(Gf_DTSet(M_CN1, , "X"), 1, 8) & "081459"
-        ElseIf txt_Shift = "2" Then
+        ElseIf TXT_SHIFT = "2" Then
             txt_RstFormDate.RawData = Mid(Gf_DTSet(M_CN1, , "X"), 1, 8) & "081500"
             txt_RstToDate.RawData = Mid(Gf_DTSet(M_CN1, , "X"), 1, 8) & "155959"
-        ElseIf txt_Shift = "3" Then
+        ElseIf TXT_SHIFT = "3" Then
             txt_RstFormDate.RawData = Mid(Gf_DTSet(M_CN1, , "X"), 1, 8) & "160000"
             txt_RstToDate.RawData = Mid(Gf_DTSet(M_CN1, , "X"), 1, 8) & "235959"
         End If
-    ElseIf Tab1.Tab = "0" Then
+    ElseIf tab1.Tab = "0" Then
         TXT_MILL_STA_TIME.RawData = Gf_DTSet(M_CN1, , "X") 'Format(Now, "YYYYMMDDHHMMSS")
     End If
 End Sub
