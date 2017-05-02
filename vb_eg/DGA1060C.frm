@@ -91,7 +91,7 @@ Begin VB.Form DGA1060C
          MaxRows         =   20
          Protect         =   0   'False
          RetainSelBlock  =   0   'False
-         SpreadDesigner  =   "DGA1060C.frx":1E5A
+         SpreadDesigner  =   "DGA1060C.frx":1E84
       End
       Begin Threed.SSFrame SSFrame1 
          Height          =   1065
@@ -256,9 +256,9 @@ Begin VB.Form DGA1060C
          End
          Begin VB.ComboBox cbo_PrcLine 
             Height          =   315
-            ItemData        =   "DGA1060C.frx":6363
+            ItemData        =   "DGA1060C.frx":63B7
             Left            =   3450
-            List            =   "DGA1060C.frx":6365
+            List            =   "DGA1060C.frx":63B9
             TabIndex        =   4
             Top             =   150
             Width           =   1695

@@ -12,8 +12,8 @@ Begin VB.Form EGC1050C
    ClientWidth     =   15240
    LinkTopic       =   "Form1"
    MDIChild        =   -1  'True
-   ScaleHeight     =   10950
-   ScaleWidth      =   20250
+   ScaleHeight     =   10890
+   ScaleWidth      =   15240
    WindowState     =   2  'Maximized
    Begin SSSplitter.SSSplitter SSSplitter1 
       Height          =   9075
@@ -48,7 +48,7 @@ Begin VB.Form EGC1050C
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         MaxCols         =   44
+         MaxCols         =   45
          MaxRows         =   1
          RetainSelBlock  =   0   'False
          SpreadDesigner  =   "EGC1050C.frx":0052
@@ -135,9 +135,9 @@ Begin VB.Form EGC1050C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "EGC1050C.frx":218E
+            ItemData        =   "EGC1050C.frx":21C7
             Left            =   5655
-            List            =   "EGC1050C.frx":219B
+            List            =   "EGC1050C.frx":21D4
             TabIndex        =   14
             Top             =   135
             Width           =   750
@@ -171,9 +171,9 @@ Begin VB.Form EGC1050C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "EGC1050C.frx":21A8
+            ItemData        =   "EGC1050C.frx":21E1
             Left            =   11730
-            List            =   "EGC1050C.frx":21C1
+            List            =   "EGC1050C.frx":21FA
             TabIndex        =   12
             Tag             =   "等级"
             Top             =   135
@@ -190,9 +190,9 @@ Begin VB.Form EGC1050C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "EGC1050C.frx":2204
+            ItemData        =   "EGC1050C.frx":223D
             Left            =   7575
-            List            =   "EGC1050C.frx":2214
+            List            =   "EGC1050C.frx":224D
             TabIndex        =   11
             Tag             =   "班别"
             Top             =   135
@@ -225,9 +225,9 @@ Begin VB.Form EGC1050C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "EGC1050C.frx":2224
+            ItemData        =   "EGC1050C.frx":225D
             Left            =   12780
-            List            =   "EGC1050C.frx":223A
+            List            =   "EGC1050C.frx":2273
             TabIndex        =   9
             Tag             =   "等级"
             Top             =   135
@@ -261,9 +261,9 @@ Begin VB.Form EGC1050C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "EGC1050C.frx":2274
+            ItemData        =   "EGC1050C.frx":22AD
             Left            =   9690
-            List            =   "EGC1050C.frx":2284
+            List            =   "EGC1050C.frx":22BD
             TabIndex        =   7
             Tag             =   "班别"
             Top             =   135
@@ -280,9 +280,9 @@ Begin VB.Form EGC1050C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "EGC1050C.frx":2294
+            ItemData        =   "EGC1050C.frx":22CD
             Left            =   11730
-            List            =   "EGC1050C.frx":2296
+            List            =   "EGC1050C.frx":22CF
             TabIndex        =   6
             Tag             =   "班别"
             Top             =   945
@@ -513,7 +513,7 @@ Begin VB.Form EGC1050C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1179,18 +1179,18 @@ Private Sub Form_Define()
      FormType = "Msheet"
 
      'Call Master_Collection("Control_Name", "p(primary)", "n(Necessary)", "m(maxlength)", "i(insert)", "r(refer)", "a(append)", "l(lock)")
-        Call Gp_Ms_Collection(TXT_LOT_NO, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+        Call Gp_Ms_Collection(txt_lot_no, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
      Call Gp_Ms_Collection(SDT_PROD_DATE, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
   Call Gp_Ms_Collection(SDT_PROD_TO_DATE, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-         Call Gp_Ms_Collection(CBO_SHIFT, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-         Call Gp_Ms_Collection(CBO_GROUP, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+         Call Gp_Ms_Collection(cbo_shift, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+         Call Gp_Ms_Collection(cbo_group, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
       Call Gp_Ms_Collection(TXT_PLATE_NO, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
      Call Gp_Ms_Collection(CHK_FROM_DATE, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
        Call Gp_Ms_Collection(CHK_TO_DATE, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
        Call Gp_Ms_Collection(CBO_SURFGRD, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
        Call Gp_Ms_Collection(CBO_PRODGRD, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
        Call Gp_Ms_Collection(txt_stdspec, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-           Call Gp_Ms_Collection(txt_loc, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+           Call Gp_Ms_Collection(txt_Loc, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
 'ADDED BY GUOLI AT 20080604
            Call Gp_Ms_Collection(SDB_THK, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
         Call Gp_Ms_Collection(SDB_THK_TO, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
@@ -1255,6 +1255,7 @@ Private Sub Form_Define()
     Call Gp_Sp_Collection(ss1, 42, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
     Call Gp_Sp_Collection(ss1, 43, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
     Call Gp_Sp_Collection(ss1, 44, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 45, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
  
     sc1.Add Item:=ss1, Key:="Spread"
     sc1.Add Item:="EGC1050C.P_SREFER", Key:="P-R"
@@ -1281,7 +1282,7 @@ Private Sub CBO_SHIFT_Click()
 End Sub
 
 Private Sub CMD_CARD_Click()
-    If SDT_PROD_DATE.RawData = "" Or SDT_PROD_TO_DATE.RawData = "" Or Trim(CBO_SHIFT.Text) = "" Then
+    If SDT_PROD_DATE.RawData = "" Or SDT_PROD_TO_DATE.RawData = "" Or Trim(cbo_shift.Text) = "" Then
         Call Gp_MsgBoxDisplay("切割时间和班次必须输入！！", "", "错误提示")
         Exit Sub
     End If
@@ -1398,7 +1399,7 @@ End Sub
 
 Public Sub Form_Ref()
     
-    Dim sMesg As String
+    Dim SMESG As String
     
     If Gf_Sp_ProceExist(Proc_Sc("Sc").Item("Spread")) Then Exit Sub
     If SDT_PROD_DATE.RawData = "" Or SDT_PROD_TO_DATE.RawData = "" Then
@@ -1407,8 +1408,8 @@ Public Sub Form_Ref()
     End If
     
     If Val(SDT_PROD_DATE.RawData) - Val(SDT_PROD_TO_DATE.RawData) > 0 Then
-         sMesg = " 时间范围输入错误，请重新输入时间信息 ！！！"
-         Call Gp_MsgBoxDisplay(sMesg)
+         SMESG = " 时间范围输入错误，请重新输入时间信息 ！！！"
+         Call Gp_MsgBoxDisplay(SMESG)
          Exit Sub
     End If
     
@@ -1450,17 +1451,17 @@ Private Sub SDT_PROD_to_DATE_GotFocus()
      SDT_PROD_TO_DATE.RawData = Gf_DTSet(M_CN1, "D")
 End Sub
 
-Private Sub ss1_Click(ByVal Col As Long, ByVal ROW As Long)
-    If ROW = 0 Then
-        Call Gp_Sp_Sort(ss1, Col, ROW)
+Private Sub ss1_Click(ByVal Col As Long, ByVal Row As Long)
+    If Row = 0 Then
+        Call Gp_Sp_Sort(ss1, Col, Row)
     End If
 End Sub
 
-Private Sub ss1_EditMode(ByVal Col As Long, ByVal ROW As Long, ByVal Mode As Integer, ByVal ChangeMade As Boolean)
+Private Sub ss1_EditMode(ByVal Col As Long, ByVal Row As Long, ByVal Mode As Integer, ByVal ChangeMade As Boolean)
 
     If Gf_Sc_Authority(sAuthority, "U") Then
         Call Gp_Sp_UpdateMake(Proc_Sc("SC")("Spread"), Mode)
-        ss1.ROW = ss1.ActiveRow
+        ss1.Row = ss1.ActiveRow
         ss1.Col = SS1_EMP_NO
         ss1.Text = sUserID
     End If
@@ -1487,7 +1488,7 @@ End Sub
 
 Private Sub ExcelPrn_Pile()
 
-    Dim i               As Integer
+    Dim I               As Integer
     Dim j               As Integer
     Dim xlApp           As Object
     Dim xlSheet         As Object
@@ -1545,11 +1546,11 @@ Private Sub ExcelPrn_Pile()
         xlApp.Range("A2").Value = "日期: " & Left(sDate, 4) + "年" + Mid(sDate, 6, 2) + "月" + Mid(sDate, 9, 2) + "日"
     End If
     
-    If CBO_SHIFT.Text = "1" Then
+    If cbo_shift.Text = "1" Then
        sShift = "大夜班"
-    ElseIf CBO_SHIFT.Text = "2" Then
+    ElseIf cbo_shift.Text = "2" Then
        sShift = "白班"
-    ElseIf CBO_SHIFT.Text = "3" Then
+    ElseIf cbo_shift.Text = "3" Then
        sShift = "小夜班"
     Else
        sShift = ""
@@ -1565,34 +1566,34 @@ Private Sub ExcelPrn_Pile()
     sPage = Int(ss1.MaxRows / sPage_Num) + 1
     sLastPage = ss1.MaxRows - Int(ss1.MaxRows / sPage_Num) * sPage_Num
     
-    For i = 0 To 10
-        xl_clr_body = "A" + CStr(4 + i * sPage_X) + ":" + "I" + CStr(33 + i * sPage_X)
-        xl_clr_sum = "G" + CStr(34 + i * sPage_X) + ":" + "G" + CStr(35 + i * sPage_X)
+    For I = 0 To 10
+        xl_clr_body = "A" + CStr(4 + I * sPage_X) + ":" + "I" + CStr(33 + I * sPage_X)
+        xl_clr_sum = "G" + CStr(34 + I * sPage_X) + ":" + "G" + CStr(35 + I * sPage_X)
         xlApp.Range(xl_clr_body).Value = Null
         xlApp.Range(xl_clr_sum).Value = Null
-    Next i
+    Next I
     
-    For i = 0 To sPage - 1
+    For I = 0 To sPage - 1
        
-        sRow1 = 1 + sPage_Num * i
-        sRow2 = sPage_Num * (i + 1)
+        sRow1 = 1 + sPage_Num * I
+        sRow2 = sPage_Num * (I + 1)
 
-        If i = sPage - 1 Then
-           sRow2 = sPage_Num * i + sLastPage
+        If I = sPage - 1 Then
+           sRow2 = sPage_Num * I + sLastPage
         End If
 
-        xl_A = "A" + CStr(4 + i * sPage_X)
-        xl_B = "B" + CStr(4 + i * sPage_X)
-        xl_C = "C" + CStr(4 + i * sPage_X)
-        xl_D = "D" + CStr(4 + i * sPage_X)
-        xl_E = "E" + CStr(4 + i * sPage_X)
-        xl_F = "F" + CStr(4 + i * sPage_X)
-        xl_G = "G" + CStr(4 + i * sPage_X)
-        xl_H = "H" + CStr(4 + i * sPage_X)
-        xl_I = "I" + CStr(4 + i * sPage_X)
+        xl_A = "A" + CStr(4 + I * sPage_X)
+        xl_B = "B" + CStr(4 + I * sPage_X)
+        xl_C = "C" + CStr(4 + I * sPage_X)
+        xl_D = "D" + CStr(4 + I * sPage_X)
+        xl_E = "E" + CStr(4 + I * sPage_X)
+        xl_F = "F" + CStr(4 + I * sPage_X)
+        xl_G = "G" + CStr(4 + I * sPage_X)
+        xl_H = "H" + CStr(4 + I * sPage_X)
+        xl_I = "I" + CStr(4 + I * sPage_X)
         
-        Xl_Cnt = "C" + CStr(3 + (i + 1) * sPage_X)
-        Xl_Wgt = "G" + CStr(3 + (i + 1) * sPage_X)
+        Xl_Cnt = "C" + CStr(3 + (I + 1) * sPage_X)
+        Xl_Wgt = "G" + CStr(3 + (I + 1) * sPage_X)
         
         Clipboard.Clear
         ss1.SetSelection SS1_LOC, sRow1, SS1_LOC, sRow2
@@ -1658,7 +1659,7 @@ Private Sub ExcelPrn_Pile()
         Clipboard.Clear
                         
                 
-        If i = sPage - 1 Then
+        If I = sPage - 1 Then
            xlApp.Range(Xl_Cnt).Value = sLastPage
         Else
            xlApp.Range(Xl_Cnt).Value = sPage_Num
@@ -1669,7 +1670,7 @@ Private Sub ExcelPrn_Pile()
             xlApp.Range(Xl_Wgt).Value = xlApp.Range(Xl_Wgt).Value + xlApp.Range(Xl_Wgt_Val).Value
         Next j
                       
-    Next i
+    Next I
     
     ss1.ClearSelection
        

@@ -90,7 +90,7 @@ Begin VB.Form AGC2051C
          MaxRows         =   20
          Protect         =   0   'False
          RetainSelBlock  =   0   'False
-         SpreadDesigner  =   "AGC2051C.frx":1DCF
+         SpreadDesigner  =   "AGC2051C.frx":1DF9
       End
       Begin Threed.SSFrame SSFrame1 
          Height          =   930
@@ -133,9 +133,9 @@ Begin VB.Form AGC2051C
          End
          Begin VB.ComboBox cbo_PrcLine 
             Height          =   315
-            ItemData        =   "AGC2051C.frx":62D0
+            ItemData        =   "AGC2051C.frx":6324
             Left            =   5070
-            List            =   "AGC2051C.frx":62D2
+            List            =   "AGC2051C.frx":6326
             Locked          =   -1  'True
             TabIndex        =   10
             Top             =   120

@@ -338,7 +338,6 @@ Begin VB.MDIForm MDIMain
          BeginProperty Panel2 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
             Style           =   1
             Alignment       =   1
-            Enabled         =   0   'False
             Object.Width           =   1059
             MinWidth        =   1059
             TextSave        =   "CAPS"
@@ -363,14 +362,14 @@ Begin VB.MDIForm MDIMain
             Alignment       =   1
             Object.Width           =   2117
             MinWidth        =   2117
-            TextSave        =   "2017-04-25"
+            TextSave        =   "2017-05-02"
          EndProperty
          BeginProperty Panel6 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
             Style           =   5
             Alignment       =   1
             Object.Width           =   1411
             MinWidth        =   1411
-            TextSave        =   "14:11"
+            TextSave        =   "11:24"
          EndProperty
          BeginProperty Panel7 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
             Object.Width           =   3352
@@ -510,9 +509,6 @@ Begin VB.MDIForm MDIMain
       Begin VB.Menu MNU_EGA1070C 
          Caption         =   "钢板取样信息查询及修改_EGA1070C"
       End
-      Begin VB.Menu MNU_AGC2410C 
-         Caption         =   "GT库钢板取样实绩查询及修改界面AGC2410C"
-      End
       Begin VB.Menu mnu_EGA1080C 
          Caption         =   "表面检查实绩查询及修改_EGA1080C"
       End
@@ -524,6 +520,15 @@ Begin VB.MDIForm MDIMain
       End
       Begin VB.Menu MNU_AGC2430C 
          Caption         =   "理化检验委托单_AGC2430C"
+      End
+      Begin VB.Menu MNU_AGC2410C 
+         Caption         =   "GT库钢板取样实绩查询及修改界面AGC2410C"
+      End
+      Begin VB.Menu MNU_AGC2051C 
+         Caption         =   "GT库钢板分板实绩修改界面_AGC2051C"
+      End
+      Begin VB.Menu MNU_DGA1060C 
+         Caption         =   "GT库火切实绩查询及修改_DGA1060C"
       End
    End
    Begin VB.Menu INQ 
@@ -546,11 +551,8 @@ Begin VB.MDIForm MDIMain
       Begin VB.Menu mnu_EGC1050C 
          Caption         =   "火切实绩查询_EGC1050C"
       End
-      Begin VB.Menu mnu_DGA1060C 
-         Caption         =   "GT库火切实绩查询及修改_DGA1060C"
-      End
-      Begin VB.Menu mnu_AGC2051C 
-         Caption         =   "GT库钢板分板实绩修改_AGC2051C"
+      Begin VB.Menu Mnu_DGA1140C 
+         Caption         =   "板卷火剪切实绩查询及修改界面_DGA1140C"
       End
       Begin VB.Menu mnu_EGC1060C 
          Caption         =   "探伤实绩查询_EGC1060C"
@@ -956,33 +958,33 @@ Private Sub MDIForm_Load()
     Else
     
     args = Split(Trim(Command), " ") ' 2012.11.09 新增  耿朝雷
-'    If UBound(args) = 1 Then
-'         MainFrmType = "New"
-'         sUserID = args(0) ' 2012.11.09 新增  耿朝雷
-'         sUserName = args(1) ' 2012.11.09 新增  耿朝雷
-'         MDIMain.StatusBar1.Panels(1) = "提示信息 ：" ' 2012.11.09 新增  耿朝雷
-'         MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName ' 2012.11.09 新增  耿朝雷
-'    Else
-'        Active_YN = GetSetting("NISCO", "EXE-FILE", "EG.exe")
-'        If Active_YN = "1" Then
-'            MainFrmType = "Old"
-'            sUserID = GetSetting("NISCO", "AUTHORITY", "sUserID")
-'            sUserName = GetSetting("NISCO", "AUTHORITY", "sUsername")
-'            MDIMain.StatusBar1.Panels(1) = "提示信息 ：："
-'            MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName
-'        Else
-'            Call Gp_MsgBoxDisplay("只能从主画面登陆...", "W")
-'            Unload Me
-'            Exit Sub
-'        End If
-'    End If  ' 2012.11.09 新增  耿朝雷
+    If UBound(args) = 1 Then
+         MainFrmType = "New"
+         sUserID = args(0) ' 2012.11.09 新增  耿朝雷
+         sUserName = args(1) ' 2012.11.09 新增  耿朝雷
+         MDIMain.StatusBar1.Panels(1) = "提示信息 ：" ' 2012.11.09 新增  耿朝雷
+         MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName ' 2012.11.09 新增  耿朝雷
+    Else
+        Active_YN = GetSetting("NISCO", "EXE-FILE", "EG.exe")
+        If Active_YN = "1" Then
+            MainFrmType = "Old"
+            sUserID = GetSetting("NISCO", "AUTHORITY", "sUserID")
+            sUserName = GetSetting("NISCO", "AUTHORITY", "sUsername")
+            MDIMain.StatusBar1.Panels(1) = "提示信息 ：："
+            MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName
+        Else
+            Call Gp_MsgBoxDisplay("只能从主画面登陆...", "W")
+            Unload Me
+            Exit Sub
+        End If
+    End If  ' 2012.11.09 新增  耿朝雷
 '
         
 
-        sUserID = "1JS1005"
-        sUserName = "杨猛"
-        MDIMain.StatusBar1.Panels(1) = "提示信息 ："
-        MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName
+'        sUserID = "1JS1005"
+'        sUserName = "杨猛"
+'        MDIMain.StatusBar1.Panels(1) = "提示信息 ："
+'        MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName
 
 
         If Mid(M_CN1, Len(M_CN1), 1) = "9" Then
@@ -1112,9 +1114,11 @@ Private Sub mnu_ACB4110C_Click()
     ACB4110C.SetFocus
 End Sub
 
-Private Sub mnu_AGC2051C_Click()
-    AGC2051C.Show
-    AGC2051C.SetFocus
+
+
+Private Sub MNU_AGC2051C_Click()
+            AGC2051C.Show
+            AGC2051C.SetFocus
 End Sub
 
 Private Sub MNU_AGC2410C_Click()
@@ -1154,6 +1158,11 @@ End Sub
 Private Sub mnu_DGA1060C_Click()
         DGA1060C.Show
         DGA1060C.SetFocus
+End Sub
+
+Private Sub mnu_DGA1140C_Click()
+        DGA1140C.Show
+        DGA1140C.SetFocus
 End Sub
 
 Private Sub MNU_EGA1070C_Click()

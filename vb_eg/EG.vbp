@@ -54,6 +54,7 @@ Form=EGC1050C.frm
 Form=AGC2051C.frm
 Form=AGC2410C.frm
 Form=DGA1060C.frm
+Form=DGA1140C.frm
 IconForm="MDIMain"
 Startup="MDIMain"
 HelpFile=""
