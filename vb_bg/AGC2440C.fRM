@@ -1,6 +1,6 @@
 VERSION 5.00
 Object = "{A5CC20C4-B5F5-11CD-98EC-0020AF234C9D}#4.1#0"; "cstext32.ocx"
-Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "indate.ocx"
+Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "Indate.ocx"
 Object = "{065E6FD1-1BF9-11D2-BAE8-00104B9E0792}#3.0#0"; "ssa3d30.ocx"
 Object = "{FDAC2480-F4ED-4632-AA78-DCA210A74E49}#6.0#0"; "SPR32X60.ocx"
 Begin VB.Form AGC2440C 
@@ -12,8 +12,8 @@ Begin VB.Form AGC2440C
    LinkTopic       =   "Form1"
    LockControls    =   -1  'True
    MDIChild        =   -1  'True
-   ScaleHeight     =   3090
-   ScaleWidth      =   4680
+   ScaleHeight     =   10950
+   ScaleWidth      =   20250
    WindowState     =   2  'Maximized
    Begin VB.TextBox txt_HTM_PLT 
       Height          =   285
@@ -146,7 +146,7 @@ Begin VB.Form AGC2440C
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      MaxCols         =   33
+      MaxCols         =   34
       MaxRows         =   1
       ProcessTab      =   -1  'True
       Protect         =   0   'False
@@ -251,7 +251,7 @@ Begin VB.Form AGC2440C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.75
+         Size            =   9.76
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -275,7 +275,7 @@ Begin VB.Form AGC2440C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.75
+         Size            =   9.76
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -431,7 +431,7 @@ Begin VB.Form AGC2440C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.75
+         Size            =   9.76
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -454,7 +454,7 @@ Begin VB.Form AGC2440C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.75
+         Size            =   9.76
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -477,7 +477,7 @@ Begin VB.Form AGC2440C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.75
+         Size            =   9.76
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -513,7 +513,7 @@ Begin VB.Form AGC2440C
       Modified        =   -1  'True
       HideSelection   =   -1  'True
       RawData         =   ""
-      Text            =   "____-__-__ __-__-__"
+      Text            =   "__:__:__"
       StartText.x     =   3
       StartText.y     =   3
       FirstVisPos     =   0
@@ -559,7 +559,7 @@ Begin VB.Form AGC2440C
       Modified        =   -1  'True
       HideSelection   =   -1  'True
       RawData         =   ""
-      Text            =   "____-__-__ __-__-__"
+      Text            =   "__:__:__"
       StartText.x     =   3
       StartText.y     =   3
       FirstVisPos     =   0
@@ -592,7 +592,7 @@ Begin VB.Form AGC2440C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.75
+         Size            =   9.76
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -694,7 +694,7 @@ Private Sub Form_Define()
             Call Gp_Ms_Collection(dtp_TIME_TO, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
                Call Gp_Ms_Collection(txt_HEAT, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
                 Call Gp_Ms_Collection(txt_PLT, "p", "n", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-           Call Gp_Ms_Collection(TXT_PLATE_NO, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+           Call Gp_Ms_Collection(txt_PLATE_NO, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
             Call Gp_Ms_Collection(txt_STDSPEC, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
        Call Gp_Ms_Collection(txt_OUT_SHEET_NO, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
              Call Gp_Ms_Collection(txt_THK_FR, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
@@ -747,6 +747,7 @@ Private Sub Form_Define()
        Call Gp_Sp_Collection(ss1, 31, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
        Call Gp_Sp_Collection(ss1, 32, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
        Call Gp_Sp_Collection(ss1, 33, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+       Call Gp_Sp_Collection(ss1, 34, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
     
     'Spread_Collection
     sc1.Add Item:=ss1, Key:="Spread"
@@ -913,7 +914,7 @@ Private Sub opt_HTM_PLT_Click(Index As Integer)
    Call Form_Ref
 End Sub
 
-Private Sub ss1_Click(ByVal Col As Long, ByVal ROW As Long)
+Private Sub ss1_Click(ByVal Col As Long, ByVal Row As Long)
         
     lBlkcol1 = 0
     lBlkcol2 = 0
@@ -931,9 +932,9 @@ Private Sub ss1_LostFocus()
 
 End Sub
 
-Private Sub ss1_RightClick(ByVal ClickType As Integer, ByVal Col As Long, ByVal ROW As Long, ByVal MouseX As Long, ByVal MouseY As Long)
+Private Sub ss1_RightClick(ByVal ClickType As Integer, ByVal Col As Long, ByVal Row As Long, ByVal MouseX As Long, ByVal MouseY As Long)
     
-    If ROW > 0 Then
+    If Row > 0 Then
         Set Active_Spread = Me.ss1
         PopupMenu MDIMain.PopUp_Spread
     End If

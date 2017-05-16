@@ -49,9 +49,9 @@ On Error GoTo DbConnect_ERROR
 
     Screen.MousePointer = vbHourglass
     
-   ' M_CN1.ConnectionString = "Provider=MSDAORA.1;User ID=nisco/nisco01;Data Source=web;Persist Security Info=True"
+'    M_CN1.ConnectionString = "Provider=MSDAORA.1;User ID=nisco/nisco01;Data Source=web;Persist Security Info=True"
 
- M_CN1.ConnectionString = "Provider=MSDAORA.1;User ID=nisco/nisco01;Data Source=ora9;Persist Security Info=True"
+    M_CN1.ConnectionString = "Provider=MSDAORA.1;User ID=nisco/nisco01;Data Source=ora9;Persist Security Info=True"
     
     M_CN1.CursorLocation = adUseClient
     
@@ -501,7 +501,7 @@ End Sub
 '---------------------------------------------------------------------------------------
 Public Function Gf_SetValueEx(ByVal hKey As Long, sValueName As String, lType As Long, vValue As Variant) As Long
     
-    Dim i As Integer
+    Dim I As Integer
     Dim j As Integer
     Dim strValue As String
     Dim lngValue As Long
@@ -513,17 +513,17 @@ Public Function Gf_SetValueEx(ByVal hKey As Long, sValueName As String, lType As
         Case 1
             strValue = vValue
             
-            For i = 1 To Len(strValue)
-                If Asc(Mid(strValue, i, 1)) < 0 Then j = j + 1
-            Next i
+            For I = 1 To Len(strValue)
+                If Asc(Mid(strValue, I, 1)) < 0 Then j = j + 1
+            Next I
             
             If j = 0 Then
-                i = Len(strValue)
+                I = Len(strValue)
             Else
-                i = LenB(strValue) - (Len(strValue) - j)
+                I = LenB(strValue) - (Len(strValue) - j)
             End If
             
-            Gf_SetValueEx = RegSetValueExString(hKey, sValueName, 0, lType, strValue, i)
+            Gf_SetValueEx = RegSetValueExString(hKey, sValueName, 0, lType, strValue, I)
             
         Case 4
             lngValue = vValue
@@ -902,7 +902,7 @@ End Sub
 
 
 Public Function CJRound(dVal As Double, iOpt As Integer, iUnit As Integer) As Double
-    Dim i   As Integer
+    Dim I   As Integer
     Dim t_s As String
     Dim t_u As Double
     
@@ -921,9 +921,9 @@ Public Function CJRound(dVal As Double, iOpt As Integer, iUnit As Integer) As Do
     
     If iUnit > 0 Then
         t_s = "0."
-        For i = 1 To iUnit
+        For I = 1 To iUnit
             t_s = t_s + "0"
-        Next i
+        Next I
         CJRound = Val(Format(t_u, t_s))
     Else
         CJRound = t_u

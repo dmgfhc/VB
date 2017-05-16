@@ -1,19 +1,19 @@
 VERSION 5.00
 Object = "{8C3D4AA0-2599-11D2-BAF1-00104B9E0792}#3.0#0"; "sssplt30.ocx"
-Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "Indate.ocx"
+Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "indate.ocx"
 Object = "{065E6FD1-1BF9-11D2-BAE8-00104B9E0792}#3.0#0"; "ssa3d30.ocx"
 Object = "{FDAC2480-F4ED-4632-AA78-DCA210A74E49}#6.0#0"; "SPR32X60.ocx"
 Object = "{248DD890-BB45-11CF-9ABC-0080C7E7B78D}#1.0#0"; "MSWINSCK.OCX"
 Begin VB.Form EGA1050C 
    Caption         =   "火切实绩查询及修改_EGA1050C"
-   ClientHeight    =   10395
+   ClientHeight    =   9330
    ClientLeft      =   60
    ClientTop       =   345
    ClientWidth     =   15240
    LinkTopic       =   "Form1"
    MDIChild        =   -1  'True
-   ScaleHeight     =   10950
-   ScaleWidth      =   20250
+   ScaleHeight     =   9330
+   ScaleWidth      =   15240
    WindowState     =   2  'Maximized
    Begin VB.Timer Timer1 
       Interval        =   3000
@@ -254,7 +254,7 @@ Begin VB.Form EGA1050C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.76
+         Size            =   9.75
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -324,7 +324,7 @@ Begin VB.Form EGA1050C
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         MaxCols         =   40
+         MaxCols         =   41
          MaxRows         =   1
          Protect         =   0   'False
          RetainSelBlock  =   0   'False
@@ -664,37 +664,38 @@ Dim lBlkcol2 As Long                'To Excel Block Col2
 Dim lBlkrow1 As Long                'To Excel Block Row1
 Dim lBlkrow2 As Long                'To Excel Block Row2
 
-Const SPD_PLATE_NO = 1
-Const SPD_UST = 9
-Const SPD_DS_CUT_END_DATE = 12
-Const SPD_DATE = 13
-Const SPD_THK = 14
-Const SPD_WID = 15
-Const SPD_LEN = 16
-Const SPD_WGT = 17
-Const SPD_DS_LAST_YN = 18
-Const SPD_SURF_GRD = 16
-Const SPD_TRIM_FL = 17
-Const SPD_DS_KNIFE_GAP = 18
-Const SPD_EMP_CD = 21
+Const SPD_SEND_CHECK = 1
+Const SPD_PLATE_NO = 2
+Const SPD_UST = 10
+'Const SPD_DS_CUT_END_DATE = 13
+Const SPD_DATE = 14
+Const SPD_THK = 15
+Const SPD_WID = 16
+Const SPD_LEN = 17
+Const SPD_WGT = 18
+'Const SPD_DS_LAST_YN = 19
+'Const SPD_SURF_GRD = 17
+'Const SPD_TRIM_FL = 18
+'Const SPD_DS_KNIFE_GAP = 19
+'Const SPD_EMP_CD = 22
 
 
-Const SPD_PROC_CD = 23
-Const SPD_END_USE = 24
-Const SPD_GROUP = 25
+Const SPD_PROC_CD = 24
+Const SPD_END_USE = 25
+Const SPD_GROUP = 26
 
 '取钢种发送侧喷设备, 2011-07-14 , by Liqian
-Const SPD_STLGRD_CP = 33
+Const SPD_STLGRD_CP = 34
 '取标准判断是否船板, 2011-07-14 , by Liqian
-Const SPD_APLY_STDSPEC = 34
+Const SPD_APLY_STDSPEC = 35
 '取客户发送侧喷设备, 2011-07-14 , by Liqian
-Const SPD_CUST_CD = 35
+Const SPD_CUST_CD = 36
 '取打印标准发送侧喷设备, 2011-07-14 , by Liqian
-Const SPD_STDSPEC_YY = 36
-Const SPD_VESSEL_NO = 37
-Const SPD_SIDEMARK = 38 '侧喷加喷
-Const SPD_SEALMEMO = 39 '加冲钢印
-Const SPD_CUST_CD_SHORT = 40
+Const SPD_STDSPEC_YY = 37
+Const SPD_VESSEL_NO = 38
+Const SPD_SIDEMARK = 39 '侧喷加喷
+Const SPD_SEALMEMO = 40 '加冲钢印
+Const SPD_CUST_CD_SHORT = 41
 
 
 Dim sQuery   As String
@@ -713,6 +714,7 @@ Private Sub Form_Define()
         Call Gp_Ms_Collection(txt_WkPlt, "p", " ", " ", " ", " ", " ", "l", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
         Call Gp_Ms_Collection(TXT_INQNO, "p", " ", " ", " ", "r", " ", " ", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
   Call Gp_Ms_Collection(TXT_MILL_LOT_NO, "p", " ", " ", " ", "r", " ", " ", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
+  Call Gp_Ms_Collection(txt_loc, "p", " ", " ", " ", "r", " ", " ", pControl1, nControl1, mControl1, iControl1, rControl1, aControl1, lControl1)
           
     Mc1.Add Item:=pControl1, Key:="pControl"
     Mc1.Add Item:=nControl1, Key:="nControl"
@@ -771,8 +773,8 @@ Private Sub Form_Define()
         
     'Spread_Collection
     'Call Spread_Collection("Column_Num", "p(primary)", "n(Necessary)", "m(maxlength)", "i(insert)", "a(append_down), "l(lock)")
-     Call Gp_Sp_Collection(ss1, 1, "p", "n", "m", "i", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
-     Call Gp_Sp_Collection(ss1, 2, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+     Call Gp_Sp_Collection(ss1, 1, " ", " ", " ", " ", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+     Call Gp_Sp_Collection(ss1, 2, "p", "n", "m", "i", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
      Call Gp_Sp_Collection(ss1, 3, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
      Call Gp_Sp_Collection(ss1, 4, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
      Call Gp_Sp_Collection(ss1, 5, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
@@ -782,39 +784,40 @@ Private Sub Form_Define()
      Call Gp_Sp_Collection(ss1, 9, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
     Call Gp_Sp_Collection(ss1, 10, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
     Call Gp_Sp_Collection(ss1, 11, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
-    Call Gp_Sp_Collection(ss1, 12, " ", " ", " ", " ", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
-    Call Gp_Sp_Collection(ss1, 13, " ", "n", " ", "i", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+    Call Gp_Sp_Collection(ss1, 12, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+    Call Gp_Sp_Collection(ss1, 13, " ", " ", " ", " ", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
     Call Gp_Sp_Collection(ss1, 14, " ", "n", " ", "i", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
     Call Gp_Sp_Collection(ss1, 15, " ", "n", " ", "i", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
     Call Gp_Sp_Collection(ss1, 16, " ", "n", " ", "i", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
-    Call Gp_Sp_Collection(ss1, 17, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
-    Call Gp_Sp_Collection(ss1, 18, " ", " ", " ", "i", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+    Call Gp_Sp_Collection(ss1, 17, " ", "n", " ", "i", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+    Call Gp_Sp_Collection(ss1, 18, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
     Call Gp_Sp_Collection(ss1, 19, " ", " ", " ", "i", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
     Call Gp_Sp_Collection(ss1, 20, " ", " ", " ", "i", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
     Call Gp_Sp_Collection(ss1, 21, " ", " ", " ", "i", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
     Call Gp_Sp_Collection(ss1, 22, " ", " ", " ", "i", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
     Call Gp_Sp_Collection(ss1, 23, " ", " ", " ", "i", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
-    Call Gp_Sp_Collection(ss1, 24, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+    Call Gp_Sp_Collection(ss1, 24, " ", " ", " ", "i", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
     Call Gp_Sp_Collection(ss1, 25, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
-    Call Gp_Sp_Collection(ss1, 26, " ", " ", " ", "i", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
-    Call Gp_Sp_Collection(ss1, 27, " ", " ", " ", "i", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+    Call Gp_Sp_Collection(ss1, 26, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+    Call Gp_Sp_Collection(ss1, 27, " ", " ", " ", "i", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
     Call Gp_Sp_Collection(ss1, 28, " ", " ", " ", "i", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
     Call Gp_Sp_Collection(ss1, 29, " ", " ", " ", "i", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
     Call Gp_Sp_Collection(ss1, 30, " ", " ", " ", "i", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
-    Call Gp_Sp_Collection(ss1, 31, " ", " ", " ", " ", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+    Call Gp_Sp_Collection(ss1, 31, " ", " ", " ", "i", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
     Call Gp_Sp_Collection(ss1, 32, " ", " ", " ", " ", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
-    '取钢种发送侧喷设备, 2011-07-14 , by Liqian
     Call Gp_Sp_Collection(ss1, 33, " ", " ", " ", " ", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
-    '取标准发送侧喷设备, 2011-07-14 , by Liqian
+    '取钢种发送侧喷设备, 2011-07-14 , by Liqian
     Call Gp_Sp_Collection(ss1, 34, " ", " ", " ", " ", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
-    '取客户发送侧喷设备, 2011-07-14 , by Liqian
+    '取标准发送侧喷设备, 2011-07-14 , by Liqian
     Call Gp_Sp_Collection(ss1, 35, " ", " ", " ", " ", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
-    '取打印标准种发送侧喷设备, 2011-07-14 , by Liqian
+    '取客户发送侧喷设备, 2011-07-14 , by Liqian
     Call Gp_Sp_Collection(ss1, 36, " ", " ", " ", " ", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+    '取打印标准种发送侧喷设备, 2011-07-14 , by Liqian
     Call Gp_Sp_Collection(ss1, 37, " ", " ", " ", " ", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
-    Call Gp_Sp_Collection(ss1, 38, " ", " ", " ", " ", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)  '侧喷加喷 20150122
-    Call Gp_Sp_Collection(ss1, 39, " ", " ", " ", " ", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)  '加冲钢印 20150122
-    Call Gp_Sp_Collection(ss1, 40, " ", " ", " ", " ", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+    Call Gp_Sp_Collection(ss1, 38, " ", " ", " ", " ", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+    Call Gp_Sp_Collection(ss1, 39, " ", " ", " ", " ", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)  '侧喷加喷 20150122
+    Call Gp_Sp_Collection(ss1, 40, " ", " ", " ", " ", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)  '加冲钢印 20150122
+    Call Gp_Sp_Collection(ss1, 41, " ", " ", " ", " ", " ", " ", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
     
     'Spread_Collection
     sc1.Add Item:=ss1, Key:="Spread"
@@ -843,13 +846,13 @@ Private Sub Form_Define()
 End Sub
 
 Public Sub Form_Exc()
-ss1.ROW = 0
+ss1.Row = 0
 ss1.Col = 0
 If ss1.Text = "◎" Then
     Call Gp_Sp_Excel(Me, ss1, lBlkcol1, lBlkcol2, lBlkrow1, lBlkrow2)
 End If
 
-ss2.ROW = 0
+ss2.Row = 0
 ss2.Col = 0
 If ss2.Text = "◎" Then
     Call Gp_Sp_Excel(Me, ss2, lBlkcol1, lBlkcol2, lBlkrow1, lBlkrow2)
@@ -936,10 +939,12 @@ Dim sUST As String
 Dim sIDEMARK As String
 Dim sEALMEMO As String
 
+Dim sCheck As Integer
+
     With ss1
         For iCount = 1 To .MaxRows
              .Col = 0
-             .ROW = iCount
+             .Row = iCount
     
                 .Col = SPD_PLATE_NO:         sPlateNo = .Text
                 .Col = SPD_THK:              sThk = Trim(str(.Text))
@@ -963,8 +968,11 @@ Dim sEALMEMO As String
                  End If
                 .Col = SPD_UST:              sUST = .Text
                 .Col = 0
-                If (chk_Cond(0) Or chk_Cond(1) Or chk_Cond(2)) Then
-                    Call Cmd_SEND(sPlateNo, sThk, sWid, sLen, sStlgrd, sStdspec, sCustCD, sStdspec_yy, sProddate, sGroup, sVessel_no, sIDEMARK, sEALMEMO, sCustCD_short, sWgt, sUST)
+                .Col = SPD_SEND_CHECK:       sCheck = .Value
+                If sCheck = 1 Then
+                    If (chk_Cond(0) Or chk_Cond(1) Or chk_Cond(2)) Then
+                        Call Cmd_SEND(sPlateNo, sThk, sWid, sLen, sStlgrd, sStdspec, sCustCD, sStdspec_yy, sProddate, sGroup, sVessel_no, sIDEMARK, sEALMEMO, sCustCD_short, sWgt, sUST)
+                    End If
                 End If
         Next iCount
     End With
@@ -1348,7 +1356,7 @@ Public Sub Form_Ref()
        Call ss2_DblClick(1, 1)
        Call MDIMain.FormMenuSetting(Me, FormType, "RE", sAuthority)
        ss2.Col = 0
-       ss2.ROW = 0
+       ss2.Row = 0
        ss2.Text = "◎"
     End If
     
@@ -1385,10 +1393,10 @@ Dim inum As Integer
 Dim lRow As Integer
     
     For iCount = 1 To ss1.MaxRows
-        ss1.ROW = iCount
+        ss1.Row = iCount
 '        ss1.Col = 0
 '        ss1.Text = "Update"
-        ss1.Col = 18
+        ss1.Col = 19
         If ss1.Value = 1 Then
             START_FOR = iCount
             Exit For
@@ -1407,7 +1415,7 @@ Dim lRow As Integer
      With ss1
         For iCount = 1 To .MaxRows
              .Col = 0
-             .ROW = iCount
+             .Row = iCount
              If .Text = "Update" Or .Text = "Insert" Then
              
                 .Col = SPD_PLATE_NO:         sPlateNo = .Text
@@ -1444,8 +1452,8 @@ Dim lRow As Integer
     
 End Sub
 
-Private Sub Cmd_SEND(iSplate_no As String, iThk As String, iWid As String, iLen As String, iStlgrd As String, iStdspec As String, iCustCD As String, iStdspec_yy As String, iProddate As String, iGroup As String, iVessel_no As String, iSidemark As String, iSealmemo As String, iCustCD_short As String, iWGT As String, iUST As String)
-    Dim sMesg As String
+Private Sub Cmd_SEND(iSplate_no As String, iTHK As String, iWID As String, iLEN As String, iStlgrd As String, iStdspec As String, iCustCD As String, iStdspec_yy As String, iProddate As String, iGroup As String, iVessel_no As String, iSidemark As String, iSealmemo As String, iCustCD_short As String, iWGT As String, iUST As String)
+    Dim SMESG As String
 
     Dim sPlate_no As String             '钢板号
     Dim sSize_Str As String             '规格
@@ -1490,14 +1498,14 @@ Private Sub Cmd_SEND(iSplate_no As String, iThk As String, iWid As String, iLen 
     Dim sSealmemo As String
     
     sPlate_no = iSplate_no
-    sSize_Str = iThk + "X" + iWid + "X" + iLen
+    sSize_Str = iTHK + "X" + iWID + "X" + iLEN
     
     '表喷
     Header = "MD"
     sPlateNo = iSplate_no
-    sLen = iLen
-    sWid = iWid
-    sThk = iThk
+    sLen = iLEN
+    sWid = iWID
+    sThk = iTHK
     sWgt = iWGT
     sProd_Date = iProddate
     sCUST_CD_SHORT = iCustCD_short
@@ -1507,8 +1515,8 @@ Private Sub Cmd_SEND(iSplate_no As String, iThk As String, iWid As String, iLen 
     sGroup = Trim(iGroup)
     
     If sGroup <> "A" And sGroup <> "B" And sGroup <> "C" And sGroup <> "D" Then
-        sMesg = " 班别错误，请确认是否正确输入班别"
-        Call Gp_MsgBoxDisplay(sMesg)
+        SMESG = " 班别错误，请确认是否正确输入班别"
+        Call Gp_MsgBoxDisplay(SMESG)
         Exit Sub
     End If
     
@@ -1679,16 +1687,16 @@ Dim iCount As Integer
         If .MaxRows = 0 Then
            If Len(TXT_MPLATE_NO.Text) = 12 Then
                Call Gp_Sp_Ins(Proc_Sc("Sc"))
-              .ROW = 1
-              .Col = 1
+              .Row = 1
+              .Col = 2
               .Text = TXT_MPLATE_NO.Text & "01"
-              .Col = 27
-              .Text = txt_WkPlt
               .Col = 28
-              .Text = txt_PrcLine
+              .Text = txt_WkPlt
               .Col = 29
+              .Text = txt_PrcLine
+              .Col = 30
               .Text = Trim(txt_loc.Text)
-              .Col = 26
+              .Col = 27
               .Text = sUserID
            Else
                Call Gp_MsgBoxDisplay("请正确输入母板号 ！")
@@ -1696,8 +1704,8 @@ Dim iCount As Integer
            Exit Sub
         End If
         For iCount = .ActiveRow To .MaxRows
-            .ROW = iCount
-            .Col = 1
+            .Row = iCount
+            .Col = 2
             If Left(.Text, 12) = Left(sPlateNo, 12) Or sPlateNo = "" Then
                sPlateNo = .Text
                lRow = iCount
@@ -1714,18 +1722,18 @@ Dim iCount As Integer
 
     With ss1
         .ReDraw = False
-        .ROW = .ActiveRow
-        .Col = 27
-        .Text = txt_WkPlt
+        .Row = .ActiveRow
         .Col = 28
-        .Text = txt_PrcLine
+        .Text = txt_WkPlt
         .Col = 29
+        .Text = txt_PrcLine
+        .Col = 30
         .Text = Trim(txt_loc.Text)
-        .Col = 26
+        .Col = 27
         .Text = sUserID
 
         If lRow > 0 Then
-            .ROW = lRow
+            .Row = lRow
             .Col = SPD_PLATE_NO:      sPlateNo = .Text
             .Col = SPD_THK:           dThk = Val(.Text & "")
             .Col = SPD_WID:           dWid = Val(.Text & "")
@@ -1735,7 +1743,7 @@ Dim iCount As Integer
             sPlateNo = TXT_MPLATE_NO.Text & "00"
         End If
 
-        .ROW = lRow + 1
+        .Row = lRow + 1
         .Col = SPD_PLATE_NO:      .Text = sPlateNo
         .Col = SPD_THK:           .Text = dThk
         .Col = SPD_WID:           .Text = dWid
@@ -1744,59 +1752,59 @@ Dim iCount As Integer
         .Col = 0: .Text = "Input"
         .Col = SPD_PLATE_NO: .Text = Left(.Text, 12) + Format((Val(Mid(.Text, 13, 2)) + 1), "00")
 
-         Call .SetActiveCell(1, .ROW)
+         Call .SetActiveCell(1, .Row)
         .ReDraw = True
     End With
     
-    ss1.ROW = 1
-    ss1.Col = 13
+    ss1.Row = 1
+    ss1.Col = 14
     cCUTDATE = ss1.Text
-    ss1.Col = 19
-    cTRIM = ss1.Value
     ss1.Col = 20
-    cHEAD = ss1.Value
+    cTRIM = ss1.Value
     ss1.Col = 21
-    cTAIL = ss1.Value
+    cHEAD = ss1.Value
     ss1.Col = 22
-    cSAMP1 = ss1.Value
+    cTAIL = ss1.Value
     ss1.Col = 23
+    cSAMP1 = ss1.Value
+    ss1.Col = 24
     cSAMP2 = ss1.Value
 
     For iIdr = 1 To ss1.MaxRows
-        ss1.ROW = iIdr
+        ss1.Row = iIdr
         ss1.Col = 0
         If ss1.Text = "Input" Then
-            ss1.Col = 13
+            ss1.Col = 14
             ss1.Text = cCUTDATE
-            ss1.Col = 18
+            ss1.Col = 19
             ss1.Value = 0
             
-            ss1.Col = 19
-            ss1.Value = cTRIM
             ss1.Col = 20
-            ss1.Value = cHEAD
+            ss1.Value = cTRIM
             ss1.Col = 21
-            ss1.Value = cTAIL
+            ss1.Value = cHEAD
             ss1.Col = 22
-            ss1.Value = cSAMP1
+            ss1.Value = cTAIL
             ss1.Col = 23
+            ss1.Value = cSAMP1
+            ss1.Col = 24
             ss1.Value = cSAMP2
             
-            ss1.Col = 24
-            ss1.Text = Gf_ShiftSet3(M_CN1)
             ss1.Col = 25
-            ss1.Text = Gf_GroupSet(M_CN1, Gf_ShiftSet3(M_CN1), Gf_DTSet(M_CN1, , "X"))
+            ss1.Text = Gf_ShiftSet3(M_CN1)
             ss1.Col = 26
-            ss1.Text = sUserID
+            ss1.Text = Gf_GroupSet(M_CN1, Gf_ShiftSet3(M_CN1), Gf_DTSet(M_CN1, , "X"))
             ss1.Col = 27
-            ss1.Text = txt_WkPlt
+            ss1.Text = sUserID
             ss1.Col = 28
-            ss1.Text = txt_PrcLine
+            ss1.Text = txt_WkPlt
             ss1.Col = 29
+            ss1.Text = txt_PrcLine
+            ss1.Col = 30
             ss1.Text = Trim(txt_loc.Text)
             If iIdr = ss1.MaxRows Then
-               ss1.ROW = iIdr
-               ss1.Col = 18
+               ss1.Row = iIdr
+               ss1.Col = 19
                ss1.Value = 1
             End If
         End If
@@ -1833,7 +1841,7 @@ End Function
 
 Public Sub Spread_Can()
     ss1.Col = 0
-    ss1.ROW = ss1.ActiveRow
+    ss1.Row = ss1.ActiveRow
     Select Case Trim(ss1.Text)
         Case "Input"
               Call Gp_Sp_Cancel(M_CN1, Proc_Sc("SC"))
@@ -1877,15 +1885,15 @@ Private Sub ss1_BlockSelected(ByVal BlockCol As Long, ByVal BlockRow As Long, By
 End Sub
 
 
-Private Sub ss1_ButtonClicked(ByVal Col As Long, ByVal ROW As Long, ByVal ButtonDown As Integer)
+Private Sub ss1_ButtonClicked(ByVal Col As Long, ByVal Row As Long, ByVal ButtonDown As Integer)
 Dim FOR_CNT
 Dim START_FOR As Integer
-    If Col <> 18 Then Exit Sub
+    If Col <> 19 Then Exit Sub
     If ButtonDown = 0 Then Exit Sub
     For FOR_CNT = 1 To ss1.MaxRows
-        If FOR_CNT <> ROW Then
-            ss1.Col = 18
-            ss1.ROW = FOR_CNT
+        If FOR_CNT <> Row Then
+            ss1.Col = 19
+            ss1.Row = FOR_CNT
             ss1.Value = 0
         End If
     Next
@@ -1899,49 +1907,49 @@ Private Sub ss2_BlockSelected(ByVal BlockCol As Long, ByVal BlockRow As Long, By
     lBlkrow2 = BlockRow2
 End Sub
 
-Private Sub ss1_Click(ByVal Col As Long, ByVal ROW As Long)
+Private Sub ss1_Click(ByVal Col As Long, ByVal Row As Long)
     lBlkcol1 = 0
     lBlkcol2 = 0
     lBlkrow1 = 0
     lBlkrow2 = 0
     
     ss1.Col = 0
-    ss1.ROW = 0
+    ss1.Row = 0
     ss1.Text = "◎"
     
     ss2.Col = 0
-    ss2.ROW = 0
+    ss2.Row = 0
     ss2.Text = ""
 End Sub
 
-Private Sub ss1_DblClick(ByVal Col As Long, ByVal ROW As Long)
+Private Sub ss1_DblClick(ByVal Col As Long, ByVal Row As Long)
 Dim sDate     As String
 Dim sDateTo   As String
 Dim FOR_CNT   As Long
 Dim tmpYYMMDD As String
 
-    If ROW < 1 Then Exit Sub
+    If Row < 1 Then Exit Sub
     If Col < 11 Then Exit Sub
     
     tmpYYMMDD = Gf_CodeFind(M_CN1, "SELECT TO_CHAR(SYSDATE,'YYYY-MM-DD HH24:MI:SS') FROM DUAL")
     
-    ss1.ROW = ROW: ss1.Col = Col
+    ss1.Row = Row: ss1.Col = Col
     
     'For FOR_CNT = 1 To ss1.MaxRows
     
-        ss1.ROW = ROW
-        If ss1.Col = 13 Then
+        ss1.Row = Row
+        If ss1.Col = 14 Then
            ss1.Text = tmpYYMMDD
         End If
-        ss1.Col = 29
+        ss1.Col = 30
         ss1.Text = Trim(txt_loc.Text)
-        ss1.Col = 28
+        ss1.Col = 29
         ss1.Text = txt_PrcLine.Text
-        ss1.Col = 27
+        ss1.Col = 28
         ss1.Text = txt_WkPlt
-        ss1.Col = 26
+        ss1.Col = 27
         ss1.Text = sUserID
-        Call ss1_Row_Edit(ROW)
+        Call ss1_Row_Edit(Row)
     'Next
     
 End Sub
@@ -1953,13 +1961,13 @@ Private Sub ss1_LostFocus()
     lBlkrow2 = 0
 End Sub
 
-Private Sub ss2_Click(ByVal Col As Long, ByVal ROW As Long)
+Private Sub ss2_Click(ByVal Col As Long, ByVal Row As Long)
     ss1.Col = 0
-    ss1.ROW = 0
+    ss1.Row = 0
     ss1.Text = ""
     
     ss2.Col = 0
-    ss2.ROW = 0
+    ss2.Row = 0
     ss2.Text = "◎"
 End Sub
 
@@ -1970,21 +1978,21 @@ Private Sub ss2_LostFocus()
     lBlkrow2 = 0
 End Sub
 
-Private Sub ss1_RightClick(ByVal ClickType As Integer, ByVal Col As Long, ByVal ROW As Long, ByVal MouseX As Long, ByVal MouseY As Long)
-    If ROW > 0 Then
+Private Sub ss1_RightClick(ByVal ClickType As Integer, ByVal Col As Long, ByVal Row As Long, ByVal MouseX As Long, ByVal MouseY As Long)
+    If Row > 0 Then
         Set Active_Spread = Me.ss1
         PopupMenu MDIMain.PopUp_Spread
     End If
 End Sub
 
-Private Sub ss2_RightClick(ByVal ClickType As Integer, ByVal Col As Long, ByVal ROW As Long, ByVal MouseX As Long, ByVal MouseY As Long)
-    If ROW > 0 Then
+Private Sub ss2_RightClick(ByVal ClickType As Integer, ByVal Col As Long, ByVal Row As Long, ByVal MouseX As Long, ByVal MouseY As Long)
+    If Row > 0 Then
         Set Active_Spread = Me.ss2
         PopupMenu MDIMain.PopUp_Spread
     End If
 End Sub
 
-Private Sub ss1_EditChange(ByVal Col As Long, ByVal ROW As Long)
+Private Sub ss1_EditChange(ByVal Col As Long, ByVal Row As Long)
     
     Dim dThk        As Double
     Dim dWid        As Double
@@ -1992,9 +2000,9 @@ Private Sub ss1_EditChange(ByVal Col As Long, ByVal ROW As Long)
     Dim sEndUseCd   As String
     Dim sStlgrd     As String
     
-    If ROW < 1 Then Exit Sub
+    If Row < 1 Then Exit Sub
     
-    ss1.ROW = ROW
+    ss1.Row = Row
             
     If Col = SPD_THK Or Col = SPD_WID Or Col = SPD_LEN Then
         ss1.Col = SPD_THK:  dThk = Val(ss1.Text & "")
@@ -2008,36 +2016,36 @@ Private Sub ss1_EditChange(ByVal Col As Long, ByVal ROW As Long)
         End If
     End If
     
-    Call ss1_Row_Edit(ROW)
+    Call ss1_Row_Edit(Row)
 End Sub
 
-Private Sub ss1_Change(ByVal Col As Long, ByVal ROW As Long)
-    If ROW < 1 Then Exit Sub
+Private Sub ss1_Change(ByVal Col As Long, ByVal Row As Long)
+    If Row < 1 Then Exit Sub
        
-    Call ss1_Row_Edit(ROW)
+    Call ss1_Row_Edit(Row)
 
 End Sub
 Private Sub ss1_Data_Edit()
     Dim iIdr        As Integer
-    Dim iThk        As Long
-    Dim iWid        As Long
-    Dim iLen        As Long
+    Dim iTHK        As Long
+    Dim iWID        As Long
+    Dim iLEN        As Long
     Dim iWGT        As Double
-    Dim ROW         As Long
+    Dim Row         As Long
     Dim sDate       As String
     Dim sDateTo     As String
     
     For iIdr = 1 To ss1.MaxRows
-        ss1.ROW = iIdr
-        ss1.Col = 24
-        ss1.Text = Gf_ShiftSet3(M_CN1)
+        ss1.Row = iIdr
         ss1.Col = 25
-        ss1.Text = Gf_GroupSet(M_CN1, Gf_ShiftSet3(M_CN1), Gf_DTSet(M_CN1, , "X"))
+        ss1.Text = Gf_ShiftSet3(M_CN1)
         ss1.Col = 26
-        ss1.Text = sUserID
+        ss1.Text = Gf_GroupSet(M_CN1, Gf_ShiftSet3(M_CN1), Gf_DTSet(M_CN1, , "X"))
         ss1.Col = 27
-        ss1.Text = txt_WkPlt
+        ss1.Text = sUserID
         ss1.Col = 28
+        ss1.Text = txt_WkPlt
+        ss1.Col = 29
         ss1.Text = txt_PrcLine.Text
         
     Next iIdr
@@ -2066,7 +2074,7 @@ On Error GoTo SpreadPro_Error
     Dim dTempInt As Double
     Dim dTempFloat As Double
     
-    Dim sMesg As String
+    Dim SMESG As String
     Dim sTemp As String
     Dim ProcessChk As String
     Dim DelYN As Boolean
@@ -2100,23 +2108,23 @@ On Error GoTo SpreadPro_Error
                 End If
                 
                 'Maxlength Check
-                sMesg = Gf_Sp_NeceCheck2(Sc.Item("Spread"), Sc.Item("mColumn"), iCount, Sc.Item("nColumn"))
+                SMESG = Gf_Sp_NeceCheck2(Sc.Item("Spread"), Sc.Item("mColumn"), iCount, Sc.Item("nColumn"))
                         
-                If Trim(sMesg) = "OK" Then
+                If Trim(SMESG) = "OK" Then
                     
-                ElseIf Mid(sMesg, 1, 5) = "FALSE" Then
+                ElseIf Mid(SMESG, 1, 5) = "FALSE" Then
                     Call Gp_Sp_RowColor(Sc.Item("Spread"), iCount, , vbYellow)
-                    sMesg = Mid(sMesg, 6, Len(sMesg))
-                    sMesg = sMesg + "长度不正确"
-                    Call Gp_MsgBoxDisplay(sMesg)
+                    SMESG = Mid(SMESG, 6, Len(SMESG))
+                    SMESG = SMESG + "长度不正确"
+                    Call Gp_MsgBoxDisplay(SMESG)
                     Screen.MousePointer = vbDefault
                     Set adoCmd = Nothing
                     Gf_Sp_Pro = False
                     Exit Function
                 Else
                     Call Gp_Sp_RowColor(Sc.Item("Spread"), iCount, , vbYellow)
-                    sMesg = sMesg + "必须输入"
-                    Call Gp_MsgBoxDisplay(sMesg)
+                    SMESG = SMESG + "必须输入"
+                    Call Gp_MsgBoxDisplay(SMESG)
                     Screen.MousePointer = vbDefault
                     Set adoCmd = Nothing
                     Gf_Sp_Pro = False
@@ -2323,10 +2331,10 @@ Private Sub MenuTool_ReSet()
 
 End Sub
 
-Private Sub ss1_Row_Edit(ByVal ROW As Long)
+Private Sub ss1_Row_Edit(ByVal Row As Long)
     
     ss1.Col = 0
-    ss1.ROW = ROW
+    ss1.Row = Row
     If Trim(ss1.Text) <> "Input" And _
        Trim(ss1.Text) <> "Update" And _
        Trim(ss1.Text) <> "Delete" Then
@@ -2335,13 +2343,13 @@ Private Sub ss1_Row_Edit(ByVal ROW As Long)
     
 End Sub
 
-Private Sub ss2_DblClick(ByVal Col As Long, ByVal ROW As Long)
+Private Sub ss2_DblClick(ByVal Col As Long, ByVal Row As Long)
     
     Dim iCount As Integer
 
-    If ROW < 1 Then Exit Sub
+    If Row < 1 Then Exit Sub
     
-    ss2.ROW = ROW
+    ss2.Row = Row
     ss2.Col = 1
     If ss2.Text <> "" Then
        TXT_MPLATE_NO.Text = ss2.Text
@@ -2354,18 +2362,18 @@ Private Sub ss2_DblClick(ByVal Col As Long, ByVal ROW As Long)
         ss1.OperationMode = OperationModeNormal
         Call ss1_Data_Edit
         
-        ss1.Col = 20
-        ss1.ROW = ss1.MaxRows
+        ss1.Col = 21
+        ss1.Row = ss1.MaxRows
         ss1.Value = 1
-        ss1.Col = 13
+        ss1.Col = 14
         If ss1.Text = "" Then
-           ss1.Col = 18
+           ss1.Col = 19
            ss1.Value = 1
         End If
         
     End If
     
-    ss2.ROW = ROW
+    ss2.Row = Row
     ss2.Col = 5
     If ss2.Text = "MP" Then
         MDIMain.MenuTool.Buttons(7).Enabled = True

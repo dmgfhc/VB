@@ -14,8 +14,8 @@ Begin VB.Form CKG2010C
    LinkTopic       =   "Form1"
    LockControls    =   -1  'True
    MDIChild        =   -1  'True
-   ScaleHeight     =   9615
-   ScaleWidth      =   15240
+   ScaleHeight     =   10950
+   ScaleWidth      =   20250
    WindowState     =   2  'Maximized
    Begin Threed.SSPanel SSPanel1 
       Height          =   435
@@ -484,11 +484,7 @@ Begin VB.Form CKG2010C
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-<<<<<<< .mine
-            MaxCols         =   61
-=======
             MaxCols         =   66
->>>>>>> .r7591
             MaxRows         =   1
             RetainSelBlock  =   0   'False
             SpreadDesigner  =   "CKG2010C.frx":0B57

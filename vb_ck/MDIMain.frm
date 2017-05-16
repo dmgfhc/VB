@@ -361,22 +361,14 @@ Begin VB.MDIForm MDIMain
             Alignment       =   1
             Object.Width           =   2117
             MinWidth        =   2117
-<<<<<<< .mine
-            TextSave        =   "2016-07-15"
-=======
             TextSave        =   "2016-06-15"
->>>>>>> .r7591
          EndProperty
          BeginProperty Panel6 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
             Style           =   5
             Alignment       =   1
             Object.Width           =   1411
             MinWidth        =   1411
-<<<<<<< .mine
-            TextSave        =   "10:13"
-=======
             TextSave        =   "14:19"
->>>>>>> .r7591
          EndProperty
          BeginProperty Panel7 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
             Object.Width           =   3352
@@ -924,33 +916,33 @@ Private Sub MDIForm_Load()
     Else
     
     args = Split(Trim(Command), " ") ' 2012.11.09 新增  耿朝雷
-'    If UBound(args) = 1 Then
-'         MainFrmType = "New"
-'         sUserID = args(0) ' 2012.11.09 新增  耿朝雷
-'         sUserName = args(1) ' 2012.11.09 新增  耿朝雷
-'         MDIMain.StatusBar1.Panels(1) = "提示信息 ：" ' 2012.11.09 新增  耿朝雷
-'         MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName ' 2012.11.09 新增  耿朝雷
-'    Else
-'        Active_YN = GetSetting("NISCO", "EXE-FILE", "CK.exe")
-'        If Active_YN = "1" Then
-'            MainFrmType = "Old"
-'            sUserID = GetSetting("NISCO", "AUTHORITY", "sUserID")
-'            sUserName = GetSetting("NISCO", "AUTHORITY", "sUsername")
-'            MDIMain.StatusBar1.Panels(1) = "提示信息 ："
-'            MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName
-'        Else
-'            Call Gp_MsgBoxDisplay("只能从主画面登陆...", "W")
-'            Unload Me
-'            Exit Sub
-'        End If
-'    End If  ' 2012.11.09 新增  耿朝雷
-'
+    If UBound(args) = 1 Then
+         MainFrmType = "New"
+         sUserID = args(0) ' 2012.11.09 新增  耿朝雷
+         sUserName = args(1) ' 2012.11.09 新增  耿朝雷
+         MDIMain.StatusBar1.Panels(1) = "提示信息 ：" ' 2012.11.09 新增  耿朝雷
+         MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName ' 2012.11.09 新增  耿朝雷
+    Else
+        Active_YN = GetSetting("NISCO", "EXE-FILE", "CK.exe")
+        If Active_YN = "1" Then
+            MainFrmType = "Old"
+            sUserID = GetSetting("NISCO", "AUTHORITY", "sUserID")
+            sUserName = GetSetting("NISCO", "AUTHORITY", "sUsername")
+            MDIMain.StatusBar1.Panels(1) = "提示信息 ："
+            MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName
+        Else
+            Call Gp_MsgBoxDisplay("只能从主画面登陆...", "W")
+            Unload Me
+            Exit Sub
+        End If
+    End If  ' 2012.11.09 新增  耿朝雷
+    
         
 
-        sUserID = "1JS1005"
-        sUserName = "杨猛"
-        MDIMain.StatusBar1.Panels(1) = "提示信息 ："
-        MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName
+'        sUserID = "1JS1005"
+'        sUserName = "杨猛"
+'        MDIMain.StatusBar1.Panels(1) = "提示信息 ："
+'        MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName
 
 
         If Mid(M_CN1, Len(M_CN1), 1) = "9" Then

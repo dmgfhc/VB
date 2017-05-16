@@ -192,7 +192,7 @@ Public Sub Gp_Sp_ColSet(sPname As Variant, FileName As String, sEcname As String
                 tPtext = .Text
                 .Row = SpreadHeader + (.ColHeaderRows - 1)
             
-                sValue = Str$(.ColWidth(i))
+                sValue = str$(.ColWidth(i))
                 
                 If .ColHidden = False Then
                     
@@ -214,7 +214,7 @@ Public Sub Gp_Sp_ColSet(sPname As Variant, FileName As String, sEcname As String
             
             For i = 1 To .MaxCols
                 .Col = i
-                sValue = Str$(.ColWidth(i))
+                sValue = str$(.ColWidth(i))
                 
                 If .ColHidden = False Then
                     sKey = Trim(sType) + Trim(.Name) + "." + Trim(.Text)
@@ -299,8 +299,8 @@ Public Sub Gp_Spl_SizeSet(sPname As Variant, FileName As String, sEcname As Stri
     
     For iCnt = 0 To sPname.Panes.Count - 1
         
-        sValueH = Str$(sPname.Panes(iCnt).Height)
-        sValueW = Str$(sPname.Panes(iCnt).Width)
+        sValueH = str$(sPname.Panes(iCnt).Height)
+        sValueW = str$(sPname.Panes(iCnt).Width)
         
         Call WritePrivateProfileString(sEcname, sKeyH + "(" & iCnt & ")", sValueH, App.Path & "\" & FileName)
         Call WritePrivateProfileString(sEcname, sKeyW + "(" & iCnt & ")", sValueW, App.Path & "\" & FileName)
@@ -359,7 +359,7 @@ Public Sub Gp_Sp_AutoInsert(Sc As Collection)
         
         For iCount = 1 To .MaxCols
             .Col = iCount
-            If .CellType = SS_CELL_TYPE_COMBOBOX Then .Value = 0
+            If .CellType = SS_CELL_TYPE_COMBOBOX Then .VALUE = 0
         Next iCount
         
         .Row = .MaxRows
@@ -773,7 +773,7 @@ On Error GoTo Gp_Sp_Ins_Error
     
         Sc.Item("Spread").Col = Sc.Item("iColumn").Item(iCount)
         If Sc.Item("Spread").CellType = SS_CELL_TYPE_COMBOBOX Then
-            Sc.Item("Spread").Value = 0
+            Sc.Item("Spread").VALUE = 0
         End If
         
     Next iCount
@@ -994,8 +994,8 @@ Public Sub Gp_Sp_ColSort(sPname As Variant, Sort_Form As Form)
     With sPname
     
         Sort_Form.cbo_first.AddItem ""
-        Sort_Form.cbo_second.AddItem ""
-        Sort_Form.cbo_third.AddItem ""
+        Sort_Form.cbo_Second.AddItem ""
+        Sort_Form.cbo_Third.AddItem ""
         
         For iCol = 1 To .MaxCols
         
@@ -1012,12 +1012,12 @@ Public Sub Gp_Sp_ColSort(sPname As Variant, Sort_Form As Form)
                     
                     If Trim(tPtext) <> Trim(.Text) Then
                         Sort_Form.cbo_first.AddItem Trim(tPtext) & "(" & .Text & ")" & Space(100) & iCol
-                        Sort_Form.cbo_second.AddItem Trim(tPtext) & "(" & .Text & ")" & Space(100) & iCol
-                        Sort_Form.cbo_third.AddItem Trim(tPtext) & "(" & .Text & ")" & Space(100) & iCol
+                        Sort_Form.cbo_Second.AddItem Trim(tPtext) & "(" & .Text & ")" & Space(100) & iCol
+                        Sort_Form.cbo_Third.AddItem Trim(tPtext) & "(" & .Text & ")" & Space(100) & iCol
                     Else
                         Sort_Form.cbo_first.AddItem .Text & Space(100) & iCol
-                        Sort_Form.cbo_second.AddItem .Text & Space(100) & iCol
-                        Sort_Form.cbo_third.AddItem .Text & Space(100) & iCol
+                        Sort_Form.cbo_Second.AddItem .Text & Space(100) & iCol
+                        Sort_Form.cbo_Third.AddItem .Text & Space(100) & iCol
                     End If
                 End If
             
@@ -1026,8 +1026,8 @@ Public Sub Gp_Sp_ColSort(sPname As Variant, Sort_Form As Form)
                 
                 If .ColHidden = False Then
                     Sort_Form.cbo_first.AddItem .Text & Space(100) & iCol
-                    Sort_Form.cbo_second.AddItem .Text & Space(100) & iCol
-                    Sort_Form.cbo_third.AddItem .Text & Space(100) & iCol
+                    Sort_Form.cbo_Second.AddItem .Text & Space(100) & iCol
+                    Sort_Form.cbo_Third.AddItem .Text & Space(100) & iCol
                 End If
             End If
             
@@ -1486,10 +1486,10 @@ Public Function Gf_Sp_RcvData(sPname As Variant, Optional iCol As Variant = -1, 
         If iRow < 0 Then .Row = .Row Else .Row = iRow
         
         If .CellType = SS_CELL_TYPE_COMBOBOX Then
-            Gf_Sp_RcvData = .Value
+            Gf_Sp_RcvData = .VALUE
             
         ElseIf .CellType = SS_CELL_TYPE_CURRENCY Or .CellType = SS_CELL_TYPE_NUMBER Then
-            Gf_Sp_RcvData = Val(.Value)
+            Gf_Sp_RcvData = Val(.VALUE)
             
         Else
             Gf_Sp_RcvData = .Text
@@ -1517,7 +1517,7 @@ Public Sub Gp_Sp_SendData(sPname As Variant, Indata As Variant, Optional iCol As
         If iRow < 0 Then .Row = .Row Else .Row = iRow
         
         If .CellType = SS_CELL_TYPE_COMBOBOX Or .CellType = SS_CELL_TYPE_CURRENCY Or .CellType = SS_CELL_TYPE_NUMBER Then
-            .Value = IIf(VarType(Indata) = vbNull, 0, Indata)
+            .VALUE = IIf(VarType(Indata) = vbNull, 0, Indata)
         Else
             .SetText iCol, iRow, IIf(VarType(Indata) = vbNull, "", Indata)
         End If
@@ -1592,7 +1592,7 @@ On Error GoTo Sp_MakeQuery_Error
                         sQuery = sQuery + "0,"
                     Else
                         dTempFloat = .Text
-                        sQuery = sQuery + Str(dTempFloat) + ","
+                        sQuery = sQuery + str(dTempFloat) + ","
                     End If
                     
                 Case SS_CELL_TYPE_NUMBER
@@ -1600,7 +1600,7 @@ On Error GoTo Sp_MakeQuery_Error
                         sQuery = sQuery + "0,"
                     Else
                         dTempInt = .Text
-                        sQuery = sQuery + Str(dTempInt) + ","
+                        sQuery = sQuery + str(dTempInt) + ","
                     End If
                     
                 Case SS_CELL_TYPE_CHECKBOX
@@ -1614,14 +1614,14 @@ On Error GoTo Sp_MakeQuery_Error
                     If Trim(.Text) = "" Then
                         sQuery = sQuery + "'0',"
                     Else
-                        sQuery = sQuery + "'" + Trim(Str(.Value)) + "',"
+                        sQuery = sQuery + "'" + Trim(str(.VALUE)) + "',"
                     End If
                     
                 Case SS_CELL_TYPE_PIC, SS_CELL_TYPE_TIME
                     If Trim(.Text) = "" Then
                         sQuery = sQuery + "'',"
                     Else
-                        sQuery = sQuery + "'" + Trim(.Value) + "',"
+                        sQuery = sQuery + "'" + Trim(.VALUE) + "',"
                     End If
                     
                 Case SS_CELL_TYPE_DATE
@@ -1714,16 +1714,16 @@ On Error GoTo OneRowDisplay_Error
                             
                         Case SS_CELL_TYPE_COMBOBOX
                             If VarType((AdoRs.Fields(iColcount - 1))) = vbNull Or Trim(AdoRs.Fields(iColcount - 1)) = "" Then
-                                .Value = 0
+                                .VALUE = 0
                             Else
-                                .Value = Trim(AdoRs.Fields(iColcount - 1))
+                                .VALUE = Trim(AdoRs.Fields(iColcount - 1))
                             End If
                             
                         Case SS_CELL_TYPE_PIC, SS_CELL_TYPE_TIME
                             If VarType((AdoRs.Fields(iColcount - 1))) = vbNull Or Trim(AdoRs.Fields(iColcount - 1)) = "" Then
-                                .Value = ""
+                                .VALUE = ""
                             Else
-                                .Value = Trim(AdoRs.Fields(iColcount - 1))
+                                .VALUE = Trim(AdoRs.Fields(iColcount - 1))
                             End If
                             
                         Case SS_CELL_TYPE_DATE
@@ -1863,9 +1863,9 @@ On Error GoTo SpreadDisplay_Error
                     Case SS_CELL_TYPE_COMBOBOX
                         If VarType(ArrayRecords(iColcount, iRowCount)) = vbNull Or _
                            Trim(ArrayRecords(iColcount, iRowCount)) = "" Then
-                            .Value = 0
+                            .VALUE = 0
                         Else
-                            .Value = Trim(ArrayRecords(iColcount, iRowCount))
+                            .VALUE = Trim(ArrayRecords(iColcount, iRowCount))
                         End If
 
                     Case SS_CELL_TYPE_DATE
@@ -1879,9 +1879,9 @@ On Error GoTo SpreadDisplay_Error
 
                     Case SS_CELL_TYPE_PIC, SS_CELL_TYPE_TIME
                         If VarType(ArrayRecords(iColcount, iRowCount)) = vbNull Then
-                            .Value = ""
+                            .VALUE = ""
                         Else
-                            .Value = Trim(ArrayRecords(iColcount, iRowCount))
+                            .VALUE = Trim(ArrayRecords(iColcount, iRowCount))
                         End If
 
                     Case Else
@@ -2122,15 +2122,15 @@ On Error GoTo SpreadPro_Error
         Select Case Trim(Gf_Sp_RcvData(Sc.Item("Spread"), 0, iCount))
         
             Case "Input"
-                adoCmd.Parameters(0).Value = "I"
+                adoCmd.Parameters(0).VALUE = "I"
                 ProcessChk = "YES"
                 
             Case "Update"
-                adoCmd.Parameters(0).Value = "U"
+                adoCmd.Parameters(0).VALUE = "U"
                 ProcessChk = "YES"
                 
             Case "Delete"
-                adoCmd.Parameters(0).Value = "D"
+                adoCmd.Parameters(0).VALUE = "D"
                 If Msg_Count = 1 Then
                    DelYN = Gf_MessConfirm("您确定要删除状态为[Delete]的数据吗？", "Q")
                    If DelYN Then Msg_Yes = "yes"
@@ -2150,53 +2150,53 @@ On Error GoTo SpreadPro_Error
                 
                     Case SS_CELL_TYPE_CURRENCY
                         If Trim(Sc.Item("Spread").Text) = "" Then
-                            adoCmd.Parameters(iCol).Value = 0
+                            adoCmd.Parameters(iCol).VALUE = 0
                         Else
                             dTempFloat = Sc.Item("Spread").Text
-                            adoCmd.Parameters(iCol).Value = Trim(Str(dTempFloat))
+                            adoCmd.Parameters(iCol).VALUE = Trim(str(dTempFloat))
                         End If
                         
                     Case SS_CELL_TYPE_NUMBER
                         If Trim(Sc.Item("Spread").Text) = "" Then
-                            adoCmd.Parameters(iCol).Value = 0
+                            adoCmd.Parameters(iCol).VALUE = 0
                         Else
                             dTempInt = Sc.Item("Spread").Text
-                            adoCmd.Parameters(iCol).Value = Trim(Str(dTempInt))
+                            adoCmd.Parameters(iCol).VALUE = Trim(str(dTempInt))
                         End If
                         
                     Case SS_CELL_TYPE_CHECKBOX
-                        If Sc.Item("Spread").Value = "1" Then
-                            adoCmd.Parameters(iCol).Value = "1"
+                        If Sc.Item("Spread").VALUE = "1" Then
+                            adoCmd.Parameters(iCol).VALUE = "1"
                         Else
-                            adoCmd.Parameters(iCol).Value = "0"
+                            adoCmd.Parameters(iCol).VALUE = "0"
                         End If
                         
                     Case SS_CELL_TYPE_COMBOBOX
                         If Trim(Sc.Item("Spread").Text) = "" Then
-                            adoCmd.Parameters(iCol).Value = "0"
+                            adoCmd.Parameters(iCol).VALUE = "0"
                         Else
-                            adoCmd.Parameters(iCol).Value = Trim(Str(Sc.Item("Spread").Value))
+                            adoCmd.Parameters(iCol).VALUE = Trim(str(Sc.Item("Spread").VALUE))
                         End If
                         
                     Case SS_CELL_TYPE_PIC, SS_CELL_TYPE_TIME
-                        If Trim(Sc.Item("Spread").Value) = "" Then
-                            adoCmd.Parameters(iCol).Value = ""
+                        If Trim(Sc.Item("Spread").VALUE) = "" Then
+                            adoCmd.Parameters(iCol).VALUE = ""
                         Else
-                            adoCmd.Parameters(iCol).Value = Trim(Sc.Item("Spread").Value)
+                            adoCmd.Parameters(iCol).VALUE = Trim(Sc.Item("Spread").VALUE)
                         End If
                         
                     Case SS_CELL_TYPE_DATE
                         If Trim(Sc.Item("Spread").Text) = "" Then
-                            adoCmd.Parameters(iCol).Value = ""
+                            adoCmd.Parameters(iCol).VALUE = ""
                         Else
-                            adoCmd.Parameters(iCol).Value = Mid(Trim(Sc.Item("Spread").Text), 1, 4) & _
+                            adoCmd.Parameters(iCol).VALUE = Mid(Trim(Sc.Item("Spread").Text), 1, 4) & _
                                                             Mid(Trim(Sc.Item("Spread").Text), 6, 2) & _
                                                             Mid(Trim(Sc.Item("Spread").Text), 9, 2)
                         End If
                        
                     Case Else
                         sTemp = Replace(Sc.Item("Spread").Text, "'", "''")
-                        adoCmd.Parameters(iCol).Value = Trim(sTemp)
+                        adoCmd.Parameters(iCol).VALUE = Trim(sTemp)
                         
                 End Select
            
@@ -2357,7 +2357,7 @@ On Error GoTo SpreadPro_Error
                 iCount = iCount - 1
                 
             Case Else
-                adoCmd.Parameters(0).Value = "D"
+                adoCmd.Parameters(0).VALUE = "D"
                 ProcessChk = "YES"
             
         End Select
@@ -2373,53 +2373,53 @@ On Error GoTo SpreadPro_Error
                 
                     Case SS_CELL_TYPE_CURRENCY
                         If Trim(Sc.Item("Spread").Text) = "" Then
-                            adoCmd.Parameters(iCol).Value = 0
+                            adoCmd.Parameters(iCol).VALUE = 0
                         Else
                             dTempFloat = Sc.Item("Spread").Text
-                            adoCmd.Parameters(iCol).Value = Str(dTempFloat)
+                            adoCmd.Parameters(iCol).VALUE = str(dTempFloat)
                         End If
                         
                     Case SS_CELL_TYPE_NUMBER
                         If Trim(Sc.Item("Spread").Text) = "" Then
-                            adoCmd.Parameters(iCol).Value = 0
+                            adoCmd.Parameters(iCol).VALUE = 0
                         Else
                             dTempInt = Sc.Item("Spread").Text
-                            adoCmd.Parameters(iCol).Value = Str(dTempInt)
+                            adoCmd.Parameters(iCol).VALUE = str(dTempInt)
                         End If
                         
                     Case SS_CELL_TYPE_CHECKBOX
                         If Sc.Item("Spread").Text = "1" Then
-                            adoCmd.Parameters(iCol).Value = "1"
+                            adoCmd.Parameters(iCol).VALUE = "1"
                         Else
-                            adoCmd.Parameters(iCol).Value = "0"
+                            adoCmd.Parameters(iCol).VALUE = "0"
                         End If
                         
                     Case SS_CELL_TYPE_COMBOBOX
                         If Trim(Sc.Item("Spread").Text) = "" Then
-                            adoCmd.Parameters(iCol).Value = "0"
+                            adoCmd.Parameters(iCol).VALUE = "0"
                         Else
-                            adoCmd.Parameters(iCol).Value = Trim(Str(Sc.Item("Spread").Value))
+                            adoCmd.Parameters(iCol).VALUE = Trim(str(Sc.Item("Spread").VALUE))
                         End If
                     
                     Case SS_CELL_TYPE_PIC, SS_CELL_TYPE_TIME
                         If Trim(Sc.Item("Spread").Text) = "" Then
-                            adoCmd.Parameters(iCol).Value = ""
+                            adoCmd.Parameters(iCol).VALUE = ""
                         Else
-                            adoCmd.Parameters(iCol).Value = Trim(Sc.Item("Spread").Value)
+                            adoCmd.Parameters(iCol).VALUE = Trim(Sc.Item("Spread").VALUE)
                         End If
                         
                     Case SS_CELL_TYPE_DATE
                         If Trim(Sc.Item("Spread").Text) = "" Then
-                            adoCmd.Parameters(iCol).Value = ""
+                            adoCmd.Parameters(iCol).VALUE = ""
                         Else
-                            adoCmd.Parameters(iCol).Value = Mid(Trim(Sc.Item("Spread").Text), 1, 4) & _
+                            adoCmd.Parameters(iCol).VALUE = Mid(Trim(Sc.Item("Spread").Text), 1, 4) & _
                                                             Mid(Trim(Sc.Item("Spread").Text), 6, 2) & _
                                                             Mid(Trim(Sc.Item("Spread").Text), 9, 2)
                         End If
                        
                     Case Else
                         sTemp = Replace(Sc.Item("Spread").Text, "'", "''")
-                        adoCmd.Parameters(iCol).Value = Trim(sTemp)
+                        adoCmd.Parameters(iCol).VALUE = Trim(sTemp)
                         
                 End Select
                 
@@ -2497,7 +2497,7 @@ Public Function Gf_Sp_NeceCheck(sPname As Variant, iRow As Variant, iCol As Coll
                             .Row = 0: Gf_Sp_NeceCheck = .Text: Exit Function
                         End If
                     Else
-                        If Trim(.Text) = "" Or .Value = "0" Then
+                        If Trim(.Text) = "" Or .VALUE = "0" Then
                             .Row = 0: Gf_Sp_NeceCheck = .Text: Exit Function
                         End If
                     End If
@@ -2555,7 +2555,7 @@ Public Function Gf_Sp_NeceCheck2(ByVal sPname As Variant, mColumn As Collection,
                             .Row = 0: Gf_Sp_NeceCheck2 = .Text: Exit Function
                         End If
                     Else
-                        If Trim(.Text) = "" Or .Value = "0" Then
+                        If Trim(.Text) = "" Or .VALUE = "0" Then
                             .Row = 0: Gf_Sp_NeceCheck2 = .Text: Exit Function
                         End If
                     End If
@@ -2773,7 +2773,7 @@ Public Function Gf_Sp_ColSum(ByVal sPname As Variant, iCol As Long, Optional Sta
         For lCount = Start_Row To End_Row
             .Row = lCount
             If .Text <> "" Then
-                dSum = dSum + .Value
+                dSum = dSum + .VALUE
             End If
         Next lCount
     
@@ -2810,7 +2810,7 @@ Public Function Gf_Sp_RowSum(ByVal sPname As Variant, iRow As Long, Optional Sta
         For lCount = Start_Col To End_Col
             .Col = lCount
             If .Text <> "" Then
-                dSum = dSum + .Value
+                dSum = dSum + .VALUE
             End If
         Next lCount
     

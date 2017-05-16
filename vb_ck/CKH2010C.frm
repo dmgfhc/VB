@@ -603,7 +603,7 @@ Begin VB.Form CKH2010C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.76
+         Size            =   9.75
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -625,7 +625,7 @@ Begin VB.Form CKH2010C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.76
+         Size            =   9.75
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -692,7 +692,7 @@ Begin VB.Form CKH2010C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.76
+         Size            =   9.75
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -790,7 +790,7 @@ Begin VB.Form CKH2010C
          MaxRows         =   12
          ProcessTab      =   -1  'True
          Protect         =   0   'False
-         SpreadDesigner  =   "CKH2010C.frx":04F1
+         SpreadDesigner  =   "CKH2010C.frx":04D0
       End
       Begin FPSpread.vaSpread ss2 
          Height          =   2565
@@ -819,7 +819,7 @@ Begin VB.Form CKH2010C
          MaxRows         =   12
          ProcessTab      =   -1  'True
          Protect         =   0   'False
-         SpreadDesigner  =   "CKH2010C.frx":0908
+         SpreadDesigner  =   "CKH2010C.frx":08C6
       End
       Begin FPSpread.vaSpread ss3 
          Height          =   2565
@@ -848,7 +848,7 @@ Begin VB.Form CKH2010C
          MaxRows         =   12
          ProcessTab      =   -1  'True
          Protect         =   0   'False
-         SpreadDesigner  =   "CKH2010C.frx":0D03
+         SpreadDesigner  =   "CKH2010C.frx":0CA0
       End
    End
    Begin InDate.ULabel ULabel2 
@@ -865,7 +865,7 @@ Begin VB.Form CKH2010C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.76
+         Size            =   9.75
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -887,7 +887,7 @@ Begin VB.Form CKH2010C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.76
+         Size            =   9.75
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -906,7 +906,7 @@ Begin VB.Form CKH2010C
       _Version        =   196609
       SplitterBarWidth=   3
       BorderStyle     =   0
-      PaneTree        =   "CKH2010C.frx":111A
+      PaneTree        =   "CKH2010C.frx":1096
       Begin FPSpread.vaSpread ss5 
          Height          =   2565
          Left            =   0
@@ -934,7 +934,7 @@ Begin VB.Form CKH2010C
          MaxRows         =   12
          ProcessTab      =   -1  'True
          Protect         =   0   'False
-         SpreadDesigner  =   "CKH2010C.frx":11AC
+         SpreadDesigner  =   "CKH2010C.frx":1128
       End
       Begin FPSpread.vaSpread ss6 
          Height          =   2565
@@ -963,7 +963,7 @@ Begin VB.Form CKH2010C
          MaxRows         =   12
          ProcessTab      =   -1  'True
          Protect         =   0   'False
-         SpreadDesigner  =   "CKH2010C.frx":1623
+         SpreadDesigner  =   "CKH2010C.frx":157E
       End
       Begin FPSpread.vaSpread ss7 
          Height          =   2565
@@ -992,7 +992,7 @@ Begin VB.Form CKH2010C
          MaxRows         =   12
          ProcessTab      =   -1  'True
          Protect         =   0   'False
-         SpreadDesigner  =   "CKH2010C.frx":1AAC
+         SpreadDesigner  =   "CKH2010C.frx":19E6
       End
       Begin FPSpread.vaSpread ss8 
          Height          =   2565
@@ -1021,7 +1021,7 @@ Begin VB.Form CKH2010C
          MaxRows         =   12
          ProcessTab      =   -1  'True
          Protect         =   0   'False
-         SpreadDesigner  =   "CKH2010C.frx":1F35
+         SpreadDesigner  =   "CKH2010C.frx":1E4E
       End
    End
    Begin InDate.ULabel ULabel7 
@@ -1104,7 +1104,7 @@ Begin VB.Form CKH2010C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.76
+         Size            =   9.75
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1148,7 +1148,7 @@ Begin VB.Form CKH2010C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.76
+         Size            =   9.75
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1170,7 +1170,7 @@ Begin VB.Form CKH2010C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.76
+         Size            =   9.75
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1257,7 +1257,7 @@ Begin VB.Form CKH2010C
    Begin VB.Image Image2 
       Height          =   510
       Left            =   14340
-      Picture         =   "CKH2010C.frx":23BE
+      Picture         =   "CKH2010C.frx":22B6
       Stretch         =   -1  'True
       Top             =   135
       Width           =   915
@@ -1265,7 +1265,7 @@ Begin VB.Form CKH2010C
    Begin VB.Image Image1 
       Height          =   510
       Left            =   105
-      Picture         =   "CKH2010C.frx":2B74
+      Picture         =   "CKH2010C.frx":2A6C
       Stretch         =   -1  'True
       Top             =   135
       Width           =   915
