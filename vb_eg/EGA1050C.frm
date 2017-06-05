@@ -254,7 +254,7 @@ Begin VB.Form EGA1050C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.75
+         Size            =   9.76
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -328,7 +328,7 @@ Begin VB.Form EGA1050C
          MaxRows         =   1
          Protect         =   0   'False
          RetainSelBlock  =   0   'False
-         SpreadDesigner  =   "EGA1050C.frx":0909
+         SpreadDesigner  =   "EGA1050C.frx":0933
       End
    End
    Begin Threed.SSFrame SSFrame1 
@@ -846,13 +846,13 @@ Private Sub Form_Define()
 End Sub
 
 Public Sub Form_Exc()
-ss1.Row = 0
+ss1.ROW = 0
 ss1.Col = 0
 If ss1.Text = "◎" Then
     Call Gp_Sp_Excel(Me, ss1, lBlkcol1, lBlkcol2, lBlkrow1, lBlkrow2)
 End If
 
-ss2.Row = 0
+ss2.ROW = 0
 ss2.Col = 0
 If ss2.Text = "◎" Then
     Call Gp_Sp_Excel(Me, ss2, lBlkcol1, lBlkcol2, lBlkrow1, lBlkrow2)
@@ -944,7 +944,7 @@ Dim sCheck As Integer
     With ss1
         For iCount = 1 To .MaxRows
              .Col = 0
-             .Row = iCount
+             .ROW = iCount
     
                 .Col = SPD_PLATE_NO:         sPlateNo = .Text
                 .Col = SPD_THK:              sThk = Trim(str(.Text))
@@ -1356,7 +1356,7 @@ Public Sub Form_Ref()
        Call ss2_DblClick(1, 1)
        Call MDIMain.FormMenuSetting(Me, FormType, "RE", sAuthority)
        ss2.Col = 0
-       ss2.Row = 0
+       ss2.ROW = 0
        ss2.Text = "◎"
     End If
     
@@ -1393,7 +1393,7 @@ Dim inum As Integer
 Dim lRow As Integer
     
     For iCount = 1 To ss1.MaxRows
-        ss1.Row = iCount
+        ss1.ROW = iCount
 '        ss1.Col = 0
 '        ss1.Text = "Update"
         ss1.Col = 19
@@ -1415,7 +1415,7 @@ Dim lRow As Integer
      With ss1
         For iCount = 1 To .MaxRows
              .Col = 0
-             .Row = iCount
+             .ROW = iCount
              If .Text = "Update" Or .Text = "Insert" Then
              
                 .Col = SPD_PLATE_NO:         sPlateNo = .Text
@@ -1453,7 +1453,7 @@ Dim lRow As Integer
 End Sub
 
 Private Sub Cmd_SEND(iSplate_no As String, iTHK As String, iWID As String, iLEN As String, iStlgrd As String, iStdspec As String, iCustCD As String, iStdspec_yy As String, iProddate As String, iGroup As String, iVessel_no As String, iSidemark As String, iSealmemo As String, iCustCD_short As String, iWGT As String, iUST As String)
-    Dim SMESG As String
+    Dim sMesg As String
 
     Dim sPlate_no As String             '钢板号
     Dim sSize_Str As String             '规格
@@ -1515,8 +1515,8 @@ Private Sub Cmd_SEND(iSplate_no As String, iTHK As String, iWID As String, iLEN 
     sGroup = Trim(iGroup)
     
     If sGroup <> "A" And sGroup <> "B" And sGroup <> "C" And sGroup <> "D" Then
-        SMESG = " 班别错误，请确认是否正确输入班别"
-        Call Gp_MsgBoxDisplay(SMESG)
+        sMesg = " 班别错误，请确认是否正确输入班别"
+        Call Gp_MsgBoxDisplay(sMesg)
         Exit Sub
     End If
     
@@ -1687,7 +1687,7 @@ Dim iCount As Integer
         If .MaxRows = 0 Then
            If Len(TXT_MPLATE_NO.Text) = 12 Then
                Call Gp_Sp_Ins(Proc_Sc("Sc"))
-              .Row = 1
+              .ROW = 1
               .Col = 2
               .Text = TXT_MPLATE_NO.Text & "01"
               .Col = 28
@@ -1704,7 +1704,7 @@ Dim iCount As Integer
            Exit Sub
         End If
         For iCount = .ActiveRow To .MaxRows
-            .Row = iCount
+            .ROW = iCount
             .Col = 2
             If Left(.Text, 12) = Left(sPlateNo, 12) Or sPlateNo = "" Then
                sPlateNo = .Text
@@ -1722,7 +1722,7 @@ Dim iCount As Integer
 
     With ss1
         .ReDraw = False
-        .Row = .ActiveRow
+        .ROW = .ActiveRow
         .Col = 28
         .Text = txt_WkPlt
         .Col = 29
@@ -1733,7 +1733,7 @@ Dim iCount As Integer
         .Text = sUserID
 
         If lRow > 0 Then
-            .Row = lRow
+            .ROW = lRow
             .Col = SPD_PLATE_NO:      sPlateNo = .Text
             .Col = SPD_THK:           dThk = Val(.Text & "")
             .Col = SPD_WID:           dWid = Val(.Text & "")
@@ -1743,7 +1743,7 @@ Dim iCount As Integer
             sPlateNo = TXT_MPLATE_NO.Text & "00"
         End If
 
-        .Row = lRow + 1
+        .ROW = lRow + 1
         .Col = SPD_PLATE_NO:      .Text = sPlateNo
         .Col = SPD_THK:           .Text = dThk
         .Col = SPD_WID:           .Text = dWid
@@ -1752,11 +1752,11 @@ Dim iCount As Integer
         .Col = 0: .Text = "Input"
         .Col = SPD_PLATE_NO: .Text = Left(.Text, 12) + Format((Val(Mid(.Text, 13, 2)) + 1), "00")
 
-         Call .SetActiveCell(1, .Row)
+         Call .SetActiveCell(1, .ROW)
         .ReDraw = True
     End With
     
-    ss1.Row = 1
+    ss1.ROW = 1
     ss1.Col = 14
     cCUTDATE = ss1.Text
     ss1.Col = 20
@@ -1771,7 +1771,7 @@ Dim iCount As Integer
     cSAMP2 = ss1.Value
 
     For iIdr = 1 To ss1.MaxRows
-        ss1.Row = iIdr
+        ss1.ROW = iIdr
         ss1.Col = 0
         If ss1.Text = "Input" Then
             ss1.Col = 14
@@ -1803,7 +1803,7 @@ Dim iCount As Integer
             ss1.Col = 30
             ss1.Text = Trim(txt_loc.Text)
             If iIdr = ss1.MaxRows Then
-               ss1.Row = iIdr
+               ss1.ROW = iIdr
                ss1.Col = 19
                ss1.Value = 1
             End If
@@ -1841,7 +1841,7 @@ End Function
 
 Public Sub Spread_Can()
     ss1.Col = 0
-    ss1.Row = ss1.ActiveRow
+    ss1.ROW = ss1.ActiveRow
     Select Case Trim(ss1.Text)
         Case "Input"
               Call Gp_Sp_Cancel(M_CN1, Proc_Sc("SC"))
@@ -1885,15 +1885,15 @@ Private Sub ss1_BlockSelected(ByVal BlockCol As Long, ByVal BlockRow As Long, By
 End Sub
 
 
-Private Sub ss1_ButtonClicked(ByVal Col As Long, ByVal Row As Long, ByVal ButtonDown As Integer)
+Private Sub ss1_ButtonClicked(ByVal Col As Long, ByVal ROW As Long, ByVal ButtonDown As Integer)
 Dim FOR_CNT
 Dim START_FOR As Integer
     If Col <> 19 Then Exit Sub
     If ButtonDown = 0 Then Exit Sub
     For FOR_CNT = 1 To ss1.MaxRows
-        If FOR_CNT <> Row Then
+        If FOR_CNT <> ROW Then
             ss1.Col = 19
-            ss1.Row = FOR_CNT
+            ss1.ROW = FOR_CNT
             ss1.Value = 0
         End If
     Next
@@ -1907,37 +1907,37 @@ Private Sub ss2_BlockSelected(ByVal BlockCol As Long, ByVal BlockRow As Long, By
     lBlkrow2 = BlockRow2
 End Sub
 
-Private Sub ss1_Click(ByVal Col As Long, ByVal Row As Long)
+Private Sub ss1_Click(ByVal Col As Long, ByVal ROW As Long)
     lBlkcol1 = 0
     lBlkcol2 = 0
     lBlkrow1 = 0
     lBlkrow2 = 0
     
     ss1.Col = 0
-    ss1.Row = 0
+    ss1.ROW = 0
     ss1.Text = "◎"
     
     ss2.Col = 0
-    ss2.Row = 0
+    ss2.ROW = 0
     ss2.Text = ""
 End Sub
 
-Private Sub ss1_DblClick(ByVal Col As Long, ByVal Row As Long)
+Private Sub ss1_DblClick(ByVal Col As Long, ByVal ROW As Long)
 Dim sDate     As String
 Dim sDateTo   As String
 Dim FOR_CNT   As Long
 Dim tmpYYMMDD As String
 
-    If Row < 1 Then Exit Sub
+    If ROW < 1 Then Exit Sub
     If Col < 11 Then Exit Sub
     
     tmpYYMMDD = Gf_CodeFind(M_CN1, "SELECT TO_CHAR(SYSDATE,'YYYY-MM-DD HH24:MI:SS') FROM DUAL")
     
-    ss1.Row = Row: ss1.Col = Col
+    ss1.ROW = ROW: ss1.Col = Col
     
     'For FOR_CNT = 1 To ss1.MaxRows
     
-        ss1.Row = Row
+        ss1.ROW = ROW
         If ss1.Col = 14 Then
            ss1.Text = tmpYYMMDD
         End If
@@ -1949,7 +1949,7 @@ Dim tmpYYMMDD As String
         ss1.Text = txt_WkPlt
         ss1.Col = 27
         ss1.Text = sUserID
-        Call ss1_Row_Edit(Row)
+        Call ss1_Row_Edit(ROW)
     'Next
     
 End Sub
@@ -1961,13 +1961,13 @@ Private Sub ss1_LostFocus()
     lBlkrow2 = 0
 End Sub
 
-Private Sub ss2_Click(ByVal Col As Long, ByVal Row As Long)
+Private Sub ss2_Click(ByVal Col As Long, ByVal ROW As Long)
     ss1.Col = 0
-    ss1.Row = 0
+    ss1.ROW = 0
     ss1.Text = ""
     
     ss2.Col = 0
-    ss2.Row = 0
+    ss2.ROW = 0
     ss2.Text = "◎"
 End Sub
 
@@ -1978,21 +1978,21 @@ Private Sub ss2_LostFocus()
     lBlkrow2 = 0
 End Sub
 
-Private Sub ss1_RightClick(ByVal ClickType As Integer, ByVal Col As Long, ByVal Row As Long, ByVal MouseX As Long, ByVal MouseY As Long)
-    If Row > 0 Then
+Private Sub ss1_RightClick(ByVal ClickType As Integer, ByVal Col As Long, ByVal ROW As Long, ByVal MouseX As Long, ByVal MouseY As Long)
+    If ROW > 0 Then
         Set Active_Spread = Me.ss1
         PopupMenu MDIMain.PopUp_Spread
     End If
 End Sub
 
-Private Sub ss2_RightClick(ByVal ClickType As Integer, ByVal Col As Long, ByVal Row As Long, ByVal MouseX As Long, ByVal MouseY As Long)
-    If Row > 0 Then
+Private Sub ss2_RightClick(ByVal ClickType As Integer, ByVal Col As Long, ByVal ROW As Long, ByVal MouseX As Long, ByVal MouseY As Long)
+    If ROW > 0 Then
         Set Active_Spread = Me.ss2
         PopupMenu MDIMain.PopUp_Spread
     End If
 End Sub
 
-Private Sub ss1_EditChange(ByVal Col As Long, ByVal Row As Long)
+Private Sub ss1_EditChange(ByVal Col As Long, ByVal ROW As Long)
     
     Dim dThk        As Double
     Dim dWid        As Double
@@ -2000,9 +2000,9 @@ Private Sub ss1_EditChange(ByVal Col As Long, ByVal Row As Long)
     Dim sEndUseCd   As String
     Dim sStlgrd     As String
     
-    If Row < 1 Then Exit Sub
+    If ROW < 1 Then Exit Sub
     
-    ss1.Row = Row
+    ss1.ROW = ROW
             
     If Col = SPD_THK Or Col = SPD_WID Or Col = SPD_LEN Then
         ss1.Col = SPD_THK:  dThk = Val(ss1.Text & "")
@@ -2016,13 +2016,13 @@ Private Sub ss1_EditChange(ByVal Col As Long, ByVal Row As Long)
         End If
     End If
     
-    Call ss1_Row_Edit(Row)
+    Call ss1_Row_Edit(ROW)
 End Sub
 
-Private Sub ss1_Change(ByVal Col As Long, ByVal Row As Long)
-    If Row < 1 Then Exit Sub
+Private Sub ss1_Change(ByVal Col As Long, ByVal ROW As Long)
+    If ROW < 1 Then Exit Sub
        
-    Call ss1_Row_Edit(Row)
+    Call ss1_Row_Edit(ROW)
 
 End Sub
 Private Sub ss1_Data_Edit()
@@ -2031,12 +2031,12 @@ Private Sub ss1_Data_Edit()
     Dim iWID        As Long
     Dim iLEN        As Long
     Dim iWGT        As Double
-    Dim Row         As Long
+    Dim ROW         As Long
     Dim sDate       As String
     Dim sDateTo     As String
     
     For iIdr = 1 To ss1.MaxRows
-        ss1.Row = iIdr
+        ss1.ROW = iIdr
         ss1.Col = 25
         ss1.Text = Gf_ShiftSet3(M_CN1)
         ss1.Col = 26
@@ -2074,7 +2074,7 @@ On Error GoTo SpreadPro_Error
     Dim dTempInt As Double
     Dim dTempFloat As Double
     
-    Dim SMESG As String
+    Dim sMesg As String
     Dim sTemp As String
     Dim ProcessChk As String
     Dim DelYN As Boolean
@@ -2108,23 +2108,23 @@ On Error GoTo SpreadPro_Error
                 End If
                 
                 'Maxlength Check
-                SMESG = Gf_Sp_NeceCheck2(Sc.Item("Spread"), Sc.Item("mColumn"), iCount, Sc.Item("nColumn"))
+                sMesg = Gf_Sp_NeceCheck2(Sc.Item("Spread"), Sc.Item("mColumn"), iCount, Sc.Item("nColumn"))
                         
-                If Trim(SMESG) = "OK" Then
+                If Trim(sMesg) = "OK" Then
                     
-                ElseIf Mid(SMESG, 1, 5) = "FALSE" Then
+                ElseIf Mid(sMesg, 1, 5) = "FALSE" Then
                     Call Gp_Sp_RowColor(Sc.Item("Spread"), iCount, , vbYellow)
-                    SMESG = Mid(SMESG, 6, Len(SMESG))
-                    SMESG = SMESG + "长度不正确"
-                    Call Gp_MsgBoxDisplay(SMESG)
+                    sMesg = Mid(sMesg, 6, Len(sMesg))
+                    sMesg = sMesg + "长度不正确"
+                    Call Gp_MsgBoxDisplay(sMesg)
                     Screen.MousePointer = vbDefault
                     Set adoCmd = Nothing
                     Gf_Sp_Pro = False
                     Exit Function
                 Else
                     Call Gp_Sp_RowColor(Sc.Item("Spread"), iCount, , vbYellow)
-                    SMESG = SMESG + "必须输入"
-                    Call Gp_MsgBoxDisplay(SMESG)
+                    sMesg = sMesg + "必须输入"
+                    Call Gp_MsgBoxDisplay(sMesg)
                     Screen.MousePointer = vbDefault
                     Set adoCmd = Nothing
                     Gf_Sp_Pro = False
@@ -2331,10 +2331,10 @@ Private Sub MenuTool_ReSet()
 
 End Sub
 
-Private Sub ss1_Row_Edit(ByVal Row As Long)
+Private Sub ss1_Row_Edit(ByVal ROW As Long)
     
     ss1.Col = 0
-    ss1.Row = Row
+    ss1.ROW = ROW
     If Trim(ss1.Text) <> "Input" And _
        Trim(ss1.Text) <> "Update" And _
        Trim(ss1.Text) <> "Delete" Then
@@ -2343,13 +2343,13 @@ Private Sub ss1_Row_Edit(ByVal Row As Long)
     
 End Sub
 
-Private Sub ss2_DblClick(ByVal Col As Long, ByVal Row As Long)
+Private Sub ss2_DblClick(ByVal Col As Long, ByVal ROW As Long)
     
     Dim iCount As Integer
 
-    If Row < 1 Then Exit Sub
+    If ROW < 1 Then Exit Sub
     
-    ss2.Row = Row
+    ss2.ROW = ROW
     ss2.Col = 1
     If ss2.Text <> "" Then
        TXT_MPLATE_NO.Text = ss2.Text
@@ -2363,7 +2363,7 @@ Private Sub ss2_DblClick(ByVal Col As Long, ByVal Row As Long)
         Call ss1_Data_Edit
         
         ss1.Col = 21
-        ss1.Row = ss1.MaxRows
+        ss1.ROW = ss1.MaxRows
         ss1.Value = 1
         ss1.Col = 14
         If ss1.Text = "" Then
@@ -2373,7 +2373,7 @@ Private Sub ss2_DblClick(ByVal Col As Long, ByVal Row As Long)
         
     End If
     
-    ss2.Row = Row
+    ss2.ROW = ROW
     ss2.Col = 5
     If ss2.Text = "MP" Then
         MDIMain.MenuTool.Buttons(7).Enabled = True

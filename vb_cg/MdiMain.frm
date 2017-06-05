@@ -1,5 +1,5 @@
 VERSION 5.00
-Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.1#0"; "MSCOMCTL.OCX"
+Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCTL.OCX"
 Object = "{38911DA0-E448-11D0-84A3-00DD01104159}#1.1#0"; "COMCT332.OCX"
 Object = "{48E59290-9880-11CF-9754-00AA00C00908}#1.0#0"; "MSINET.OCX"
 Begin VB.MDIForm MDIMain 
@@ -26,10 +26,10 @@ Begin VB.MDIForm MDIMain
       Height          =   615
       Left            =   0
       ScaleHeight     =   555
-      ScaleWidth      =   20190
+      ScaleWidth      =   12330
       TabIndex        =   0
       Top             =   0
-      Width           =   20250
+      Width           =   12390
       Begin ComCtl3.CoolBar CoolBar1 
          Height          =   600
          Left            =   0
@@ -41,7 +41,7 @@ Begin VB.MDIForm MDIMain
          BandCount       =   1
          _CBWidth        =   15420
          _CBHeight       =   600
-         _Version        =   "6.7.9782"
+         _Version        =   "6.0.8169"
          Child1          =   "MenuTool"
          MinHeight1      =   540
          Width1          =   15360
@@ -323,16 +323,16 @@ Begin VB.MDIForm MDIMain
       Height          =   465
       Left            =   0
       TabIndex        =   3
-      Top             =   10185
-      Width           =   20250
-      _ExtentX        =   35719
+      Top             =   7380
+      Width           =   12390
+      _ExtentX        =   21855
       _ExtentY        =   820
       _Version        =   393216
       BeginProperty Panels {8E3867A5-8586-11D1-B16A-00C0F0283628} 
          NumPanels       =   9
          BeginProperty Panel1 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
             AutoSize        =   1
-            Object.Width           =   20866
+            Object.Width           =   12876
             MinWidth        =   12876
          EndProperty
          BeginProperty Panel2 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
@@ -363,14 +363,14 @@ Begin VB.MDIForm MDIMain
             Alignment       =   1
             Object.Width           =   2117
             MinWidth        =   2117
-            TextSave        =   "2016-12-01"
+            TextSave        =   "2017/5/23"
          EndProperty
          BeginProperty Panel6 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
             Style           =   5
             Alignment       =   1
             Object.Width           =   1411
             MinWidth        =   1411
-            TextSave        =   "8:55"
+            TextSave        =   "16:59"
          EndProperty
          BeginProperty Panel7 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
             Object.Width           =   3352
@@ -1186,33 +1186,33 @@ Private Sub MDIForm_Load()
     Else
     
     args = Split(Trim(Command), " ") ' 2012.11.09 新增  耿朝雷
-    If UBound(args) = 1 Then
-         MainFrmType = "New"
-         sUserID = args(0) ' 2012.11.09 新增  耿朝雷
-         sUserName = args(1) ' 2012.11.09 新增  耿朝雷
-         MDIMain.StatusBar1.Panels(1) = "提示信息 ：" ' 2012.11.09 新增  耿朝雷
-         MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName ' 2012.11.09 新增  耿朝雷
-    Else
-        Active_YN = GetSetting("NISCO", "EXE-FILE", "CG.exe")
-        If Active_YN = "1" Then
-            MainFrmType = "Old"
-            sUserID = GetSetting("NISCO", "AUTHORITY", "sUserID")
-            sUserName = GetSetting("NISCO", "AUTHORITY", "sUsername")
-            MDIMain.StatusBar1.Panels(1) = "提示信息 ：："
-            MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName
-        Else
-            Call Gp_MsgBoxDisplay("只能从主画面登陆...", "W")
-            Unload Me
-            Exit Sub
-        End If
-    End If  ' 2012.11.09 新增  耿朝雷
+'    If UBound(args) = 1 Then
+'         MainFrmType = "New"
+'         sUserID = args(0) ' 2012.11.09 新增  耿朝雷
+'         sUserName = args(1) ' 2012.11.09 新增  耿朝雷
+'         MDIMain.StatusBar1.Panels(1) = "提示信息 ：" ' 2012.11.09 新增  耿朝雷
+'         MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName ' 2012.11.09 新增  耿朝雷
+'    Else
+'        Active_YN = GetSetting("NISCO", "EXE-FILE", "CG.exe")
+'        If Active_YN = "1" Then
+'            MainFrmType = "Old"
+'            sUserID = GetSetting("NISCO", "AUTHORITY", "sUserID")
+'            sUserName = GetSetting("NISCO", "AUTHORITY", "sUsername")
+'            MDIMain.StatusBar1.Panels(1) = "提示信息 ：："
+'            MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName
+'        Else
+'            Call Gp_MsgBoxDisplay("只能从主画面登陆...", "W")
+'            Unload Me
+'            Exit Sub
+'        End If
+'    End If  ' 2012.11.09 新增  耿朝雷
     
         
 
-'        sUserID = "1JS1005"
-'        sUserName = "杨猛"
-'        MDIMain.StatusBar1.Panels(1) = "提示信息 ："
-'        MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName
+        sUserID = "1JS1005"
+        sUserName = "杨猛"
+        MDIMain.StatusBar1.Panels(1) = "提示信息 ："
+        MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName
 
 
         If Mid(M_CN1, Len(M_CN1), 1) = "9" Then

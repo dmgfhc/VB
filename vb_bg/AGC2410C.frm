@@ -1,6 +1,6 @@
 VERSION 5.00
 Object = "{8C3D4AA0-2599-11D2-BAF1-00104B9E0792}#3.0#0"; "sssplt30.ocx"
-Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "Indate.ocx"
+Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "indate.ocx"
 Object = "{065E6FD1-1BF9-11D2-BAE8-00104B9E0792}#3.0#0"; "ssa3d30.ocx"
 Object = "{FDAC2480-F4ED-4632-AA78-DCA210A74E49}#6.0#0"; "SPR32X60.ocx"
 Begin VB.Form AGC2410C 
@@ -13,8 +13,8 @@ Begin VB.Form AGC2410C
    LinkTopic       =   "Form1"
    LockControls    =   -1  'True
    MDIChild        =   -1  'True
-   ScaleHeight     =   10950
-   ScaleWidth      =   20250
+   ScaleHeight     =   8505
+   ScaleWidth      =   11400
    Visible         =   0   'False
    WindowState     =   2  'Maximized
    Begin VB.Frame Frame2 
@@ -99,7 +99,7 @@ Begin VB.Form AGC2410C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -122,7 +122,7 @@ Begin VB.Form AGC2410C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -144,7 +144,7 @@ Begin VB.Form AGC2410C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -235,7 +235,7 @@ Begin VB.Form AGC2410C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -389,7 +389,7 @@ Begin VB.Form AGC2410C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -412,7 +412,7 @@ Begin VB.Form AGC2410C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -435,7 +435,7 @@ Begin VB.Form AGC2410C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -458,7 +458,7 @@ Begin VB.Form AGC2410C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -481,7 +481,7 @@ Begin VB.Form AGC2410C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -742,7 +742,7 @@ Private Sub Form_Define()
     Mc1.Add Item:=lContro1, Key:="lControl"
     
         'Call Master_Collection("Control_Name", "p(primary)", "n(Necessary)", "m(maxlength)", "i(insert)", "r(refer)", "a(append)", "l(lock)")
-    Call Gp_Ms_Collection(txt_SLAB_NO, "p", "n", "m", " ", " ", " ", " ", pContro12, nContro12, mContro12, iContro12, rContro12, aContro12, lContro12)
+    Call Gp_Ms_Collection(txt_Slab_No, "p", "n", "m", " ", " ", " ", " ", pContro12, nContro12, mContro12, iContro12, rContro12, aContro12, lContro12)
     
     'MASTER Collection
      Mc2.Add Item:=pContro12, Key:="pControl"
@@ -1179,7 +1179,7 @@ End Sub
 
 Public Sub TextClear()
 
-    txt_SMP_NO.Text = ""
+    TXT_SMP_NO.Text = ""
     txt_SMP_LEN.Text = ""
     txt_SMP_LOC.Text = ""
     txt_SMP_LOC_NAME.Text = ""
@@ -1189,7 +1189,7 @@ Public Sub TextClear()
 End Sub
 
 Public Sub Form_Ref()
-    Dim iRow As Integer
+    Dim iROW As Integer
     Dim iCol As Integer
     Dim sUrgnt_Fl As String
     
@@ -1205,14 +1205,14 @@ Public Sub Form_Ref()
         
         '紧急订单绿色显示 add by liqian 2012-11-08
          With ss1
-              For iRow = 1 To .MaxRows
-                 .Row = iRow:
+              For iROW = 1 To .MaxRows
+                 .Row = iROW:
                   .Col = SS1_URGNT_FL:    sUrgnt_Fl = Trim(.Text)
                 
                   If sUrgnt_Fl = "Y" Then
-                     Call Gp_Sp_BlockColor(ss1, 1, .MaxCols, iRow, iRow, &HC000&)
+                     Call Gp_Sp_BlockColor(ss1, 1, .MaxCols, iROW, iROW, &HC000&)
                   End If
-              Next iRow
+              Next iROW
         End With
         
         Call MDIMain.FormMenuSetting(Me, FormType, "RE", sAuthority)
@@ -1312,7 +1312,7 @@ Private Sub ss1_DblClick(ByVal Col As Long, ByVal Row As Long)
         
         ss2.MaxRows = 0
         .Col = 1
-        txt_SLAB_NO = .Text
+        txt_Slab_No = .Text
         
         sLoopChk = "**"
         If Gf_Sp_Refer(M_CN1, sc2, Mc2) Then
@@ -1377,19 +1377,19 @@ Private Sub Sample_No_Edit()
                 End If
                 
                 '指定试样号逻辑
-                If txt_SMP_NO.Text = "" Then
+                If TXT_SMP_NO.Text = "" Then
                     If sSmpFl <> "" And Right(sSmpNo, 2) <> sSmp_No Then
-                        txt_SMP_NO.Text = sSmpNo
+                        TXT_SMP_NO.Text = sSmpNo
                     Else
-                        If (Len(Trim(txt_SMP_NO.Text)) <> 14 And sProdCd = "PP") Or (Len(Trim(txt_SMP_NO.Text)) <> 12 And sProdCd = "HC") Then
-                            txt_SMP_NO.Text = sPlateNo
+                        If (Len(Trim(TXT_SMP_NO.Text)) <> 14 And sProdCd = "PP") Or (Len(Trim(TXT_SMP_NO.Text)) <> 12 And sProdCd = "HC") Then
+                            TXT_SMP_NO.Text = sPlateNo
                         End If
                     End If
                 End If
                 
                 '如果改前标准或当前标准有要做普的，则指定做普试样号
                 If ExpoCheck(sBefStdspec) Or ExpoCheck(sStdspec) Then
-                    If sSmpFl <> "" And sSmpNo <> txt_SMP_NO.Text Then
+                    If sSmpFl <> "" And sSmpNo <> TXT_SMP_NO.Text Then
 '                        txt_CHG_SMP_NO.Text = sSmpNo
                         txt_CHG_STDSPEC.Text = sStdspec
                     Else
@@ -1399,9 +1399,9 @@ Private Sub Sample_No_Edit()
                     End If
                     
                     If sProdCd = "PP" Then
-                       txt_CHG_SMP_NO.Text = Left(txt_SMP_NO.Text, 12) & sSmp_No
+                       txt_CHG_SMP_NO.Text = Left(TXT_SMP_NO.Text, 12) & sSmp_No
                     Else
-                       txt_CHG_SMP_NO.Text = Left(txt_SMP_NO.Text, 10) & sSmp_No
+                       txt_CHG_SMP_NO.Text = Left(TXT_SMP_NO.Text, 10) & sSmp_No
                     End If
                 End If
             End If
@@ -1555,8 +1555,8 @@ Private Sub ss2_ButtonClicked(ByVal Col As Long, ByVal Row As Long, ByVal Button
                            .Col = SS2_SMP_NO: .Text = txt_CHG_SMP_NO.Text
                         End If
                     Else
-                        If (Len(Trim(txt_SMP_NO.Text)) = 14 And sProdCd = "PP") Or (Len(Trim(txt_SMP_NO.Text)) = 12 And sProdCd = "HC") Then
-                           .Col = SS2_SMP_NO: .Text = txt_SMP_NO.Text
+                        If (Len(Trim(TXT_SMP_NO.Text)) = 14 And sProdCd = "PP") Or (Len(Trim(TXT_SMP_NO.Text)) = 12 And sProdCd = "HC") Then
+                           .Col = SS2_SMP_NO: .Text = TXT_SMP_NO.Text
                         End If
                     End If
 
@@ -1570,7 +1570,7 @@ Private Sub ss2_ButtonClicked(ByVal Col As Long, ByVal Row As Long, ByVal Button
                         .Col = SS2_SMP_FLAG:    .Text = "Y"
                         .ForeColor = RED
                     Else
-                        If sSmpFl = "P" And strSmpNO <> txt_SMP_NO.Text And (Right(Trim(.Text), 2) = "00" Or Right(Trim(.Text), 2) = "99") Then
+                        If sSmpFl = "P" And strSmpNO <> TXT_SMP_NO.Text And (Right(Trim(.Text), 2) = "00" Or Right(Trim(.Text), 2) = "99") Then
                             .Col = SS2_SMP_FLAG:    .Text = sSmpFl
                             .Col = SS2_SMP_LEN:     .Text = "0"
 
@@ -1595,7 +1595,7 @@ Private Sub ss2_ButtonClicked(ByVal Col As Long, ByVal Row As Long, ByVal Button
                     End If
 
                     .Col = SS2_SMP_NO
-                    If strSmpNO = txt_SMP_NO.Text And (Right(Trim(.Text), 2) = "00" Or Right(Trim(.Text), 2) = "99") Then
+                    If strSmpNO = TXT_SMP_NO.Text And (Right(Trim(.Text), 2) = "00" Or Right(Trim(.Text), 2) = "99") Then
                         sSmpFl = "P"
                     End If
                 End If
@@ -1789,10 +1789,10 @@ End Function
 
 
 Private Sub txt_charge_no_Change()
-   Dim SMESG As String
+   Dim sMesg As String
    If Len(txt_charge_no.Text) > 10 Then
-      SMESG = "查询号长度不能超过10位，请确认查询号 ！！！"
-      Call Gp_MsgBoxDisplay(SMESG)
+      sMesg = "查询号长度不能超过10位，请确认查询号 ！！！"
+      Call Gp_MsgBoxDisplay(sMesg)
    End If
 End Sub
 
@@ -1867,9 +1867,9 @@ Private Sub txt_SMP_NO_Change()
     Dim iDR As Long
     If ss2.MaxRows < 1 Then Exit Sub
     
-    If Len(Trim(txt_SMP_NO.Text)) = 14 Then
+    If Len(Trim(TXT_SMP_NO.Text)) = 14 Then
         If Trim(txt_CHG_SMP_NO.Text) <> "" Then
-            txt_CHG_SMP_NO.Text = Left(txt_SMP_NO.Text, 12) & "00"
+            txt_CHG_SMP_NO.Text = Left(TXT_SMP_NO.Text, 12) & "00"
         End If
     End If
     

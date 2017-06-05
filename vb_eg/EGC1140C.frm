@@ -1,17 +1,17 @@
 VERSION 5.00
-Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "Indate.ocx"
+Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "indate.ocx"
 Object = "{065E6FD1-1BF9-11D2-BAE8-00104B9E0792}#3.0#0"; "ssa3d30.ocx"
 Object = "{FDAC2480-F4ED-4632-AA78-DCA210A74E49}#6.0#0"; "SPR32X60.ocx"
 Begin VB.Form EGC1140C 
    Caption         =   "压平机实绩查询_EGC1140C"
-   ClientHeight    =   9585
+   ClientHeight    =   9330
    ClientLeft      =   60
    ClientTop       =   450
    ClientWidth     =   13425
    LinkTopic       =   "Form1"
    MDIChild        =   -1  'True
-   ScaleHeight     =   10950
-   ScaleWidth      =   20250
+   ScaleHeight     =   9330
+   ScaleWidth      =   13425
    WindowState     =   2  'Maximized
    Begin VB.TextBox txt_prc_line 
       BeginProperty Font 
@@ -306,7 +306,7 @@ Begin VB.Form EGC1140C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.76
+         Size            =   9.75
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False

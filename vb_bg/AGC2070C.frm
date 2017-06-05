@@ -1,7 +1,7 @@
 VERSION 5.00
 Object = "{A5CC20C4-B5F5-11CD-98EC-0020AF234C9D}#4.1#0"; "cstext32.ocx"
 Object = "{8C3D4AA0-2599-11D2-BAF1-00104B9E0792}#3.0#0"; "sssplt30.ocx"
-Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "Indate.ocx"
+Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "indate.ocx"
 Object = "{065E6FD1-1BF9-11D2-BAE8-00104B9E0792}#3.0#0"; "ssa3d30.ocx"
 Object = "{FDAC2480-F4ED-4632-AA78-DCA210A74E49}#6.0#0"; "SPR32X60.ocx"
 Begin VB.Form AGC2070C 
@@ -12,8 +12,8 @@ Begin VB.Form AGC2070C
    ClientWidth     =   4680
    LinkTopic       =   "Form1"
    MDIChild        =   -1  'True
-   ScaleHeight     =   10950
-   ScaleWidth      =   20250
+   ScaleHeight     =   3090
+   ScaleWidth      =   4680
    WindowState     =   2  'Maximized
    Begin SSSplitter.SSSplitter SSSplitter1 
       Height          =   9105
@@ -195,7 +195,7 @@ Begin VB.Form AGC2070C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -370,7 +370,7 @@ Dim lBlkrow2 As Long                'To Excel Block Row2
 
 Private Sub Form_Define()
 
-    Dim iRow As Integer
+    Dim iROW As Integer
 
     'Form Type : Start , Master, Sheet, Msheet, PopSheet, Refer
      FormType = "Msheet"
@@ -498,10 +498,10 @@ Private Sub ss1_RightClick(ByVal ClickType As Integer, ByVal Col As Long, ByVal 
 End Sub
 
 Private Sub TXT_PLATE_NO_Change()
-   Dim SMESG As String
+   Dim sMesg As String
       If Len(TXT_PLATE_NO.Text) > 14 Then
-      SMESG = "板坯号长度不能超过14位，请确认板坯号 ！！！"
-      Call Gp_MsgBoxDisplay(SMESG)
+      sMesg = "板坯号长度不能超过14位，请确认板坯号 ！！！"
+      Call Gp_MsgBoxDisplay(sMesg)
    End If
 End Sub
 

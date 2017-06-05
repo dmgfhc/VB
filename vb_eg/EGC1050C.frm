@@ -1,18 +1,18 @@
 VERSION 5.00
 Object = "{A5CC20C4-B5F5-11CD-98EC-0020AF234C9D}#4.1#0"; "cstext32.ocx"
 Object = "{8C3D4AA0-2599-11D2-BAF1-00104B9E0792}#3.0#0"; "sssplt30.ocx"
-Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "Indate.ocx"
+Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "indate.ocx"
 Object = "{065E6FD1-1BF9-11D2-BAE8-00104B9E0792}#3.0#0"; "ssa3d30.ocx"
 Object = "{FDAC2480-F4ED-4632-AA78-DCA210A74E49}#6.0#0"; "SPR32X60.ocx"
 Begin VB.Form EGC1050C 
    Caption         =   "火切实绩查询_EGC1050C"
-   ClientHeight    =   10890
+   ClientHeight    =   9330
    ClientLeft      =   60
    ClientTop       =   345
    ClientWidth     =   15240
    LinkTopic       =   "Form1"
    MDIChild        =   -1  'True
-   ScaleHeight     =   10890
+   ScaleHeight     =   9330
    ScaleWidth      =   15240
    WindowState     =   2  'Maximized
    Begin SSSplitter.SSSplitter SSSplitter1 
@@ -28,39 +28,14 @@ Begin VB.Form EGC1050C
       BorderStyle     =   0
       Locked          =   -1  'True
       PaneTree        =   "EGC1050C.frx":0000
-      Begin FPSpread.vaSpread ss1 
-         Height          =   7650
+      Begin Threed.SSFrame Single 
+         Height          =   1695
          Left            =   0
          TabIndex        =   4
-         Top             =   1425
-         Width           =   15225
-         _Version        =   393216
-         _ExtentX        =   26855
-         _ExtentY        =   13494
-         _StockProps     =   64
-         ColsFrozen      =   3
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         MaxCols         =   45
-         MaxRows         =   1
-         RetainSelBlock  =   0   'False
-         SpreadDesigner  =   "EGC1050C.frx":0052
-      End
-      Begin Threed.SSFrame Single 
-         Height          =   1365
-         Left            =   0
-         TabIndex        =   5
          Top             =   0
          Width           =   15225
          _ExtentX        =   26855
-         _ExtentY        =   2408
+         _ExtentY        =   2990
          _Version        =   196609
          BackColor       =   14737632
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -72,6 +47,44 @@ Begin VB.Form EGC1050C
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
+         Begin VB.ComboBox cbo_ord_fl 
+            BeginProperty Font 
+               Name            =   "宋体"
+               Size            =   9.75
+               Charset         =   134
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   315
+            ItemData        =   "EGC1050C.frx":0052
+            Left            =   4365
+            List            =   "EGC1050C.frx":0054
+            TabIndex        =   32
+            Tag             =   "班别"
+            Top             =   1320
+            Width           =   1530
+         End
+         Begin VB.TextBox txt_mv_lst_no 
+            Alignment       =   2  'Center
+            BeginProperty Font 
+               Name            =   "宋体"
+               Size            =   9.75
+               Charset         =   134
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   315
+            Left            =   1485
+            MaxLength       =   15
+            TabIndex        =   30
+            Tag             =   "移拨码单号"
+            Top             =   1320
+            Width           =   1680
+         End
          Begin VB.TextBox text_cur_inv_code 
             Alignment       =   2  'Center
             BeginProperty Font 
@@ -86,7 +99,7 @@ Begin VB.Form EGC1050C
             Height          =   315
             Left            =   11730
             MaxLength       =   2
-            TabIndex        =   30
+            TabIndex        =   29
             Top             =   540
             Width           =   780
          End
@@ -102,7 +115,7 @@ Begin VB.Form EGC1050C
             EndProperty
             Height          =   315
             Left            =   12540
-            TabIndex        =   29
+            TabIndex        =   28
             TabStop         =   0   'False
             Top             =   540
             Width           =   2610
@@ -120,7 +133,7 @@ Begin VB.Form EGC1050C
             Height          =   315
             Left            =   1485
             MaxLength       =   14
-            TabIndex        =   15
+            TabIndex        =   14
             Top             =   540
             Width           =   1680
          End
@@ -135,10 +148,10 @@ Begin VB.Form EGC1050C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "EGC1050C.frx":217C
+            ItemData        =   "EGC1050C.frx":0056
             Left            =   5655
-            List            =   "EGC1050C.frx":2189
-            TabIndex        =   14
+            List            =   "EGC1050C.frx":0063
+            TabIndex        =   13
             Top             =   135
             Width           =   750
          End
@@ -155,7 +168,7 @@ Begin VB.Form EGC1050C
             Height          =   315
             Left            =   8055
             MaxLength       =   18
-            TabIndex        =   13
+            TabIndex        =   12
             Tag             =   "标准号"
             Top             =   540
             Width           =   2380
@@ -171,10 +184,10 @@ Begin VB.Form EGC1050C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "EGC1050C.frx":2196
+            ItemData        =   "EGC1050C.frx":0070
             Left            =   11730
-            List            =   "EGC1050C.frx":21AF
-            TabIndex        =   12
+            List            =   "EGC1050C.frx":0089
+            TabIndex        =   11
             Tag             =   "等级"
             Top             =   135
             Width           =   1065
@@ -190,10 +203,10 @@ Begin VB.Form EGC1050C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "EGC1050C.frx":21F2
+            ItemData        =   "EGC1050C.frx":00CC
             Left            =   7575
-            List            =   "EGC1050C.frx":2202
-            TabIndex        =   11
+            List            =   "EGC1050C.frx":00DC
+            TabIndex        =   10
             Tag             =   "班别"
             Top             =   135
             Width           =   750
@@ -210,7 +223,7 @@ Begin VB.Form EGC1050C
             EndProperty
             Height          =   315
             Left            =   4725
-            TabIndex        =   10
+            TabIndex        =   9
             Top             =   540
             Width           =   1680
          End
@@ -225,10 +238,10 @@ Begin VB.Form EGC1050C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "EGC1050C.frx":2212
+            ItemData        =   "EGC1050C.frx":00EC
             Left            =   12780
-            List            =   "EGC1050C.frx":2228
-            TabIndex        =   9
+            List            =   "EGC1050C.frx":0102
+            TabIndex        =   8
             Tag             =   "等级"
             Top             =   135
             Width           =   1065
@@ -245,7 +258,7 @@ Begin VB.Form EGC1050C
             EndProperty
             Height          =   315
             Left            =   13740
-            TabIndex        =   8
+            TabIndex        =   7
             Tag             =   "标准代码"
             Top             =   945
             Width           =   1395
@@ -261,10 +274,10 @@ Begin VB.Form EGC1050C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "EGC1050C.frx":2262
+            ItemData        =   "EGC1050C.frx":013C
             Left            =   9690
-            List            =   "EGC1050C.frx":2272
-            TabIndex        =   7
+            List            =   "EGC1050C.frx":014C
+            TabIndex        =   6
             Tag             =   "班别"
             Top             =   135
             Width           =   750
@@ -280,10 +293,10 @@ Begin VB.Form EGC1050C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "EGC1050C.frx":2282
+            ItemData        =   "EGC1050C.frx":015C
             Left            =   11730
-            List            =   "EGC1050C.frx":2284
-            TabIndex        =   6
+            List            =   "EGC1050C.frx":015E
+            TabIndex        =   5
             Tag             =   "班别"
             Top             =   945
             Width           =   1065
@@ -381,7 +394,7 @@ Begin VB.Form EGC1050C
          Begin InDate.UDate SDT_PROD_TO_DATE 
             Height          =   315
             Left            =   3090
-            TabIndex        =   16
+            TabIndex        =   15
             Tag             =   "起始日期"
             Top             =   135
             Width           =   1410
@@ -402,7 +415,7 @@ Begin VB.Form EGC1050C
          Begin InDate.UDate SDT_PROD_DATE 
             Height          =   315
             Left            =   1485
-            TabIndex        =   17
+            TabIndex        =   16
             Tag             =   "起始日期"
             Top             =   135
             Width           =   1410
@@ -489,7 +502,7 @@ Begin VB.Form EGC1050C
          Begin Threed.SSCommand CMD_CARD 
             Height          =   345
             Left            =   13860
-            TabIndex        =   18
+            TabIndex        =   17
             Top             =   120
             Width           =   1305
             _ExtentX        =   2302
@@ -513,7 +526,7 @@ Begin VB.Form EGC1050C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -546,7 +559,7 @@ Begin VB.Form EGC1050C
          Begin CSTextLibCtl.sidbEdit SDB_WID 
             Height          =   315
             Left            =   4365
-            TabIndex        =   19
+            TabIndex        =   18
             Top             =   945
             Width           =   900
             _Version        =   262145
@@ -622,7 +635,7 @@ Begin VB.Form EGC1050C
          Begin CSTextLibCtl.sidbEdit SDB_LEN 
             Height          =   315
             Left            =   8055
-            TabIndex        =   20
+            TabIndex        =   19
             Top             =   945
             Width           =   1050
             _Version        =   262145
@@ -676,7 +689,7 @@ Begin VB.Form EGC1050C
          Begin CSTextLibCtl.sidbEdit SDB_WID_TO 
             Height          =   315
             Left            =   5505
-            TabIndex        =   21
+            TabIndex        =   20
             Top             =   945
             Width           =   900
             _Version        =   262145
@@ -730,7 +743,7 @@ Begin VB.Form EGC1050C
          Begin CSTextLibCtl.sidbEdit SDB_LEN_TO 
             Height          =   315
             Left            =   9390
-            TabIndex        =   22
+            TabIndex        =   21
             Top             =   945
             Width           =   1050
             _Version        =   262145
@@ -784,7 +797,7 @@ Begin VB.Form EGC1050C
          Begin CSTextLibCtl.sidbEdit SDB_THK 
             Height          =   315
             Left            =   1365
-            TabIndex        =   23
+            TabIndex        =   22
             Top             =   940
             Width           =   765
             _Version        =   262145
@@ -859,7 +872,7 @@ Begin VB.Form EGC1050C
          Begin CSTextLibCtl.sidbEdit SDB_THK_TO 
             Height          =   315
             Left            =   2400
-            TabIndex        =   24
+            TabIndex        =   23
             Top             =   940
             Width           =   765
             _Version        =   262145
@@ -976,12 +989,56 @@ Begin VB.Form EGC1050C
             EndProperty
             ForeColor       =   16711680
          End
+         Begin InDate.ULabel ULabel12 
+            Height          =   315
+            Left            =   105
+            Top             =   1320
+            Width           =   1350
+            _ExtentX        =   2381
+            _ExtentY        =   556
+            Caption         =   "移拨码单号"
+            Alignment       =   1
+            BackColor       =   14804173
+            BackgroundStyle =   1
+            ChiselText      =   2
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "宋体"
+               Size            =   9.76
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+         End
+         Begin InDate.ULabel ULabel14 
+            Height          =   315
+            Left            =   3345
+            Top             =   1320
+            Width           =   1020
+            _ExtentX        =   1799
+            _ExtentY        =   556
+            Caption         =   "余材替代"
+            Alignment       =   1
+            BackColor       =   14804173
+            BackgroundStyle =   1
+            ChiselText      =   2
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "宋体"
+               Size            =   9.76
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+         End
          Begin VB.Label Label6 
             BackColor       =   &H00E0E0E0&
             Caption         =   "~"
             Height          =   120
             Left            =   2220
-            TabIndex        =   28
+            TabIndex        =   27
             Top             =   1065
             Width           =   195
          End
@@ -990,7 +1047,7 @@ Begin VB.Form EGC1050C
             Caption         =   "~"
             Height          =   120
             Left            =   2940
-            TabIndex        =   27
+            TabIndex        =   26
             Top             =   255
             Width           =   195
          End
@@ -999,7 +1056,7 @@ Begin VB.Form EGC1050C
             Caption         =   "~"
             Height          =   120
             Left            =   5340
-            TabIndex        =   26
+            TabIndex        =   25
             Top             =   1065
             Width           =   195
          End
@@ -1008,10 +1065,35 @@ Begin VB.Form EGC1050C
             Caption         =   "~"
             Height          =   120
             Left            =   9195
-            TabIndex        =   25
+            TabIndex        =   24
             Top             =   1065
             Width           =   195
          End
+      End
+      Begin FPSpread.vaSpread ss1 
+         Height          =   7320
+         Left            =   0
+         TabIndex        =   31
+         Top             =   1755
+         Width           =   15225
+         _Version        =   393216
+         _ExtentX        =   26855
+         _ExtentY        =   12912
+         _StockProps     =   64
+         ColsFrozen      =   3
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         MaxCols         =   49
+         MaxRows         =   501
+         RetainSelBlock  =   0   'False
+         SpreadDesigner  =   "EGC1050C.frx":0160
       End
    End
    Begin InDate.ULabel ULabel3 
@@ -1161,16 +1243,16 @@ Dim lBlkrow1 As Long                'To Excel Block Row1
 Dim lBlkrow2 As Long                'To Excel Block Row2
 
 Const SS1_PLATE_NO = 1
-Const SS1_PROC_CD = 4
-Const SS1_STDSPEC = 5
-Const SS1_AFER_SIZE = 8
-Const SS1_AFER_WGT = 9
-Const SS1_EMP_NO = 24
-Const SS1_LOC = 25
-Const SS1_REMARK = 27
-Const SS1_CUST_CD = 33
-Const SS1_ORD = 32
-Const SS1_SIZE = 34
+Const SS1_PROC_CD = 8
+Const SS1_STDSPEC = 9
+Const SS1_AFER_SIZE = 12
+Const SS1_AFER_WGT = 13
+Const SS1_EMP_NO = 28
+Const SS1_LOC = 29
+Const SS1_REMARK = 31
+Const SS1_CUST_CD = 37
+Const SS1_ORD = 36
+Const SS1_SIZE = 38
 
 
 Private Sub Form_Define()
@@ -1201,6 +1283,8 @@ Private Sub Form_Define()
      Call Gp_Ms_Collection(CBO_MILLGROUP, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
      Call Gp_Ms_Collection(cbo_cut_place, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
  Call Gp_Ms_Collection(text_cur_inv_code, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+     Call Gp_Ms_Collection(txt_mv_lst_no, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+     Call Gp_Ms_Collection(cbo_ord_fl, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
         
         Mc1.Add Item:=pControl, Key:="pControl"
         Mc1.Add Item:=nControl, Key:="nControl"
@@ -1214,48 +1298,52 @@ Private Sub Form_Define()
      Call Gp_Sp_Collection(ss1, 1, "p", " ", " ", "i", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
      Call Gp_Sp_Collection(ss1, 2, " ", " ", " ", "i", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
      Call Gp_Sp_Collection(ss1, 3, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-     Call Gp_Sp_Collection(ss1, 4, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-     Call Gp_Sp_Collection(ss1, 5, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-     Call Gp_Sp_Collection(ss1, 6, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-     Call Gp_Sp_Collection(ss1, 7, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 4, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 5, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 6, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 7, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
      Call Gp_Sp_Collection(ss1, 8, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
      Call Gp_Sp_Collection(ss1, 9, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-    Call Gp_Sp_Collection(ss1, 10, " ", " ", " ", "i", " ", " ", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-    Call Gp_Sp_Collection(ss1, 11, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-    Call Gp_Sp_Collection(ss1, 12, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-    Call Gp_Sp_Collection(ss1, 13, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-    Call Gp_Sp_Collection(ss1, 14, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+     Call Gp_Sp_Collection(ss1, 10, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+     Call Gp_Sp_Collection(ss1, 11, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+     Call Gp_Sp_Collection(ss1, 12, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+     Call Gp_Sp_Collection(ss1, 13, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 14, " ", " ", " ", "i", " ", " ", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
     Call Gp_Sp_Collection(ss1, 15, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-     Call Gp_Sp_Collection(ss1, 16, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn) '试样号状态
-     Call Gp_Sp_Collection(ss1, 17, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn) '委托单号
-    Call Gp_Sp_Collection(ss1, 18, " ", " ", " ", "i", " ", " ", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-    Call Gp_Sp_Collection(ss1, 19, " ", " ", " ", "i", " ", " ", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-    Call Gp_Sp_Collection(ss1, 20, " ", " ", " ", "i", " ", " ", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-    Call Gp_Sp_Collection(ss1, 21, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-    Call Gp_Sp_Collection(ss1, 22, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-    Call Gp_Sp_Collection(ss1, 23, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-    Call Gp_Sp_Collection(ss1, 24, " ", " ", " ", "i", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-    Call Gp_Sp_Collection(ss1, 25, " ", " ", " ", "i", " ", " ", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 16, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 17, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 18, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 19, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+     Call Gp_Sp_Collection(ss1, 20, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn) '试样号状态
+     Call Gp_Sp_Collection(ss1, 21, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn) '委托单号
+    Call Gp_Sp_Collection(ss1, 22, " ", " ", " ", "i", " ", " ", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 23, " ", " ", " ", "i", " ", " ", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 24, " ", " ", " ", "i", " ", " ", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 25, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
     Call Gp_Sp_Collection(ss1, 26, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
     Call Gp_Sp_Collection(ss1, 27, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-    Call Gp_Sp_Collection(ss1, 28, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-    Call Gp_Sp_Collection(ss1, 29, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 28, " ", " ", " ", "i", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 29, " ", " ", " ", "i", " ", " ", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
     Call Gp_Sp_Collection(ss1, 30, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
     Call Gp_Sp_Collection(ss1, 31, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
     Call Gp_Sp_Collection(ss1, 32, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
     Call Gp_Sp_Collection(ss1, 33, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
     Call Gp_Sp_Collection(ss1, 34, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
     Call Gp_Sp_Collection(ss1, 35, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-    Call Gp_Sp_Collection(ss1, 36, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)      '热处理指示 by 2011-09-07
-    Call Gp_Sp_Collection(ss1, 37, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)      '矫直指示   by 2011-09-07
-    Call Gp_Sp_Collection(ss1, 38, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)      '探伤指示   by 2011-09-07
+    Call Gp_Sp_Collection(ss1, 36, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 37, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 38, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
     Call Gp_Sp_Collection(ss1, 39, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-    Call Gp_Sp_Collection(ss1, 40, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-    Call Gp_Sp_Collection(ss1, 41, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
-    Call Gp_Sp_Collection(ss1, 42, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 40, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)      '热处理指示 by 2011-09-07
+    Call Gp_Sp_Collection(ss1, 41, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)      '矫直指示   by 2011-09-07
+    Call Gp_Sp_Collection(ss1, 42, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)      '探伤指示   by 2011-09-07
     Call Gp_Sp_Collection(ss1, 43, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
     Call Gp_Sp_Collection(ss1, 44, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
     Call Gp_Sp_Collection(ss1, 45, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 46, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 47, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 48, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 49, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
  
     sc1.Add Item:=ss1, Key:="Spread"
     sc1.Add Item:="EGC1050C.P_SREFER", Key:="P-R"
@@ -1325,8 +1413,15 @@ Private Sub Form_Load()
     cbo_cut_place.AddItem "中板厂"
     cbo_cut_place.AddItem "修建部"
     cbo_cut_place.AddItem "港南库"
-    cbo_cut_place.AddItem "五号线" '20170511
+    cbo_cut_place.AddItem "板卷线" '20170511
+    cbo_cut_place.AddItem "GT库" '20170522
     cbo_cut_place.ListIndex = 0
+    
+    cbo_ord_fl.AddItem ""
+    cbo_ord_fl.AddItem "订单材-余材"
+    cbo_ord_fl.AddItem "余材-订单材"
+    cbo_ord_fl.AddItem "订单材-订单材"
+    cbo_ord_fl.ListIndex = 0
 
     Call Gp_Ms_ControlLock(Mc1("lControl"), True)
 
@@ -1400,7 +1495,7 @@ End Sub
 
 Public Sub Form_Ref()
     
-    Dim SMESG As String
+    Dim sMesg As String
     
     If Gf_Sp_ProceExist(Proc_Sc("Sc").Item("Spread")) Then Exit Sub
     If SDT_PROD_DATE.RawData = "" Or SDT_PROD_TO_DATE.RawData = "" Then
@@ -1409,8 +1504,8 @@ Public Sub Form_Ref()
     End If
     
     If Val(SDT_PROD_DATE.RawData) - Val(SDT_PROD_TO_DATE.RawData) > 0 Then
-         SMESG = " 时间范围输入错误，请重新输入时间信息 ！！！"
-         Call Gp_MsgBoxDisplay(SMESG)
+         sMesg = " 时间范围输入错误，请重新输入时间信息 ！！！"
+         Call Gp_MsgBoxDisplay(sMesg)
          Exit Sub
     End If
     
@@ -1452,17 +1547,21 @@ Private Sub SDT_PROD_to_DATE_GotFocus()
      SDT_PROD_TO_DATE.RawData = Gf_DTSet(M_CN1, "D")
 End Sub
 
-Private Sub ss1_Click(ByVal Col As Long, ByVal Row As Long)
-    If Row = 0 Then
-        Call Gp_Sp_Sort(ss1, Col, Row)
-    End If
+Private Sub ss1_Click(ByVal Col As Long, ByVal ROW As Long)
+
+    Call Gp_Sp_Sort(Proc_Sc("Sc")("Spread"), Col, ROW)
+
+    lBlkcol1 = 0
+    lBlkcol2 = 0
+    lBlkrow1 = 0
+    lBlkrow2 = 0
 End Sub
 
-Private Sub ss1_EditMode(ByVal Col As Long, ByVal Row As Long, ByVal Mode As Integer, ByVal ChangeMade As Boolean)
+Private Sub ss1_EditMode(ByVal Col As Long, ByVal ROW As Long, ByVal Mode As Integer, ByVal ChangeMade As Boolean)
 
     If Gf_Sc_Authority(sAuthority, "U") Then
         Call Gp_Sp_UpdateMake(Proc_Sc("SC")("Spread"), Mode)
-        ss1.Row = ss1.ActiveRow
+        ss1.ROW = ss1.ActiveRow
         ss1.Col = SS1_EMP_NO
         ss1.Text = sUserID
     End If
@@ -1489,7 +1588,7 @@ End Sub
 
 Private Sub ExcelPrn_Pile()
 
-    Dim I               As Integer
+    Dim i               As Integer
     Dim j               As Integer
     Dim xlApp           As Object
     Dim xlSheet         As Object
@@ -1567,34 +1666,34 @@ Private Sub ExcelPrn_Pile()
     sPage = Int(ss1.MaxRows / sPage_Num) + 1
     sLastPage = ss1.MaxRows - Int(ss1.MaxRows / sPage_Num) * sPage_Num
     
-    For I = 0 To 10
-        xl_clr_body = "A" + CStr(4 + I * sPage_X) + ":" + "I" + CStr(33 + I * sPage_X)
-        xl_clr_sum = "G" + CStr(34 + I * sPage_X) + ":" + "G" + CStr(35 + I * sPage_X)
+    For i = 0 To 10
+        xl_clr_body = "A" + CStr(4 + i * sPage_X) + ":" + "I" + CStr(33 + i * sPage_X)
+        xl_clr_sum = "G" + CStr(34 + i * sPage_X) + ":" + "G" + CStr(35 + i * sPage_X)
         xlApp.Range(xl_clr_body).Value = Null
         xlApp.Range(xl_clr_sum).Value = Null
-    Next I
+    Next i
     
-    For I = 0 To sPage - 1
+    For i = 0 To sPage - 1
        
-        sRow1 = 1 + sPage_Num * I
-        sRow2 = sPage_Num * (I + 1)
+        sRow1 = 1 + sPage_Num * i
+        sRow2 = sPage_Num * (i + 1)
 
-        If I = sPage - 1 Then
-           sRow2 = sPage_Num * I + sLastPage
+        If i = sPage - 1 Then
+           sRow2 = sPage_Num * i + sLastPage
         End If
 
-        xl_A = "A" + CStr(4 + I * sPage_X)
-        xl_B = "B" + CStr(4 + I * sPage_X)
-        xl_C = "C" + CStr(4 + I * sPage_X)
-        xl_D = "D" + CStr(4 + I * sPage_X)
-        xl_E = "E" + CStr(4 + I * sPage_X)
-        xl_F = "F" + CStr(4 + I * sPage_X)
-        xl_G = "G" + CStr(4 + I * sPage_X)
-        xl_H = "H" + CStr(4 + I * sPage_X)
-        xl_I = "I" + CStr(4 + I * sPage_X)
+        xl_A = "A" + CStr(4 + i * sPage_X)
+        xl_B = "B" + CStr(4 + i * sPage_X)
+        xl_C = "C" + CStr(4 + i * sPage_X)
+        xl_D = "D" + CStr(4 + i * sPage_X)
+        xl_E = "E" + CStr(4 + i * sPage_X)
+        xl_F = "F" + CStr(4 + i * sPage_X)
+        xl_G = "G" + CStr(4 + i * sPage_X)
+        xl_H = "H" + CStr(4 + i * sPage_X)
+        xl_I = "I" + CStr(4 + i * sPage_X)
         
-        Xl_Cnt = "C" + CStr(3 + (I + 1) * sPage_X)
-        Xl_Wgt = "G" + CStr(3 + (I + 1) * sPage_X)
+        Xl_Cnt = "C" + CStr(3 + (i + 1) * sPage_X)
+        Xl_Wgt = "G" + CStr(3 + (i + 1) * sPage_X)
         
         Clipboard.Clear
         ss1.SetSelection SS1_LOC, sRow1, SS1_LOC, sRow2
@@ -1660,7 +1759,7 @@ Private Sub ExcelPrn_Pile()
         Clipboard.Clear
                         
                 
-        If I = sPage - 1 Then
+        If i = sPage - 1 Then
            xlApp.Range(Xl_Cnt).Value = sLastPage
         Else
            xlApp.Range(Xl_Cnt).Value = sPage_Num
@@ -1671,7 +1770,7 @@ Private Sub ExcelPrn_Pile()
             xlApp.Range(Xl_Wgt).Value = xlApp.Range(Xl_Wgt).Value + xlApp.Range(Xl_Wgt_Val).Value
         Next j
                       
-    Next I
+    Next i
     
     ss1.ClearSelection
        

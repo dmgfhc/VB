@@ -12,8 +12,8 @@ Begin VB.Form ACB5035C
    ClientWidth     =   11280
    LinkTopic       =   "Form1"
    MDIChild        =   -1  'True
-   ScaleHeight     =   9420
-   ScaleWidth      =   11280
+   ScaleHeight     =   10950
+   ScaleWidth      =   20250
    WindowState     =   2  'Maximized
    Begin SSSplitter.SSSplitter SSSplitter2 
       Height          =   9360
@@ -288,7 +288,7 @@ Begin VB.Form ACB5035C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -310,7 +310,7 @@ Begin VB.Form ACB5035C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -437,7 +437,7 @@ Begin VB.Form ACB5035C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -500,7 +500,7 @@ Begin VB.Form ACB5035C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -524,7 +524,7 @@ Begin VB.Form ACB5035C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -547,7 +547,7 @@ Begin VB.Form ACB5035C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   134
                Weight          =   400
                Underline       =   0   'False
@@ -570,7 +570,7 @@ Begin VB.Form ACB5035C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -592,7 +592,7 @@ Begin VB.Form ACB5035C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -730,7 +730,7 @@ Begin VB.Form ACB5035C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -902,7 +902,7 @@ Begin VB.Form ACB5035C
             Protect         =   0   'False
             RetainSelBlock  =   0   'False
             ScrollBarExtMode=   -1  'True
-            SpreadDesigner  =   "ACB5035C.frx":09C3
+            SpreadDesigner  =   "ACB5035C.frx":0911
          End
          Begin FPSpread.vaSpread ss3 
             Height          =   45
@@ -932,7 +932,7 @@ Begin VB.Form ACB5035C
             Protect         =   0   'False
             RetainSelBlock  =   0   'False
             ScrollBarExtMode=   -1  'True
-            SpreadDesigner  =   "ACB5035C.frx":2630
+            SpreadDesigner  =   "ACB5035C.frx":24CC
          End
       End
    End
@@ -1097,13 +1097,13 @@ Private Sub Form_Define()
      'Form Type : Start , Master, Sheet, Msheet, PopSheet, Refer
       FormType = "Msheet"
          
-           Call Gp_Ms_Collection(text_prod_cd, "p", "n", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+           Call Gp_Ms_Collection(Text_PROD_CD, "p", "n", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
       Call Gp_Ms_Collection(text_cur_inv_code, "p", "n", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
              Call Gp_Ms_Collection(txt_to_inv, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
     Call Gp_Ms_Collection(udate_in_plt_date_a, "p", "n", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
     Call Gp_Ms_Collection(udate_in_plt_date_b, "p", "n", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
           Call Gp_Ms_Collection(txt_mv_lst_no, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-          Call Gp_Ms_Collection(txt_plate_no, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+          Call Gp_Ms_Collection(TXT_PLATE_NO, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
                                                             
       'MASTER Collection
     Mc1.Add Item:=pControl, Key:="pControl"
@@ -1205,26 +1205,26 @@ Private Sub Form_Define()
     Proc_Sc.Add Item:=sc1, Key:="Sc"
                                                   
     ' control part   Call Spread_Collection("Column_Num", "p(primary)", "n(Necessary)", "m(maxlength)", "i(insert)", "a(append_down), "l(lock)")
-    Call Gp_Sp_Collection(ss2, 1, "p", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-    Call Gp_Sp_Collection(ss2, 2, "p", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-    Call Gp_Sp_Collection(ss2, 3, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-    Call Gp_Sp_Collection(ss2, 4, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-    Call Gp_Sp_Collection(ss2, 5, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-    Call Gp_Sp_Collection(ss2, 6, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-    Call Gp_Sp_Collection(ss2, 7, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-    Call Gp_Sp_Collection(ss2, 8, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-    Call Gp_Sp_Collection(ss2, 9, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-   Call Gp_Sp_Collection(ss2, 10, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-   Call Gp_Sp_Collection(ss2, 11, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-   Call Gp_Sp_Collection(ss2, 12, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2) '12
-   Call Gp_Sp_Collection(ss2, 13, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2) '13
-   Call Gp_Sp_Collection(ss2, 14, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2) '13-> 14
-   Call Gp_Sp_Collection(ss2, 15, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2) '15
-   Call Gp_Sp_Collection(ss2, 16, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2) '16
+    Call Gp_Sp_Collection(SS2, 1, "p", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+    Call Gp_Sp_Collection(SS2, 2, "p", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+    Call Gp_Sp_Collection(SS2, 3, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+    Call Gp_Sp_Collection(SS2, 4, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+    Call Gp_Sp_Collection(SS2, 5, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+    Call Gp_Sp_Collection(SS2, 6, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+    Call Gp_Sp_Collection(SS2, 7, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+    Call Gp_Sp_Collection(SS2, 8, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+    Call Gp_Sp_Collection(SS2, 9, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+   Call Gp_Sp_Collection(SS2, 10, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+   Call Gp_Sp_Collection(SS2, 11, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+   Call Gp_Sp_Collection(SS2, 12, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2) '12
+   Call Gp_Sp_Collection(SS2, 13, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2) '13
+   Call Gp_Sp_Collection(SS2, 14, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2) '13-> 14
+   Call Gp_Sp_Collection(SS2, 15, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2) '15
+   Call Gp_Sp_Collection(SS2, 16, " ", " ", " ", " ", " ", "l", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2) '16
    
    
     'Spread_Collection
-    sc2.Add Item:=ss2, Key:="Spread"
+    sc2.Add Item:=SS2, Key:="Spread"
     sc2.Add Item:="ACB5035C.P_SREFER", Key:="P-R"
     sc2.Add Item:=pColumn2, Key:="pColumn"
     sc2.Add Item:=nColumn2, Key:="nColumn"
@@ -1233,14 +1233,14 @@ Private Sub Form_Define()
     sc2.Add Item:=iColumn2, Key:="iColumn"
     sc2.Add Item:=lColumn2, Key:="lColumn"
     sc2.Add Item:=2, Key:="First"
-    sc2.Add Item:=ss2.MaxCols, Key:="Last"
+    sc2.Add Item:=SS2.MaxCols, Key:="Last"
 
     Proc_Sc.Add Item:=sc2, Key:="Sc2"
 
     Me.KeyPreview = True
     Me.BackColor = &HE0E0E0
     
-    Call Gp_Sp_ColHidden(ss2, SS2_TRANS_WAY, True)
+    Call Gp_Sp_ColHidden(SS2, SS2_TRANS_WAY, True)
     
     
    Call Gp_Sp_Collection(ss3, 1, " ", " ", " ", " ", " ", "l", pColumn3, nColumn3, mColumn3, iColumn3, aColumn3, lColumn3)
@@ -1506,20 +1506,20 @@ End Sub
 
 Private Sub Text_PROD_CD_Change()
    
-    If Len(text_prod_cd) <> 2 Then Exit Sub
+    If Len(Text_PROD_CD) <> 2 Then Exit Sub
 
-    Select Case text_prod_cd.Text
+    Select Case Text_PROD_CD.Text
 
         Case "PP", "pp"
-            text_prod_cd.Text = "PP"
+            Text_PROD_CD.Text = "PP"
         Case "HC", "hc"
-            text_prod_cd.Text = "HC"
+            Text_PROD_CD.Text = "HC"
         Case "MP", "mp"
-            text_prod_cd.Text = "MP"
+            Text_PROD_CD.Text = "MP"
         Case "", "**"
-            text_prod_cd.Text = ""
+            Text_PROD_CD.Text = ""
         Case Else
-            text_prod_cd.Text = ""
+            Text_PROD_CD.Text = ""
             Call MsgBox("产品分类代码" & Chr(10) & "不符合规范! 请更正。", vbExclamation + vbOKOnly, "警告")
     End Select
 
@@ -1535,10 +1535,10 @@ End Sub
 
 Private Sub text_prod_cd_LostFocus()
 
-    If text_prod_cd.Text <> "" Then
-        If (Len(text_prod_cd.Text) < text_prod_cd.MaxLength) Then
+    If Text_PROD_CD.Text <> "" Then
+        If (Len(Text_PROD_CD.Text) < Text_PROD_CD.MaxLength) Then
             Call Gp_MsgBoxDisplay("产品分类代码输入未完成！")
-            text_prod_cd.SetFocus
+            Text_PROD_CD.SetFocus
         End If
     End If
 
@@ -1594,7 +1594,7 @@ Private Sub Form_Load()
     
     Screen.MousePointer = vbDefault
     
-    text_prod_cd.Text = "PP"
+    Text_PROD_CD.Text = "PP"
     
     text_cur_inv_code = "00"
     txt_to_inv.Text = "WD"
@@ -1676,7 +1676,7 @@ Public Sub Form_Cls()
     text_tot_sheets.Value = 0
     text_tot_wgt.Value = 0
     txt_input_date.Text = ""
-    text_prod_cd.Text = "PP"
+    Text_PROD_CD.Text = "PP"
 
     text_cur_inv_code = "00"
     txt_to_inv.Text = "WD"
@@ -1722,10 +1722,10 @@ Public Sub Form_Ref()
     If Gf_Sp_Refer(M_CN1, sc2, Mc1, Mc1("nControl"), Mc1("mControl")) Then
         Call MDIMain.FormMenuSetting(Me, FormType, "RE", sAuthority)
         Call MenuTool_ReSet
-        ss2.OperationMode = OperationModeNormal
+        SS2.OperationMode = OperationModeNormal
     End If
     
-    With ss2
+    With SS2
     
         If .MaxRows <= 1 Then
            Exit Sub
@@ -1751,7 +1751,7 @@ Public Sub Form_Ref()
     
     
 
-    With ss2
+    With SS2
     
         If .MaxRows = 0 Then
             text_tot_sheets.Text = "0"
@@ -1912,22 +1912,22 @@ Private Sub ss2_DblClick(ByVal Col As Long, ByVal ROW As Long)
 
     If ROW < 1 Then Exit Sub
 
-    ss2.ROW = ROW
-    ss2.Col = SS2_MV_LST_NO
-    If Len(Trim(ss2.Text)) > 10 Then
-        txt_mv_lst_no.Text = ss2.Text
-        ss2.Col = SS2_FR_INV
-        text_cur_inv_code.Text = ss2.Text
-        ss2.Col = SS2_TO_INV
-        txt_to_inv.Text = ss2.Text
-        ss2.Col = SS2_TRANS_WAY
-        txt_trans_way.Text = ss2.Text
+    SS2.ROW = ROW
+    SS2.Col = SS2_MV_LST_NO
+    If Len(Trim(SS2.Text)) > 10 Then
+        txt_mv_lst_no.Text = SS2.Text
+        SS2.Col = SS2_FR_INV
+        text_cur_inv_code.Text = SS2.Text
+        SS2.Col = SS2_TO_INV
+        txt_to_inv.Text = SS2.Text
+        SS2.Col = SS2_TRANS_WAY
+        txt_trans_way.Text = SS2.Text
     Else
         txt_mv_lst_no.Text = ""
     End If
 
-    ss2.Col = SS2_MV_NUM:  text_tot_sheets.Text = Val(ss2.Value & "")
-    ss2.Col = SS2_MV_WGT: text_tot_wgt.Text = Val(ss2.Value & "")
+    SS2.Col = SS2_MV_NUM:  text_tot_sheets.Text = Val(SS2.Value & "")
+    SS2.Col = SS2_MV_WGT: text_tot_wgt.Text = Val(SS2.Value & "")
 
     Call Gf_Sp_Refer(M_CN1, sc1, Mc1, Mc1("nControl"), Mc1("mControl"), False)
     
@@ -1946,7 +1946,7 @@ Private Sub ss2_DblClick(ByVal Col As Long, ByVal ROW As Long)
       
       Next iRow
       ss1.ROW = 1
-      ss1.Col = SS1_PLATE_NO: txt_plate_no = ss1.Value
+      ss1.Col = SS1_PLATE_NO: TXT_PLATE_NO = ss1.Value
       Call Gf_Sp_Refer(M_CN1, Sc3, Mc1, Mc1("nControl"), Mc1("mControl"), False)
       ss3.OperationMode = OperationModeNormal
       
@@ -1990,7 +1990,7 @@ Private Sub ss1_Click(ByVal Col As Long, ByVal ROW As Long)
 '   Call ss1_row_Click(Col, Row)
 
  ss1.ROW = ROW
-      ss1.Col = SS1_PLATE_NO: txt_plate_no = ss1.Value
+      ss1.Col = SS1_PLATE_NO: TXT_PLATE_NO = ss1.Value
       
       
       Call Gf_Sp_Refer(M_CN1, Sc3, Mc1, Mc1("nControl"), Mc1("mControl"), False)
@@ -2141,7 +2141,7 @@ Private Sub Text_PROD_CD_KeyUp(KeyCode As Integer, Shift As Integer)
         DD.sWitch = "MS"
         DD.sKey = "B0005"
 
-        DD.rControl.Add Item:=text_prod_cd
+        DD.rControl.Add Item:=Text_PROD_CD
         'DD.rControl.Add Item:=Text_PROD_CD_Name
         
         DD.nameType = "2"
@@ -2193,7 +2193,7 @@ Private Sub ExcelPrn()
     xlApp.Range(sRow).Select
     xlApp.ActiveSheet.Paste
             
-    Select Case text_prod_cd.Text
+    Select Case Text_PROD_CD.Text
         Case "PP"
             xlApp.Range("B3").Value = "钢板"
         Case "SL"
@@ -2281,19 +2281,19 @@ Private Sub ExcelPrn()
     xlApp.Range(sRow).Value = text_tot_wgt.Text
 
     sRow = "A" & ss1.MaxRows + 6
-    ss2.ROW = ss2.ActiveRow: ss2.Col = 14
+    SS2.ROW = SS2.ActiveRow: SS2.Col = 14
     
 '     sRow = "A" & ss1.MaxRows + 6
 '    ss2.Row = ss2.ActiveRow: ss2.Col = 13
 '
-    xlApp.Range(sRow).Value = "转库发货员姓名:" & ss2.Text
+    xlApp.Range(sRow).Value = "转库发货员姓名:" & SS2.Text
 
     sRow = "D" & ss1.MaxRows + 6
     xlApp.Range(sRow).Value = "仓库操作员工号:" & sUserName
 
     sRow = "H" & ss1.MaxRows + 6
-    ss2.ROW = ss2.ActiveRow: ss2.Col = SS2_CAR_NO
-    xlApp.Range(sRow).Value = "车辆号:" & ss2.Text
+    SS2.ROW = SS2.ActiveRow: SS2.Col = SS2_CAR_NO
+    xlApp.Range(sRow).Value = "车辆号:" & SS2.Text
 
     Clipboard.Clear
     xlApp.Range("A2").Select
@@ -2344,7 +2344,7 @@ Private Sub ExcelGatePrn()
     Dim iFr_inv         As String
     Dim iTo_inv         As String
     
-    If ss1.MaxRows < 1 Or ss2.MaxRows < 1 Then Exit Sub
+    If ss1.MaxRows < 1 Or SS2.MaxRows < 1 Then Exit Sub
     
     Screen.MousePointer = vbHourglass
      
@@ -2362,7 +2362,7 @@ Private Sub ExcelGatePrn()
     Set xlSheet = xlApp.Worksheets("Sheet1")
     xlApp.Sheets("Sheet1").Select
 
-    Select Case text_prod_cd.Text
+    Select Case Text_PROD_CD.Text
         Case "PP"
             xlApp.Range("B9").Value = "热轧钢板"
         Case "MP"
@@ -2375,7 +2375,7 @@ Private Sub ExcelGatePrn()
     xlApp.Range("J3").Value = TXT_PASS_NO.Text
     xlApp.Range("G13").Value = CBO_GATE.Text
 
-    With ss2
+    With SS2
         .ROW = .ActiveRow
         .Col = SS2_MV_LST_NO
         If .Text = txt_mv_lst_no.Text Then

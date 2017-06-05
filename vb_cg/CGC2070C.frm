@@ -1,5 +1,5 @@
 VERSION 5.00
-Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "Indate.ocx"
+Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "indate.ocx"
 Object = "{065E6FD1-1BF9-11D2-BAE8-00104B9E0792}#3.0#0"; "ssa3d30.ocx"
 Object = "{FDAC2480-F4ED-4632-AA78-DCA210A74E49}#6.0#0"; "SPR32X60.ocx"
 Begin VB.Form CGC2070C 
@@ -12,7 +12,7 @@ Begin VB.Form CGC2070C
    LinkTopic       =   "Form1"
    MDIChild        =   -1  'True
    ScaleHeight     =   10950
-   ScaleWidth      =   20250
+   ScaleWidth      =   15240
    WindowState     =   2  'Maximized
    Begin VB.ComboBox CBO_GAS_FL 
       BeginProperty Font 
@@ -806,7 +806,7 @@ End Sub
 
 Public Sub Form_Ref()
     
-    Dim sMesg As String
+    Dim SMESG As String
     Dim lRow As Long
     Dim sSmp_color As Variant
     Dim sCnt_color As Variant

@@ -1,6 +1,6 @@
 VERSION 5.00
 Object = "{A5CC20C4-B5F5-11CD-98EC-0020AF234C9D}#4.1#0"; "cstext32.ocx"
-Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "Indate.ocx"
+Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "indate.ocx"
 Object = "{065E6FD1-1BF9-11D2-BAE8-00104B9E0792}#3.0#0"; "ssa3d30.ocx"
 Object = "{FDAC2480-F4ED-4632-AA78-DCA210A74E49}#6.0#0"; "SPR32X60.ocx"
 Begin VB.Form AGC2040C 
@@ -2568,7 +2568,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -2590,7 +2590,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -2654,7 +2654,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -2734,7 +2734,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.76
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -2986,7 +2986,7 @@ Private Sub Form_Define()
      Call Gp_Ms_Collection(SDT_PROD_TO_DATE, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
             Call Gp_Ms_Collection(CBO_SHIFT, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
         Call Gp_Ms_Collection(TXT_PROC_FLAG, " ", " ", " ", " ", "r", " ", "l", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-   Call Gp_Ms_Collection(TXT_APLY_ENDUSE_CD, " ", " ", " ", " ", "r", " ", "l", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+   Call Gp_Ms_Collection(txt_APLY_ENDUSE_CD, " ", " ", " ", " ", "r", " ", "l", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
            Call Gp_Ms_Collection(TXT_STLGRD, " ", " ", " ", " ", "r", " ", "l", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
                                                                                                                                                 
           Call Gp_Ms_Collection(TXT_KIND_NO, " ", " ", " ", "i", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
@@ -3015,14 +3015,14 @@ Private Sub Form_Define()
           Call Gp_Ms_Collection(SDB_ORD_WID, " ", " ", " ", " ", "r", " ", "l", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
           Call Gp_Ms_Collection(SDB_ORD_LEN, " ", " ", " ", " ", "r", " ", "l", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
           Call Gp_Ms_Collection(SDB_WGT_ORD, " ", " ", " ", " ", "r", " ", "l", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-          Call Gp_Ms_Collection(TXT_UST_GRD, " ", "n", " ", "i", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+          Call Gp_Ms_Collection(txt_ust_GRD, " ", "n", " ", "i", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
           Call Gp_Ms_Collection(TXT_PRD_GRD, " ", "n", " ", "i", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
          Call Gp_Ms_Collection(TXT_INSP_MAN, " ", "n", " ", "i", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
    Call Gp_Ms_Collection(TXT_INSP_OCCR_TIME, " ", "n", " ", "i", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
           Call Gp_Ms_Collection(TXT_ADD_THK, " ", " ", " ", "i", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
               Call Gp_Ms_Collection(TXT_LOC, " ", " ", " ", "i", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
            Call Gp_Ms_Collection(TXT_REMARK, " ", " ", " ", "i", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-          Call Gp_Ms_Collection(txt_stdspec, " ", " ", " ", "i", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+          Call Gp_Ms_Collection(TXT_STDSPEC, " ", " ", " ", "i", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
       Call Gp_Ms_Collection(txt_stdspec_chg, " ", " ", " ", "i", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
      Call Gp_Ms_Collection(TXT_REASON_FL(0), " ", " ", " ", "i", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
      Call Gp_Ms_Collection(TXT_REASON_FL(1), " ", " ", " ", "i", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
@@ -3032,7 +3032,7 @@ Private Sub Form_Define()
           Call Gp_Ms_Collection(TXT_ADDR(2), " ", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
        Call Gp_Ms_Collection(txt_Scrap_code, " ", " ", " ", "i", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
        Call Gp_Ms_Collection(txt_Scrap_name, " ", " ", " ", " ", " ", " ", "l", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-        Call Gp_Ms_Collection(TXT_NEXT_PROC, " ", " ", " ", "i", "r", " ", "l", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+        Call Gp_Ms_Collection(txt_NEXT_PROC, " ", " ", " ", "i", "r", " ", "l", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
            Call Gp_Ms_Collection(TXT_UST_FL, " ", " ", " ", " ", "r", " ", "l", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
           Call Gp_Ms_Collection(txt_woo_rsn, " ", " ", " ", "i", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl) '余材代码 20110608  ADD BY LiQian 如有发生降余材，提示必须输入余材代码，将余材代码做记录
              Call Gp_Ms_Collection(CBO_EQPM, " ", " ", " ", "i", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
@@ -3135,7 +3135,7 @@ Private Sub CHK_NEXT_PRC_Click(Index As Integer)
             End If
         Next iIndexStr
         If iCount = 0 Then
-            TXT_NEXT_PROC.Text = ""
+            txt_NEXT_PROC.Text = ""
             CHK_NEXT_PRC(Index).ForeColor = &H808080
             sCheck = ""
             Exit Sub
@@ -3150,7 +3150,7 @@ Private Sub CHK_NEXT_PRC_Click(Index As Integer)
     CHK_NEXT_PRC(Index).ForeColor = &HFF&
     CHK_NEXT_PRC(Index).Value = ssCBChecked
     
-    TXT_NEXT_PROC.Text = CHK_NEXT_PRC(Index).Tag
+    txt_NEXT_PROC.Text = CHK_NEXT_PRC(Index).Tag
         
     sCheck = ""
     
@@ -3162,17 +3162,17 @@ Private Sub Cmd_Edit_Click()
     Dim sComments   As String
     Dim sDate       As String
     Dim lSeq        As Long
-    Dim iRow        As Integer
+    Dim iROW        As Integer
     
-    Dim SMESG       As String
+    Dim sMesg       As String
     
     On Error GoTo UPDATE_ERROR
 
     Screen.MousePointer = vbHourglass
     
     If sUserID <> "1CJM001" And sUserID <> "1CJD001" And sUserID <> "1CJM005" Then '刘素梅，姜利，李钟玮
-        SMESG = " 您没有权限更新垛位号 ！"
-        Call Gp_MsgBoxDisplay(SMESG)
+        sMesg = " 您没有权限更新垛位号 ！"
+        Call Gp_MsgBoxDisplay(sMesg)
         Screen.MousePointer = vbDefault
         Exit Sub
     End If
@@ -3210,15 +3210,15 @@ Private Sub Cmd_Edit_Date_Click()
     Dim sShift               As String
     Dim sGroup_cd            As String
     
-    Dim SMESG                As String
+    Dim sMesg                As String
     
     On Error GoTo UPDATE_ERROR
 
     Screen.MousePointer = vbHourglass
     
     If sUserID <> "1CJM001" And sUserID <> "1CJD001" Then '刘素梅，姜利
-        SMESG = " 您没有权限更新垛位号 ！"
-        Call Gp_MsgBoxDisplay(SMESG)
+        sMesg = " 您没有权限更新垛位号 ！"
+        Call Gp_MsgBoxDisplay(sMesg)
         Screen.MousePointer = vbDefault
         Exit Sub
     End If
@@ -3375,7 +3375,7 @@ Public Sub Form_Ref()
     Dim iDATETIME As String
     Dim iTXT_REMARK As String
     
-    Dim iRow As Integer
+    Dim iROW As Integer
     Dim iCol As Integer
     Dim sUrgnt_Fl As String
     
@@ -3392,14 +3392,14 @@ Public Sub Form_Ref()
     
     '紧急订单绿色显示 add by liqian 2012-11-08
      With ss1
-          For iRow = 1 To .MaxRows
-             .Row = iRow:
+          For iROW = 1 To .MaxRows
+             .Row = iROW:
               .Col = SS1_URGNT_FL:    sUrgnt_Fl = Trim(.Text)
             
               If sUrgnt_Fl = "Y" Then
-                 Call Gp_Sp_BlockColor(ss1, 1, .MaxCols, iRow, iRow, &HC000&)
+                 Call Gp_Sp_BlockColor(ss1, 1, .MaxCols, iROW, iROW, &HC000&)
               End If
-          Next iRow
+          Next iROW
     End With
     
     If Len(TXT_PLATE_NO.Text) = 14 Then
@@ -3411,9 +3411,9 @@ Public Sub Form_Ref()
         Call ss1_DblClick(1, 1)
     End If
     
-    If TXT_NEXT_PROC.Text = "" Or TXT_NEXT_PROC.Text = "U" Then
+    If txt_NEXT_PROC.Text = "" Or txt_NEXT_PROC.Text = "U" Then
        CHK_NEXT_PRC(0).Value = 1
-       TXT_NEXT_PROC.Text = "P"
+       txt_NEXT_PROC.Text = "P"
     End If
         
     If Len(iAddr) = 3 And Len(iAddr1) = 4 And Len(iAddr2) > 0 Then
@@ -3435,7 +3435,7 @@ End Sub
 
 Public Sub Form_Pro()
 
-    Dim SMESG   As String
+    Dim sMesg   As String
     Dim iCount  As Integer
     
     Dim iAddr As String
@@ -3447,36 +3447,36 @@ Public Sub Form_Pro()
     iAddr2 = TXT_ADDR(2).Text
     
     If txt_stdspec_chg.Text <> "" And Trim(TXT_REASON_FL(0).Text) = "" And Trim(TXT_REASON_FL(1).Text) = "" Then
-        SMESG = " 请输入改判原因 ！"
-        Call Gp_MsgBoxDisplay(SMESG)
+        sMesg = " 请输入改判原因 ！"
+        Call Gp_MsgBoxDisplay(sMesg)
         Exit Sub
     End If
     
 '    If CHK_PRD_GRD(1).Value <> ssCBChecked Then
         If SDB_WGT_ORG.Value > 0 And SDB_WGT.Value <> SDB_WGT_ORG.Value And Trim(TXT_REASON_FL(2).Text) = "" Then
-            SMESG = " 请输入返剪原因 ！"
-            Call Gp_MsgBoxDisplay(SMESG)
+            sMesg = " 请输入返剪原因 ！"
+            Call Gp_MsgBoxDisplay(sMesg)
             Exit Sub
         End If
 '    End If
     
     If Not Gp_DateCheck(TXT_INSP_OCCR_TIME) Then
-        SMESG = " 请正确输入检查时间 ！"
-        Call Gp_MsgBoxDisplay(SMESG)
+        sMesg = " 请正确输入检查时间 ！"
+        Call Gp_MsgBoxDisplay(sMesg)
         Exit Sub
     End If
     
     If CHK_PRD_GRD(4).Value = ssCBChecked Then
         If txt_Scrap_code.Text = "" Then
-            SMESG = " 请正确输入废钢原因 ！"
-            Call Gp_MsgBoxDisplay(SMESG)
+            sMesg = " 请正确输入废钢原因 ！"
+            Call Gp_MsgBoxDisplay(sMesg)
             Exit Sub
         End If
     End If
     
     If CBO_EQPM.Text <> "NDT" And CBO_EQPM.Text <> "NK" Then
-            SMESG = " 请正确选择设备"
-            Call Gp_MsgBoxDisplay(SMESG)
+            sMesg = " 请正确选择设备"
+            Call Gp_MsgBoxDisplay(sMesg)
             Exit Sub
     End If
         
@@ -3485,8 +3485,8 @@ Public Sub Form_Pro()
        TXT_INSP_MAN = sUserID
        
        If TXT_UST_STAND_NO.Text <> TXT_UST_FL.Text Then
-            SMESG = " 探伤标准与计划探伤标准不一致，您确认保存么？"
-            If Gf_MessConfirm(SMESG, "Q") Then
+            sMesg = " 探伤标准与计划探伤标准不一致，您确认保存么？"
+            If Gf_MessConfirm(sMesg, "Q") Then
                 If Gf_Ms_Process(M_CN1, Mc1, sAuthority) Then
                     Call MDIMain.FormMenuSetting(Me, FormType, "SE", sAuthority)
                     TXT_PLATE_NO.Enabled = True
@@ -3562,9 +3562,9 @@ End Sub
 Private Sub TXT_STDSPEC_Change()
     Dim RS  As New ADODB.Recordset
 
-    If Trim(txt_stdspec.Text) = "" Then Exit Sub
+    If Trim(TXT_STDSPEC.Text) = "" Then Exit Sub
     
-    sQuery = "SELECT  Gf_Stdspec_Name_Chn('" & Trim(txt_stdspec.Text) & "')" & vbCrLf
+    sQuery = "SELECT  Gf_Stdspec_Name_Chn('" & Trim(TXT_STDSPEC.Text) & "')" & vbCrLf
     sQuery = sQuery & "       FROM  DUAL " & vbCrLf
     RS.Open sQuery, M_CN1, adOpenForwardOnly, adLockReadOnly
     
@@ -3835,7 +3835,7 @@ Private Sub CHK_UST_GRD_Click(Index As Integer)
     
     If CHK_UST_GRD(Index).Value = ssCBUnchecked Then
         If CHK_UST_GRD(iNext).Value = ssCBUnchecked Then
-            TXT_UST_GRD.Text = ""
+            txt_ust_GRD.Text = ""
             CHK_UST_GRD(Index).ForeColor = &H808080
             sCheck = ""
             Exit Sub
@@ -3850,7 +3850,7 @@ Private Sub CHK_UST_GRD_Click(Index As Integer)
     CHK_UST_GRD(iNext).ForeColor = &H808080
     CHK_UST_GRD(iNext).Value = ssCBUnchecked
 
-    TXT_UST_GRD.Text = CHK_UST_GRD(Index).Tag
+    txt_ust_GRD.Text = CHK_UST_GRD(Index).Tag
     sCheck = ""
     
 End Sub
@@ -3914,7 +3914,7 @@ Private Sub Display_Data_Edit()
     sCheck = "**"
             
     For iIndexChk = 0 To 1
-        If TXT_UST_GRD.Text = CHK_UST_GRD(iIndexChk).Tag Then
+        If txt_ust_GRD.Text = CHK_UST_GRD(iIndexChk).Tag Then
             CHK_UST_GRD(iIndexChk).ForeColor = &HFF&
             CHK_UST_GRD(iIndexChk).Value = CHECKED
         Else
@@ -3994,7 +3994,7 @@ Private Sub Size_Grade_Edit()
         sGradeFlag = "N"
     End If
     
-    If TXT_UST_GRD = "" Then
+    If txt_ust_GRD = "" Then
         CHK_UST_GRD(0).Value = CHECKED
         Call CHK_UST_GRD_Click(0)
     End If
@@ -4020,7 +4020,7 @@ Private Function Cal_Plate_Wgt(sMode As String, dThk As Double, dWid As Double, 
     Cal_Plate_Wgt = 0
     
     sQuery = "SELECT  Gf_Cal_Plate_Wgt('" & sMode & "'" & vbCrLf
-    sQuery = sQuery & "             ,'" & Trim(TXT_APLY_ENDUSE_CD.Text) & "'" & vbCrLf
+    sQuery = sQuery & "             ,'" & Trim(txt_APLY_ENDUSE_CD.Text) & "'" & vbCrLf
     sQuery = sQuery & "             ,'" & Trim(TXT_STLGRD.Text) & "'" & vbCrLf
     sQuery = sQuery & "             ," & dThk & vbCrLf
     sQuery = sQuery & "             ," & dWid & vbCrLf
@@ -4145,9 +4145,9 @@ Private Sub ss1_DblClick(ByVal Col As Long, ByVal Row As Long)
         If Gf_Ms_Refer(M_CN1, Mc1, , , True) Then
             Call MDIMain.FormMenuSetting(Me, FormType, "RE", sAuthority)
             Call Display_Data_Edit
-            If TXT_NEXT_PROC.Text = "" Or TXT_NEXT_PROC.Text = "U" Then
+            If txt_NEXT_PROC.Text = "" Or txt_NEXT_PROC.Text = "U" Then
                CHK_NEXT_PRC(0).Value = 1
-               TXT_NEXT_PROC.Text = "P"
+               txt_NEXT_PROC.Text = "P"
             End If
             iAddr = TXT_ADDR(0).Text
             iAddr1 = TXT_ADDR(1).Text
