@@ -1167,6 +1167,27 @@ Begin VB.Form AGC2041C
          _ExtentY        =   3493
          _Version        =   196609
          BackColor       =   14737632
+         Begin InDate.UDate test_date 
+            Height          =   315
+            Left            =   4320
+            TabIndex        =   60
+            Tag             =   "起始日期"
+            Top             =   120
+            Width           =   1455
+            _ExtentX        =   2566
+            _ExtentY        =   556
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "宋体"
+               Size            =   9.74
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   -2147483630
+            BackColor       =   16777215
+         End
          Begin VB.TextBox TXT_UST_GRADE 
             BeginProperty Font 
                Name            =   "宋体"
@@ -1179,7 +1200,7 @@ Begin VB.Form AGC2041C
             EndProperty
             Height          =   315
             Left            =   10080
-            TabIndex        =   60
+            TabIndex        =   59
             Top             =   1200
             Width           =   2115
          End
@@ -1196,7 +1217,7 @@ Begin VB.Form AGC2041C
             Height          =   330
             Left            =   7200
             MaxLength       =   99
-            TabIndex        =   59
+            TabIndex        =   58
             Top             =   1200
             Width           =   1485
          End
@@ -1205,7 +1226,7 @@ Begin VB.Form AGC2041C
             ItemData        =   "AGC2041C.frx":1728
             Left            =   10080
             List            =   "AGC2041C.frx":1732
-            TabIndex        =   58
+            TabIndex        =   57
             Text            =   "NISCO-3500-1"
             Top             =   480
             Width           =   2085
@@ -1215,7 +1236,7 @@ Begin VB.Form AGC2041C
             ItemData        =   "AGC2041C.frx":1752
             Left            =   13440
             List            =   "AGC2041C.frx":175C
-            TabIndex        =   57
+            TabIndex        =   56
             Text            =   "30*3200*6000"
             Top             =   480
             Width           =   1485
@@ -1255,7 +1276,7 @@ Begin VB.Form AGC2041C
             Height          =   330
             Left            =   10080
             MaxLength       =   99
-            TabIndex        =   56
+            TabIndex        =   55
             Tag             =   "标准代码"
             Text            =   "轧制表面/热处理表面"
             Top             =   120
@@ -1274,7 +1295,7 @@ Begin VB.Form AGC2041C
             Height          =   330
             Left            =   4320
             MaxLength       =   99
-            TabIndex        =   55
+            TabIndex        =   54
             Tag             =   "标准代码"
             Text            =   "间隙式水膜法"
             Top             =   840
@@ -1293,25 +1314,21 @@ Begin VB.Form AGC2041C
             Height          =   330
             Left            =   1320
             MaxLength       =   99
-            TabIndex        =   54
+            TabIndex        =   53
             Tag             =   "标准代码"
             Text            =   "水"
             Top             =   840
             Width           =   1725
          End
-         Begin VB.ComboBox cbx_ord 
+         Begin VB.ComboBox cbx_plt 
             Height          =   300
+            ItemData        =   "AGC2041C.frx":177E
             Left            =   1320
-            TabIndex        =   53
+            List            =   "AGC2041C.frx":178B
+            TabIndex        =   52
+            Text            =   "中厚板卷厂"
             Top             =   120
             Width           =   1695
-         End
-         Begin VB.ComboBox cbx_flag 
-            Height          =   300
-            Left            =   4320
-            TabIndex        =   52
-            Top             =   120
-            Width           =   1455
          End
          Begin VB.TextBox Text1 
             BeginProperty Font 
@@ -1567,7 +1584,7 @@ Begin VB.Form AGC2041C
             Width           =   1170
             _ExtentX        =   2064
             _ExtentY        =   556
-            Caption         =   "订单号"
+            Caption         =   "检测单位"
             Alignment       =   1
             BackColor       =   14804173
             BackgroundStyle =   1
@@ -1589,7 +1606,7 @@ Begin VB.Form AGC2041C
             Width           =   1170
             _ExtentX        =   2064
             _ExtentY        =   556
-            Caption         =   "牌号"
+            Caption         =   "检测日期"
             Alignment       =   1
             BackColor       =   14804173
             BackgroundStyle =   1
@@ -1943,7 +1960,7 @@ Begin VB.Form AGC2041C
             Width           =   1170
             _ExtentX        =   2064
             _ExtentY        =   556
-            Caption         =   "审核员"
+            Caption         =   "签发员"
             Alignment       =   1
             BackColor       =   14804173
             BackgroundStyle =   1
@@ -2141,7 +2158,7 @@ Private Sub Form_Define()
      Call Gp_Ms_Collection(SDT_PROD_DATE_FR, "p", "n", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
      Call Gp_Ms_Collection(SDT_PROD_DATE_TO, "p", "n", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
      Call Gp_Ms_Collection(TXT_UST_STAND_NO, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-            Call Gp_Ms_Collection(cbo_shift, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+            Call Gp_Ms_Collection(CBO_SHIFT, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
           Call Gp_Ms_Collection(CBO_UST_DEC, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
           Call Gp_Ms_Collection(SDB_UST_THK, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
           Call Gp_Ms_Collection(SDB_UST_WID, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
@@ -2344,6 +2361,8 @@ Private Sub Form_Load()
     Call Gp_Sp_ColGet(Proc_Sc("Sc")("Spread"), "G-System.INI", Me.Name)
         
     Screen.MousePointer = vbDefault
+    
+    test_date.RawData = Gf_DTSet(M_CN1, "D")
 
 End Sub
 
@@ -2416,9 +2435,9 @@ Public Sub Form_Ref()
     Dim iCount          As Integer
     Dim dMillCal_Wgt    As Double
     
-    Dim bCount          As Integer
-    Dim ord_no          As String
-    Dim std_flag        As String
+'    Dim bCount          As Integer
+'    Dim ord_no          As String
+'    Dim std_flag        As String
     
     If Gf_Sp_ProceExist(Proc_Sc("Sc").Item("Spread")) Then Exit Sub
     
@@ -2443,46 +2462,46 @@ Public Sub Form_Ref()
                  dMillCal_Wgt = dMillCal_Wgt + .Value
              End If
              
-            'EDIT HANCHAO 20171027
-            '下面这段代码逻辑是循环遍历SPREAD列表，取出订单数据，同时每一个订单数据在COMBOBOX选项框中进行遍历，当该选项框中没有这个订单号时，将这个订单号添加进去
-            '定义一个控制值
-            Dim flag1 As Boolean
-            Dim flag2 As Boolean
-            '默认为真
-            flag1 = True
-            flag2 = True
-            '获取订单号
-            .Col = SS1_ORD_REPORT: ord_no = .Text
-            '循环遍历选项框中的数据
-            For bCount = 0 To cbx_ord.ListCount - 1
-            '当选项框中存在和列表中相同的订单数据时
-            If ord_no = cbx_ord.List(bCount) Then
-            '将控制器设置为假
-            flag1 = False
-            '退出循环
-            Exit For
-            End If
-            Next bCount
-            
-            .Col = SS1_STD_FLAG: std_flag = .Text
-             '循环遍历选项框中的数据
-            For bCount = 0 To cbx_flag.ListCount - 1
-            '当选项框中存在和列表中相同的牌号数据时
-            If std_flag = cbx_flag.List(bCount) Then
-            '将控制器设置为假
-            flag2 = False
-            '退出循环
-            Exit For
-            End If
-            Next bCount
-            
-            '只有控制器为真的时候才会添加数据
-            If flag1 Then
-            cbx_ord.AddItem (ord_no)
-            End If
-            If flag2 Then
-            cbx_flag.AddItem (std_flag)
-            End If
+'            'EDIT HANCHAO 20171027
+'            '下面这段代码逻辑是循环遍历SPREAD列表，取出订单数据，同时每一个订单数据在COMBOBOX选项框中进行遍历，当该选项框中没有这个订单号时，将这个订单号添加进去
+'            '定义一个控制值
+'            Dim flag1 As Boolean
+'            Dim flag2 As Boolean
+'            '默认为真
+'            flag1 = True
+'            flag2 = True
+'            '获取订单号
+'            .Col = SS1_ORD_REPORT: ord_no = .Text
+'            '循环遍历选项框中的数据
+'            For bCount = 0 To cbx_ord.ListCount - 1
+'            '当选项框中存在和列表中相同的订单数据时
+'            If ord_no = cbx_ord.List(bCount) Then
+'            '将控制器设置为假
+'            flag1 = False
+'            '退出循环
+'            Exit For
+'            End If
+'            Next bCount
+'
+'            .Col = SS1_STD_FLAG: std_flag = .Text
+'             '循环遍历选项框中的数据
+'            For bCount = 0 To cbx_flag.ListCount - 1
+'            '当选项框中存在和列表中相同的牌号数据时
+'            If std_flag = cbx_flag.List(bCount) Then
+'            '将控制器设置为假
+'            flag2 = False
+'            '退出循环
+'            Exit For
+'            End If
+'            Next bCount
+'
+'            '只有控制器为真的时候才会添加数据
+'            If flag1 Then
+'            cbx_ord.AddItem (ord_no)
+'            End If
+'            If flag2 Then
+'            cbx_flag.AddItem (std_flag)
+'            End If
              
         Next iCount
     End With
@@ -2729,11 +2748,11 @@ Private Sub ExcelPrn_Pile()
         xlApp.Range("A2").Value = "日期: " & Left(sDate, 4) + "年" + Mid(sDate, 6, 2) + "月" + Mid(sDate, 9, 2) + "日"
     End If
     
-    If cbo_shift.Text = "1" Then
+    If CBO_SHIFT.Text = "1" Then
        sShift = "大夜班"
-    ElseIf cbo_shift.Text = "2" Then
+    ElseIf CBO_SHIFT.Text = "2" Then
        sShift = "白班"
-    ElseIf cbo_shift.Text = "3" Then
+    ElseIf CBO_SHIFT.Text = "3" Then
        sShift = "小夜班"
     Else
        sShift = ""

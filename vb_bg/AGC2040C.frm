@@ -5,7 +5,7 @@ Object = "{065E6FD1-1BF9-11D2-BAE8-00104B9E0792}#3.0#0"; "ssa3d30.ocx"
 Object = "{FDAC2480-F4ED-4632-AA78-DCA210A74E49}#6.0#0"; "SPR32X60.ocx"
 Begin VB.Form AGC2040C 
    Caption         =   "探伤实绩查询及修改界面_AGC2040C"
-   ClientHeight    =   10500
+   ClientHeight    =   9330
    ClientLeft      =   390
    ClientTop       =   1935
    ClientWidth     =   15240
@@ -21,7 +21,7 @@ Begin VB.Form AGC2040C
    LinkTopic       =   "Form1"
    LockControls    =   -1  'True
    MDIChild        =   -1  'True
-   ScaleHeight     =   10500
+   ScaleHeight     =   9330
    ScaleWidth      =   15240
    WindowState     =   2  'Maximized
    Begin VB.TextBox TXT_REASON_FL 
@@ -721,7 +721,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -743,7 +743,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -766,7 +766,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -789,7 +789,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -811,7 +811,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -833,7 +833,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -856,7 +856,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -878,7 +878,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -900,7 +900,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1517,7 +1517,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1539,7 +1539,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1665,7 +1665,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1687,7 +1687,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1871,7 +1871,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1949,7 +1949,7 @@ Begin VB.Form AGC2040C
          Modified        =   -1  'True
          HideSelection   =   -1  'True
          RawData         =   ""
-         Text            =   "____-__-__ __:__:__"
+         Text            =   "____-__-__ __-__-__"
          StartText.x     =   3
          StartText.y     =   3
          FirstVisPos     =   0
@@ -2214,7 +2214,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -2236,7 +2236,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -2280,7 +2280,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -2350,7 +2350,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -2418,7 +2418,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -2568,7 +2568,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -2590,7 +2590,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -2654,7 +2654,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -2734,7 +2734,7 @@ Begin VB.Form AGC2040C
          ChiselText      =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "宋体"
-            Size            =   9.75
+            Size            =   9.76
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -3162,17 +3162,17 @@ Private Sub Cmd_Edit_Click()
     Dim sComments   As String
     Dim sDate       As String
     Dim lSeq        As Long
-    Dim iROW        As Integer
+    Dim iRow        As Integer
     
-    Dim sMesg       As String
+    Dim SMESG       As String
     
     On Error GoTo UPDATE_ERROR
 
     Screen.MousePointer = vbHourglass
     
     If sUserID <> "1CJM001" And sUserID <> "1CJD001" And sUserID <> "1CJM005" Then '刘素梅，姜利，李钟玮
-        sMesg = " 您没有权限更新垛位号 ！"
-        Call Gp_MsgBoxDisplay(sMesg)
+        SMESG = " 您没有权限更新垛位号 ！"
+        Call Gp_MsgBoxDisplay(SMESG)
         Screen.MousePointer = vbDefault
         Exit Sub
     End If
@@ -3210,15 +3210,15 @@ Private Sub Cmd_Edit_Date_Click()
     Dim sShift               As String
     Dim sGroup_cd            As String
     
-    Dim sMesg                As String
+    Dim SMESG                As String
     
     On Error GoTo UPDATE_ERROR
 
     Screen.MousePointer = vbHourglass
     
     If sUserID <> "1CJM001" And sUserID <> "1CJD001" Then '刘素梅，姜利
-        sMesg = " 您没有权限更新垛位号 ！"
-        Call Gp_MsgBoxDisplay(sMesg)
+        SMESG = " 您没有权限更新垛位号 ！"
+        Call Gp_MsgBoxDisplay(SMESG)
         Screen.MousePointer = vbDefault
         Exit Sub
     End If
@@ -3375,7 +3375,7 @@ Public Sub Form_Ref()
     Dim iDATETIME As String
     Dim iTXT_REMARK As String
     
-    Dim iROW As Integer
+    Dim iRow As Integer
     Dim iCol As Integer
     Dim sUrgnt_Fl As String
     
@@ -3392,14 +3392,14 @@ Public Sub Form_Ref()
     
     '紧急订单绿色显示 add by liqian 2012-11-08
      With ss1
-          For iROW = 1 To .MaxRows
-             .Row = iROW:
+          For iRow = 1 To .MaxRows
+             .Row = iRow:
               .Col = SS1_URGNT_FL:    sUrgnt_Fl = Trim(.Text)
             
               If sUrgnt_Fl = "Y" Then
-                 Call Gp_Sp_BlockColor(ss1, 1, .MaxCols, iROW, iROW, &HC000&)
+                 Call Gp_Sp_BlockColor(ss1, 1, .MaxCols, iRow, iRow, &HC000&)
               End If
-          Next iROW
+          Next iRow
     End With
     
     If Len(TXT_PLATE_NO.Text) = 14 Then
@@ -3435,7 +3435,7 @@ End Sub
 
 Public Sub Form_Pro()
 
-    Dim sMesg   As String
+    Dim SMESG   As String
     Dim iCount  As Integer
     
     Dim iAddr As String
@@ -3447,36 +3447,36 @@ Public Sub Form_Pro()
     iAddr2 = TXT_ADDR(2).Text
     
     If txt_stdspec_chg.Text <> "" And Trim(TXT_REASON_FL(0).Text) = "" And Trim(TXT_REASON_FL(1).Text) = "" Then
-        sMesg = " 请输入改判原因 ！"
-        Call Gp_MsgBoxDisplay(sMesg)
+        SMESG = " 请输入改判原因 ！"
+        Call Gp_MsgBoxDisplay(SMESG)
         Exit Sub
     End If
     
 '    If CHK_PRD_GRD(1).Value <> ssCBChecked Then
         If SDB_WGT_ORG.Value > 0 And SDB_WGT.Value <> SDB_WGT_ORG.Value And Trim(TXT_REASON_FL(2).Text) = "" Then
-            sMesg = " 请输入返剪原因 ！"
-            Call Gp_MsgBoxDisplay(sMesg)
+            SMESG = " 请输入返剪原因 ！"
+            Call Gp_MsgBoxDisplay(SMESG)
             Exit Sub
         End If
 '    End If
     
     If Not Gp_DateCheck(TXT_INSP_OCCR_TIME) Then
-        sMesg = " 请正确输入检查时间 ！"
-        Call Gp_MsgBoxDisplay(sMesg)
+        SMESG = " 请正确输入检查时间 ！"
+        Call Gp_MsgBoxDisplay(SMESG)
         Exit Sub
     End If
     
     If CHK_PRD_GRD(4).Value = ssCBChecked Then
         If txt_Scrap_code.Text = "" Then
-            sMesg = " 请正确输入废钢原因 ！"
-            Call Gp_MsgBoxDisplay(sMesg)
+            SMESG = " 请正确输入废钢原因 ！"
+            Call Gp_MsgBoxDisplay(SMESG)
             Exit Sub
         End If
     End If
     
     If CBO_EQPM.Text <> "NDT" And CBO_EQPM.Text <> "NK" Then
-            sMesg = " 请正确选择设备"
-            Call Gp_MsgBoxDisplay(sMesg)
+            SMESG = " 请正确选择设备"
+            Call Gp_MsgBoxDisplay(SMESG)
             Exit Sub
     End If
         
@@ -3485,8 +3485,8 @@ Public Sub Form_Pro()
        TXT_INSP_MAN = sUserID
        
        If TXT_UST_STAND_NO.Text <> TXT_UST_FL.Text Then
-            sMesg = " 探伤标准与计划探伤标准不一致，您确认保存么？"
-            If Gf_MessConfirm(sMesg, "Q") Then
+            SMESG = " 探伤标准与计划探伤标准不一致，您确认保存么？"
+            If Gf_MessConfirm(SMESG, "Q") Then
                 If Gf_Ms_Process(M_CN1, Mc1, sAuthority) Then
                     Call MDIMain.FormMenuSetting(Me, FormType, "SE", sAuthority)
                     TXT_PLATE_NO.Enabled = True

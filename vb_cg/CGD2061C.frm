@@ -1329,6 +1329,37 @@ Begin VB.Form CGD2061C
       _ExtentY        =   3625
       _Version        =   196609
       BackColor       =   14737632
+      Begin InDate.UDate test_date 
+         Height          =   315
+         Left            =   4320
+         TabIndex        =   61
+         Tag             =   "起始日期"
+         Top             =   120
+         Width           =   1455
+         _ExtentX        =   2566
+         _ExtentY        =   556
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "宋体"
+            Size            =   9.74
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   -2147483630
+         BackColor       =   16777215
+      End
+      Begin VB.ComboBox cbx_plt 
+         Height          =   300
+         ItemData        =   "CGD2061C.frx":183D
+         Left            =   1320
+         List            =   "CGD2061C.frx":184A
+         TabIndex        =   60
+         Text            =   "中板厂"
+         Top             =   120
+         Width           =   1695
+      End
       Begin VB.TextBox TXT_UST_GRADE 
          BeginProperty Font 
             Name            =   "宋体"
@@ -1341,7 +1372,7 @@ Begin VB.Form CGD2061C
          EndProperty
          Height          =   315
          Left            =   10080
-         TabIndex        =   61
+         TabIndex        =   59
          Top             =   1200
          Width           =   2115
       End
@@ -1358,7 +1389,7 @@ Begin VB.Form CGD2061C
          Height          =   330
          Left            =   10080
          MaxLength       =   99
-         TabIndex        =   60
+         TabIndex        =   58
          Tag             =   "标准代码"
          Text            =   "100%"
          Top             =   840
@@ -1377,7 +1408,7 @@ Begin VB.Form CGD2061C
          Height          =   330
          Left            =   7200
          MaxLength       =   99
-         TabIndex        =   59
+         TabIndex        =   57
          Top             =   1200
          Width           =   1485
       End
@@ -1394,7 +1425,7 @@ Begin VB.Form CGD2061C
          Height          =   330
          Left            =   7200
          MaxLength       =   99
-         TabIndex        =   58
+         TabIndex        =   56
          Tag             =   "标准代码"
          Text            =   "纵波直接接触法"
          Top             =   840
@@ -1413,7 +1444,7 @@ Begin VB.Form CGD2061C
          Height          =   330
          Left            =   4320
          MaxLength       =   99
-         TabIndex        =   57
+         TabIndex        =   55
          Tag             =   "标准代码"
          Text            =   "夏成胜"
          Top             =   1560
@@ -1432,7 +1463,7 @@ Begin VB.Form CGD2061C
          Height          =   330
          Left            =   4320
          MaxLength       =   99
-         TabIndex        =   56
+         TabIndex        =   54
          Tag             =   "标准代码"
          Text            =   "0dB"
          Top             =   1200
@@ -1451,7 +1482,7 @@ Begin VB.Form CGD2061C
          Height          =   330
          Left            =   1320
          MaxLength       =   99
-         TabIndex        =   55
+         TabIndex        =   53
          Tag             =   "标准代码"
          Text            =   "3级"
          Top             =   1560
@@ -1470,7 +1501,7 @@ Begin VB.Form CGD2061C
          Height          =   330
          Left            =   1320
          MaxLength       =   99
-         TabIndex        =   54
+         TabIndex        =   52
          Tag             =   "标准代码"
          Text            =   "3mm  FBH"
          Top             =   1200
@@ -1489,7 +1520,7 @@ Begin VB.Form CGD2061C
          Height          =   330
          Left            =   13440
          MaxLength       =   99
-         TabIndex        =   53
+         TabIndex        =   51
          Tag             =   "标准代码"
          Text            =   "杨德蓉"
          Top             =   1200
@@ -1508,7 +1539,7 @@ Begin VB.Form CGD2061C
          Height          =   330
          Left            =   13440
          MaxLength       =   99
-         TabIndex        =   52
+         TabIndex        =   50
          Tag             =   "标准代码"
          Text            =   "平行于轧制线"
          Top             =   840
@@ -1527,7 +1558,7 @@ Begin VB.Form CGD2061C
          Height          =   330
          Left            =   13440
          MaxLength       =   99
-         TabIndex        =   51
+         TabIndex        =   49
          Tag             =   "标准代码"
          Text            =   "30*2000*73500"
          Top             =   480
@@ -1546,7 +1577,7 @@ Begin VB.Form CGD2061C
          Height          =   330
          Left            =   7200
          MaxLength       =   99
-         TabIndex        =   50
+         TabIndex        =   48
          Tag             =   "标准代码"
          Text            =   "5MHz"
          Top             =   480
@@ -1565,7 +1596,7 @@ Begin VB.Form CGD2061C
          Height          =   330
          Left            =   4320
          MaxLength       =   99
-         TabIndex        =   49
+         TabIndex        =   47
          Tag             =   "标准代码"
          Text            =   "60×20"
          Top             =   480
@@ -1584,7 +1615,7 @@ Begin VB.Form CGD2061C
          Height          =   330
          Left            =   1320
          MaxLength       =   99
-         TabIndex        =   48
+         TabIndex        =   46
          Tag             =   "标准代码"
          Text            =   "3STSE 18.3/8PB5"
          Top             =   480
@@ -1603,7 +1634,7 @@ Begin VB.Form CGD2061C
          Height          =   330
          Left            =   13440
          MaxLength       =   99
-         TabIndex        =   47
+         TabIndex        =   45
          Tag             =   "标准代码"
          Text            =   "HPT/B/LT-TR"
          Top             =   120
@@ -1622,27 +1653,11 @@ Begin VB.Form CGD2061C
          Height          =   330
          Left            =   7200
          MaxLength       =   99
-         TabIndex        =   46
+         TabIndex        =   44
          Tag             =   "标准代码"
          Text            =   "热轧后"
          Top             =   120
          Width           =   1485
-      End
-      Begin VB.ComboBox cbx_flag 
-         Height          =   300
-         Left            =   4320
-         TabIndex        =   45
-         Top             =   120
-         Width           =   1455
-      End
-      Begin VB.ComboBox cbx_ord 
-         Height          =   300
-         ItemData        =   "CGD2061C.frx":1867
-         Left            =   1320
-         List            =   "CGD2061C.frx":1869
-         TabIndex        =   44
-         Top             =   120
-         Width           =   1695
       End
       Begin VB.TextBox Text9 
          BeginProperty Font 
@@ -2125,7 +2140,7 @@ Begin VB.Form CGD2061C
          Width           =   1170
          _ExtentX        =   2064
          _ExtentY        =   556
-         Caption         =   "审核员"
+         Caption         =   "签发员"
          Alignment       =   1
          BackColor       =   14804173
          BackgroundStyle =   1
@@ -2530,6 +2545,8 @@ Private Sub Form_Load()
     
     SDT_PROD_DATE_FROM.RawData = Gf_DTSet(M_CN1, "D")
     SDT_PROD_DATE_TO.RawData = Gf_DTSet(M_CN1, "D")
+    
+    test_date.RawData = Gf_DTSet(M_CN1, "D")
         
     Screen.MousePointer = vbDefault
 
@@ -2595,11 +2612,11 @@ End Sub
 Public Sub Form_Ref()
     
     Dim iCount          As Integer
-    Dim bCount          As Integer
+'    Dim bCount          As Integer
     Dim dMillCal_Wgt    As Double
     Dim simpcont As String
-    Dim ord_no As String
-    Dim std_flag As String
+'    Dim ord_no As String
+'    Dim std_flag As String
     
     If Gf_Sp_ProceExist(Proc_Sc("Sc").Item("Spread")) Then Exit Sub
     
@@ -2637,46 +2654,46 @@ Public Sub Form_Ref()
               Call Gp_Sp_BlockColor(ss1, SS1_IMP_CONT, SS1_IMP_CONT, iCount, iCount, SSP4.BackColor)
             End If
             
-            'EDIT HANCHAO 20171027
-            '下面这段代码逻辑是循环遍历SPREAD列表，取出订单数据，同时每一个订单数据在COMBOBOX选项框中进行遍历，当该选项框中没有这个订单号时，将这个订单号添加进去
-            '定义一个控制值
-            Dim flag1 As Boolean
-            Dim flag2 As Boolean
-            '默认为真
-            flag1 = True
-            flag2 = True
-            '获取订单号
-            .Col = SS1_ORD_REPORT: ord_no = .Text
-            '循环遍历选项框中的数据
-            For bCount = 0 To cbx_ord.ListCount - 1
-            '当选项框中存在和列表中相同的订单数据时
-            If ord_no = cbx_ord.List(bCount) Then
-            '将控制器设置为假
-            flag1 = False
-            '退出循环
-            Exit For
-            End If
-            Next bCount
-            
-            .Col = SS1_STD_FLAG: std_flag = .Text
-             '循环遍历选项框中的数据
-            For bCount = 0 To cbx_flag.ListCount - 1
-            '当选项框中存在和列表中相同的牌号数据时
-            If std_flag = cbx_flag.List(bCount) Then
-            '将控制器设置为假
-            flag2 = False
-            '退出循环
-            Exit For
-            End If
-            Next bCount
-            
-            '只有控制器为真的时候才会添加数据
-            If flag1 Then
-            cbx_ord.AddItem (ord_no)
-            End If
-            If flag2 Then
-            cbx_flag.AddItem (std_flag)
-            End If
+'            'EDIT HANCHAO 20171027
+'            '下面这段代码逻辑是循环遍历SPREAD列表，取出订单数据，同时每一个订单数据在COMBOBOX选项框中进行遍历，当该选项框中没有这个订单号时，将这个订单号添加进去
+'            '定义一个控制值
+'            Dim flag1 As Boolean
+'            Dim flag2 As Boolean
+'            '默认为真
+'            flag1 = True
+'            flag2 = True
+'            '获取订单号
+'            .Col = SS1_ORD_REPORT: ord_no = .Text
+'            '循环遍历选项框中的数据
+'            For bCount = 0 To cbx_ord.ListCount - 1
+'            '当选项框中存在和列表中相同的订单数据时
+'            If ord_no = cbx_ord.List(bCount) Then
+'            '将控制器设置为假
+'            flag1 = False
+'            '退出循环
+'            Exit For
+'            End If
+'            Next bCount
+'
+'            .Col = SS1_STD_FLAG: std_flag = .Text
+'             '循环遍历选项框中的数据
+'            For bCount = 0 To cbx_flag.ListCount - 1
+'            '当选项框中存在和列表中相同的牌号数据时
+'            If std_flag = cbx_flag.List(bCount) Then
+'            '将控制器设置为假
+'            flag2 = False
+'            '退出循环
+'            Exit For
+'            End If
+'            Next bCount
+'
+'            '只有控制器为真的时候才会添加数据
+'            If flag1 Then
+'            cbx_ord.AddItem (ord_no)
+'            End If
+'            If flag2 Then
+'            cbx_flag.AddItem (std_flag)
+'            End If
         Next iCount
     End With
     SDB_WGT.Value = dMillCal_Wgt
