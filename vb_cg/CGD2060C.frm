@@ -6,14 +6,14 @@ Object = "{065E6FD1-1BF9-11D2-BAE8-00104B9E0792}#3.0#0"; "ssa3d30.ocx"
 Object = "{FDAC2480-F4ED-4632-AA78-DCA210A74E49}#6.0#0"; "SPR32X60.ocx"
 Begin VB.Form CGD2060C 
    Caption         =   "探伤实绩查询及修改界面_CGD2060C"
-   ClientHeight    =   10950
+   ClientHeight    =   9330
    ClientLeft      =   60
    ClientTop       =   450
    ClientWidth     =   15240
    LinkTopic       =   "Form1"
    LockControls    =   -1  'True
    MDIChild        =   -1  'True
-   ScaleHeight     =   10950
+   ScaleHeight     =   9330
    ScaleWidth      =   15240
    WindowState     =   2  'Maximized
    Begin SSSplitter.SSSplitter SSSplitter1 
@@ -125,7 +125,7 @@ Begin VB.Form CGD2060C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -147,7 +147,7 @@ Begin VB.Form CGD2060C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -169,7 +169,7 @@ Begin VB.Form CGD2060C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -191,7 +191,7 @@ Begin VB.Form CGD2060C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1200,7 +1200,7 @@ Begin VB.Form CGD2060C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1338,7 +1338,7 @@ Begin VB.Form CGD2060C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1360,7 +1360,7 @@ Begin VB.Form CGD2060C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1382,7 +1382,7 @@ Begin VB.Form CGD2060C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -2169,7 +2169,7 @@ Begin VB.Form CGD2060C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -2741,7 +2741,7 @@ Begin VB.Form CGD2060C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False

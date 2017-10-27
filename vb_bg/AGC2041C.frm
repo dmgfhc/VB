@@ -1167,12 +1167,45 @@ Begin VB.Form AGC2041C
          _ExtentY        =   3493
          _Version        =   196609
          BackColor       =   14737632
+         Begin VB.TextBox TXT_UST_GRADE 
+            BeginProperty Font 
+               Name            =   "宋体"
+               Size            =   9.75
+               Charset         =   134
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   315
+            Left            =   10080
+            TabIndex        =   60
+            Top             =   1200
+            Width           =   2115
+         End
+         Begin VB.TextBox TXT_UST_STAND_REPORT 
+            BeginProperty Font 
+               Name            =   "宋体"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   330
+            Left            =   7200
+            MaxLength       =   99
+            TabIndex        =   59
+            Top             =   1200
+            Width           =   1485
+         End
          Begin VB.ComboBox Combo4 
             Height          =   300
             ItemData        =   "AGC2041C.frx":1728
             Left            =   10080
             List            =   "AGC2041C.frx":1732
-            TabIndex        =   60
+            TabIndex        =   58
             Text            =   "NISCO-3500-1"
             Top             =   480
             Width           =   2085
@@ -1182,7 +1215,7 @@ Begin VB.Form AGC2041C
             ItemData        =   "AGC2041C.frx":1752
             Left            =   13440
             List            =   "AGC2041C.frx":175C
-            TabIndex        =   59
+            TabIndex        =   57
             Text            =   "30*3200*6000"
             Top             =   480
             Width           =   1485
@@ -1222,7 +1255,7 @@ Begin VB.Form AGC2041C
             Height          =   330
             Left            =   10080
             MaxLength       =   99
-            TabIndex        =   58
+            TabIndex        =   56
             Tag             =   "标准代码"
             Text            =   "轧制表面/热处理表面"
             Top             =   120
@@ -1241,7 +1274,7 @@ Begin VB.Form AGC2041C
             Height          =   330
             Left            =   4320
             MaxLength       =   99
-            TabIndex        =   57
+            TabIndex        =   55
             Tag             =   "标准代码"
             Text            =   "间隙式水膜法"
             Top             =   840
@@ -1260,7 +1293,7 @@ Begin VB.Form AGC2041C
             Height          =   330
             Left            =   1320
             MaxLength       =   99
-            TabIndex        =   56
+            TabIndex        =   54
             Tag             =   "标准代码"
             Text            =   "水"
             Top             =   840
@@ -1269,14 +1302,14 @@ Begin VB.Form AGC2041C
          Begin VB.ComboBox cbx_ord 
             Height          =   300
             Left            =   1320
-            TabIndex        =   55
+            TabIndex        =   53
             Top             =   120
             Width           =   1695
          End
          Begin VB.ComboBox cbx_flag 
             Height          =   300
             Left            =   4320
-            TabIndex        =   54
+            TabIndex        =   52
             Top             =   120
             Width           =   1455
          End
@@ -1293,7 +1326,7 @@ Begin VB.Form AGC2041C
             Height          =   330
             Left            =   7200
             MaxLength       =   99
-            TabIndex        =   53
+            TabIndex        =   51
             Tag             =   "标准代码"
             Text            =   "热轧后"
             Top             =   120
@@ -1312,7 +1345,7 @@ Begin VB.Form AGC2041C
             Height          =   330
             Left            =   13440
             MaxLength       =   99
-            TabIndex        =   52
+            TabIndex        =   50
             Tag             =   "标准代码"
             Text            =   "HP/B3/L1-TR"
             Top             =   120
@@ -1331,7 +1364,7 @@ Begin VB.Form AGC2041C
             Height          =   330
             Left            =   1320
             MaxLength       =   99
-            TabIndex        =   51
+            TabIndex        =   49
             Tag             =   "标准代码"
             Text            =   "3STSE 18.3/8PB5"
             Top             =   480
@@ -1350,7 +1383,7 @@ Begin VB.Form AGC2041C
             Height          =   330
             Left            =   4320
             MaxLength       =   99
-            TabIndex        =   50
+            TabIndex        =   48
             Tag             =   "标准代码"
             Text            =   "60×20"
             Top             =   480
@@ -1369,7 +1402,7 @@ Begin VB.Form AGC2041C
             Height          =   330
             Left            =   7200
             MaxLength       =   99
-            TabIndex        =   49
+            TabIndex        =   47
             Tag             =   "标准代码"
             Text            =   "5MHz"
             Top             =   480
@@ -1388,7 +1421,7 @@ Begin VB.Form AGC2041C
             Height          =   330
             Left            =   13440
             MaxLength       =   99
-            TabIndex        =   48
+            TabIndex        =   46
             Tag             =   "标准代码"
             Text            =   "平行于轧制线"
             Top             =   840
@@ -1407,7 +1440,7 @@ Begin VB.Form AGC2041C
             Height          =   330
             Left            =   13440
             MaxLength       =   99
-            TabIndex        =   47
+            TabIndex        =   45
             Tag             =   "标准代码"
             Text            =   "胡雷鸣"
             Top             =   1200
@@ -1426,7 +1459,7 @@ Begin VB.Form AGC2041C
             Height          =   330
             Left            =   1320
             MaxLength       =   99
-            TabIndex        =   46
+            TabIndex        =   44
             Tag             =   "标准代码"
             Text            =   "3mm  FBH"
             Top             =   1200
@@ -1445,7 +1478,7 @@ Begin VB.Form AGC2041C
             Height          =   330
             Left            =   1320
             MaxLength       =   99
-            TabIndex        =   45
+            TabIndex        =   43
             Tag             =   "标准代码"
             Text            =   "2级"
             Top             =   1560
@@ -1464,7 +1497,7 @@ Begin VB.Form AGC2041C
             Height          =   330
             Left            =   4320
             MaxLength       =   99
-            TabIndex        =   44
+            TabIndex        =   42
             Tag             =   "标准代码"
             Text            =   "0dB"
             Top             =   1200
@@ -1483,7 +1516,7 @@ Begin VB.Form AGC2041C
             Height          =   330
             Left            =   4320
             MaxLength       =   99
-            TabIndex        =   43
+            TabIndex        =   41
             Tag             =   "标准代码"
             Text            =   "丁锋"
             Top             =   1560
@@ -1502,29 +1535,10 @@ Begin VB.Form AGC2041C
             Height          =   330
             Left            =   7200
             MaxLength       =   99
-            TabIndex        =   42
+            TabIndex        =   40
             Tag             =   "标准代码"
             Text            =   "纵波直接接触法"
             Top             =   840
-            Width           =   1485
-         End
-         Begin VB.TextBox Text19 
-            BeginProperty Font 
-               Name            =   "宋体"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   330
-            Left            =   7200
-            MaxLength       =   99
-            TabIndex        =   41
-            Tag             =   "标准代码"
-            Text            =   "通用"
-            Top             =   1200
             Width           =   1485
          End
          Begin VB.TextBox Text20 
@@ -1540,29 +1554,10 @@ Begin VB.Form AGC2041C
             Height          =   330
             Left            =   10080
             MaxLength       =   99
-            TabIndex        =   40
+            TabIndex        =   39
             Tag             =   "标准代码"
             Text            =   "100%"
             Top             =   840
-            Width           =   2085
-         End
-         Begin VB.TextBox Text21 
-            BeginProperty Font 
-               Name            =   "宋体"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   330
-            Left            =   10080
-            MaxLength       =   99
-            TabIndex        =   39
-            Tag             =   "标准代码"
-            Text            =   "技术要求及检测标准"
-            Top             =   1200
             Width           =   2085
          End
          Begin InDate.ULabel ULabel11 
@@ -1916,6 +1911,7 @@ Begin VB.Form AGC2041C
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
+            ForeColor       =   16711680
          End
          Begin InDate.ULabel ULabel32 
             Height          =   315
@@ -1938,6 +1934,7 @@ Begin VB.Form AGC2041C
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
+            ForeColor       =   16711680
          End
          Begin InDate.ULabel ULabel33 
             Height          =   315
@@ -2926,6 +2923,51 @@ Private Sub txt_f_addr_KeyUp(KeyCode As Integer, Shift As Integer)
     
 
 End Sub
+
+Private Sub TXT_UST_STAND_REPORT_KeyUp(KeyCode As Integer, Shift As Integer)
+
+    If KeyCode = vbKeyF4 Then
+    
+        DD.sWitch = "MS"
+        DD.sKey = "Q0046"
+        DD.rControl.Add Item:=TXT_UST_STAND_REPORT
+        
+        DD.nameType = "2"
+        
+        Call Gf_Common_DD(M_CN1, KeyCode)
+        
+        Exit Sub
+        
+    End If
+
+End Sub
+
+Private Sub TXT_UST_STAND_REPORT_DblClick()
+     Call TXT_UST_STAND_REPORT_KeyUp(vbKeyF4, 0)
+End Sub
+
+Private Sub TXT_UST_GRADE_DblClick()
+
+    Call TXT_UST_GRADE_KeyUp(vbKeyF4, 0)
+    
+End Sub
+
+Private Sub TXT_UST_GRADE_KeyUp(KeyCode As Integer, Shift As Integer)
+
+    If KeyCode = vbKeyF4 Then
+    
+        DD.sWitch = "MS"
+        DD.sKey = "Q0053"
+        DD.rControl.Add Item:=TXT_UST_GRADE
+    
+        DD.nameType = "2"
+        
+        Call Gf_Common_DD(M_CN1, vbKeyF4)
+    
+    End If
+
+End Sub
+
 Public Sub Spread_Forzens_Setting()
     Active_Spread.SetFocus
     Me.ActiveControl.ColsFrozen = Me.ActiveControl.ActiveCol

@@ -1329,24 +1329,21 @@ Begin VB.Form CGD2061C
       _ExtentY        =   3625
       _Version        =   196609
       BackColor       =   14737632
-      Begin VB.TextBox Text21 
+      Begin VB.TextBox TXT_UST_GRADE 
          BeginProperty Font 
             Name            =   "宋体"
             Size            =   9.75
-            Charset         =   0
+            Charset         =   134
             Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   315
          Left            =   10080
-         MaxLength       =   99
          TabIndex        =   61
-         Tag             =   "标准代码"
-         Text            =   "技术要求及检测标准"
          Top             =   1200
-         Width           =   2085
+         Width           =   2115
       End
       Begin VB.TextBox Text20 
          BeginProperty Font 
@@ -1367,7 +1364,7 @@ Begin VB.Form CGD2061C
          Top             =   840
          Width           =   2085
       End
-      Begin VB.TextBox Text19 
+      Begin VB.TextBox TXT_UST_STAND_REPORT 
          BeginProperty Font 
             Name            =   "宋体"
             Size            =   9.75
@@ -1381,8 +1378,6 @@ Begin VB.Form CGD2061C
          Left            =   7200
          MaxLength       =   99
          TabIndex        =   59
-         Tag             =   "标准代码"
-         Text            =   "通用"
          Top             =   1200
          Width           =   1485
       End
@@ -1642,9 +1637,9 @@ Begin VB.Form CGD2061C
       End
       Begin VB.ComboBox cbx_ord 
          Height          =   300
-         ItemData        =   "CGD2061C.frx":183D
+         ItemData        =   "CGD2061C.frx":1867
          Left            =   1320
-         List            =   "CGD2061C.frx":183F
+         List            =   "CGD2061C.frx":1869
          TabIndex        =   44
          Top             =   120
          Width           =   1695
@@ -2098,6 +2093,7 @@ Begin VB.Form CGD2061C
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
+         ForeColor       =   16711680
       End
       Begin InDate.ULabel ULabel32 
          Height          =   315
@@ -2120,6 +2116,7 @@ Begin VB.Form CGD2061C
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
+         ForeColor       =   16711680
       End
       Begin InDate.ULabel ULabel33 
          Height          =   315
@@ -3163,6 +3160,51 @@ Private Sub SDT_PROD_DATE_FROM_GotFocus()
         SDT_PROD_DATE_TO.RawData = Gf_DTSet(M_CN1, "D")
      End If
      
+End Sub
+
+
+Private Sub TXT_UST_STAND_REPORT_KeyUp(KeyCode As Integer, Shift As Integer)
+
+    If KeyCode = vbKeyF4 Then
+    
+        DD.sWitch = "MS"
+        DD.sKey = "Q0046"
+        DD.rControl.Add Item:=TXT_UST_STAND_REPORT
+        
+        DD.nameType = "2"
+        
+        Call Gf_Common_DD(M_CN1, KeyCode)
+        
+        Exit Sub
+        
+    End If
+
+End Sub
+
+Private Sub TXT_UST_STAND_REPORT_DblClick()
+     Call TXT_UST_STAND_REPORT_KeyUp(vbKeyF4, 0)
+End Sub
+
+Private Sub TXT_UST_GRADE_DblClick()
+
+    Call TXT_UST_GRADE_KeyUp(vbKeyF4, 0)
+    
+End Sub
+
+Private Sub TXT_UST_GRADE_KeyUp(KeyCode As Integer, Shift As Integer)
+
+    If KeyCode = vbKeyF4 Then
+    
+        DD.sWitch = "MS"
+        DD.sKey = "Q0053"
+        DD.rControl.Add Item:=TXT_UST_GRADE
+    
+        DD.nameType = "2"
+        
+        Call Gf_Common_DD(M_CN1, vbKeyF4)
+    
+    End If
+
 End Sub
 
 
