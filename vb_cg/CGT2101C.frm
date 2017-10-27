@@ -1,7 +1,7 @@
 VERSION 5.00
 Object = "{A5CC20C4-B5F5-11CD-98EC-0020AF234C9D}#4.1#0"; "cstext32.ocx"
 Object = "{8C3D4AA0-2599-11D2-BAF1-00104B9E0792}#3.0#0"; "sssplt30.ocx"
-Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "Indate.ocx"
+Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "indate.ocx"
 Object = "{065E6FD1-1BF9-11D2-BAE8-00104B9E0792}#3.0#0"; "ssa3d30.ocx"
 Object = "{FDAC2480-F4ED-4632-AA78-DCA210A74E49}#6.0#0"; "SPR32X60.ocx"
 Begin VB.Form CGT2101C 
@@ -76,9 +76,9 @@ Begin VB.Form CGT2101C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "CGT2101C.frx":30BC
+            ItemData        =   "CGT2101C.frx":304A
             Left            =   1275
-            List            =   "CGT2101C.frx":30D2
+            List            =   "CGT2101C.frx":3060
             TabIndex        =   29
             Tag             =   "等级"
             Top             =   495
@@ -95,9 +95,9 @@ Begin VB.Form CGT2101C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "CGT2101C.frx":310C
+            ItemData        =   "CGT2101C.frx":309A
             Left            =   4725
-            List            =   "CGT2101C.frx":3122
+            List            =   "CGT2101C.frx":30B0
             TabIndex        =   28
             Tag             =   "等级"
             Top             =   495
@@ -131,9 +131,9 @@ Begin VB.Form CGT2101C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "CGT2101C.frx":315C
+            ItemData        =   "CGT2101C.frx":30EA
             Left            =   11640
-            List            =   "CGT2101C.frx":316C
+            List            =   "CGT2101C.frx":30FA
             TabIndex        =   17
             Tag             =   "班别"
             Top             =   870
@@ -1242,7 +1242,7 @@ Private Sub Form_Define()
     'Form Type : Start , Master, Sheet, Msheet, PopSheet, Refer
     FormType = "Hsheet"
     'Call Master_Collection("Control_Name", "p(primary)", "n(Necessary)", "m(maxlength)", "i(insert)", "r(refer)", "a(append)", "l(lock)")
-         Call Gp_Ms_Collection(txt_SLAB_NO, "p", " ", " ", " i", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl) '板坯号
+         Call Gp_Ms_Collection(txt_slab_no, "p", " ", " ", " i", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl) '板坯号
           Call Gp_Ms_Collection(TXT_ORD_NO, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl) '订单号
         Call Gp_Ms_Collection(TXT_ORD_ITEM, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl) '序列
          Call Gp_Ms_Collection(TXT_CUST_CD, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl) '客户代码
@@ -1432,7 +1432,7 @@ Public Sub Form_Ref()
     Dim sexport As String
     Dim iCount   As Integer
 
-    If Len(txt_SLAB_NO) <= 8 Then
+    If Len(txt_slab_no) <= 8 Then
         If Trim(TXT_MILL_DATE.RawData) = "" Or Trim(TXT_MILL_DATE_TO.RawData) = "" Then
            MsgBox "查询日期未输入!", vbCritical, "系统提示信息"
            Exit Sub

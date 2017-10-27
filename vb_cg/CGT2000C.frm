@@ -1,6 +1,6 @@
 VERSION 5.00
 Object = "{A5CC20C4-B5F5-11CD-98EC-0020AF234C9D}#4.1#0"; "cstext32.ocx"
-Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "Indate.ocx"
+Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "indate.ocx"
 Object = "{065E6FD1-1BF9-11D2-BAE8-00104B9E0792}#3.0#0"; "ssa3d30.ocx"
 Object = "{FDAC2480-F4ED-4632-AA78-DCA210A74E49}#6.0#0"; "SPR32X60.ocx"
 Begin VB.Form CGT2000C 
@@ -12,7 +12,7 @@ Begin VB.Form CGT2000C
    LinkTopic       =   "Form1"
    MDIChild        =   -1  'True
    ScaleHeight     =   10950
-   ScaleWidth      =   20250
+   ScaleWidth      =   15780
    WindowState     =   2  'Maximized
    Begin VB.ComboBox CBO_GROUP 
       BeginProperty Font 
@@ -602,12 +602,12 @@ Private Sub Form_Define()
      FormType = "Msheet"
 
      'Call Master_Collection("Control_Name", "p(primary)", "n(Necessary)", "m(maxlength)", "i(insert)", "r(refer)", "a(append)", "l(lock)")
-       Call Gp_Ms_Collection(TXT_SLAB_NO, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+       Call Gp_Ms_Collection(txt_slab_no, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
 Call Gp_Ms_Collection(SDT_PROD_DATE_FROM, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
   Call Gp_Ms_Collection(SDT_PROD_DATE_TO, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
          Call Gp_Ms_Collection(CBO_SHIFT, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
          Call Gp_Ms_Collection(CBO_GROUP, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-      Call Gp_Ms_Collection(CBO_PRC_LINE, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+      Call Gp_Ms_Collection(cbo_prc_line, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
         Call Gp_Ms_Collection(txt_stlgrd, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
          Call Gp_Ms_Collection(TXT_CH_CD, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
          
@@ -750,10 +750,10 @@ Private Sub Form_Load()
     
     OPT_CH.Value = True
     
-    CBO_PRC_LINE.AddItem "1"
-    CBO_PRC_LINE.AddItem "2"
-    CBO_PRC_LINE.AddItem "3"
-    CBO_PRC_LINE.AddItem "4"
+    cbo_prc_line.AddItem "1"
+    cbo_prc_line.AddItem "2"
+    cbo_prc_line.AddItem "3"
+    cbo_prc_line.AddItem "4"
     
     CBO_GROUP.AddItem "A"
     CBO_GROUP.AddItem "B"

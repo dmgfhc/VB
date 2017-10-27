@@ -1,7 +1,7 @@
 VERSION 5.00
 Object = "{A5CC20C4-B5F5-11CD-98EC-0020AF234C9D}#4.1#0"; "cstext32.ocx"
 Object = "{8C3D4AA0-2599-11D2-BAF1-00104B9E0792}#3.0#0"; "sssplt30.ocx"
-Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "Indate.ocx"
+Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "indate.ocx"
 Object = "{065E6FD1-1BF9-11D2-BAE8-00104B9E0792}#3.0#0"; "ssa3d30.ocx"
 Object = "{FDAC2480-F4ED-4632-AA78-DCA210A74E49}#6.0#0"; "SPR32X60.ocx"
 Begin VB.Form CGD2060C 
@@ -3226,7 +3226,7 @@ Private Sub Cmd_Edit_Click()
     Dim lSeq        As Long
     Dim iRow        As Integer
     
-    Dim sMesg       As String
+    Dim SMESG       As String
     
     On Error GoTo UPDATE_ERROR
     
@@ -3262,7 +3262,7 @@ Private Sub Cmd_Edit_Date_Click()
     Dim sShift               As String
     Dim sGroup_cd            As String
     
-    Dim sMesg                As String
+    Dim SMESG                As String
     
     On Error GoTo UPDATE_ERROR
 
@@ -3438,7 +3438,7 @@ Public Sub Form_Ref()
     Dim iDATETIME   As String
     Dim iTXT_REMARK As String
     
-    Dim sMesg       As String
+    Dim SMESG       As String
     
     iAddr = TXT_ADDR(0).Text
     iAddr1 = TXT_ADDR(1).Text
@@ -3449,8 +3449,8 @@ Public Sub Form_Ref()
     iTXT_REMARK = TXT_REMARK.Text
     
     If TXT_PLATE_NO.Text <> "" And Len(TXT_PLATE_NO.Text) < 10 Then
-        sMesg = "物料号必须大于9位 ！"
-        Call Gp_MsgBoxDisplay(sMesg)
+        SMESG = "物料号必须大于9位 ！"
+        Call Gp_MsgBoxDisplay(SMESG)
         Exit Sub
        Exit Sub
     End If
@@ -3497,7 +3497,7 @@ End Sub
 
 Public Sub Form_Pro()
 
-    Dim sMesg   As String
+    Dim SMESG   As String
     Dim iCount  As Integer
     
     Dim iAddr As String
@@ -3509,29 +3509,29 @@ Public Sub Form_Pro()
     iAddr2 = TXT_ADDR(2).Text
     
     If txt_stdspec_chg.Text <> "" And Trim(TXT_REASON_FL(0).Text) = "" And Trim(TXT_REASON_FL(1).Text) = "" Then
-        sMesg = " 请输入改判原因 ！"
-        Call Gp_MsgBoxDisplay(sMesg)
+        SMESG = " 请输入改判原因 ！"
+        Call Gp_MsgBoxDisplay(SMESG)
         Exit Sub
     End If
     
     If CHK_PRD_GRD(1).Value <> ssCBChecked Then
         If SDB_WGT_ORG.Value > 0 And SDB_WGT.Value <> SDB_WGT_ORG.Value And Trim(TXT_REASON_FL(2).Text) = "" Then
-            sMesg = " 请输入返剪原因 ！"
-            Call Gp_MsgBoxDisplay(sMesg)
+            SMESG = " 请输入返剪原因 ！"
+            Call Gp_MsgBoxDisplay(SMESG)
             Exit Sub
         End If
     End If
     
     If Not Gp_DateCheck(TXT_INSP_OCCR_TIME) Then
-        sMesg = " 请正确输入检查时间 ！"
-        Call Gp_MsgBoxDisplay(sMesg)
+        SMESG = " 请正确输入检查时间 ！"
+        Call Gp_MsgBoxDisplay(SMESG)
         Exit Sub
     End If
     
     If CHK_PRD_GRD(4).Value = ssCBChecked Then
         If txt_Scrap_code.Text = "" Then
-            sMesg = " 请正确输入废钢原因 ！"
-            Call Gp_MsgBoxDisplay(sMesg)
+            SMESG = " 请正确输入废钢原因 ！"
+            Call Gp_MsgBoxDisplay(SMESG)
             Exit Sub
         End If
     End If

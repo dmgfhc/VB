@@ -897,7 +897,7 @@ Begin VB.Form ACB5035C
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            MaxCols         =   70
+            MaxCols         =   71
             MaxRows         =   5
             Protect         =   0   'False
             RetainSelBlock  =   0   'False
@@ -932,7 +932,13 @@ Begin VB.Form ACB5035C
             Protect         =   0   'False
             RetainSelBlock  =   0   'False
             ScrollBarExtMode=   -1  'True
+<<<<<<< .mine
             SpreadDesigner  =   "ACB5035C.frx":24CC
+||||||| .r7890
+            SpreadDesigner  =   "ACB5035C.frx":2630
+=======
+            SpreadDesigner  =   "ACB5035C.frx":2688
+>>>>>>> .r8185
          End
       End
    End
@@ -1187,6 +1193,7 @@ Private Sub Form_Define()
    Call Gp_Sp_Collection(ss1, 68, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
    Call Gp_Sp_Collection(ss1, 69, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
    Call Gp_Sp_Collection(ss1, 70, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1) '产品备注
+   Call Gp_Sp_Collection(ss1, 71, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1) '产品备注
   
     'Spread_Collection
     sc1.Add Item:=ss1, Key:="Spread"
@@ -1476,7 +1483,7 @@ Private Sub cmd_input_Click()
     With ss1
     
         For iDx = 1 To .MaxRows
-            .ROW = iDx
+            .Row = iDx
             
             .Col = 2
             If sMvNo <> Trim(.Text) Then
@@ -1733,16 +1740,16 @@ Public Sub Form_Ref()
         
         For iCount = 1 To .MaxRows
         
-            .ROW = iCount:            .Col = SS2_MV_NUM
+            .Row = iCount:            .Col = SS2_MV_NUM
             sTotnum = sTotnum + .Value
             
-            .ROW = iCount:            .Col = SS2_MV_WGT
+            .Row = iCount:            .Col = SS2_MV_WGT
             sTotwgt = sTotwgt + .Value
             
         Next iCount
         
         .MaxRows = .MaxRows + 1
-        .ROW = .MaxRows:
+        .Row = .MaxRows:
         .Col = 1:           .Text = "  合  计 "
         .Col = SS2_MV_NUM:  .Value = sTotnum
         .Col = SS2_MV_WGT:  .Value = sTotwgt
@@ -1758,17 +1765,17 @@ Public Sub Form_Ref()
             text_tot_wgt.Value = 0
         Else
             .ReDraw = False
-            .ROW = .MaxRows
+            .Row = .MaxRows
             .Col = SS2_MV_NUM:  text_tot_sheets.Text = Val(.Value & "")
             .Col = SS2_MV_WGT:  text_tot_wgt.Text = Val(.Value & "")
             .MaxRows = .MaxRows + 1
-            .ROW = 1
+            .Row = 1
             .Action = SS_ACTION_INSERT_ROW
             .Col = 1:   .Text = "  合  计 "
             .Col = SS2_MV_NUM:   .Text = text_tot_sheets.Text
             .Col = SS2_MV_WGT:  .Text = text_tot_wgt.Text
             Call Gp_Sp_BlockColor(sc2.Item("Spread"), 1, .MaxCols, 1, 1, BLACK, &HE6E6FF)
-            .ROW = .MaxRows
+            .Row = .MaxRows
             .Action = SS_ACTION_DELETE_ROW
             .MaxRows = .MaxRows - 1
             .ReDraw = True
@@ -1787,7 +1794,7 @@ Public Sub Form_Pro()
     max_row = ss1.MaxRows
     
     For iRow = 1 To ss1.MaxRows
-        ss1.ROW = iRow
+        ss1.Row = iRow
         ss1.Col = 0
         If ss1.Text = "Update" Then
             ss1.Col = SS1_RCV_DATE
@@ -1840,7 +1847,7 @@ Public Sub Spread_Del()
     Call Gp_Sp_Del(sc1)
     
     For iRow = 1 To ss1.MaxRows
-        ss1.ROW = iRow
+        ss1.Row = iRow
         ss1.Col = 0
         If UCase(ss1.Text) = "DELETE" Then
             ss1.Col = SS1_RCV_EMP
@@ -1904,14 +1911,15 @@ Public Sub Spread_Forzens_Cancel()
     
 End Sub
 
-Private Sub ss2_DblClick(ByVal Col As Long, ByVal ROW As Long)
+Private Sub ss2_DblClick(ByVal Col As Long, ByVal Row As Long)
 
     Dim iRow As Integer
     Dim iCol As Integer
     Dim i As Integer
 
-    If ROW < 1 Then Exit Sub
+    If Row < 1 Then Exit Sub
 
+<<<<<<< .mine
     SS2.ROW = ROW
     SS2.Col = SS2_MV_LST_NO
     If Len(Trim(SS2.Text)) > 10 Then
@@ -1922,6 +1930,29 @@ Private Sub ss2_DblClick(ByVal Col As Long, ByVal ROW As Long)
         txt_to_inv.Text = SS2.Text
         SS2.Col = SS2_TRANS_WAY
         txt_trans_way.Text = SS2.Text
+||||||| .r7890
+    ss2.ROW = ROW
+    ss2.Col = SS2_MV_LST_NO
+    If Len(Trim(ss2.Text)) > 10 Then
+        txt_mv_lst_no.Text = ss2.Text
+        ss2.Col = SS2_FR_INV
+        text_cur_inv_code.Text = ss2.Text
+        ss2.Col = SS2_TO_INV
+        txt_to_inv.Text = ss2.Text
+        ss2.Col = SS2_TRANS_WAY
+        txt_trans_way.Text = ss2.Text
+=======
+    ss2.Row = Row
+    ss2.Col = SS2_MV_LST_NO
+    If Len(Trim(ss2.Text)) > 10 Then
+        txt_mv_lst_no.Text = ss2.Text
+        ss2.Col = SS2_FR_INV
+        text_cur_inv_code.Text = ss2.Text
+        ss2.Col = SS2_TO_INV
+        txt_to_inv.Text = ss2.Text
+        ss2.Col = SS2_TRANS_WAY
+        txt_trans_way.Text = ss2.Text
+>>>>>>> .r8185
     Else
         txt_mv_lst_no.Text = ""
     End If
@@ -1935,7 +1966,7 @@ Private Sub ss2_DblClick(ByVal Col As Long, ByVal ROW As Long)
     
      For iRow = 1 To ss1.MaxRows
     
-          ss1.ROW = iRow
+          ss1.Row = iRow
           ss1.Col = 51
            If ss1.Text = "Y" Then
               For i = 1 To ss1.MaxCols
@@ -1945,14 +1976,22 @@ Private Sub ss2_DblClick(ByVal Col As Long, ByVal ROW As Long)
            End If
       
       Next iRow
+<<<<<<< .mine
       ss1.ROW = 1
       ss1.Col = SS1_PLATE_NO: TXT_PLATE_NO = ss1.Value
+||||||| .r7890
+      ss1.ROW = 1
+      ss1.Col = SS1_PLATE_NO: txt_plate_no = ss1.Value
+=======
+      ss1.Row = 1
+      ss1.Col = SS1_PLATE_NO: TXT_PLATE_NO = ss1.Value
+>>>>>>> .r8185
       Call Gf_Sp_Refer(M_CN1, Sc3, Mc1, Mc1("nControl"), Mc1("mControl"), False)
       ss3.OperationMode = OperationModeNormal
       
 End Sub
 
-Private Sub ss2_Click(ByVal Col As Long, ByVal ROW As Long)
+Private Sub ss2_Click(ByVal Col As Long, ByVal Row As Long)
 
     lBlkcol1 = 0
     lBlkcol2 = 0
@@ -1979,9 +2018,9 @@ Private Sub ss2_LostFocus()
 
 End Sub
 
-Private Sub ss1_Click(ByVal Col As Long, ByVal ROW As Long)
+Private Sub ss1_Click(ByVal Col As Long, ByVal Row As Long)
 
-    Call Gp_Sp_Sort(Proc_Sc("Sc")("Spread"), Col, ROW)
+    Call Gp_Sp_Sort(Proc_Sc("Sc")("Spread"), Col, Row)
     
     lBlkcol1 = 0
     lBlkcol2 = 0
@@ -1989,8 +2028,16 @@ Private Sub ss1_Click(ByVal Col As Long, ByVal ROW As Long)
     lBlkrow2 = 0
 '   Call ss1_row_Click(Col, Row)
 
+<<<<<<< .mine
  ss1.ROW = ROW
       ss1.Col = SS1_PLATE_NO: TXT_PLATE_NO = ss1.Value
+||||||| .r7890
+ ss1.ROW = ROW
+      ss1.Col = SS1_PLATE_NO: txt_plate_no = ss1.Value
+=======
+ ss1.Row = Row
+      ss1.Col = SS1_PLATE_NO: TXT_PLATE_NO = ss1.Value
+>>>>>>> .r8185
       
       
       Call Gf_Sp_Refer(M_CN1, Sc3, Mc1, Mc1("nControl"), Mc1("mControl"), False)
@@ -1998,12 +2045,12 @@ Private Sub ss1_Click(ByVal Col As Long, ByVal ROW As Long)
 
 End Sub
 
-Private Sub ss1_EditMode(ByVal Col As Long, ByVal ROW As Long, ByVal Mode As Integer, ByVal ChangeMade As Boolean)
+Private Sub ss1_EditMode(ByVal Col As Long, ByVal Row As Long, ByVal Mode As Integer, ByVal ChangeMade As Boolean)
 
 
-    If ROW <= 0 Then Exit Sub
+    If Row <= 0 Then Exit Sub
     
-    ss1.ROW = ROW
+    ss1.Row = Row
     ss1.Col = Col
 
     If Mode = 1 Then
@@ -2031,9 +2078,9 @@ Private Sub ss1_LostFocus()
 
 End Sub
 
-Private Sub ss1_RightClick(ByVal ClickType As Integer, ByVal Col As Long, ByVal ROW As Long, ByVal MouseX As Long, ByVal MouseY As Long)
+Private Sub ss1_RightClick(ByVal ClickType As Integer, ByVal Col As Long, ByVal Row As Long, ByVal MouseX As Long, ByVal MouseY As Long)
     
-    If ROW > 0 Then
+    If Row > 0 Then
         Set Active_Spread = Me.ss1
         PopupMenu MDIMain.PopUp_Spread
     End If
@@ -2206,7 +2253,7 @@ Private Sub ExcelPrn()
     xlApp.Range("G3").Value = txt_mv_lst_no.Text
     xlApp.Range("J3").Value = txt_to_inv_name.Text
           
-    ss1.ROW = 1: ss1.Col = ss1.MaxCols
+    ss1.Row = 1: ss1.Col = ss1.MaxCols
     If CHE_LOT = 1 Then
         Clipboard.Clear
         ss1.SetSelection SS1_OUT_SHEET_NO, 1, SS1_OUT_SHEET_NO, ss1.MaxRows
@@ -2281,7 +2328,13 @@ Private Sub ExcelPrn()
     xlApp.Range(sRow).Value = text_tot_wgt.Text
 
     sRow = "A" & ss1.MaxRows + 6
+<<<<<<< .mine
     SS2.ROW = SS2.ActiveRow: SS2.Col = 14
+||||||| .r7890
+    ss2.ROW = ss2.ActiveRow: ss2.Col = 14
+=======
+    ss2.Row = ss2.ActiveRow: ss2.Col = 14
+>>>>>>> .r8185
     
 '     sRow = "A" & ss1.MaxRows + 6
 '    ss2.Row = ss2.ActiveRow: ss2.Col = 13
@@ -2292,8 +2345,16 @@ Private Sub ExcelPrn()
     xlApp.Range(sRow).Value = "仓库操作员工号:" & sUserName
 
     sRow = "H" & ss1.MaxRows + 6
+<<<<<<< .mine
     SS2.ROW = SS2.ActiveRow: SS2.Col = SS2_CAR_NO
     xlApp.Range(sRow).Value = "车辆号:" & SS2.Text
+||||||| .r7890
+    ss2.ROW = ss2.ActiveRow: ss2.Col = SS2_CAR_NO
+    xlApp.Range(sRow).Value = "车辆号:" & ss2.Text
+=======
+    ss2.Row = ss2.ActiveRow: ss2.Col = SS2_CAR_NO
+    xlApp.Range(sRow).Value = "车辆号:" & ss2.Text
+>>>>>>> .r8185
 
     Clipboard.Clear
     xlApp.Range("A2").Select
@@ -2376,7 +2437,7 @@ Private Sub ExcelGatePrn()
     xlApp.Range("G13").Value = CBO_GATE.Text
 
     With SS2
-        .ROW = .ActiveRow
+        .Row = .ActiveRow
         .Col = SS2_MV_LST_NO
         If .Text = txt_mv_lst_no.Text Then
         
@@ -2411,7 +2472,7 @@ Private Sub ExcelGatePrn()
     
     With ss1
     
-           .ROW = 1
+           .Row = 1
            .Col = SS1_PLT
            xlApp.Range("C5").Value = .Text
         
@@ -2592,7 +2653,7 @@ On Error GoTo Excel_Error
         Clipboard.Clear
         
         .Col = bLkcol1: .Col2 = bLkcol2
-        .ROW = bLkrow1: .Row2 = bLkrow2
+        .Row = bLkrow1: .Row2 = bLkrow2
         Clipboard.SetText .Clip
         
         'Call Excel
@@ -2607,7 +2668,7 @@ On Error GoTo Excel_Error
         sExlRange1 = ""
         For ColIndex = 1 To .MaxCols
             .Col = ColIndex
-            .ROW = 1
+            .Row = 1
 
             iExlCol = ColIndex
 '            If IsNumeric(.Text) And (Left(.Text, 1) = "0" Or Left(.Text, 1) = "1" Or Left(.Text, 1) = "7") And _
@@ -2634,7 +2695,7 @@ On Error GoTo Excel_Error
             End If
         Next
         
-       ss1.ROW = 0
+       ss1.Row = 0
        ss1.Col = SS1_PLATE_NO:             xlApp.Range("A1").Value = ss1.Text
        ss1.Col = SS1_LEN:                  xlApp.Range("B1").Value = ss1.Text
        ss1.Col = SS1_CUST_CD:              xlApp.Range("C1").Value = ss1.Text
@@ -2845,7 +2906,7 @@ On Error GoTo Excel_Error
         
         xlSheet.Cells.NumberFormatLocal = "@"
         
-        ss1.ROW = ss1.ActiveRow
+        ss1.Row = ss1.ActiveRow
         
         xlSheet.Range("A1").Value = "生产厂"
         xlSheet.Range("A2").Value = "日期"
@@ -3182,7 +3243,7 @@ On Error GoTo Excel_Error
         
         xlSheet.Cells.NumberFormatLocal = "@"
         
-        ss3.ROW = i
+        ss3.Row = i
         
         xlSheet.Range("A1").Value = "生产厂"
         xlSheet.Range("A2").Value = "日期"

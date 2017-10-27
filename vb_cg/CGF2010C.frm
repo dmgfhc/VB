@@ -1,6 +1,6 @@
 VERSION 5.00
 Object = "{A5CC20C4-B5F5-11CD-98EC-0020AF234C9D}#4.1#0"; "cstext32.ocx"
-Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "Indate.ocx"
+Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "indate.ocx"
 Object = "{065E6FD1-1BF9-11D2-BAE8-00104B9E0792}#3.0#0"; "ssa3d30.ocx"
 Begin VB.Form CGF2010C 
    Caption         =   "轧辊、轴承座和轴承的入库、查询及修改界面_CGF2010C"
@@ -10,8 +10,8 @@ Begin VB.Form CGF2010C
    ClientWidth     =   14880
    LinkTopic       =   "Form1"
    MDIChild        =   -1  'True
-   ScaleHeight     =   10230
-   ScaleWidth      =   14880
+   ScaleHeight     =   10950
+   ScaleWidth      =   20250
    WindowState     =   2  'Maximized
    Begin Threed.SSCheck sc4 
       Height          =   300
@@ -1299,7 +1299,6 @@ Begin VB.Form CGF2010C
          TabIndex        =   70
          Tag             =   "供货商"
          Top             =   7845
-         Visible         =   0   'False
          Width           =   660
       End
       Begin VB.TextBox TXT_LOC 
@@ -3544,7 +3543,7 @@ Private Sub Form_Define()
           Call Gp_Ms_Collection(TXT_R_SHIFT, " ", " ", " ", " ", "r", " ", "l", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
           Call Gp_Ms_Collection(TXT_R_GROUP, " ", " ", " ", " ", "r", " ", "l", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
          Call Gp_Ms_Collection(TXT_R_IN_EMP, " ", " ", " ", " ", "r", " ", "l", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-              Call Gp_Ms_Collection(txt_loc, " ", " ", " ", "i", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+              Call Gp_Ms_Collection(TXT_LOC, " ", " ", " ", "i", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
     Call Gp_Ms_Collection(txt_sec_treat_mtd, " ", " ", " ", "i", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
      '''added by guoli at 20081229100800 for ERP
      Call Gp_Ms_Collection(txt_ISSUETALLYNO, " ", " ", " ", "i", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
@@ -3698,16 +3697,16 @@ Private Sub Form_Load()
 
     sc1.ForeColor = &HFF&
     sc2.ForeColor = &H808080
-    sc3.ForeColor = &H808080
+    Sc3.ForeColor = &H808080
     sc4.ForeColor = &H808080
     sc1.Value = ssCBChecked
     sc2.Value = ssCBUnchecked
-    sc3.Value = ssCBUnchecked
+    Sc3.Value = ssCBUnchecked
     sc4.Value = ssCBUnchecked
-    sf1.Enabled = True
+    SF1.Enabled = True
     sf2.Enabled = False
     sf3.Enabled = False
-    SF4.Enabled = False
+    sf4.Enabled = False
     ULabel16.Caption = "轧辊号"
     
     Screen.MousePointer = vbDefault
@@ -3784,14 +3783,14 @@ Public Sub Form_Cls()
     sc1.Value = ssCBChecked
     sc2.ForeColor = &H808080
     sc2.Value = ssCBUnchecked
-    sc3.ForeColor = &H808080
-    sc3.Value = ssCBUnchecked
+    Sc3.ForeColor = &H808080
+    Sc3.Value = ssCBUnchecked
     sc4.ForeColor = &H808080
     sc4.Value = ssCBUnchecked
-    sf1.Enabled = True
+    SF1.Enabled = True
     sf2.Enabled = False
     sf3.Enabled = False
-    SF4.Enabled = False
+    sf4.Enabled = False
     
     SSC(0).Value = 0
     SSC(1).Value = 0
@@ -3879,7 +3878,7 @@ End Sub
 
 Public Sub Form_Pro()
 
-    Dim sMesg As String
+    Dim SMESG As String
     Dim i As Integer
     
     TXT_ROLL_IN_EMP = sUserID
@@ -3897,18 +3896,18 @@ Public Sub Form_Pro()
     If sc2.ForeColor = &HFF& Then
        
        If Mid(CBO_ROLL_NO.Text, 1, 1) <> "C" Then
-          sMesg = " 请输入正确的轴承座号 ！"
-          Call Gp_MsgBoxDisplay(sMesg)
+          SMESG = " 请输入正确的轴承座号 ！"
+          Call Gp_MsgBoxDisplay(SMESG)
           Exit Sub
        End If
     End If
     
     
-    If sc3.ForeColor = &HFF& Then
+    If Sc3.ForeColor = &HFF& Then
        
        If Mid(CBO_ROLL_NO.Text, 1, 1) <> "B" Then
-          sMesg = " 请输入正确的轴承号 ！"
-          Call Gp_MsgBoxDisplay(sMesg)
+          SMESG = " 请输入正确的轴承号 ！"
+          Call Gp_MsgBoxDisplay(SMESG)
           Exit Sub
        End If
     End If
@@ -3917,8 +3916,8 @@ Public Sub Form_Pro()
     If sc4.ForeColor = &HFF& Then
        
        If Mid(CBO_ROLL_NO.Text, 1, 1) <> "P" Then
-          sMesg = " 请输入正确的护板号 ！"
-          Call Gp_MsgBoxDisplay(sMesg)
+          SMESG = " 请输入正确的护板号 ！"
+          Call Gp_MsgBoxDisplay(SMESG)
           Exit Sub
        End If
     End If
@@ -3930,20 +3929,36 @@ Public Sub Form_Pro()
        
        Case "J"
           If Not Gp_DateCheck(UTP_ROLL_IN_TIME) Then
-              sMesg = " 请正确输入轧辊入库时间 ！"
-              Call Gp_MsgBoxDisplay(sMesg)
+              SMESG = " 请正确输入轧辊入库时间 ！"
+              Call Gp_MsgBoxDisplay(SMESG)
               Exit Sub
           End If
           ''''added by guoli at 20081229 103600 for ERP'''''
+<<<<<<< .mine
+          If Trim(txt_ISSUETALLYNO.Text) = "" And Trim(txt_ROLL_PRICE.Text) = "" Then
+              SMESG = "领料单号和单价不能同时为空!"
+              Call Gp_MsgBoxDisplay(SMESG)
+||||||| .r8076
           If Trim(txt_ISSUETALLYNO.Text) = "" And Trim(txt_ROLL_PRICE.Text) = "" Then
               sMesg = "领料单号和单价不能同时为空!"
               Call Gp_MsgBoxDisplay(sMesg)
+=======
+          If Trim(txt_ISSUETALLYNO.Text) = "" Or Trim(txt_ROLL_PRICE.Text) = "" Then
+              SMESG = "领料单号和单价不能为空!"
+              Call Gp_MsgBoxDisplay(SMESG)
+>>>>>>> .r8095
               Exit Sub
           End If
           
+          If Len(txt_ISSUETALLYNO.Text) <> 10 Then
+             SMESG = "领料单号应为10位!"
+             Call Gp_MsgBoxDisplay(SMESG)
+             Exit Sub
+          End If
+          
           If SDB_ROLL_WGT.Value = 0 Then
-              sMesg = "轧辊重量不能为空!"
-              Call Gp_MsgBoxDisplay(sMesg)
+              SMESG = "轧辊重量不能为空!"
+              Call Gp_MsgBoxDisplay(SMESG)
               Exit Sub
           End If
           ''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -3960,15 +3975,31 @@ Public Sub Form_Pro()
           End If
        Case "C"
           If Not Gp_DateCheck(UTP_ROLL_IN_TIME) Then
-              sMesg = " 请正确输入轧辊入库时间 ！"
-              Call Gp_MsgBoxDisplay(sMesg)
+              SMESG = " 请正确输入轧辊入库时间 ！"
+              Call Gp_MsgBoxDisplay(SMESG)
               Exit Sub
           End If
           ''''added by guoli at 20081229 103600 for ERP
+<<<<<<< .mine
+          If Trim(txt_ISSUETALLYNO.Text) = "" And Trim(txt_ROLL_PRICE.Text) = "" Then
+              SMESG = "领料单号和单价不能同时为空!"
+              Call Gp_MsgBoxDisplay(SMESG)
+||||||| .r8076
           If Trim(txt_ISSUETALLYNO.Text) = "" And Trim(txt_ROLL_PRICE.Text) = "" Then
               sMesg = "领料单号和单价不能同时为空!"
               Call Gp_MsgBoxDisplay(sMesg)
+=======
+          If Trim(txt_ISSUETALLYNO.Text) = "" Or Trim(txt_ROLL_PRICE.Text) = "" Then
+              SMESG = "领料单号和单价不能为空!"
+              Call Gp_MsgBoxDisplay(SMESG)
+>>>>>>> .r8095
               Exit Sub
+          End If
+          
+          If Len(txt_ISSUETALLYNO.Text) <> 10 Then
+             SMESG = "领料单号应为10位!"
+             Call Gp_MsgBoxDisplay(SMESG)
+             Exit Sub
           End If
 
           txt_sec_treat_mtd.Text = ""
@@ -3984,8 +4015,8 @@ Public Sub Form_Pro()
           
        Case "B"
           If Not Gp_DateCheck(UTP_B_ROLL_IN_TIME) Then
-              sMesg = " 请正确输入轴承座入库时间 ！"
-              Call Gp_MsgBoxDisplay(sMesg)
+              SMESG = " 请正确输入轴承座入库时间 ！"
+              Call Gp_MsgBoxDisplay(SMESG)
               Exit Sub
           End If
           If Gf_Ms_Process(M_CN1, Mc3, sAuthority) Then
@@ -3993,8 +4024,8 @@ Public Sub Form_Pro()
           End If
        Case "C"
           If Not Gp_DateCheck(UTP_C_ROLL_IN_TIME) Then
-              sMesg = " 请正确输入轴承入库时间 ！"
-              Call Gp_MsgBoxDisplay(sMesg)
+              SMESG = " 请正确输入轴承入库时间 ！"
+              Call Gp_MsgBoxDisplay(SMESG)
               Exit Sub
           End If
           If Gf_Ms_Process(M_CN1, Mc2, sAuthority) Then
@@ -4003,8 +4034,8 @@ Public Sub Form_Pro()
           End If
        Case "P"
           If Not Gp_DateCheck(UTP_P_ROLL_IN_TIME) Then
-              sMesg = " 请正确输入护板入库时间 ！"
-              Call Gp_MsgBoxDisplay(sMesg)
+              SMESG = " 请正确输入护板入库时间 ！"
+              Call Gp_MsgBoxDisplay(SMESG)
               Exit Sub
           End If
           If Gf_Ms_Process(M_CN1, Mc4, sAuthority) Then
@@ -4057,7 +4088,7 @@ Private Sub sc1_Click(Value As Integer)
    Call Gp_Ms_Cls(Mc1("rControl"))
     
     If sc1.Value = ssCBUnchecked Then
-       If sc2.Value = ssCBUnchecked And sc3.Value = ssCBUnchecked And sc4.Value = ssCBUnchecked Then
+       If sc2.Value = ssCBUnchecked And Sc3.Value = ssCBUnchecked And sc4.Value = ssCBUnchecked Then
           sc1.Value = ssCBChecked
 
        End If
@@ -4068,14 +4099,14 @@ Private Sub sc1_Click(Value As Integer)
         sc1.ForeColor = &HFF&
         sc2.ForeColor = &H808080
         sc2.Value = ssCBUnchecked
-        sc3.ForeColor = &H808080
-        sc3.Value = ssCBUnchecked
+        Sc3.ForeColor = &H808080
+        Sc3.Value = ssCBUnchecked
         sc4.ForeColor = &H808080
         sc4.Value = ssCBUnchecked
-        sf1.Enabled = True
+        SF1.Enabled = True
         sf2.Enabled = False
         sf3.Enabled = False
-        SF4.Enabled = False
+        sf4.Enabled = False
         ULabel16.Caption = "轧辊号"
         sQuery_load = "SELECT ROLL_NO FROM GP_ROLL3 WHERE ROLL_STATUS<>'DL'  "
         Call Gf_ComboAdd(M_CN1, CBO_ROLL_NO, sQuery_load)
@@ -4091,7 +4122,7 @@ Private Sub sc2_Click(Value As Integer)
    
    
     If sc2.Value = ssCBUnchecked Then
-       If sc1.Value = ssCBUnchecked And sc3.Value = ssCBUnchecked And sc4.Value = ssCBUnchecked Then
+       If sc1.Value = ssCBUnchecked And Sc3.Value = ssCBUnchecked And sc4.Value = ssCBUnchecked Then
           sc2.Value = ssCBChecked
 
        End If
@@ -4102,14 +4133,14 @@ Private Sub sc2_Click(Value As Integer)
         sc2.ForeColor = &HFF&
         sc1.ForeColor = &H808080
         sc1.Value = ssCBUnchecked
-        sc3.ForeColor = &H808080
-        sc3.Value = ssCBUnchecked
+        Sc3.ForeColor = &H808080
+        Sc3.Value = ssCBUnchecked
         sc4.ForeColor = &H808080
         sc4.Value = ssCBUnchecked
         sf2.Enabled = True
-        sf1.Enabled = False
+        SF1.Enabled = False
         sf3.Enabled = False
-        SF4.Enabled = False
+        sf4.Enabled = False
         ULabel16.Caption = "轴承座号"
         sQuery_load = "SELECT CHOCK_ID FROM GP_CHOCK3    "
         Call Gf_ComboAdd(M_CN1, CBO_ROLL_NO, sQuery_load)
@@ -4124,16 +4155,16 @@ Private Sub sc3_Click(Value As Integer)
    CBO_ROLL_NO.Enabled = True
    Call Gp_Ms_Cls(Mc3("rControl"))
    
-    If sc3.Value = ssCBUnchecked Then
+    If Sc3.Value = ssCBUnchecked Then
        If sc1.Value = ssCBUnchecked And sc2.Value = ssCBUnchecked And sc4.Value = ssCBUnchecked Then
-          sc3.Value = ssCBChecked
+          Sc3.Value = ssCBChecked
 '          ULabel16.Caption = "轴承号"
        End If
     Exit Sub
     End If
   
   '  If sc2.Value = -1 Then    '-1: ssCBChecked
-        sc3.ForeColor = &HFF&
+        Sc3.ForeColor = &HFF&
         sc1.ForeColor = &H808080
         sc1.Value = ssCBUnchecked
         sc2.ForeColor = &H808080
@@ -4141,9 +4172,9 @@ Private Sub sc3_Click(Value As Integer)
         sc4.ForeColor = &H808080
         sc4.Value = ssCBUnchecked
         sf3.Enabled = True
-        sf1.Enabled = False
+        SF1.Enabled = False
         sf2.Enabled = False
-        SF4.Enabled = False
+        sf4.Enabled = False
         ULabel16.Caption = "轴承号"
         sQuery_load = "SELECT BEARING_ID FROM GP_BEARING3    "
         Call Gf_ComboAdd(M_CN1, CBO_ROLL_NO, sQuery_load)
@@ -4157,7 +4188,7 @@ Private Sub sc4_Click(Value As Integer)
    Call Gp_Ms_Cls(Mc4("rControl"))
    
     If sc4.Value = ssCBUnchecked Then
-       If sc1.Value = ssCBUnchecked And sc2.Value = ssCBUnchecked And sc3.Value = ssCBUnchecked Then
+       If sc1.Value = ssCBUnchecked And sc2.Value = ssCBUnchecked And Sc3.Value = ssCBUnchecked Then
           sc4.Value = ssCBChecked
 
        End If
@@ -4169,10 +4200,10 @@ Private Sub sc4_Click(Value As Integer)
         sc1.Value = ssCBUnchecked
         sc2.ForeColor = &H808080
         sc2.Value = ssCBUnchecked
-        sc3.ForeColor = &H808080
-        sc3.Value = ssCBUnchecked
-        SF4.Enabled = True
-        sf1.Enabled = False
+        Sc3.ForeColor = &H808080
+        Sc3.Value = ssCBUnchecked
+        sf4.Enabled = True
+        SF1.Enabled = False
         sf2.Enabled = False
         sf3.Enabled = False
         ULabel16.Caption = "护板号"

@@ -108,7 +108,6 @@ Form=AGC2070C.frm
 Form=AGB2013C.frm
 Form=AGG2050C.frm
 Form=AGB3012C.frm
-Form=..\vb_aq\AGC2420C.frm
 IconForm="MDIMain"
 Startup="MDIMain"
 HelpFile=""

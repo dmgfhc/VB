@@ -526,7 +526,7 @@ Begin VB.Form EGC1050C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "ËÎÌו"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1090,7 +1090,7 @@ Begin VB.Form EGC1050C
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         MaxCols         =   49
+         MaxCols         =   52
          MaxRows         =   501
          RetainSelBlock  =   0   'False
          SpreadDesigner  =   "EGC1050C.frx":0160
@@ -1344,6 +1344,9 @@ Private Sub Form_Define()
     Call Gp_Sp_Collection(ss1, 47, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
     Call Gp_Sp_Collection(ss1, 48, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
     Call Gp_Sp_Collection(ss1, 49, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 50, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 51, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
+    Call Gp_Sp_Collection(ss1, 52, " ", " ", " ", " ", " ", "l", pColumn, nColumn, mColumn, iColumn, aColumn, lColumn)
  
     sc1.Add Item:=ss1, Key:="Spread"
     sc1.Add Item:="EGC1050C.P_SREFER", Key:="P-R"

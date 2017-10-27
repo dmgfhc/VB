@@ -1,6 +1,6 @@
 VERSION 5.00
 Object = "{A5CC20C4-B5F5-11CD-98EC-0020AF234C9D}#4.1#0"; "cstext32.ocx"
-Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "Indate.ocx"
+Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "indate.ocx"
 Object = "{065E6FD1-1BF9-11D2-BAE8-00104B9E0792}#3.0#0"; "ssa3d30.ocx"
 Object = "{FDAC2480-F4ED-4632-AA78-DCA210A74E49}#6.0#0"; "SPR32X60.ocx"
 Begin VB.Form CGF2030C 
@@ -3417,25 +3417,25 @@ End Sub
 
 Public Sub Form_Pro()
 
-    Dim sMesg As String
+    Dim SMESG As String
     
       CBO_EMP1.Text = sUserID
 
     If Not Gp_DateCheck(TXT_GRID_STA_TIME) Then
-        sMesg = " 请正确输入磨削开始时间 ！"
-        Call Gp_MsgBoxDisplay(sMesg)
+        SMESG = " 请正确输入磨削开始时间 ！"
+        Call Gp_MsgBoxDisplay(SMESG)
         Exit Sub
     End If
     
     If TXT_GRID_STA_TIME.RawData <> "" And TXT_GRID_END_TIME.RawData <> "" Then
            If Not Gp_DateCheck(TXT_GRID_END_TIME) Then
-                sMesg = " 请正确输入磨削结束时间 ！"
-                Call Gp_MsgBoxDisplay(sMesg)
+                SMESG = " 请正确输入磨削结束时间 ！"
+                Call Gp_MsgBoxDisplay(SMESG)
                 Exit Sub
            End If
            If Val(TXT_GRID_STA_TIME.RawData) - Val(TXT_GRID_END_TIME.RawData) > 0 Then
-                sMesg = " 磨削结束时间应大于磨削开始时间，请正确输入时间信息 ！"
-                Call Gp_MsgBoxDisplay(sMesg)
+                SMESG = " 磨削结束时间应大于磨削开始时间，请正确输入时间信息 ！"
+                Call Gp_MsgBoxDisplay(SMESG)
                 Exit Sub
            End If
     End If

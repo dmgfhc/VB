@@ -1,7 +1,7 @@
 VERSION 5.00
 Object = "{A5CC20C4-B5F5-11CD-98EC-0020AF234C9D}#4.1#0"; "cstext32.ocx"
 Object = "{8C3D4AA0-2599-11D2-BAF1-00104B9E0792}#3.0#0"; "sssplt30.ocx"
-Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "Indate.ocx"
+Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "indate.ocx"
 Object = "{065E6FD1-1BF9-11D2-BAE8-00104B9E0792}#3.0#0"; "ssa3d30.ocx"
 Object = "{FDAC2480-F4ED-4632-AA78-DCA210A74E49}#6.0#0"; "SPR32X60.ocx"
 Begin VB.Form CGT2020C 
@@ -184,9 +184,9 @@ Begin VB.Form CGT2020C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "CGT2020C.frx":1E71
+            ItemData        =   "CGT2020C.frx":1E01
             Left            =   6390
-            List            =   "CGT2020C.frx":1E73
+            List            =   "CGT2020C.frx":1E03
             TabIndex        =   8
             Top             =   90
             Width           =   735
@@ -220,9 +220,9 @@ Begin VB.Form CGT2020C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "CGT2020C.frx":1E75
+            ItemData        =   "CGT2020C.frx":1E05
             Left            =   6390
-            List            =   "CGT2020C.frx":1E77
+            List            =   "CGT2020C.frx":1E07
             TabIndex        =   6
             Top             =   480
             Width           =   735
@@ -238,9 +238,9 @@ Begin VB.Form CGT2020C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "CGT2020C.frx":1E79
+            ItemData        =   "CGT2020C.frx":1E09
             Left            =   6390
-            List            =   "CGT2020C.frx":1E7B
+            List            =   "CGT2020C.frx":1E0B
             TabIndex        =   5
             Top             =   870
             Width           =   735
@@ -256,9 +256,9 @@ Begin VB.Form CGT2020C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "CGT2020C.frx":1E7D
+            ItemData        =   "CGT2020C.frx":1E0D
             Left            =   6390
-            List            =   "CGT2020C.frx":1E7F
+            List            =   "CGT2020C.frx":1E0F
             TabIndex        =   4
             Top             =   1260
             Width           =   735
@@ -837,7 +837,7 @@ Begin VB.Form CGT2020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "ËÎÌו"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -912,7 +912,7 @@ Begin VB.Form CGT2020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "ËÎÌו"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1146,7 +1146,7 @@ Begin VB.Form CGT2020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "ËÎÌו"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1516,9 +1516,9 @@ Begin VB.Form CGT2020C
          Strikethrough   =   0   'False
       EndProperty
       Height          =   315
-      ItemData        =   "CGT2020C.frx":1E81
+      ItemData        =   "CGT2020C.frx":1E11
       Left            =   4470
-      List            =   "CGT2020C.frx":1E83
+      List            =   "CGT2020C.frx":1E13
       TabIndex        =   0
       Top             =   5970
       Visible         =   0   'False
@@ -1634,7 +1634,7 @@ Private Sub Form_Define()
      FormType = "Msheet"
 
      'Call Master_Collection("Control_Name", "p(primary)", "n(Necessary)", "m(maxlength)", "i(insert)", "r(refer)", "a(append)", "l(lock)")
-       Call Gp_Ms_Collection(txt_SLAB_NO, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+       Call Gp_Ms_Collection(txt_slab_no, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
    Call Gp_Ms_Collection(TXT_MILL_LOT_NO, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
 Call Gp_Ms_Collection(SDT_PROD_DATE_FROM, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
   Call Gp_Ms_Collection(SDT_PROD_DATE_TO, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
