@@ -13,7 +13,7 @@ Begin VB.Form AGC2041C
    LinkTopic       =   "Form1"
    MDIChild        =   -1  'True
    ScaleHeight     =   9330
-   ScaleWidth      =   20250
+   ScaleWidth      =   15240
    WindowState     =   2  'Maximized
    Begin SSSplitter.SSSplitter SSSplitter1 
       Height          =   9255
@@ -2113,7 +2113,7 @@ Private Sub Form_Define()
      Call Gp_Ms_Collection(SDT_PROD_DATE_FR, "p", "n", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
      Call Gp_Ms_Collection(SDT_PROD_DATE_TO, "p", "n", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
      Call Gp_Ms_Collection(TXT_UST_STAND_NO, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-            Call Gp_Ms_Collection(CBO_SHIFT, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+            Call Gp_Ms_Collection(cbo_shift, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
           Call Gp_Ms_Collection(CBO_UST_DEC, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
           Call Gp_Ms_Collection(SDB_UST_THK, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
           Call Gp_Ms_Collection(SDB_UST_WID, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
@@ -2703,11 +2703,11 @@ Private Sub ExcelPrn_Pile()
         xlApp.Range("A2").Value = "日期: " & Left(sDate, 4) + "年" + Mid(sDate, 6, 2) + "月" + Mid(sDate, 9, 2) + "日"
     End If
     
-    If CBO_SHIFT.Text = "1" Then
+    If cbo_shift.Text = "1" Then
        sShift = "大夜班"
-    ElseIf CBO_SHIFT.Text = "2" Then
+    ElseIf cbo_shift.Text = "2" Then
        sShift = "白班"
-    ElseIf CBO_SHIFT.Text = "3" Then
+    ElseIf cbo_shift.Text = "3" Then
        sShift = "小夜班"
     Else
        sShift = ""

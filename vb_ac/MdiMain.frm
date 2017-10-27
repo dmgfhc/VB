@@ -369,7 +369,7 @@ Begin VB.MDIForm MDIMain
             Alignment       =   1
             Object.Width           =   1411
             MinWidth        =   1411
-            TextSave        =   "14:05"
+            TextSave        =   "15:00"
          EndProperty
          BeginProperty Panel7 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
             Object.Width           =   3352
@@ -2029,4 +2029,5 @@ Private Sub Mnu_Vertical_Click()
     MDIMain.StatusBar1.Panels(1) = "提示信息 : "
     MDIMain.Arrange 2
 End Sub
+
 
