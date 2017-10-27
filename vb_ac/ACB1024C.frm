@@ -1,6 +1,6 @@
 VERSION 5.00
 Object = "{FDAC2480-F4ED-4632-AA78-DCA210A74E49}#6.0#0"; "SPR32X60.ocx"
-Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "Indate.ocx"
+Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "indate.ocx"
 Begin VB.Form ACB1024C 
    Caption         =   "物料信息变更履历查询_ACB1024C"
    ClientHeight    =   9225
@@ -111,7 +111,7 @@ Begin VB.Form ACB1024C
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      MaxCols         =   19
+      MaxCols         =   24
       MaxRows         =   20
       ProcessTab      =   -1  'True
       Protect         =   0   'False
@@ -242,7 +242,7 @@ Begin VB.Form ACB1024C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.76
+         Size            =   9.75
          Charset         =   134
          Weight          =   400
          Underline       =   0   'False
@@ -326,7 +326,7 @@ Private Sub Form_Define()
 
     'Call Master_Collection("Control_Name", "p(primary)", "n(Necessary)", "m(maxlength)", "i(insert)", "r(refer)", "a(append)", "l(lock)")
              Call Gp_Ms_Collection(txt_plt, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-          Call Gp_Ms_Collection(txt_mat_no, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+          Call Gp_Ms_Collection(TXT_MAT_NO, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
          Call Gp_Ms_Collection(DTP_PROD_FR, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
          Call Gp_Ms_Collection(DTP_PROD_TO, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
          Call Gp_Ms_Collection(CBO_PROD_CD, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
@@ -359,6 +359,13 @@ Private Sub Form_Define()
    Call Gp_Sp_Collection(ss1, 15, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
    Call Gp_Sp_Collection(ss1, 16, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
    Call Gp_Sp_Collection(ss1, 17, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+   Call Gp_Sp_Collection(ss1, 18, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+   Call Gp_Sp_Collection(ss1, 19, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+   Call Gp_Sp_Collection(ss1, 20, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+   Call Gp_Sp_Collection(ss1, 21, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+   Call Gp_Sp_Collection(ss1, 22, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+    Call Gp_Sp_Collection(ss1, 23, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+     Call Gp_Sp_Collection(ss1, 24, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
     
     'Spread_Collection
     sc1.Add Item:=ss1, Key:="Spread"
@@ -528,9 +535,9 @@ Private Sub ss1_BlockSelected(ByVal BlockCol As Long, ByVal BlockRow As Long, By
 
 End Sub
 
-Private Sub ss1_Click(ByVal Col As Long, ByVal ROW As Long)
+Private Sub ss1_Click(ByVal Col As Long, ByVal Row As Long)
 
-    Call Gp_Sp_Sort(Proc_Sc("Sc")("Spread"), Col, ROW)
+    Call Gp_Sp_Sort(Proc_Sc("Sc")("Spread"), Col, Row)
     
     lBlkcol1 = 0
     lBlkcol2 = 0
@@ -548,9 +555,9 @@ Private Sub ss1_LostFocus()
 
 End Sub
 
-Private Sub ss1_RightClick(ByVal ClickType As Integer, ByVal Col As Long, ByVal ROW As Long, ByVal MouseX As Long, ByVal MouseY As Long)
+Private Sub ss1_RightClick(ByVal ClickType As Integer, ByVal Col As Long, ByVal Row As Long, ByVal MouseX As Long, ByVal MouseY As Long)
 
-    If ROW > 0 Then
+    If Row > 0 Then
         Set Active_Spread = Me.ss1
         PopupMenu MDIMain.PopUp_Spread
     End If

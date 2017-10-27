@@ -40,7 +40,7 @@ Begin VB.Form ACB1020C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.76
+         Size            =   9.75
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -127,7 +127,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -870,7 +870,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   134
                Weight          =   400
                Underline       =   0   'False
@@ -892,7 +892,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   134
                Weight          =   400
                Underline       =   0   'False
@@ -915,7 +915,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   134
                Weight          =   400
                Underline       =   0   'False
@@ -938,7 +938,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   134
                Weight          =   400
                Underline       =   0   'False
@@ -961,7 +961,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   134
                Weight          =   400
                Underline       =   0   'False
@@ -984,7 +984,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   134
                Weight          =   400
                Underline       =   0   'False
@@ -1098,7 +1098,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   134
                Weight          =   400
                Underline       =   0   'False
@@ -1120,7 +1120,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   134
                Weight          =   400
                Underline       =   0   'False
@@ -1142,7 +1142,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   134
                Weight          =   400
                Underline       =   0   'False
@@ -1264,7 +1264,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1457,7 +1457,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1480,7 +1480,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1503,7 +1503,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1526,7 +1526,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1549,7 +1549,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1572,7 +1572,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1618,7 +1618,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1641,7 +1641,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   134
                Weight          =   400
                Underline       =   0   'False
@@ -1664,7 +1664,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   134
                Weight          =   400
                Underline       =   0   'False
@@ -1709,7 +1709,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   134
                Weight          =   400
                Underline       =   0   'False
@@ -1732,7 +1732,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1754,7 +1754,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   134
                Weight          =   400
                Underline       =   0   'False
@@ -1776,7 +1776,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   134
                Weight          =   400
                Underline       =   0   'False
@@ -1798,7 +1798,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   134
                Weight          =   400
                Underline       =   0   'False
@@ -1822,7 +1822,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   134
                Weight          =   400
                Underline       =   0   'False
@@ -1920,7 +1920,7 @@ Begin VB.Form ACB1020C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -2266,17 +2266,17 @@ Private Sub Form_Define()
           Call Gp_Ms_Collection(txt_cust_cd, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
          Call Gp_Ms_Collection(txt_prod_grd, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
         Call Gp_Ms_Collection(TXT_ENDUSE_CD, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-          Call Gp_Ms_Collection(text_stlgrd, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+          Call Gp_Ms_Collection(Text_STLGRD, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
          Call Gp_Ms_Collection(Text_PROC_CD, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
     Call Gp_Ms_Collection(text_cur_inv_code, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
              Call Gp_Ms_Collection(Text_LOC, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
            Call Gp_Ms_Collection(sdb_thk_fr, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
            Call Gp_Ms_Collection(sdb_thk_to, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
            Call Gp_Ms_Collection(sdb_wid_fr, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-           Call Gp_Ms_Collection(SDB_WID_TO, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+           Call Gp_Ms_Collection(sdb_wid_to, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
            Call Gp_Ms_Collection(sdb_len_fr, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-           Call Gp_Ms_Collection(SDB_LEN_TO, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-           Call Gp_Ms_Collection(TXT_MAT_NO, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+           Call Gp_Ms_Collection(sdb_len_to, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+           Call Gp_Ms_Collection(txt_mat_no, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
            Call Gp_Ms_Collection(txt_lot_no, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
               Call Gp_Ms_Collection(TXT_HTM, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
     Call Gp_Ms_Collection(TXT_BED_PILE_DATE, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
@@ -2719,8 +2719,8 @@ Private Sub Option2_Click()
 End Sub
 
 Private Sub sdb_len_fr_Change()
-    If sdb_len_fr.Value > 0 And SDB_LEN_TO.Value < sdb_len_fr.Value Then
-        SDB_LEN_TO.Value = sdb_len_fr.Value
+    If sdb_len_fr.Value > 0 And sdb_len_to.Value < sdb_len_fr.Value Then
+        sdb_len_to.Value = sdb_len_fr.Value
     End If
 End Sub
 
@@ -2731,8 +2731,8 @@ Private Sub sdb_thk_fr_Change()
 End Sub
 
 Private Sub sdb_wid_fr_Change()
-    If sdb_wid_fr.Value > 0 And SDB_WID_TO.Value < sdb_wid_fr.Value Then
-        SDB_WID_TO.Value = sdb_wid_fr.Value
+    If sdb_wid_fr.Value > 0 And sdb_wid_to.Value < sdb_wid_fr.Value Then
+        sdb_wid_to.Value = sdb_wid_fr.Value
     End If
 End Sub
 
@@ -3031,7 +3031,7 @@ Public Sub Form_Ref()                   '#######################################
     End If
      
     If Refer_Fl = "Y" Then
-        If Len(TXT_MAT_NO.Text) < 8 And Len(txt_lot_no.Text) < 12 And TXT_ORD_NO.Text = "" And CBO_ORD_ITEM.Text = "" And (DTP_PROD_FR.RawData = "" Or DTP_PROD_TO.RawData = "") Then
+        If Len(txt_mat_no.Text) < 8 And Len(txt_lot_no.Text) < 12 And TXT_ORD_NO.Text = "" And CBO_ORD_ITEM.Text = "" And (DTP_PROD_FR.RawData = "" Or DTP_PROD_TO.RawData = "") Then
             Call Gp_MsgBoxDisplay("生产日期或订单号或物料号或轧批号必须输入", "I", "错误提示")
             Exit Sub
         End If
@@ -3376,7 +3376,7 @@ Private Sub text_stlgrd_KeyUp(KeyCode As Integer, Shift As Integer)
     
     If KeyCode = vbKeyF4 Then
         DD.sWitch = "MS"
-        DD.rControl.Add Item:=text_stlgrd
+        DD.rControl.Add Item:=Text_STLGRD
            
         If CBO_PROD_CD.Text = "SL" Then
             DD.nameType = "1"

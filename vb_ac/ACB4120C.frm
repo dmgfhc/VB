@@ -20,8 +20,8 @@ Begin VB.Form ACB4120C
    LinkTopic       =   "Form1"
    LockControls    =   -1  'True
    MDIChild        =   -1  'True
-   ScaleHeight     =   9225
-   ScaleWidth      =   14655
+   ScaleHeight     =   10935
+   ScaleWidth      =   20250
    WindowState     =   2  'Maximized
    Begin VB.TextBox txt_lot_no 
       BeginProperty Font 
@@ -151,7 +151,7 @@ Begin VB.Form ACB4120C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.75
+         Size            =   9.76
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -175,7 +175,7 @@ Begin VB.Form ACB4120C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.75
+         Size            =   9.76
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -208,7 +208,7 @@ Begin VB.Form ACB4120C
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      MaxCols         =   16
+      MaxCols         =   20
       MaxRows         =   2
       ProcessTab      =   -1  'True
       Protect         =   0   'False
@@ -228,7 +228,7 @@ Begin VB.Form ACB4120C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.75
+         Size            =   9.76
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -251,7 +251,7 @@ Begin VB.Form ACB4120C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.75
+         Size            =   9.76
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -275,7 +275,7 @@ Begin VB.Form ACB4120C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.75
+         Size            =   9.76
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -346,7 +346,7 @@ Begin VB.Form ACB4120C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.75
+         Size            =   9.76
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -368,7 +368,7 @@ Begin VB.Form ACB4120C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.75
+         Size            =   9.76
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -390,7 +390,7 @@ Begin VB.Form ACB4120C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.75
+         Size            =   9.76
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -659,7 +659,7 @@ Begin VB.Form ACB4120C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.75
+         Size            =   9.76
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -683,7 +683,7 @@ Begin VB.Form ACB4120C
       ChiselText      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
-         Size            =   9.75
+         Size            =   9.76
          Charset         =   134
          Weight          =   400
          Underline       =   0   'False
@@ -721,6 +721,72 @@ Begin VB.Form ACB4120C
       Top             =   90
       Width           =   1410
       _ExtentX        =   2487
+      _ExtentY        =   556
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "宋体"
+         Size            =   9.74
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483630
+      BackColor       =   16777215
+      MaxLength       =   10
+   End
+   Begin InDate.ULabel ULabel16 
+      Height          =   315
+      Left            =   14160
+      Top             =   120
+      Width           =   1260
+      _ExtentX        =   2223
+      _ExtentY        =   556
+      Caption         =   "判定日期"
+      Alignment       =   1
+      BackColor       =   14804173
+      BackgroundStyle =   1
+      ChiselText      =   2
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "宋体"
+         Size            =   9.76
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+   End
+   Begin InDate.UDate Udate_BB_CONF_TO 
+      Height          =   315
+      Left            =   16860
+      TabIndex        =   17
+      Tag             =   "交货期"
+      Top             =   120
+      Width           =   1440
+      _ExtentX        =   2540
+      _ExtentY        =   556
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "宋体"
+         Size            =   9.74
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483630
+      BackColor       =   16777215
+      MaxLength       =   10
+   End
+   Begin InDate.UDate Udate_BB_CONF_FR 
+      Height          =   315
+      Left            =   15450
+      TabIndex        =   18
+      Tag             =   "交货期"
+      Top             =   120
+      Width           =   1440
+      _ExtentX        =   2540
       _ExtentY        =   556
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "宋体"
@@ -812,8 +878,10 @@ Private Sub Form_Define()
           Call Gp_Ms_Collection(sdb_len_fr, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
           Call Gp_Ms_Collection(SDB_LEN_TO, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
           Call Gp_Ms_Collection(txt_lot_no, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-         Call Gp_Ms_Collection(udt_date_fr, "p", "n", "m", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-         Call Gp_Ms_Collection(udt_date_to, "p", "n", "m", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+         Call Gp_Ms_Collection(udt_date_fr, "p", "", "", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+         Call Gp_Ms_Collection(udt_date_to, "p", "", "", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+         Call Gp_Ms_Collection(Udate_BB_CONF_FR, "p", "", "", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+         Call Gp_Ms_Collection(Udate_BB_CONF_TO, "p", "", "", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
     
     'MASTER Collection
     Mc1.Add Item:=pControl, Key:="pControl"
@@ -842,6 +910,10 @@ Private Sub Form_Define()
    Call Gp_Sp_Collection(ss1, 14, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
    Call Gp_Sp_Collection(ss1, 15, "p", " ", " ", "i", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1, False)
    Call Gp_Sp_Collection(ss1, 16, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+    Call Gp_Sp_Collection(ss1, 17, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+     Call Gp_Sp_Collection(ss1, 18, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+      Call Gp_Sp_Collection(ss1, 19, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
+       Call Gp_Sp_Collection(ss1, 20, " ", " ", " ", " ", " ", "l", pColumn1, nColumn1, mColumn1, iColumn1, aColumn1, lColumn1)
     
     'Spread_Collection
     sc1.Add Item:=ss1, Key:="Spread"
@@ -1049,19 +1121,19 @@ Private Sub ss1_BlockSelected(ByVal BlockCol As Long, ByVal BlockRow As Long, By
 
 End Sub
 
-Private Sub ss1_Click(ByVal Col As Long, ByVal ROW As Long)
+Private Sub ss1_Click(ByVal Col As Long, ByVal Row As Long)
 
-    Call Gp_Sp_Sort(Proc_Sc("Sc")("Spread"), Col, ROW)
+    Call Gp_Sp_Sort(Proc_Sc("Sc")("Spread"), Col, Row)
     
     lBlkcol1 = 0
     lBlkcol2 = 0
     lBlkrow1 = 0
     lBlkrow2 = 0
     
-    If ROW < 1 Then Exit Sub
+    If Row < 1 Then Exit Sub
     If ss1.MaxRows < 1 Then Exit Sub
     
-    ss1.ROW = ROW
+    ss1.Row = Row
     ss1.Col = 0
     
     If ss1.Text <> "Update" Then
@@ -1074,7 +1146,7 @@ Private Sub ss1_Click(ByVal Col As Long, ByVal ROW As Long)
         ss1.Col = 14
         ss1.Text = sUserName
         
-        Call Gp_Sp_BlockColor(ss1, 1, ss1.MaxCols, ROW, ROW, , &HFFFF80)
+        Call Gp_Sp_BlockColor(ss1, 1, ss1.MaxCols, Row, Row, , &HFFFF80)
     Else
         ss1.Text = ""
         
@@ -1083,12 +1155,12 @@ Private Sub ss1_Click(ByVal Col As Long, ByVal ROW As Long)
         ss1.Col = 14
         ss1.Text = ""
         
-        Call Gp_Sp_BlockColor(ss1, 1, ss1.MaxCols, ROW, ROW)
+        Call Gp_Sp_BlockColor(ss1, 1, ss1.MaxCols, Row, Row)
     End If
     
 End Sub
 
-Private Sub ss1_EditMode(ByVal Col As Long, ByVal ROW As Long, ByVal Mode As Integer, ByVal ChangeMade As Boolean)
+Private Sub ss1_EditMode(ByVal Col As Long, ByVal Row As Long, ByVal Mode As Integer, ByVal ChangeMade As Boolean)
 
     If Gf_Sc_Authority(sAuthority, "U") Then
         Call Gp_Sp_UpdateMake(Proc_Sc("SC")("Spread"), Mode)
@@ -1121,9 +1193,9 @@ Private Sub ss1_LostFocus()
 
 End Sub
 
-Private Sub ss1_RightClick(ByVal ClickType As Integer, ByVal Col As Long, ByVal ROW As Long, ByVal MouseX As Long, ByVal MouseY As Long)
+Private Sub ss1_RightClick(ByVal ClickType As Integer, ByVal Col As Long, ByVal Row As Long, ByVal MouseX As Long, ByVal MouseY As Long)
 
-    If ROW > 0 Then
+    If Row > 0 Then
         Set Active_Spread = Me.ss1
         PopupMenu MDIMain.PopUp_Spread
     End If
@@ -1176,11 +1248,11 @@ End Sub
 
 Private Sub txt_stdspec_DblClick()
     
-    Call txt_stdspec_KeyUp(vbKeyF4, 0)
+    Call txt_STDSPEC_KeyUp(vbKeyF4, 0)
     
 End Sub
 
-Private Sub txt_stdspec_KeyUp(KeyCode As Integer, Shift As Integer)
+Private Sub txt_STDSPEC_KeyUp(KeyCode As Integer, Shift As Integer)
 
     If KeyCode = vbKeyF4 Then
 

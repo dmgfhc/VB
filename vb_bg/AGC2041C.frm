@@ -13,7 +13,7 @@ Begin VB.Form AGC2041C
    LinkTopic       =   "Form1"
    MDIChild        =   -1  'True
    ScaleHeight     =   9330
-   ScaleWidth      =   15240
+   ScaleWidth      =   20250
    WindowState     =   2  'Maximized
    Begin SSSplitter.SSSplitter SSSplitter1 
       Height          =   9255
@@ -608,7 +608,7 @@ Begin VB.Form AGC2041C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.75
+               Size            =   9.76
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1167,10 +1167,332 @@ Begin VB.Form AGC2041C
          _ExtentY        =   3493
          _Version        =   196609
          BackColor       =   14737632
+         Begin VB.ComboBox cbx_size 
+            Height          =   300
+            ItemData        =   "AGC2041C.frx":1728
+            Left            =   13440
+            List            =   "AGC2041C.frx":173E
+            TabIndex        =   60
+            Text            =   "30*3200*6000"
+            Top             =   480
+            Width           =   1455
+         End
+         Begin VB.ComboBox cbx_plt 
+            Height          =   300
+            ItemData        =   "AGC2041C.frx":179A
+            Left            =   1320
+            List            =   "AGC2041C.frx":17A7
+            TabIndex        =   58
+            Text            =   "中厚板卷厂"
+            Top             =   120
+            Width           =   1695
+         End
+         Begin VB.TextBox TXT_UST_GRADE 
+            BeginProperty Font 
+               Name            =   "宋体"
+               Size            =   9.75
+               Charset         =   134
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   315
+            Left            =   10080
+            TabIndex        =   57
+            Top             =   1200
+            Width           =   2115
+         End
+         Begin VB.TextBox cbx_scale 
+            BeginProperty Font 
+               Name            =   "宋体"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   330
+            Left            =   10080
+            MaxLength       =   99
+            TabIndex        =   56
+            Tag             =   "标准代码"
+            Text            =   "100%"
+            Top             =   840
+            Width           =   2085
+         End
+         Begin VB.TextBox TXT_UST_STAND_REPORT 
+            BeginProperty Font 
+               Name            =   "宋体"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   330
+            Left            =   7200
+            MaxLength       =   99
+            TabIndex        =   55
+            Top             =   1200
+            Width           =   1485
+         End
+         Begin VB.TextBox cbx_test 
+            BeginProperty Font 
+               Name            =   "宋体"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   330
+            Left            =   7200
+            MaxLength       =   99
+            TabIndex        =   54
+            Tag             =   "标准代码"
+            Text            =   "纵波直接接触法"
+            Top             =   840
+            Width           =   1485
+         End
+         Begin VB.TextBox txt_comp 
+            BeginProperty Font 
+               Name            =   "宋体"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   330
+            Left            =   4320
+            MaxLength       =   99
+            TabIndex        =   53
+            Tag             =   "标准代码"
+            Text            =   "0dB"
+            Top             =   1200
+            Width           =   1485
+         End
+         Begin VB.TextBox txt_sens 
+            BeginProperty Font 
+               Name            =   "宋体"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   330
+            Left            =   1320
+            MaxLength       =   99
+            TabIndex        =   52
+            Tag             =   "标准代码"
+            Text            =   "3mm  FBH"
+            Top             =   1200
+            Width           =   1695
+         End
+         Begin VB.TextBox cbx_direction 
+            BeginProperty Font 
+               Name            =   "宋体"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   330
+            Left            =   13440
+            MaxLength       =   99
+            TabIndex        =   51
+            Tag             =   "标准代码"
+            Text            =   "平行于轧制线"
+            Top             =   840
+            Width           =   1485
+         End
+         Begin VB.TextBox cbx_rate 
+            BeginProperty Font 
+               Name            =   "宋体"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   330
+            Left            =   7200
+            MaxLength       =   99
+            TabIndex        =   50
+            Tag             =   "标准代码"
+            Text            =   "5MHz"
+            Top             =   480
+            Width           =   1485
+         End
+         Begin VB.TextBox cbx_chip 
+            BeginProperty Font 
+               Name            =   "宋体"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   330
+            Left            =   4320
+            MaxLength       =   99
+            TabIndex        =   49
+            Tag             =   "标准代码"
+            Text            =   "60×20"
+            Top             =   480
+            Width           =   1455
+         End
+         Begin VB.TextBox txt_time 
+            BeginProperty Font 
+               Name            =   "宋体"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   330
+            Left            =   7200
+            MaxLength       =   99
+            TabIndex        =   48
+            Tag             =   "标准代码"
+            Text            =   "热轧后"
+            Top             =   120
+            Width           =   1485
+         End
+         Begin VB.TextBox txt_couplant 
+            BeginProperty Font 
+               Name            =   "宋体"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   330
+            Left            =   1320
+            MaxLength       =   99
+            TabIndex        =   47
+            Tag             =   "标准代码"
+            Text            =   "水"
+            Top             =   840
+            Width           =   1725
+         End
+         Begin VB.TextBox cbx_style 
+            BeginProperty Font 
+               Name            =   "宋体"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   330
+            Left            =   4320
+            MaxLength       =   99
+            TabIndex        =   46
+            Tag             =   "标准代码"
+            Text            =   "间隙式水膜法"
+            Top             =   840
+            Width           =   1455
+         End
+         Begin VB.TextBox txt_surface 
+            BeginProperty Font 
+               Name            =   "宋体"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   330
+            Left            =   10080
+            MaxLength       =   99
+            TabIndex        =   45
+            Tag             =   "标准代码"
+            Text            =   "轧制表面/热处理表面"
+            Top             =   120
+            Width           =   2085
+         End
+         Begin VB.ComboBox cbx_ins 
+            Height          =   300
+            ItemData        =   "AGC2041C.frx":17C9
+            Left            =   13440
+            List            =   "AGC2041C.frx":17D6
+            TabIndex        =   44
+            Text            =   "HP/B3/L1-TR"
+            Top             =   120
+            Width           =   1455
+         End
+         Begin VB.ComboBox cbx_probe 
+            Height          =   300
+            ItemData        =   "AGC2041C.frx":1805
+            Left            =   1320
+            List            =   "AGC2041C.frx":180F
+            TabIndex        =   43
+            Text            =   "3STSE 18.3/8PB5"
+            Top             =   480
+            Width           =   1695
+         End
+         Begin VB.ComboBox cbx_type 
+            Height          =   300
+            ItemData        =   "AGC2041C.frx":1832
+            Left            =   10080
+            List            =   "AGC2041C.frx":1848
+            TabIndex        =   42
+            Text            =   "NISCO-3500-1"
+            Top             =   480
+            Width           =   2055
+         End
+         Begin VB.ComboBox cbx_sign 
+            Height          =   300
+            ItemData        =   "AGC2041C.frx":18A0
+            Left            =   13440
+            List            =   "AGC2041C.frx":18AD
+            TabIndex        =   41
+            Text            =   "胡雷鸣"
+            Top             =   1200
+            Width           =   1455
+         End
+         Begin VB.ComboBox cbx_level 
+            Height          =   300
+            ItemData        =   "AGC2041C.frx":18C7
+            Left            =   1320
+            List            =   "AGC2041C.frx":18D1
+            TabIndex        =   40
+            Text            =   "2级"
+            Top             =   1560
+            Width           =   1695
+         End
+         Begin VB.ComboBox cbx_approve 
+            Height          =   300
+            ItemData        =   "AGC2041C.frx":18DF
+            Left            =   4320
+            List            =   "AGC2041C.frx":18EC
+            TabIndex        =   39
+            Text            =   "丁锋"
+            Top             =   1560
+            Width           =   1455
+         End
          Begin InDate.UDate test_date 
             Height          =   315
             Left            =   4320
-            TabIndex        =   60
+            TabIndex        =   59
             Tag             =   "起始日期"
             Top             =   120
             Width           =   1455
@@ -1187,59 +1509,6 @@ Begin VB.Form AGC2041C
             EndProperty
             ForeColor       =   -2147483630
             BackColor       =   16777215
-         End
-         Begin VB.TextBox TXT_UST_GRADE 
-            BeginProperty Font 
-               Name            =   "宋体"
-               Size            =   9.75
-               Charset         =   134
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   315
-            Left            =   10080
-            TabIndex        =   59
-            Top             =   1200
-            Width           =   2115
-         End
-         Begin VB.TextBox TXT_UST_STAND_REPORT 
-            BeginProperty Font 
-               Name            =   "宋体"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   330
-            Left            =   7200
-            MaxLength       =   99
-            TabIndex        =   58
-            Top             =   1200
-            Width           =   1485
-         End
-         Begin VB.ComboBox Combo4 
-            Height          =   300
-            ItemData        =   "AGC2041C.frx":1728
-            Left            =   10080
-            List            =   "AGC2041C.frx":1732
-            TabIndex        =   57
-            Text            =   "NISCO-3500-1"
-            Top             =   480
-            Width           =   2085
-         End
-         Begin VB.ComboBox Combo3 
-            Height          =   300
-            ItemData        =   "AGC2041C.frx":1752
-            Left            =   13440
-            List            =   "AGC2041C.frx":175C
-            TabIndex        =   56
-            Text            =   "30*3200*6000"
-            Top             =   480
-            Width           =   1485
          End
          Begin InDate.ULabel ULabel24 
             Height          =   315
@@ -1262,320 +1531,6 @@ Begin VB.Form AGC2041C
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-         End
-         Begin VB.TextBox Text2 
-            BeginProperty Font 
-               Name            =   "宋体"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   330
-            Left            =   10080
-            MaxLength       =   99
-            TabIndex        =   55
-            Tag             =   "标准代码"
-            Text            =   "轧制表面/热处理表面"
-            Top             =   120
-            Width           =   2085
-         End
-         Begin VB.TextBox Text12 
-            BeginProperty Font 
-               Name            =   "宋体"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   330
-            Left            =   4320
-            MaxLength       =   99
-            TabIndex        =   54
-            Tag             =   "标准代码"
-            Text            =   "间隙式水膜法"
-            Top             =   840
-            Width           =   1455
-         End
-         Begin VB.TextBox Text9 
-            BeginProperty Font 
-               Name            =   "宋体"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   330
-            Left            =   1320
-            MaxLength       =   99
-            TabIndex        =   53
-            Tag             =   "标准代码"
-            Text            =   "水"
-            Top             =   840
-            Width           =   1725
-         End
-         Begin VB.ComboBox cbx_plt 
-            Height          =   300
-            ItemData        =   "AGC2041C.frx":177E
-            Left            =   1320
-            List            =   "AGC2041C.frx":178B
-            TabIndex        =   52
-            Text            =   "中厚板卷厂"
-            Top             =   120
-            Width           =   1695
-         End
-         Begin VB.TextBox Text1 
-            BeginProperty Font 
-               Name            =   "宋体"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   330
-            Left            =   7200
-            MaxLength       =   99
-            TabIndex        =   51
-            Tag             =   "标准代码"
-            Text            =   "热轧后"
-            Top             =   120
-            Width           =   1485
-         End
-         Begin VB.TextBox Text3 
-            BeginProperty Font 
-               Name            =   "宋体"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   330
-            Left            =   13440
-            MaxLength       =   99
-            TabIndex        =   50
-            Tag             =   "标准代码"
-            Text            =   "HP/B3/L1-TR"
-            Top             =   120
-            Width           =   1485
-         End
-         Begin VB.TextBox Text4 
-            BeginProperty Font 
-               Name            =   "宋体"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   330
-            Left            =   1320
-            MaxLength       =   99
-            TabIndex        =   49
-            Tag             =   "标准代码"
-            Text            =   "3STSE 18.3/8PB5"
-            Top             =   480
-            Width           =   1725
-         End
-         Begin VB.TextBox Text5 
-            BeginProperty Font 
-               Name            =   "宋体"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   330
-            Left            =   4320
-            MaxLength       =   99
-            TabIndex        =   48
-            Tag             =   "标准代码"
-            Text            =   "60×20"
-            Top             =   480
-            Width           =   1455
-         End
-         Begin VB.TextBox Text6 
-            BeginProperty Font 
-               Name            =   "宋体"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   330
-            Left            =   7200
-            MaxLength       =   99
-            TabIndex        =   47
-            Tag             =   "标准代码"
-            Text            =   "5MHz"
-            Top             =   480
-            Width           =   1485
-         End
-         Begin VB.TextBox Text10 
-            BeginProperty Font 
-               Name            =   "宋体"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   330
-            Left            =   13440
-            MaxLength       =   99
-            TabIndex        =   46
-            Tag             =   "标准代码"
-            Text            =   "平行于轧制线"
-            Top             =   840
-            Width           =   1485
-         End
-         Begin VB.TextBox Text11 
-            BeginProperty Font 
-               Name            =   "宋体"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   330
-            Left            =   13440
-            MaxLength       =   99
-            TabIndex        =   45
-            Tag             =   "标准代码"
-            Text            =   "胡雷鸣"
-            Top             =   1200
-            Width           =   1485
-         End
-         Begin VB.TextBox Text13 
-            BeginProperty Font 
-               Name            =   "宋体"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   330
-            Left            =   1320
-            MaxLength       =   99
-            TabIndex        =   44
-            Tag             =   "标准代码"
-            Text            =   "3mm  FBH"
-            Top             =   1200
-            Width           =   1695
-         End
-         Begin VB.TextBox Text14 
-            BeginProperty Font 
-               Name            =   "宋体"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   330
-            Left            =   1320
-            MaxLength       =   99
-            TabIndex        =   43
-            Tag             =   "标准代码"
-            Text            =   "2级"
-            Top             =   1560
-            Width           =   1695
-         End
-         Begin VB.TextBox Text16 
-            BeginProperty Font 
-               Name            =   "宋体"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   330
-            Left            =   4320
-            MaxLength       =   99
-            TabIndex        =   42
-            Tag             =   "标准代码"
-            Text            =   "0dB"
-            Top             =   1200
-            Width           =   1485
-         End
-         Begin VB.TextBox Text17 
-            BeginProperty Font 
-               Name            =   "宋体"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   330
-            Left            =   4320
-            MaxLength       =   99
-            TabIndex        =   41
-            Tag             =   "标准代码"
-            Text            =   "丁锋"
-            Top             =   1560
-            Width           =   1245
-         End
-         Begin VB.TextBox Text18 
-            BeginProperty Font 
-               Name            =   "宋体"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   330
-            Left            =   7200
-            MaxLength       =   99
-            TabIndex        =   40
-            Tag             =   "标准代码"
-            Text            =   "纵波直接接触法"
-            Top             =   840
-            Width           =   1485
-         End
-         Begin VB.TextBox Text20 
-            BeginProperty Font 
-               Name            =   "宋体"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   330
-            Left            =   10080
-            MaxLength       =   99
-            TabIndex        =   39
-            Tag             =   "标准代码"
-            Text            =   "100%"
-            Top             =   840
-            Width           =   2085
          End
          Begin InDate.ULabel ULabel11 
             Height          =   315

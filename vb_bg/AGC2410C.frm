@@ -601,7 +601,7 @@ Begin VB.Form AGC2410C
          MaxCols         =   29
          Protect         =   0   'False
          RetainSelBlock  =   0   'False
-         SpreadDesigner  =   "AGC2410C.frx":08BD
+         SpreadDesigner  =   "AGC2410C.frx":08E7
       End
    End
    Begin VB.Line Line1 
@@ -1189,7 +1189,7 @@ Public Sub TextClear()
 End Sub
 
 Public Sub Form_Ref()
-    Dim iROW As Integer
+    Dim iRow As Integer
     Dim iCol As Integer
     Dim sUrgnt_Fl As String
     
@@ -1205,14 +1205,14 @@ Public Sub Form_Ref()
         
         '紧急订单绿色显示 add by liqian 2012-11-08
          With ss1
-              For iROW = 1 To .MaxRows
-                 .Row = iROW:
+              For iRow = 1 To .MaxRows
+                 .Row = iRow:
                   .Col = SS1_URGNT_FL:    sUrgnt_Fl = Trim(.Text)
                 
                   If sUrgnt_Fl = "Y" Then
-                     Call Gp_Sp_BlockColor(ss1, 1, .MaxCols, iROW, iROW, &HC000&)
+                     Call Gp_Sp_BlockColor(ss1, 1, .MaxCols, iRow, iRow, &HC000&)
                   End If
-              Next iROW
+              Next iRow
         End With
         
         Call MDIMain.FormMenuSetting(Me, FormType, "RE", sAuthority)
@@ -1789,10 +1789,10 @@ End Function
 
 
 Private Sub txt_charge_no_Change()
-   Dim sMesg As String
+   Dim SMESG As String
    If Len(txt_charge_no.Text) > 10 Then
-      sMesg = "查询号长度不能超过10位，请确认查询号 ！！！"
-      Call Gp_MsgBoxDisplay(sMesg)
+      SMESG = "查询号长度不能超过10位，请确认查询号 ！！！"
+      Call Gp_MsgBoxDisplay(SMESG)
    End If
 End Sub
 

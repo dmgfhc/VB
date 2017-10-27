@@ -1,5 +1,5 @@
 VERSION 5.00
-Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "MSCOMCTL.OCX"
+Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCTL.OCX"
 Object = "{38911DA0-E448-11D0-84A3-00DD01104159}#1.1#0"; "COMCT332.OCX"
 Object = "{48E59290-9880-11CF-9754-00AA00C00908}#1.0#0"; "MSINET.OCX"
 Begin VB.MDIForm MDIMain 
@@ -40,7 +40,7 @@ Begin VB.MDIForm MDIMain
          BandCount       =   1
          _CBWidth        =   20250
          _CBHeight       =   600
-         _Version        =   "6.7.9782"
+         _Version        =   "6.0.8169"
          Child1          =   "MenuTool"
          MinHeight1      =   540
          Width1          =   20190
@@ -362,14 +362,14 @@ Begin VB.MDIForm MDIMain
             Alignment       =   1
             Object.Width           =   2117
             MinWidth        =   2117
-            TextSave        =   "2017/10/11"
+            TextSave        =   "2017/10/27"
          EndProperty
          BeginProperty Panel6 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
             Style           =   5
             Alignment       =   1
             Object.Width           =   1411
             MinWidth        =   1411
-            TextSave        =   "9:27"
+            TextSave        =   "14:05"
          EndProperty
          BeginProperty Panel7 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
             Object.Width           =   3352
@@ -490,28 +490,28 @@ Begin VB.MDIForm MDIMain
          Caption         =   "合同兑现查询"
       End
       Begin VB.Menu Mnu_ACA1120C 
-         Caption         =   "历史订单进程查询_ACA1120C"
+         Caption         =   "历史订单进程查询"
       End
       Begin VB.Menu Mnu_ACA1130C 
-         Caption         =   "合同兑现分析综合报表_ACA1130C"
+         Caption         =   "合同兑现分析综合报表"
       End
       Begin VB.Menu Mnu_ACA1140C 
-         Caption         =   "物料工艺时间查询_ACA1140C"
+         Caption         =   "物料工艺时间查询"
       End
       Begin VB.Menu Mnu_ACA2010C 
          Caption         =   "变更订单投入生产厂"
       End
       Begin VB.Menu Mnu_ACA2030C 
-         Caption         =   "订单多次投料信息查询—ACA2030C"
+         Caption         =   "订单多次投料信息查询"
       End
       Begin VB.Menu Mnu_ACA2036C 
-         Caption         =   "板坯库存报表(时间)—ACA2036C"
+         Caption         =   "板坯库存报表(时间)"
       End
       Begin VB.Menu Mnu_ACA2033C 
-         Caption         =   "板坯库存报表—ACA2033C"
+         Caption         =   "板坯库存报表"
       End
       Begin VB.Menu Mnu_ACB6080C 
-         Caption         =   "当月订单欠量统计_ACB6080C"
+         Caption         =   "当月订单欠量统计"
       End
       Begin VB.Menu Mnu_ACA2034C 
          Caption         =   "月度炼钢量统计报表（钢种）"
@@ -564,7 +564,7 @@ Begin VB.MDIForm MDIMain
          Caption         =   "板坯信息查询修改"
       End
       Begin VB.Menu Mnu_ACB4098C 
-         Caption         =   "板坯尺寸信息转换处理_ACB4098C"
+         Caption         =   "板坯尺寸信息转换处理"
       End
       Begin VB.Menu Mnu_ACB4099C 
          Caption         =   "板坯尺寸信息查询修改"
@@ -626,7 +626,7 @@ Begin VB.MDIForm MDIMain
             Caption         =   "转库作业实绩查询"
          End
          Begin VB.Menu Mnu_ACB5080C 
-            Caption         =   "垛位号变更履历查询-ACB5080C"
+            Caption         =   "垛位号变更履历查询"
          End
       End
       Begin VB.Menu Line3 
@@ -744,19 +744,19 @@ Begin VB.MDIForm MDIMain
             Caption         =   "在制品余材降级(订单标准)"
          End
          Begin VB.Menu Mnu_ACE6040C 
-            Caption         =   "在制品替代分板处理_ACE6040C"
+            Caption         =   "在制品替代分板处理"
          End
       End
       Begin VB.Menu Mnu_ACE9 
          Caption         =   "在制品自动替代"
          Begin VB.Menu Mnu_ACE7000C 
-            Caption         =   "录入在制品自动替代标准_ACE7000C"
+            Caption         =   "录入在制品自动替代标准"
          End
          Begin VB.Menu Mnu_ACE7010C 
-            Caption         =   "在制品自动替代确认(物料标准)_ACE7010C"
+            Caption         =   "在制品自动替代确认(物料标准)"
          End
          Begin VB.Menu Mnu_ACE7020C 
-            Caption         =   "在制品自动替代确认(订单标准)_ACE7020C"
+            Caption         =   "在制品自动替代确认(订单标准)"
          End
       End
       Begin VB.Menu Mnu_ACE1209C 
@@ -786,37 +786,37 @@ Begin VB.MDIForm MDIMain
    Begin VB.Menu Mnu_ACF1 
       Caption         =   "看板管理"
       Begin VB.Menu Mnu_ACF0010C 
-         Caption         =   "船板定制配送进度跟踪_ACF0010C"
+         Caption         =   "船板定制配送进度跟踪"
       End
       Begin VB.Menu Mnu_ACF0020C 
-         Caption         =   "船板定制配送订单跟踪查询_ACF0020C"
+         Caption         =   "船板定制配送订单跟踪查询"
       End
       Begin VB.Menu Mnu_ACF0030C 
-         Caption         =   "船板定制配送工序时间汇总_ACF0030C"
+         Caption         =   "船板定制配送工序时间汇总"
       End
       Begin VB.Menu Mnu_ACF0040C 
-         Caption         =   "订单标准工序时间管理_ACF0040C"
+         Caption         =   "订单标准工序时间管理"
       End
       Begin VB.Menu Mnu_ACF0050C 
-         Caption         =   "生产简报_ACF0050C"
+         Caption         =   "生产简报"
       End
       Begin VB.Menu Mnu_ACF0060C 
-         Caption         =   "板材订单汇总表_ACF0060C"
+         Caption         =   "板材订单汇总表"
       End
       Begin VB.Menu Mnu_ACF0070C 
-         Caption         =   "板材事业部生产经营日报_ACF0070C"
+         Caption         =   "板材事业部生产经营日报"
       End
       Begin VB.Menu Mnu_ACF0080C 
-         Caption         =   "生产成本数据跟踪_ACF0080C"
+         Caption         =   "生产成本数据跟踪"
       End
       Begin VB.Menu Mnu_ACF0090C 
-         Caption         =   "生产成本数据跟踪明细_ACF0090C"
+         Caption         =   "生产成本数据跟踪明细"
       End
       Begin VB.Menu Mnu_ACF0091C 
-         Caption         =   "炼钢成本数据跟踪明细_ACF0091C"
+         Caption         =   "炼钢成本数据跟踪明细"
       End
       Begin VB.Menu Mnu_ACF0100C 
-         Caption         =   "热装热送统计报表_ACF0100C"
+         Caption         =   "热装热送统计报表"
       End
    End
    Begin VB.Menu Mnu_ACZ 
@@ -828,7 +828,7 @@ Begin VB.MDIForm MDIMain
          Caption         =   "钢板转坯料履历查询"
       End
       Begin VB.Menu Mnu_ACA2035C 
-         Caption         =   "特殊质量信息详细查询界面_ACA2035C"
+         Caption         =   "特殊质量信息详细查询界面"
       End
       Begin VB.Menu Mnu_ACA2032C 
          Caption         =   "QAB状态未及时处理钢板统计表"
@@ -1225,31 +1225,31 @@ Private Sub MDIForm_Load()
     Else
 
         args = Split(Trim(Command), " ") ' 2012.11.09 新增  耿朝雷
-        If UBound(args) = 1 Then
-             MainFrmType = "New"
-             sUserID = args(0) ' 2012.11.09 新增  耿朝雷
-             sUserName = args(1) ' 2012.11.09 新增  耿朝雷
-             MDIMain.StatusBar1.Panels(1) = "提示信息 ：" ' 2012.11.09 新增  耿朝雷
-             MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName ' 2012.11.09 新增  耿朝雷
-        Else
-            Active_YN = GetSetting("NISCO", "EXE-FILE", "AC.exe")
-            If Active_YN = "1" Then
-                MainFrmType = "Old"
-                sUserID = GetSetting("NISCO", "AUTHORITY", "sUserID")
-                sUserName = GetSetting("NISCO", "AUTHORITY", "sUsername")
-                MDIMain.StatusBar1.Panels(1) = "提示信息 ："
-                MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName
-            Else
-                Call Gp_MsgBoxDisplay("只能从主画面登陆...", "W")
-                Unload Me
-                Exit Sub
-            End If
-        End If  ' 2012.11.09 新增  耿朝雷
+'        If UBound(args) = 1 Then
+'             MainFrmType = "New"
+'             sUserID = args(0) ' 2012.11.09 新增  耿朝雷
+'             sUserName = args(1) ' 2012.11.09 新增  耿朝雷
+'             MDIMain.StatusBar1.Panels(1) = "提示信息 ：" ' 2012.11.09 新增  耿朝雷
+'             MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName ' 2012.11.09 新增  耿朝雷
+'        Else
+'            Active_YN = GetSetting("NISCO", "EXE-FILE", "AC.exe")
+'            If Active_YN = "1" Then
+'                MainFrmType = "Old"
+'                sUserID = GetSetting("NISCO", "AUTHORITY", "sUserID")
+'                sUserName = GetSetting("NISCO", "AUTHORITY", "sUsername")
+'                MDIMain.StatusBar1.Panels(1) = "提示信息 ："
+'                MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName
+'            Else
+'                Call Gp_MsgBoxDisplay("只能从主画面登陆...", "W")
+'                Unload Me
+'                Exit Sub
+'            End If
+'        End If  ' 2012.11.09 新增  耿朝雷
 
-'        sUserID = "1JS1005"  '1JS1005
-'        sUserName = "杨猛"
-'        MDIMain.StatusBar1.Panels(1) = "提示信息 ："
-'        MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName
+        sUserID = "1JS1005"  '1JS1005
+        sUserName = "杨猛"
+        MDIMain.StatusBar1.Panels(1) = "提示信息 ："
+        MDIMain.StatusBar1.Panels(7) = sUserID + " " + sUserName
 
 
         If Mid(M_CN1, Len(M_CN1), 1) = "9" Then

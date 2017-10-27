@@ -24,7 +24,7 @@ Begin VB.Form ACB4100C
       Width           =   15195
       _ExtentX        =   26802
       _ExtentY        =   13070
-      _Version        =   196610
+      _Version        =   196609
       SplitterBarWidth=   4
       SplitterBarJoinStyle=   0
       SplitterBarAppearance=   0
@@ -39,7 +39,7 @@ Begin VB.Form ACB4100C
          Width           =   15195
          _ExtentX        =   26802
          _ExtentY        =   6694
-         _Version        =   196610
+         _Version        =   196609
          SplitterBarWidth=   2
          SplitterBarJoinStyle=   0
          SplitterBarAppearance=   0
@@ -54,7 +54,7 @@ Begin VB.Form ACB4100C
             Width           =   15195
             _ExtentX        =   26802
             _ExtentY        =   1005
-            _Version        =   196610
+            _Version        =   196609
             BackColor       =   14737918
             BevelOuter      =   1
             RoundedCorners  =   0   'False
@@ -345,7 +345,7 @@ Begin VB.Form ACB4100C
                Width           =   915
                _ExtentX        =   1614
                _ExtentY        =   503
-               _Version        =   196610
+               _Version        =   196609
                Font3D          =   2
                BackColor       =   14737918
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -453,7 +453,7 @@ Begin VB.Form ACB4100C
          MaxCols         =   40
          MaxRows         =   1
          RetainSelBlock  =   0   'False
-         SpreadDesigner  =   "ACB4100C.frx":0856
+         SpreadDesigner  =   "ACB4100C.frx":0880
       End
    End
    Begin Threed.SSFrame SSFrame1 
@@ -464,7 +464,7 @@ Begin VB.Form ACB4100C
       Width           =   15195
       _ExtentX        =   26802
       _ExtentY        =   3069
-      _Version        =   196610
+      _Version        =   196609
       BackColor       =   14737632
       ShadowStyle     =   1
       Begin VB.TextBox TXT_ORD_NO 
@@ -690,9 +690,9 @@ Begin VB.Form ACB4100C
             Strikethrough   =   0   'False
          EndProperty
          Height          =   315
-         ItemData        =   "ACB4100C.frx":1ACA
+         ItemData        =   "ACB4100C.frx":1B1E
          Left            =   1230
-         List            =   "ACB4100C.frx":1AD4
+         List            =   "ACB4100C.frx":1B28
          TabIndex        =   8
          Text            =   "PP"
          Top             =   135
@@ -710,9 +710,9 @@ Begin VB.Form ACB4100C
             Strikethrough   =   0   'False
          EndProperty
          Height          =   315
-         ItemData        =   "ACB4100C.frx":1AE0
+         ItemData        =   "ACB4100C.frx":1B34
          Left            =   3240
-         List            =   "ACB4100C.frx":1AF0
+         List            =   "ACB4100C.frx":1B44
          TabIndex        =   7
          Text            =   "C1"
          Top             =   135
@@ -790,9 +790,9 @@ Begin VB.Form ACB4100C
             Strikethrough   =   0   'False
          EndProperty
          Height          =   315
-         ItemData        =   "ACB4100C.frx":1B04
+         ItemData        =   "ACB4100C.frx":1B58
          Left            =   10080
-         List            =   "ACB4100C.frx":1B11
+         List            =   "ACB4100C.frx":1B65
          TabIndex        =   3
          Top             =   135
          Width           =   915
@@ -805,7 +805,7 @@ Begin VB.Form ACB4100C
          Width           =   3675
          _ExtentX        =   6482
          _ExtentY        =   556
-         _Version        =   196610
+         _Version        =   196609
          BackColor       =   14737632
          Begin VB.OptionButton Opt_rk_y 
             BackColor       =   &H00E0E0E0&
@@ -1457,7 +1457,7 @@ Begin VB.Form ACB4100C
          Width           =   1125
          _ExtentX        =   1984
          _ExtentY        =   503
-         _Version        =   196610
+         _Version        =   196609
          Font3D          =   2
          BackColor       =   14737632
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -1714,19 +1714,19 @@ Private Sub Form_Define()
           Call Gp_Ms_Collection(DTP_PROD_FR, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
           Call Gp_Ms_Collection(DTP_PROD_TO, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
             Call Gp_Ms_Collection(CBO_SHIFT, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-           Call Gp_Ms_Collection(txt_ord_no, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-         Call Gp_Ms_Collection(cbo_ord_item, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+           Call Gp_Ms_Collection(TXT_ORD_NO, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+         Call Gp_Ms_Collection(CBO_ORD_ITEM, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
          Call Gp_Ms_Collection(txt_prod_grd, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
         Call Gp_Ms_Collection(TXT_ENDUSE_CD, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-          Call Gp_Ms_Collection(text_stlgrd, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+          Call Gp_Ms_Collection(Text_STLGRD, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
     Call Gp_Ms_Collection(text_cur_inv_code, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
            Call Gp_Ms_Collection(sdb_thk_fr, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
            Call Gp_Ms_Collection(sdb_thk_to, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
            Call Gp_Ms_Collection(sdb_wid_fr, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-           Call Gp_Ms_Collection(SDB_WID_TO, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+           Call Gp_Ms_Collection(sdb_wid_to, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
            Call Gp_Ms_Collection(sdb_len_fr, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-           Call Gp_Ms_Collection(SDB_LEN_TO, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-           Call Gp_Ms_Collection(TXT_MAT_NO, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+           Call Gp_Ms_Collection(sdb_len_to, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+           Call Gp_Ms_Collection(txt_mat_no, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
               Call Gp_Ms_Collection(TXT_HTM, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
     Call Gp_Ms_Collection(TXT_BED_PILE_DATE, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
            Call Gp_Ms_Collection(TXT_UST_FL, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
@@ -1779,7 +1779,7 @@ Private Sub Form_Define()
            Call Gp_Ms_Collection(txt_spec, "p", "n", " ", " ", "r", " ", " ", pControl2, nControl2, mControl2, iControl2, rControl2, aControl2, lControl2)
             Call Gp_Ms_Collection(SDB_THK, "p", "n", " ", " ", "r", " ", " ", pControl2, nControl2, mControl2, iControl2, rControl2, aControl2, lControl2)
             Call Gp_Ms_Collection(SDB_WID, "p", "n", " ", " ", "r", " ", " ", pControl2, nControl2, mControl2, iControl2, rControl2, aControl2, lControl2)
-            Call Gp_Ms_Collection(SDB_LEN, "p", "n", " ", " ", "r", " ", " ", pControl2, nControl2, mControl2, iControl2, rControl2, aControl2, lControl2)
+            Call Gp_Ms_Collection(sdb_len, "p", "n", " ", " ", "r", " ", " ", pControl2, nControl2, mControl2, iControl2, rControl2, aControl2, lControl2)
 
        'MASTER Collection
     Mc2.Add Item:=pControl2, Key:="pControl"
@@ -1791,22 +1791,22 @@ Private Sub Form_Define()
     Mc2.Add Item:=aControl2, Key:="aControl"
     Mc2.Add Item:=lControl2, Key:="lControl"
    
-     Call Gp_Sp_Collection(SS2, 1, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-     Call Gp_Sp_Collection(SS2, 2, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-     Call Gp_Sp_Collection(SS2, 3, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-     Call Gp_Sp_Collection(SS2, 4, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-     Call Gp_Sp_Collection(SS2, 5, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-     Call Gp_Sp_Collection(SS2, 6, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-     Call Gp_Sp_Collection(SS2, 7, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-     Call Gp_Sp_Collection(SS2, 8, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-     Call Gp_Sp_Collection(SS2, 9, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-    Call Gp_Sp_Collection(SS2, 10, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-    Call Gp_Sp_Collection(SS2, 11, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-    Call Gp_Sp_Collection(SS2, 12, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
-    Call Gp_Sp_Collection(SS2, 13, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+     Call Gp_Sp_Collection(ss2, 1, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+     Call Gp_Sp_Collection(ss2, 2, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+     Call Gp_Sp_Collection(ss2, 3, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+     Call Gp_Sp_Collection(ss2, 4, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+     Call Gp_Sp_Collection(ss2, 5, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+     Call Gp_Sp_Collection(ss2, 6, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+     Call Gp_Sp_Collection(ss2, 7, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+     Call Gp_Sp_Collection(ss2, 8, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+     Call Gp_Sp_Collection(ss2, 9, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+    Call Gp_Sp_Collection(ss2, 10, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+    Call Gp_Sp_Collection(ss2, 11, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+    Call Gp_Sp_Collection(ss2, 12, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
+    Call Gp_Sp_Collection(ss2, 13, " ", " ", " ", " ", " ", " ", pColumn2, nColumn2, mColumn2, iColumn2, aColumn2, lColumn2)
 
     'Spread_Collection
-    sc2.Add Item:=SS2, Key:="Spread"
+    sc2.Add Item:=ss2, Key:="Spread"
     sc2.Add Item:="ACB4100C.P_SREFER2", Key:="P-R"
     sc2.Add Item:=pColumn2, Key:="pColumn"
     sc2.Add Item:=nColumn2, Key:="nColumn"
@@ -1840,7 +1840,7 @@ Private Sub Form_Load()
     Call Gp_Ms_NeceColor(Mc2("nControl"))
     
     Call Gp_Sp_Setting(ss1)
-    Call Gp_Sp_Setting(SS2)
+    Call Gp_Sp_Setting(ss2)
 '    Call Gp_Sp_ReadOnlySet(Proc_Sc("Sc")("Spread"))
 
     Call Gf_Sp_Cls(sc1)
@@ -1849,7 +1849,7 @@ Private Sub Form_Load()
     Call Gp_Spl_SizeGet(SSSplitter1, "C-System.INI", Me.Name, "H")
     
     Call Gp_Sp_ColGet(ss1, "C-System.INI", Me.Name)
-    Call Gp_Sp_ColGet(SS2, "C-System.INI", Me.Name)
+    Call Gp_Sp_ColGet(ss2, "C-System.INI", Me.Name)
     
     Call MDIMain.FormMenuSetting(Me, FormType, "FS", sAuthority)
     Call MenuTool_ReSet
@@ -1892,9 +1892,9 @@ Private Sub Combo_ORD_ITEM_LostFocus()
     
     Dim S As String
   
-    If Len(cbo_ord_item.Text) = 1 Then
-        S = cbo_ord_item.Text
-        cbo_ord_item.Text = "0" + S
+    If Len(CBO_ORD_ITEM.Text) = 1 Then
+        S = CBO_ORD_ITEM.Text
+        CBO_ORD_ITEM.Text = "0" + S
     End If
     
 End Sub
@@ -1975,8 +1975,8 @@ Private Sub Opt_rk_y_Click()
 End Sub
 
 Private Sub sdb_len_fr_Change()
-    If sdb_len_fr.Value > 0 And SDB_LEN_TO.Value < sdb_len_fr.Value Then
-        SDB_LEN_TO.Value = sdb_len_fr.Value
+    If sdb_len_fr.Value > 0 And sdb_len_to.Value < sdb_len_fr.Value Then
+        sdb_len_to.Value = sdb_len_fr.Value
     End If
 End Sub
 
@@ -1987,12 +1987,12 @@ Private Sub sdb_thk_fr_Change()
 End Sub
 
 Private Sub sdb_wid_fr_Change()
-    If sdb_wid_fr.Value > 0 And SDB_WID_TO.Value < sdb_wid_fr.Value Then
-        SDB_WID_TO.Value = sdb_wid_fr.Value
+    If sdb_wid_fr.Value > 0 And sdb_wid_to.Value < sdb_wid_fr.Value Then
+        sdb_wid_to.Value = sdb_wid_fr.Value
     End If
 End Sub
 
-Private Sub ss1_EditMode(ByVal Col As Long, ByVal ROW As Long, ByVal Mode As Integer, ByVal ChangeMade As Boolean)
+Private Sub ss1_EditMode(ByVal Col As Long, ByVal Row As Long, ByVal Mode As Integer, ByVal ChangeMade As Boolean)
 
     If Gf_Sc_Authority(sAuthority, "U") Then Call Gp_Sp_UpdateMake(Proc_Sc("SC")("Spread"), Mode)
     
@@ -2000,24 +2000,24 @@ End Sub
 
 
 
-Private Sub ss2_Click(ByVal Col As Long, ByVal ROW As Long)
+Private Sub ss2_Click(ByVal Col As Long, ByVal Row As Long)
 
     Dim i As Integer
     
     Dim iOrd_no As String
     Dim iOrd_item As String
 
-    If Col = 0 And ROW > 0 Then
+    If Col = 0 And Row > 0 Then
 
-        For i = 1 To SS2.MaxRows
-           SS2.Col = 0
-           SS2.Text = ""
-           Call Gp_Sp_BlockColor(SS2, 1, SS2.MaxCols, i, i)
+        For i = 1 To ss2.MaxRows
+           ss2.Col = 0
+           ss2.Text = ""
+           Call Gp_Sp_BlockColor(ss2, 1, ss2.MaxCols, i, i)
         Next
-       Call ss2_row_Click(Col, ROW)
-       SS2.ROW = SS2.ActiveRow:    SS2.Col = 1:            iOrd_no = SS2.Text
-                                   SS2.Col = 2:            iOrd_item = SS2.Text
-       ss1.ROW = iOrd_row:         ss1.Col = SPD_ORD_NO:   ss1.Text = iOrd_no
+       Call ss2_row_Click(Col, Row)
+       ss2.Row = ss2.ActiveRow:    ss2.Col = 1:            iOrd_no = ss2.Text
+                                   ss2.Col = 2:            iOrd_item = ss2.Text
+       ss1.Row = iOrd_row:         ss1.Col = SPD_ORD_NO:   ss1.Text = iOrd_no
                                    ss1.Col = SPD_ORD_ITEM: ss1.Text = iOrd_item
        
     End If
@@ -2133,7 +2133,7 @@ Private Sub Form_QueryUnload(Cancel As Integer, UnloadMode As Integer)
     Call Gp_Spl_SizeSet(SSSplitter1, "C-System.INI", Me.Name)
     
     Call Gp_Sp_ColSet(ss1, "C-System.INI", Me.Name)
-    Call Gp_Sp_ColSet(SS2, "C-System.INI", Me.Name)
+    Call Gp_Sp_ColSet(ss2, "C-System.INI", Me.Name)
     
     Set pControl = Nothing
     Set nControl = Nothing
@@ -2184,7 +2184,7 @@ Public Sub Form_Cls()
         Call Gp_Ms_Cls(Mc2("rControl"))
         Call MDIMain.FormMenuSetting(Me, FormType, "CLS", sAuthority)
         Call MenuTool_ReSet
-        cbo_ord_item.Clear
+        CBO_ORD_ITEM.Clear
     End If
     
     If App.Title = "CE" Then
@@ -2316,17 +2316,17 @@ Private Sub ss1_BlockSelected(ByVal BlockCol As Long, ByVal BlockRow As Long, By
 
 End Sub
 
-Private Sub ss1_row_Click(ByVal Col As Long, ByVal ROW As Long)
+Private Sub ss1_row_Click(ByVal Col As Long, ByVal Row As Long)
     
     lBlkcol1 = 0
     lBlkcol2 = 0
     lBlkrow1 = 0
     lBlkrow2 = 0
 
-    If ROW < 1 Then Exit Sub
+    If Row < 1 Then Exit Sub
     If ss1.MaxRows < 1 Then Exit Sub
     
-    ss1.ROW = ROW
+    ss1.Row = Row
     ss1.Col = 0
     
     ss1.ReDraw = False
@@ -2334,29 +2334,29 @@ Private Sub ss1_row_Click(ByVal Col As Long, ByVal ROW As Long)
     If ss1.Text <> "Update" Then
                 
         ss1.Text = "Update"
-        iOrd_row = ROW
+        iOrd_row = Row
         ss1.Col = 40
         ss1.Text = sUserID
-        Call Gp_Sp_BlockColor(ss1, 1, -1, ROW, ROW, , &HFFFF80)
+        Call Gp_Sp_BlockColor(ss1, 1, -1, Row, Row, , &HFFFF80)
         
-        If ROW > 0 Then
+        If Row > 0 Then
         
             If ss1.MaxRows = 0 Then Exit Sub
             
             If prod_txt_prod_cd = "" Then
                prod_txt_prod_cd.Text = CBO_PROD_CD.Text
             End If
-               ss1.Col = SPD_APLY_STDSPEC:     ss1.ROW = ss1.ActiveRow
+               ss1.Col = SPD_APLY_STDSPEC:     ss1.Row = ss1.ActiveRow
                txt_spec.Text = ss1.Text
-               ss1.Col = SPD_THK:              ss1.ROW = ss1.ActiveRow
+               ss1.Col = SPD_THK:              ss1.Row = ss1.ActiveRow
                SDB_THK.Text = ss1.Text
-               ss1.Col = SPD_WID:              ss1.ROW = ss1.ActiveRow
+               ss1.Col = SPD_WID:              ss1.Row = ss1.ActiveRow
                SDB_WID.Text = ss1.Text
-               ss1.Col = SPD_LEN:              ss1.ROW = ss1.ActiveRow
-               SDB_LEN.Text = ss1.Text
+               ss1.Col = SPD_LEN:              ss1.Row = ss1.ActiveRow
+               sdb_len.Text = ss1.Text
             
             If Gf_Sp_Refer(M_CN1, sc2, Mc2, Mc2("nControl"), Mc2("mControl")) Then
-                SS2.OperationMode = OperationModeNormal
+                ss2.OperationMode = OperationModeNormal
                 Call MDIMain.FormMenuSetting(Me, FormType, "RE", sAuthority)
                 Exit Sub
             End If
@@ -2370,46 +2370,46 @@ Private Sub ss1_row_Click(ByVal Col As Long, ByVal ROW As Long)
         iOrd_row = 0
         ss1.Col = 40
         ss1.Text = ""
-        Call Gp_Sp_BlockColor(ss1, 1, ss1.MaxCols, ROW, ROW)
+        Call Gp_Sp_BlockColor(ss1, 1, ss1.MaxCols, Row, Row)
        
     End If
     ss1.ReDraw = True
     
 End Sub
-Private Sub ss2_row_Click(ByVal Col As Long, ByVal ROW As Long)
+Private Sub ss2_row_Click(ByVal Col As Long, ByVal Row As Long)
     
     lBlkcol1 = 0
     lBlkcol2 = 0
     lBlkrow1 = 0
     lBlkrow2 = 0
 
-    If ROW < 1 Then Exit Sub
-    If SS2.MaxRows < 1 Then Exit Sub
+    If Row < 1 Then Exit Sub
+    If ss2.MaxRows < 1 Then Exit Sub
     
-    SS2.ROW = ROW
-    SS2.Col = 0
+    ss2.Row = Row
+    ss2.Col = 0
     
-    SS2.ReDraw = False
+    ss2.ReDraw = False
     
-    If SS2.Text <> "Update" Then
+    If ss2.Text <> "Update" Then
         
-        SS2.Text = "Update"
-        Call Gp_Sp_BlockColor(SS2, 1, -1, ROW, ROW, , &HFFFF80)
+        ss2.Text = "Update"
+        Call Gp_Sp_BlockColor(ss2, 1, -1, Row, Row, , &HFFFF80)
         
     Else
        
-        SS2.Text = ""
-        Call Gp_Sp_BlockColor(SS2, 1, SS2.MaxCols, ROW, ROW)
+        ss2.Text = ""
+        Call Gp_Sp_BlockColor(ss2, 1, ss2.MaxCols, Row, Row)
        
     End If
-    SS2.ReDraw = True
+    ss2.ReDraw = True
     
 End Sub
 
-Private Sub ss1_Click(ByVal Col As Long, ByVal ROW As Long)
+Private Sub ss1_Click(ByVal Col As Long, ByVal Row As Long)
 
-    If ROW = 0 Then
-      Call Gp_Sp_Sort(Proc_Sc("Sc")("Spread"), Col, ROW)
+    If Row = 0 Then
+      Call Gp_Sp_Sort(Proc_Sc("Sc")("Spread"), Col, Row)
     End If
     
     lBlkcol1 = 0
@@ -2426,7 +2426,7 @@ Private Sub ss1_Click(ByVal Col As Long, ByVal ROW As Long)
            Call Gp_Sp_BlockColor(ss1, 1, ss1.MaxCols, i, i)
         Next
     
-       Call ss1_row_Click(Col, ROW)
+       Call ss1_row_Click(Col, Row)
        
     End If
     
@@ -2441,9 +2441,9 @@ Private Sub ss1_LostFocus()
 
 End Sub
 
-Private Sub ss1_RightClick(ByVal ClickType As Integer, ByVal Col As Long, ByVal ROW As Long, ByVal MouseX As Long, ByVal MouseY As Long)
+Private Sub ss1_RightClick(ByVal ClickType As Integer, ByVal Col As Long, ByVal Row As Long, ByVal MouseX As Long, ByVal MouseY As Long)
     
-    If ROW > 0 Then
+    If Row > 0 Then
         Set Active_Spread = Me.ss1
         PopupMenu MDIMain.PopUp_Spread
     End If
@@ -2466,7 +2466,7 @@ Private Sub text_stlgrd_KeyUp(KeyCode As Integer, Shift As Integer)
     
     If KeyCode = vbKeyF4 Then
         DD.sWitch = "MS"
-        DD.rControl.Add Item:=text_stlgrd
+        DD.rControl.Add Item:=Text_STLGRD
            
         If CBO_PROD_CD.Text = "SL" Then
             DD.nameType = "1"
@@ -2525,28 +2525,28 @@ Private Sub Text_size_knd_KeyUp(KeyCode As Integer, Shift As Integer)
     
 End Sub
 
-Private Sub ss1_DblClick(ByVal Col As Long, ByVal ROW As Long)
+Private Sub ss1_DblClick(ByVal Col As Long, ByVal Row As Long)
  
     If Col <> SPD_MAT_NO Then Exit Sub
     
-    If ROW > 0 And Col > 0 Then
+    If Row > 0 And Col > 0 Then
     
-        If ss1.MaxRows = ROW Then Exit Sub
+        If ss1.MaxRows = Row Then Exit Sub
         
         If prod_txt_prod_cd = "" Then
            prod_txt_prod_cd.Text = CBO_PROD_CD.Text
         End If
-           ss1.Col = SPD_APLY_STDSPEC:     ss1.ROW = ss1.ActiveRow
+           ss1.Col = SPD_APLY_STDSPEC:     ss1.Row = ss1.ActiveRow
            txt_spec.Text = ss1.Text
-           ss1.Col = SPD_THK:              ss1.ROW = ss1.ActiveRow
+           ss1.Col = SPD_THK:              ss1.Row = ss1.ActiveRow
            SDB_THK.Text = ss1.Text
-           ss1.Col = SPD_WID:              ss1.ROW = ss1.ActiveRow
+           ss1.Col = SPD_WID:              ss1.Row = ss1.ActiveRow
            SDB_WID.Text = ss1.Text
-           ss1.Col = SPD_LEN:              ss1.ROW = ss1.ActiveRow
-           SDB_LEN.Text = ss1.Text
+           ss1.Col = SPD_LEN:              ss1.Row = ss1.ActiveRow
+           sdb_len.Text = ss1.Text
         
         If Gf_Sp_Refer(M_CN1, sc2, Mc2, Mc2("nControl"), Mc2("mControl")) Then
-            SS2.OperationMode = OperationModeNormal
+            ss2.OperationMode = OperationModeNormal
             Call MDIMain.FormMenuSetting(Me, FormType, "RE", sAuthority)
             Exit Sub
         End If
@@ -2559,17 +2559,17 @@ Private Sub txt_ord_no_KeyUp(KeyCode As Integer, Shift As Integer)
 
     Dim sQuery As String
 
-    If Len(Trim(txt_ord_no.Text)) = txt_ord_no.MaxLength Then
+    If Len(Trim(TXT_ORD_NO.Text)) = TXT_ORD_NO.MaxLength Then
     
-        If cbo_ord_item.Text <> "" Then Exit Sub
+        If CBO_ORD_ITEM.Text <> "" Then Exit Sub
         
-        txt_ord_no.Text = StrConv(txt_ord_no.Text, vbUpperCase)
+        TXT_ORD_NO.Text = StrConv(TXT_ORD_NO.Text, vbUpperCase)
         
-        sQuery = " SELECT ORD_ITEM FROM CP_PRC WHERE ORD_NO = '" & Trim(txt_ord_no.Text) & "'"
-        Call Gf_ComboAdd(M_CN1, cbo_ord_item, sQuery)
+        sQuery = " SELECT ORD_ITEM FROM CP_PRC WHERE ORD_NO = '" & Trim(TXT_ORD_NO.Text) & "'"
+        Call Gf_ComboAdd(M_CN1, CBO_ORD_ITEM, sQuery)
 
     Else
-        cbo_ord_item.Clear
+        CBO_ORD_ITEM.Clear
     End If
 
 End Sub

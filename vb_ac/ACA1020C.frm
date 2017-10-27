@@ -1860,7 +1860,7 @@ Begin VB.Form ACA1020C
          MaxRows         =   2
          Protect         =   0   'False
          RetainSelBlock  =   0   'False
-         SpreadDesigner  =   "ACA1020C.frx":2672
+         SpreadDesigner  =   "ACA1020C.frx":260B
       End
       Begin FPSpread.vaSpread ss3 
          Height          =   3600
@@ -1887,7 +1887,7 @@ Begin VB.Form ACA1020C
          MaxRows         =   2
          ProcessTab      =   -1  'True
          RetainSelBlock  =   0   'False
-         SpreadDesigner  =   "ACA1020C.frx":2FB9
+         SpreadDesigner  =   "ACA1020C.frx":2EEB
       End
    End
    Begin VB.TextBox text_ORD_REM_WGT 
@@ -2171,7 +2171,7 @@ Private Sub Form_Define()
      Call Gp_Ms_Collection(Udate_BB_CONF_TO, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
        Call Gp_Ms_Collection(SDB_ORD_WID_TO, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
        Call Gp_Ms_Collection(SDB_ORD_LEN_TO, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-          Call Gp_Ms_Collection(TXT_STDSPEC, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+          Call Gp_Ms_Collection(txt_stdspec, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
        Call Gp_Ms_Collection(txt_item_count, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
            Call Gp_Ms_Collection(TXT_ORD_FL, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
         Call Gp_Ms_Collection(SS_KEY_ORD_FL, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
@@ -3692,7 +3692,7 @@ Private Sub txt_STDSPEC_KeyUp(KeyCode As Integer, Shift As Integer)
 
     If KeyCode = vbKeyF4 Then
         DD.sWitch = "MS"
-        DD.rControl.Add Item:=TXT_STDSPEC
+        DD.rControl.Add Item:=txt_stdspec
            
         If Text_BB_PROD_CD.Text = "SL" Then
             DD.nameType = "1"

@@ -1,19 +1,19 @@
 VERSION 5.00
 Object = "{A5CC20C4-B5F5-11CD-98EC-0020AF234C9D}#4.1#0"; "cstext32.ocx"
 Object = "{8C3D4AA0-2599-11D2-BAF1-00104B9E0792}#3.0#0"; "sssplt30.ocx"
-Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "Indate.ocx"
+Object = "{D1F54538-FC6B-4AC6-9655-2FB5170110A8}#1.0#0"; "indate.ocx"
 Object = "{065E6FD1-1BF9-11D2-BAE8-00104B9E0792}#3.0#0"; "ssa3d30.ocx"
 Object = "{FDAC2480-F4ED-4632-AA78-DCA210A74E49}#6.0#0"; "SPR32X60.ocx"
 Begin VB.Form AGC2200C 
    Caption         =   "钢板实绩查询界面_AGC2200C"
-   ClientHeight    =   10680
+   ClientHeight    =   9330
    ClientLeft      =   15
    ClientTop       =   1740
    ClientWidth     =   15240
    LinkTopic       =   "Form1"
    MDIChild        =   -1  'True
-   ScaleHeight     =   10950
-   ScaleWidth      =   20250
+   ScaleHeight     =   9330
+   ScaleWidth      =   15240
    WindowState     =   2  'Maximized
    Begin SSSplitter.SSSplitter SSSplitter1 
       Height          =   9165
@@ -319,7 +319,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -341,7 +341,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -363,7 +363,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -385,7 +385,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -407,7 +407,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -429,7 +429,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -451,7 +451,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -481,9 +481,9 @@ Begin VB.Form AGC2200C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "AGC2200C.frx":474A
+            ItemData        =   "AGC2200C.frx":4774
             Left            =   7080
-            List            =   "AGC2200C.frx":475A
+            List            =   "AGC2200C.frx":4784
             TabIndex        =   52
             Top             =   90
             Width           =   735
@@ -586,9 +586,9 @@ Begin VB.Form AGC2200C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "AGC2200C.frx":476A
+            ItemData        =   "AGC2200C.frx":4794
             Left            =   6180
-            List            =   "AGC2200C.frx":4774
+            List            =   "AGC2200C.frx":479E
             TabIndex        =   45
             Top             =   1260
             Width           =   885
@@ -657,9 +657,9 @@ Begin VB.Form AGC2200C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "AGC2200C.frx":4780
+            ItemData        =   "AGC2200C.frx":47AA
             Left            =   9555
-            List            =   "AGC2200C.frx":4793
+            List            =   "AGC2200C.frx":47BD
             TabIndex        =   41
             Top             =   1260
             Width           =   975
@@ -675,9 +675,9 @@ Begin VB.Form AGC2200C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "AGC2200C.frx":47B0
+            ItemData        =   "AGC2200C.frx":47DA
             Left            =   2760
-            List            =   "AGC2200C.frx":47C6
+            List            =   "AGC2200C.frx":47F0
             TabIndex        =   9
             Tag             =   "等级"
             Top             =   1260
@@ -728,9 +728,9 @@ Begin VB.Form AGC2200C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "AGC2200C.frx":4800
+            ItemData        =   "AGC2200C.frx":482A
             Left            =   1365
-            List            =   "AGC2200C.frx":4819
+            List            =   "AGC2200C.frx":4843
             TabIndex        =   6
             Tag             =   "等级"
             Top             =   1260
@@ -755,9 +755,9 @@ Begin VB.Form AGC2200C
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "AGC2200C.frx":485C
+            ItemData        =   "AGC2200C.frx":4886
             Left            =   6180
-            List            =   "AGC2200C.frx":4869
+            List            =   "AGC2200C.frx":4893
             TabIndex        =   4
             Top             =   90
             Width           =   885
@@ -776,7 +776,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -798,7 +798,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -867,7 +867,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -890,7 +890,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -912,7 +912,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -945,7 +945,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1021,7 +1021,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1247,7 +1247,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1377,7 +1377,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1399,7 +1399,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   134
                Weight          =   400
                Underline       =   0   'False
@@ -1422,7 +1422,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1468,7 +1468,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1490,7 +1490,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1512,7 +1512,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1534,7 +1534,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1556,7 +1556,7 @@ Begin VB.Form AGC2200C
             ChiselText      =   2
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "宋体"
-               Size            =   9.76
+               Size            =   9.75
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -1856,10 +1856,10 @@ Call Gp_Ms_Collection(SDT_PROD_DATE_FROM, "p", "n", " ", " ", "r", " ", " ", pCo
           Call Gp_Ms_Collection(SDB_LEN, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
        Call Gp_Ms_Collection(SDB_LEN_TO, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
          Call Gp_Ms_Collection(SLAB_THK, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-       Call Gp_Ms_Collection(txt_stlgrd, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+       Call Gp_Ms_Collection(TXT_STLGRD, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
        Call Gp_Ms_Collection(TXT_SMP_NO, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
      Call Gp_Ms_Collection(CBO_PRC_LINE, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
-      Call Gp_Ms_Collection(txt_proc_cd, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
+      Call Gp_Ms_Collection(TXT_PROC_CD, "p", " ", " ", " ", "r", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
    Call Gp_Ms_Collection(txt_org_ord_no, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl) ' Add by Li Qian at 2012-08-02 原始订单号查询
  Call Gp_Ms_Collection(txt_org_ord_item, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl)
     Call Gp_Ms_Collection(TXT_ENDUSE_CD, "p", " ", " ", " ", " ", " ", " ", pControl, nControl, mControl, iControl, rControl, aControl, lControl) ' Add by Li Qian at 2012-09-14 原始订单用途
@@ -2356,7 +2356,7 @@ Private Sub txt_stdspec_chg_KeyUp(KeyCode As Integer, Shift As Integer)
 End Sub
 
 Private Sub txt_stlgrd_Change()
-   If Len(txt_stlgrd.Text) <> 11 Then txt_STLGRD_Name.Text = ""
+   If Len(TXT_STLGRD.Text) <> 11 Then txt_STLGRD_Name.Text = ""
 End Sub
 
 Private Sub txt_stlgrd_DblClick()
@@ -2370,7 +2370,7 @@ Private Sub txt_stlgrd_KeyUp(KeyCode As Integer, Shift As Integer)
     If KeyCode = vbKeyF4 Then
     
         DD.sWitch = "MS"
-        DD.rControl.Add Item:=txt_stlgrd
+        DD.rControl.Add Item:=TXT_STLGRD
         DD.rControl.Add Item:=txt_STLGRD_Name
         DD.nameType = "1"
         Call Gf_Stlgrd_DD(M_CN1, KeyCode)
