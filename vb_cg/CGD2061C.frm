@@ -14,6 +14,38 @@ Begin VB.Form CGD2061C
    ScaleHeight     =   9330
    ScaleWidth      =   15240
    WindowState     =   2  'Maximized
+   Begin VB.ComboBox cbx_result 
+      Height          =   300
+      ItemData        =   "CGD2061C.frx":0000
+      Left            =   10440
+      List            =   "CGD2061C.frx":000A
+      TabIndex        =   60
+      Text            =   "合格OK"
+      Top             =   2520
+      Width           =   1935
+   End
+   Begin InDate.ULabel ULabel36 
+      Height          =   315
+      Left            =   9240
+      Top             =   2520
+      Width           =   1170
+      _ExtentX        =   2064
+      _ExtentY        =   556
+      Caption         =   "检查结果"
+      Alignment       =   1
+      BackColor       =   14804173
+      BackgroundStyle =   1
+      ChiselText      =   2
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "宋体"
+         Size            =   9.76
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+   End
    Begin Threed.SSFrame Single 
       Height          =   1305
       Left            =   120
@@ -44,9 +76,9 @@ Begin VB.Form CGD2061C
             Strikethrough   =   0   'False
          EndProperty
          Height          =   315
-         ItemData        =   "CGD2061C.frx":0000
+         ItemData        =   "CGD2061C.frx":0020
          Left            =   7755
-         List            =   "CGD2061C.frx":0040
+         List            =   "CGD2061C.frx":0060
          TabIndex        =   27
          Top             =   120
          Width           =   1365
@@ -62,9 +94,9 @@ Begin VB.Form CGD2061C
             Strikethrough   =   0   'False
          EndProperty
          Height          =   315
-         ItemData        =   "CGD2061C.frx":00F1
+         ItemData        =   "CGD2061C.frx":0111
          Left            =   8565
-         List            =   "CGD2061C.frx":0107
+         List            =   "CGD2061C.frx":0127
          TabIndex        =   26
          Tag             =   "等级"
          Top             =   840
@@ -267,9 +299,9 @@ Begin VB.Form CGD2061C
             Strikethrough   =   0   'False
          EndProperty
          Height          =   315
-         ItemData        =   "CGD2061C.frx":0141
+         ItemData        =   "CGD2061C.frx":0161
          Left            =   5610
-         List            =   "CGD2061C.frx":014E
+         List            =   "CGD2061C.frx":016E
          TabIndex        =   4
          Top             =   480
          Width           =   930
@@ -285,9 +317,9 @@ Begin VB.Form CGD2061C
             Strikethrough   =   0   'False
          EndProperty
          Height          =   315
-         ItemData        =   "CGD2061C.frx":0168
+         ItemData        =   "CGD2061C.frx":0188
          Left            =   5610
-         List            =   "CGD2061C.frx":0178
+         List            =   "CGD2061C.frx":0198
          TabIndex        =   3
          Top             =   120
          Width           =   930
@@ -1291,14 +1323,14 @@ Begin VB.Form CGD2061C
       End
    End
    Begin FPSpread.vaSpread ss1 
-      Height          =   6105
+      Height          =   5985
       Left            =   120
       TabIndex        =   2
-      Top             =   3240
+      Top             =   3360
       Width           =   15105
       _Version        =   393216
       _ExtentX        =   26644
-      _ExtentY        =   10769
+      _ExtentY        =   10557
       _StockProps     =   64
       AllowDragDrop   =   -1  'True
       AllowMultiBlocks=   -1  'True
@@ -1317,37 +1349,78 @@ Begin VB.Form CGD2061C
       Protect         =   0   'False
       RetainSelBlock  =   0   'False
       ScrollBarExtMode=   -1  'True
-      SpreadDesigner  =   "CGD2061C.frx":0187
+      SpreadDesigner  =   "CGD2061C.frx":01A7
    End
    Begin Threed.SSFrame SSFrame1 
-      Height          =   1935
+      Height          =   2055
       Left            =   120
       TabIndex        =   39
       Top             =   1320
       Width           =   15090
       _ExtentX        =   26617
-      _ExtentY        =   3413
+      _ExtentY        =   3625
       _Version        =   196609
       BackColor       =   14737632
-      Begin VB.ComboBox cbx_size 
-         Height          =   300
-         ItemData        =   "CGD2061C.frx":183D
-         Left            =   13440
-         List            =   "CGD2061C.frx":1853
-         TabIndex        =   61
-         Text            =   "30*2000*73500"
+      Begin VB.TextBox cbx_focus 
+         BeginProperty Font 
+            Name            =   "宋体"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   330
+         Left            =   4320
+         MaxLength       =   99
+         TabIndex        =   59
+         Tag             =   "标准代码"
+         Text            =   "20mm"
          Top             =   480
          Width           =   1455
       End
+      Begin InDate.ULabel ULabel34 
+         Height          =   315
+         Left            =   3120
+         Top             =   480
+         Width           =   1170
+         _ExtentX        =   2064
+         _ExtentY        =   556
+         Caption         =   "探头焦距"
+         Alignment       =   1
+         BackColor       =   14804173
+         BackgroundStyle =   1
+         ChiselText      =   2
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "宋体"
+            Size            =   9.76
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+      End
+      Begin VB.ComboBox cbx_size 
+         Height          =   300
+         ItemData        =   "CGD2061C.frx":185D
+         Left            =   10320
+         List            =   "CGD2061C.frx":1873
+         TabIndex        =   58
+         Text            =   "30*2000*73500"
+         Top             =   480
+         Width           =   1935
+      End
       Begin VB.ComboBox cbx_plt 
          Height          =   300
-         ItemData        =   "CGD2061C.frx":18AF
+         ItemData        =   "CGD2061C.frx":18CF
          Left            =   1320
-         List            =   "CGD2061C.frx":18BC
-         TabIndex        =   59
+         List            =   "CGD2061C.frx":18DC
+         TabIndex        =   56
          Text            =   "中板厂"
          Top             =   120
-         Width           =   1695
+         Width           =   1455
       End
       Begin VB.TextBox TXT_UST_GRADE 
          BeginProperty Font 
@@ -1360,10 +1433,10 @@ Begin VB.Form CGD2061C
             Strikethrough   =   0   'False
          EndProperty
          Height          =   315
-         Left            =   10080
-         TabIndex        =   58
+         Left            =   7320
+         TabIndex        =   55
          Top             =   1200
-         Width           =   2115
+         Width           =   1515
       End
       Begin VB.TextBox cbx_scale 
          BeginProperty Font 
@@ -1376,13 +1449,13 @@ Begin VB.Form CGD2061C
             Strikethrough   =   0   'False
          EndProperty
          Height          =   330
-         Left            =   10080
+         Left            =   7320
          MaxLength       =   99
-         TabIndex        =   57
+         TabIndex        =   54
          Tag             =   "标准代码"
          Text            =   "100%"
          Top             =   840
-         Width           =   2085
+         Width           =   1485
       End
       Begin VB.TextBox TXT_UST_STAND_REPORT 
          BeginProperty Font 
@@ -1395,11 +1468,11 @@ Begin VB.Form CGD2061C
             Strikethrough   =   0   'False
          EndProperty
          Height          =   330
-         Left            =   7200
+         Left            =   4320
          MaxLength       =   99
-         TabIndex        =   56
+         TabIndex        =   53
          Top             =   1200
-         Width           =   1485
+         Width           =   1455
       End
       Begin VB.TextBox cbx_test 
          BeginProperty Font 
@@ -1412,13 +1485,13 @@ Begin VB.Form CGD2061C
             Strikethrough   =   0   'False
          EndProperty
          Height          =   330
-         Left            =   7200
+         Left            =   4320
          MaxLength       =   99
-         TabIndex        =   55
+         TabIndex        =   52
          Tag             =   "标准代码"
          Text            =   "纵波直接接触法"
          Top             =   840
-         Width           =   1485
+         Width           =   1455
       End
       Begin VB.TextBox txt_comp 
          BeginProperty Font 
@@ -1431,13 +1504,13 @@ Begin VB.Form CGD2061C
             Strikethrough   =   0   'False
          EndProperty
          Height          =   330
-         Left            =   4320
+         Left            =   1320
          MaxLength       =   99
-         TabIndex        =   54
+         TabIndex        =   51
          Tag             =   "标准代码"
          Text            =   "0dB"
          Top             =   1200
-         Width           =   1485
+         Width           =   1455
       End
       Begin VB.TextBox txt_sens 
          BeginProperty Font 
@@ -1450,13 +1523,13 @@ Begin VB.Form CGD2061C
             Strikethrough   =   0   'False
          EndProperty
          Height          =   330
-         Left            =   1320
+         Left            =   13680
          MaxLength       =   99
-         TabIndex        =   53
+         TabIndex        =   50
          Tag             =   "标准代码"
          Text            =   "3mm  FBH"
-         Top             =   1200
-         Width           =   1695
+         Top             =   840
+         Width           =   1215
       End
       Begin VB.TextBox cbx_direction 
          BeginProperty Font 
@@ -1469,72 +1542,15 @@ Begin VB.Form CGD2061C
             Strikethrough   =   0   'False
          EndProperty
          Height          =   330
-         Left            =   13440
-         MaxLength       =   99
-         TabIndex        =   52
-         Tag             =   "标准代码"
-         Text            =   "平行于轧制线"
-         Top             =   840
-         Width           =   1485
-      End
-      Begin VB.TextBox cbx_rate 
-         BeginProperty Font 
-            Name            =   "宋体"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   330
-         Left            =   7200
-         MaxLength       =   99
-         TabIndex        =   51
-         Tag             =   "标准代码"
-         Text            =   "5MHz"
-         Top             =   480
-         Width           =   1485
-      End
-      Begin VB.TextBox cbx_chip 
-         BeginProperty Font 
-            Name            =   "宋体"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   330
-         Left            =   4320
-         MaxLength       =   99
-         TabIndex        =   50
-         Tag             =   "标准代码"
-         Text            =   "60×20"
-         Top             =   480
-         Width           =   1455
-      End
-      Begin VB.TextBox txt_time 
-         BeginProperty Font 
-            Name            =   "宋体"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   330
-         Left            =   7200
+         Left            =   10320
          MaxLength       =   99
          TabIndex        =   49
          Tag             =   "标准代码"
-         Text            =   "热轧后"
-         Top             =   120
-         Width           =   1485
+         Text            =   "平行于轧制线Parallel to rolling"
+         Top             =   840
+         Width           =   1935
       End
-      Begin VB.TextBox txt_couplant 
+      Begin VB.TextBox cbx_rate 
          BeginProperty Font 
             Name            =   "宋体"
             Size            =   9.75
@@ -1549,9 +1565,47 @@ Begin VB.Form CGD2061C
          MaxLength       =   99
          TabIndex        =   48
          Tag             =   "标准代码"
-         Text            =   "水"
-         Top             =   840
-         Width           =   1725
+         Text            =   "5MHz"
+         Top             =   480
+         Width           =   1455
+      End
+      Begin VB.TextBox cbx_chip 
+         BeginProperty Font 
+            Name            =   "宋体"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   330
+         Left            =   13680
+         MaxLength       =   99
+         TabIndex        =   47
+         Tag             =   "标准代码"
+         Text            =   "60×20"
+         Top             =   120
+         Width           =   1215
+      End
+      Begin VB.TextBox txt_couplant 
+         BeginProperty Font 
+            Name            =   "宋体"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   330
+         Left            =   13680
+         MaxLength       =   99
+         TabIndex        =   46
+         Tag             =   "标准代码"
+         Text            =   "水Water"
+         Top             =   480
+         Width           =   1215
       End
       Begin VB.TextBox cbx_style 
          BeginProperty Font 
@@ -1564,97 +1618,68 @@ Begin VB.Form CGD2061C
             Strikethrough   =   0   'False
          EndProperty
          Height          =   330
-         Left            =   4320
+         Left            =   1320
          MaxLength       =   99
-         TabIndex        =   47
+         TabIndex        =   45
          Tag             =   "标准代码"
-         Text            =   "间隙式水膜法"
+         Text            =   "间隙式水膜法Water Film"
          Top             =   840
          Width           =   1455
       End
-      Begin VB.TextBox txt_surface 
-         BeginProperty Font 
-            Name            =   "宋体"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   330
-         Left            =   10080
-         MaxLength       =   99
-         TabIndex        =   46
-         Tag             =   "标准代码"
-         Text            =   "轧制表面/热处理表面"
-         Top             =   120
-         Width           =   2085
-      End
       Begin VB.ComboBox cbx_ins 
          Height          =   300
-         ItemData        =   "CGD2061C.frx":18DE
-         Left            =   13440
-         List            =   "CGD2061C.frx":18EB
-         TabIndex        =   45
+         ItemData        =   "CGD2061C.frx":18FE
+         Left            =   7320
+         List            =   "CGD2061C.frx":190B
+         TabIndex        =   44
          Text            =   "HPT/B/LT-TR"
          Top             =   120
          Width           =   1455
       End
       Begin VB.ComboBox cbx_probe 
          Height          =   300
-         ItemData        =   "CGD2061C.frx":191A
-         Left            =   1320
-         List            =   "CGD2061C.frx":1924
-         TabIndex        =   44
+         ItemData        =   "CGD2061C.frx":193A
+         Left            =   10320
+         List            =   "CGD2061C.frx":1944
+         TabIndex        =   43
          Text            =   "3STSE 18.3/8PB5"
-         Top             =   480
-         Width           =   1695
+         Top             =   120
+         Width           =   1935
       End
       Begin VB.ComboBox cbx_type 
          Height          =   300
-         ItemData        =   "CGD2061C.frx":1947
-         Left            =   10080
-         List            =   "CGD2061C.frx":195D
-         TabIndex        =   43
+         ItemData        =   "CGD2061C.frx":1967
+         Left            =   7320
+         List            =   "CGD2061C.frx":197D
+         TabIndex        =   42
          Text            =   "NISCO-2800-1"
          Top             =   480
-         Width           =   2055
+         Width           =   1455
       End
       Begin VB.ComboBox cbx_sign 
          Height          =   300
-         ItemData        =   "CGD2061C.frx":19B5
-         Left            =   13440
-         List            =   "CGD2061C.frx":19C2
-         TabIndex        =   42
+         ItemData        =   "CGD2061C.frx":19D5
+         Left            =   13680
+         List            =   "CGD2061C.frx":19E2
+         TabIndex        =   41
          Text            =   "杨德蓉"
          Top             =   1200
-         Width           =   1455
+         Width           =   1215
       End
       Begin VB.ComboBox cbx_level 
          Height          =   300
-         ItemData        =   "CGD2061C.frx":19DC
+         ItemData        =   "CGD2061C.frx":19FC
          Left            =   1320
-         List            =   "CGD2061C.frx":19E6
-         TabIndex        =   41
-         Text            =   "3级"
-         Top             =   1560
-         Width           =   1695
-      End
-      Begin VB.ComboBox cbx_approve 
-         Height          =   300
-         ItemData        =   "CGD2061C.frx":19F4
-         Left            =   4320
-         List            =   "CGD2061C.frx":1A01
+         List            =   "CGD2061C.frx":1A06
          TabIndex        =   40
-         Text            =   "夏成胜"
+         Text            =   "3级"
          Top             =   1560
          Width           =   1455
       End
       Begin InDate.UDate test_date 
          Height          =   315
          Left            =   4320
-         TabIndex        =   60
+         TabIndex        =   57
          Tag             =   "起始日期"
          Top             =   120
          Width           =   1455
@@ -1674,7 +1699,7 @@ Begin VB.Form CGD2061C
       End
       Begin InDate.ULabel ULabel24 
          Height          =   315
-         Left            =   12240
+         Left            =   9120
          Top             =   480
          Width           =   1170
          _ExtentX        =   2064
@@ -1738,32 +1763,10 @@ Begin VB.Form CGD2061C
             Strikethrough   =   0   'False
          EndProperty
       End
-      Begin InDate.ULabel ULabel14 
-         Height          =   315
-         Left            =   8880
-         Top             =   120
-         Width           =   1170
-         _ExtentX        =   2064
-         _ExtentY        =   556
-         Caption         =   "表面状态"
-         Alignment       =   1
-         BackColor       =   14804173
-         BackgroundStyle =   1
-         ChiselText      =   2
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "宋体"
-            Size            =   9.76
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-      End
       Begin InDate.ULabel ULabel15 
          Height          =   315
-         Left            =   3120
-         Top             =   480
+         Left            =   12480
+         Top             =   120
          Width           =   1170
          _ExtentX        =   2064
          _ExtentY        =   556
@@ -1784,7 +1787,7 @@ Begin VB.Form CGD2061C
       End
       Begin InDate.ULabel ULabel16 
          Height          =   315
-         Left            =   8880
+         Left            =   6120
          Top             =   480
          Width           =   1170
          _ExtentX        =   2064
@@ -1806,8 +1809,8 @@ Begin VB.Form CGD2061C
       End
       Begin InDate.ULabel ULabel17 
          Height          =   315
-         Left            =   120
-         Top             =   840
+         Left            =   12480
+         Top             =   480
          Width           =   1170
          _ExtentX        =   2064
          _ExtentY        =   556
@@ -1828,7 +1831,7 @@ Begin VB.Form CGD2061C
       End
       Begin InDate.ULabel ULabel18 
          Height          =   315
-         Left            =   12240
+         Left            =   6120
          Top             =   120
          Width           =   1170
          _ExtentX        =   2064
@@ -1850,8 +1853,8 @@ Begin VB.Form CGD2061C
       End
       Begin InDate.ULabel ULabel19 
          Height          =   315
-         Left            =   120
-         Top             =   480
+         Left            =   9120
+         Top             =   120
          Width           =   1170
          _ExtentX        =   2064
          _ExtentY        =   556
@@ -1872,7 +1875,7 @@ Begin VB.Form CGD2061C
       End
       Begin InDate.ULabel ULabel20 
          Height          =   315
-         Left            =   6000
+         Left            =   120
          Top             =   480
          Width           =   1170
          _ExtentX        =   2064
@@ -1894,7 +1897,7 @@ Begin VB.Form CGD2061C
       End
       Begin InDate.ULabel ULabel23 
          Height          =   315
-         Left            =   3120
+         Left            =   120
          Top             =   840
          Width           =   1170
          _ExtentX        =   2064
@@ -1916,12 +1919,12 @@ Begin VB.Form CGD2061C
       End
       Begin InDate.ULabel ULabel25 
          Height          =   315
-         Left            =   6000
+         Left            =   3120
          Top             =   840
          Width           =   1170
          _ExtentX        =   2064
          _ExtentY        =   556
-         Caption         =   "检测方式"
+         Caption         =   "检测方法"
          Alignment       =   1
          BackColor       =   14804173
          BackgroundStyle =   1
@@ -1938,7 +1941,7 @@ Begin VB.Form CGD2061C
       End
       Begin InDate.ULabel ULabel26 
          Height          =   315
-         Left            =   8880
+         Left            =   6120
          Top             =   840
          Width           =   1170
          _ExtentX        =   2064
@@ -1960,7 +1963,7 @@ Begin VB.Form CGD2061C
       End
       Begin InDate.ULabel ULabel27 
          Height          =   315
-         Left            =   12240
+         Left            =   9120
          Top             =   840
          Width           =   1170
          _ExtentX        =   2064
@@ -1982,12 +1985,12 @@ Begin VB.Form CGD2061C
       End
       Begin InDate.ULabel ULabel28 
          Height          =   315
-         Left            =   120
-         Top             =   1200
+         Left            =   12480
+         Top             =   840
          Width           =   1170
          _ExtentX        =   2064
          _ExtentY        =   556
-         Caption         =   "检测灵敏度"
+         Caption         =   "灵敏度"
          Alignment       =   1
          BackColor       =   14804173
          BackgroundStyle =   1
@@ -2004,7 +2007,7 @@ Begin VB.Form CGD2061C
       End
       Begin InDate.ULabel ULabel30 
          Height          =   315
-         Left            =   3120
+         Left            =   120
          Top             =   1200
          Width           =   1170
          _ExtentX        =   2064
@@ -2026,7 +2029,7 @@ Begin VB.Form CGD2061C
       End
       Begin InDate.ULabel ULabel31 
          Height          =   315
-         Left            =   6000
+         Left            =   3120
          Top             =   1200
          Width           =   1170
          _ExtentX        =   2064
@@ -2049,7 +2052,7 @@ Begin VB.Form CGD2061C
       End
       Begin InDate.ULabel ULabel32 
          Height          =   315
-         Left            =   8880
+         Left            =   6120
          Top             =   1200
          Width           =   1170
          _ExtentX        =   2064
@@ -2072,34 +2075,12 @@ Begin VB.Form CGD2061C
       End
       Begin InDate.ULabel ULabel33 
          Height          =   315
-         Left            =   12240
+         Left            =   12480
          Top             =   1200
          Width           =   1170
          _ExtentX        =   2064
          _ExtentY        =   556
          Caption         =   "签发员"
-         Alignment       =   1
-         BackColor       =   14804173
-         BackgroundStyle =   1
-         ChiselText      =   2
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "宋体"
-            Size            =   9.76
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-      End
-      Begin InDate.ULabel ULabel35 
-         Height          =   315
-         Left            =   3120
-         Top             =   1560
-         Width           =   1170
-         _ExtentX        =   2064
-         _ExtentY        =   556
-         Caption         =   "批准员"
          Alignment       =   1
          BackColor       =   14804173
          BackgroundStyle =   1
@@ -2122,28 +2103,6 @@ Begin VB.Form CGD2061C
          _ExtentX        =   2064
          _ExtentY        =   556
          Caption         =   "级别"
-         Alignment       =   1
-         BackColor       =   14804173
-         BackgroundStyle =   1
-         ChiselText      =   2
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "宋体"
-            Size            =   9.76
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-      End
-      Begin InDate.ULabel ULabel21 
-         Height          =   315
-         Left            =   6000
-         Top             =   120
-         Width           =   1170
-         _ExtentX        =   2064
-         _ExtentY        =   556
-         Caption         =   "检测时机"
          Alignment       =   1
          BackColor       =   14804173
          BackgroundStyle =   1
@@ -2742,10 +2701,13 @@ End Sub
 
 Private Sub ExcelPrn()
     Dim i               As Integer
+    Dim COUNT           As Integer
     Dim xlApp           As Object
     Dim xlSheet         As Object
     Dim sRow            As String
     Dim sDate           As String
+    Dim testUnit        As String
+    Dim xlNo            As String
     
     If ss1.MaxRows < 1 Then Exit Sub
     
@@ -2760,59 +2722,137 @@ Private Sub ExcelPrn()
     
     Err.Clear
 
-    xlApp.Workbooks.Open (App.Path & "\CGD2061C.xls")
+    xlApp.Workbooks.Open (App.Path & "\UST0001.xls")
     
     Set xlSheet = xlApp.Worksheets("Sheet1")
     xlApp.Sheets("Sheet1").Select
     
     sDate = SDT_PROD_DATE_FROM.Text
     
-    If SDT_PROD_DATE_FROM.Text <> SDT_PROD_DATE_TO.Text Then
-        xlApp.Range("D2").Value = "日期: " & Left(sDate, 4) + "年" + Mid(sDate, 6, 2) + "月" + Mid(sDate, 9, 2) + "日 - " + Mid(SDT_PROD_DATE_TO.Text, 9, 2) + "日"
-    Else
-        xlApp.Range("D2").Value = "日期: " & Left(sDate, 4) + "年" + Mid(sDate, 6, 2) + "月" + Mid(sDate, 9, 2) + "日"
+    xlApp.Range("D6").Value = Left(sDate, 4) + "年" + Mid(sDate, 6, 2) + "月" + Mid(sDate, 9, 2) + "日"
+    xlApp.Range("D7").Value = Left(sDate, 4) + "." + Mid(sDate, 6, 2) + "." + Mid(sDate, 9, 2)
+    
+    'EXCEL检测单位中文
+    xlApp.Range("B6").Value = cbx_plt.Text
+    'EXCEL检测单位英文
+    If cbx_plt.Text = "中板厂" Then
+    xlApp.Range("B7").Value = "Medium Plate Plant"
+    ElseIf cbx_plt.Text = "中厚板卷厂" Then
+    xlApp.Range("B7").Value = "Plate/coil Plant"
+    ElseIf cbx_plt.Text = "宽厚板厂" Then
+    xlApp.Range("B7").Value = "Heavy Plate Plant"
     End If
- 
-    ss1.ROW = 1
-    ss1.Col = SS1_UST_MACHINE_NO:     xlApp.Range("A4").Value = ss1.Text
-    ss1.Col = SS1_UST_HEAD_KIND:      xlApp.Range("B4").Value = ss1.Text
-    ss1.Col = SS1_UST_METHOD:         xlApp.Range("C4").Value = ss1.Text
-    ss1.Col = SS1_UST_STATESCOPE:     xlApp.Range("D4").Value = ss1.Text
-    ss1.Col = SS1_UST_FL:             xlApp.Range("G4").Value = ss1.Text
+    '报告编号
+    xlApp.Range("G6").Value = "JL321106/B"
+    xlApp.Range("G7").Value = "JL321106/B"
+    '仪器型号
     
-    Clipboard.Clear
-    ss1.SetSelection SS1_STDSPEC, 1, SS1_PLATE_NO, ss1.MaxRows
-    ss1.ClipboardCopy
-    xlApp.Range("A7").Select
-    xlApp.ActiveSheet.Paste
-    Clipboard.Clear
+    xlApp.Range("B8").Value = cbx_ins.Text
     
-    Clipboard.Clear
-    ss1.SetSelection SS1_PROD_SIZE, 1, SS1_STDSPEC_UPD_FL1, ss1.MaxRows
-    ss1.ClipboardCopy
-    xlApp.Range("D7").Select
-    xlApp.ActiveSheet.Paste
-    Clipboard.Clear
     
-    Clipboard.Clear
-    ss1.SetSelection SS1_UST_DEC, 1, SS1_UST_DEC, ss1.MaxRows
-    ss1.ClipboardCopy
-    xlApp.Range("H7").Select
-    xlApp.ActiveSheet.Paste
-    Clipboard.Clear
+    '探头型号
+    
+    xlApp.Range("D8").Value = cbx_probe.Text
+    
+    
+    '晶片尺寸
+    
+    xlApp.Range("G8").Value = cbx_chip.Text
+    
+    
+    '探头频率
+    
+    xlApp.Range("I8").Value = cbx_rate.Text
+    
+    
+    '探头焦距
+    
+    xlApp.Range("B9").Value = cbx_focus.Text
+    
+    
+    '试块型号
+    
+    xlApp.Range("D9").Value = cbx_type.Text
+    
+    
+    '试块尺寸
+    
+    xlApp.Range("G9").Value = cbx_size.Text
+    
+    
+    '耦合剂
+    
+    xlApp.Range("I9").Value = txt_couplant.Text
+    
+    
+    '耦合方式
+    
+    xlApp.Range("B10").Value = cbx_style.Text
+    
+    
+    '检测方法
+    
+    xlApp.Range("D10").Value = cbx_test.Text
+    
+    
+    '检测比例
+    
+    xlApp.Range("G10").Value = cbx_scale.Text
+    
+    
+    '扫查方向
+    
+    xlApp.Range("I10").Value = cbx_direction.Text
+    
+    
+    '灵敏度
+    
+    xlApp.Range("B11").Value = txt_sens.Text
+    
+    
+    '表面补偿
+    
+    xlApp.Range("D11").Value = txt_comp.Text
+    
+    
+    '检测标准
+    
+    xlApp.Range("G11").Value = TXT_UST_STAND_REPORT.Text
+    
+    
+    '验收级别
+    
+    xlApp.Range("I11").Value = TXT_UST_GRADE.Text
+    
+    '签发员
+    xlApp.Range("D44").Value = cbx_sign.Text
+    
+     '等级
+    xlApp.Range("G44").Value = cbx_level.Text
+    
 
-    For i = 7 To ss1.MaxRows + 6
-        If xlApp.Range("C" & i).Value <> "" Then
-           xlApp.Range("E" & i).Value = "1"
-        End If
+    For i = 1 To ss1.MaxRows
+    ss1.ROW = i
+    COUNT = i + 19
+      
+    '序号
+    xlNo = "A" & COUNT
+    xlApp.Range("A" & COUNT).Value = i
+    '产品编号
+    ss1.Col = SS1_PLATE_NO: xlApp.Range("B" & COUNT).Value = ss1.Text
+    '规格
+    ss1.Col = SS1_PROD_SIZE: xlApp.Range("C" & COUNT).Value = ss1.Text
+    '牌号
+    'ss1.Col = SS1_PLATE_NO: xlApp.Range("D" & COUNT).Value = ss1.Text
+    '评定结果
+    'ss1.Col = SS1_PLATE_NO: xlApp.Range("F" & COUNT).Value = ss1.Text
+    '检查结论
+     xlApp.Range("H" & COUNT).Value = cbx_result
+    '检测员
+    ss1.Col = SS1_EMP_CD: xlApp.Range("I" & COUNT).Value = ss1.Text
+      
     Next i
     
-    xlApp.Range("I2").Select
-    xlApp.ActiveSheet.Paste
-    
-'    xlApp.ActiveWindow.SelectedSheets.PrintOut Copies:=1, Collate:=True
-    
-    ss1.ClearSelection
        
     Screen.MousePointer = vbDefault
     
@@ -3160,5 +3200,6 @@ Private Sub TXT_UST_GRADE_KeyUp(KeyCode As Integer, Shift As Integer)
     End If
 
 End Sub
+
 
 
